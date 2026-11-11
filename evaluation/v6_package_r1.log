@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6_package_delivery.py", line 126, in <module>
+    main()
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6_package_delivery.py", line 71, in main
+    raise AssertionError(tests.stderr[-4000:])
+AssertionError: t_unknown_rows_stay_in_order_and_block_allocation) ... ok
+test_validate_boundaries_and_finance_merge (test_workflow.WorkflowTests.test_validate_boundaries_and_finance_merge) ... ok
+
+======================================================================
+ERROR: test_originals_keep_159_events (test_parsing_v6.ParseChatV6Tests.test_originals_keep_159_events) (filename='星月站11.3下单.txt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/package_r1/unpacked/order-mapping/tests/test_parsing_v6.py", line 114, in test_originals_keep_159_events
+    text = (original / filename).read_text(encoding='utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1028, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1014, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/package_r1/original/星月站11.3下单.txt'
+
+======================================================================
+ERROR: test_originals_keep_159_events (test_parsing_v6.ParseChatV6Tests.test_originals_keep_159_events) (filename='学院路站11.3下单.txt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/package_r1/unpacked/order-mapping/tests/test_parsing_v6.py", line 114, in test_originals_keep_159_events
+    text = (original / filename).read_text(encoding='utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1028, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1014, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/package_r1/original/学院路站11.3下单.txt'
+
+======================================================================
+ERROR: test_originals_keep_159_events (test_parsing_v6.ParseChatV6Tests.test_originals_keep_159_events) (filename='松北大道站11.3下单.txt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/package_r1/unpacked/order-mapping/tests/test_parsing_v6.py", line 114, in test_originals_keep_159_events
+    text = (original / filename).read_text(encoding='utf-8')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1028, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1014, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/package_r1/original/松北大道站11.3下单.txt'
+
+----------------------------------------------------------------------
+Ran 104 tests in 1.031s
+
+FAILED (errors=3, skipped=1)
+

@@ -1,0 +1,92 @@
+{
+  "scope": "retrospective_document_and_preservation_integrity_only_no_mapping_or_tests",
+  "created_local": "2026-11-08T21:54:59.663934+08:00",
+  "goal_status": "paused",
+  "optimization_resumed": false,
+  "new_mapping_execution": false,
+  "core_tests_rerun": false,
+  "checkpoint_comparison": {
+    "original_sha256": {
+      "files_checked": 8,
+      "mismatches": []
+    },
+    "skill_sha256": {
+      "files_checked": 51,
+      "mismatches": []
+    },
+    "evidence_sha256": {
+      "files_checked": 11,
+      "mismatches": [
+        {
+          "path": "evaluation/v7/kb19_final_history/summary.json",
+          "expected_sha256": "2feb47beb147d97978cadc417fd959e404bf3f37fcfae4f86cd216af3870a721",
+          "actual_sha256": "b6ff04df5ab329882aceb0577548f33dc4bbc3e590e03594018bf6b24f998aeb"
+        }
+      ]
+    }
+  },
+  "production_and_originals_intact": true,
+  "strict_checkpoint_integrity_passed": false,
+  "document_checks_passed": true,
+  "known_document_drift": {
+    "paths": [
+      "evaluation/v7/kb19_final_history/summary.json",
+      "evaluation/v7/kb19_final_history/summary.md"
+    ],
+    "observed_checkpoint_mismatch_is_only_disclosed_summary": true,
+    "explanation": "Collaborating auditor confirmed post-checkpoint summary annotation/rebuild without runner execution. Its dictionary key (mode,case_id,source_event_id) collapsed multiple null-source rows; local invoice diagnostic attribution is incomplete. Preserve the original replay, original checkpoint, and discovered summaries; use rowwise comparison in 既有证据对照.json. No acceptance threshold is changed.",
+    "correct_added_invoice_diagnostics_per_mode": {
+      "catalog_only": 12,
+      "shared": 12,
+      "shared_with_company_contract": 12
+    },
+    "all_modes_total": 36,
+    "authoritative_original_replay_sha256": "5b20fce3e28df43e2de7aec064997ce5c6bf61c33668cb2e8ea7691b0c5f2ac2",
+    "discovered_summary_snapshots": {
+      "evaluation/复盘20261108/快照/历史摘要_发现漂移.json": "b6ff04df5ab329882aceb0577548f33dc4bbc3e590e03594018bf6b24f998aeb",
+      "evaluation/复盘20261108/快照/历史摘要_发现漂移.md": "44de3fa4ff5e24d0e005480b45a444ea14100f12b848b8305d8ae483132698ed"
+    }
+  },
+  "same_159_csv": {
+    "rows": 159,
+    "unique_ids": 159,
+    "stations": {
+      "songbei": 53,
+      "xingyue": 42,
+      "xueyuan": 64
+    },
+    "fixed_sku_events": 132,
+    "kb19_outcomes": {
+      "unselected": 35,
+      "different_sku": 17,
+      "correct": 80
+    },
+    "transitions_match_saved_json": true
+  },
+  "local_document_links": {
+    "checked": 50,
+    "missing": []
+  },
+  "deliverables": {
+    "方案复盘与推荐.md": "1322f6690376c359c03aa68fd66dac6508b4eb6362543abacff9744b3add6a10",
+    "调用链审查.md": "1bbc60ae488211da8fd3303e077d44fb4b29f1006afdc63fe77f584ca28f1a36",
+    "共享知识边界审查.md": "fc3e7a9063428545366450a0c7a264bc772672caf740a089fc38eff2de9c9e32",
+    "既有证据对照.json": "4065072933cfd42fd2726bb5db3b028960a868a9f446a0af9975981c3d4122f6",
+    "159事件版本逐项对照.csv": "14f92c3ab40a563aec8c82b5680c1c6d1452f138e56a40abeae8c83c374f4782",
+    "暂停检查点.json": "94b885278f1ceed2ba4c25110d158063f2094a384986e0de3f1286f4617ad467",
+    "构建既有证据对照.py": "b475fefe9c52ac072ad22c9eb0a48a743bbb3553fea0e82cb74f2fb736e83059"
+  },
+  "status_documents": {
+    "task_plan.md": "d88739550fbc23f8d335c8bc365954c88f740eac1c59b563e6f4cd1697fde93a",
+    "执行清单.md": "af155b278d47126db501037467e722474a1bcbf4d78fa73a402afa97a4fdbdfc"
+  },
+  "unverified": [
+    "Agent semantic normal-flow acceptance",
+    "complete reasonable candidate sets",
+    "Qianwen Office and WorkBuddy host compatibility",
+    "new real business orders",
+    "95 percent business acceptance"
+  ],
+  "passed": false,
+  "interpretation": "Strict checkpoint identity is false due to an explicitly disclosed historical summary rewrite. This report does not claim all frozen evidence is unchanged or business acceptance passed."
+}

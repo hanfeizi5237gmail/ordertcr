@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "purpose": "独立语义验收标签：仅依据三份原始聊天，检查原文覆盖、拆单、日期、商品约束与疑点保留；不预设任何SKU或财务价格。",
+  "source_scope": "仅 original/ 的三份下单.txt；source_line 为原文件中的一基行号。",
+  "cases": [
+    {
+      "id": "xingyue-cold-noodle-pack",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 1,
+      "raw_text": "冷面1大包",
+      "expected": {"name": "冷面", "quantity": "1", "unit": "大包"},
+      "expected_behavior": ["保留大包原始单位", "冷面种类和大包规格无法从原文唯一确定，待人工确认"],
+      "must_not": ["把1大包自动换算为1斤或1袋", "以目录最高总价跨包装直接定SKU"]
+    },
+    {
+      "id": "xingyue-sauce-weight-vs-packet",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 2,
+      "raw_text": "蒜蓉辣酱10斤",
+      "expected": {"name": "蒜蓉辣酱", "quantity": "10", "unit": "斤"},
+      "expected_behavior": ["保留重量需求与品牌/袋装候选差异", "无确认包装关系时不得计算袋数"],
+      "must_not": ["按名称相似把10斤写成10袋"]
+    },
+    {
+      "id": "xingyue-dumpling-pieces",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 3,
+      "raw_text": "饺子皮300个",
+      "expected": {"name": "饺子皮", "quantity": "300", "unit": "个"},
+      "expected_behavior": ["按个数保留需求", "若候选按重量计价，要求单个重量或本批实称"],
+      "must_not": ["自动把300个换算为300个500g计价单位"]
+    },
+    {
+      "id": "xingyue-sandwich-ham-variant",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 5,
+      "raw_text": "三明治火腿1个",
+      "expected": {"name": "三明治火腿", "quantity": "1", "unit": "个"},
+      "expected_behavior": ["三明治/三文治是检索线索，规格可能不同", "一个包装多重未明确时标记待确认"],
+      "must_not": ["直接把400g和2kg的候选当成同一规格"]
+    },
+    {
+      "id": "xingyue-cumin-missing-unit",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 10,
+      "raw_text": "孜然粉2",
+      "expected": {"name": "孜然粉", "quantity": "2", "unit": null},
+      "expected_behavior": ["数量2存在但单位缺失，保留原文入待处理行", "未确认单位前价格和金额留空"],
+      "must_not": ["默认单位为斤或袋"]
+    },
+    {
+      "id": "xingyue-date-range-title",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 12,
+      "raw_text": "11月3号到5号早上的菜",
+      "expected": {"is_item": false, "date_context": "11月3号到5号早上"},
+      "expected_behavior": ["保留多日范围作为后续项目上下文", "不能当作商品或推断年份/发货日"],
+      "must_not": ["将3或5识别为商品数量"]
+    },
+    {
+      "id": "xingyue-date-3-title",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 13,
+      "raw_text": "11月3号",
+      "expected": {"is_item": false, "date_context": "11月3号"},
+      "expected_behavior": ["之后商品保留11月3号来源日期", "年份和发货安排由批次确认"],
+      "must_not": ["日期标题导出为商品"]
+    },
+    {
+      "id": "xingyue-heart-meat-species",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 14,
+      "raw_text": "护心肉10斤",
+      "expected": {"name": "护心肉", "quantity": "10", "unit": "斤"},
+      "expected_behavior": ["猪/牛等物种不明确时保留差异，不能只按品名片段选价高商品"],
+      "must_not": ["将牛护心肉无确认替代猪护心肉"]
+    },
+    {
+      "id": "xingyue-pickled-cabbage-case",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 17,
+      "raw_text": "酸菜1箱",
+      "expected": {"name": "酸菜", "quantity": "1", "unit": "箱"},
+      "expected_behavior": ["筛选箱装候选，保留每箱袋数及每袋重量差异", "不可与袋装或酸菜鱼调料混同"],
+      "must_not": ["把1箱自动按1袋计价"]
+    },
+    {
+      "id": "xingyue-chicken-block-raw-prepared",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 25,
+      "raw_text": "鸡块5斤",
+      "expected": {"name": "鸡块", "quantity": "5", "unit": "斤"},
+      "expected_behavior": ["预制鸡块和生鲜鸡肉块身份不明，保留疑点"],
+      "must_not": ["仅凭鸡块词形直接匹配预制鸡块"]
+    },
+    {
+      "id": "xingyue-date-4-title",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 34,
+      "raw_text": "11月4",
+      "expected": {"is_item": false, "date_context": "11月4"},
+      "expected_behavior": ["之后商品保留11月4号来源日期，不与11月3日自动合并"],
+      "must_not": ["日期标题导出为商品"]
+    },
+    {
+      "id": "xingyue-corn-segments-bag",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 37,
+      "raw_text": "玉米段1袋",
+      "expected": {"name": "玉米段", "quantity": "1", "unit": "袋"},
+      "expected_behavior": ["目录无同名时按原文入待处理订单", "整根玉米和玉米粒不等于玉米段，需补商品/规格依据"],
+      "must_not": ["把玉米段静默匹配为玉米粒或玉米面"]
+    },
+    {
+      "id": "xingyue-pork-elbow-hair",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 38,
+      "raw_text": "猪肘去毛5个",
+      "expected": {"name": "猪肘", "quantity": "5", "unit": "个", "processing_note": "去毛"},
+      "expected_behavior": ["保留去毛加工要求与按个下单", "前/后肘及按重量计价关系未明时待确认"],
+      "must_not": ["把去毛备注丢弃", "无实称自动计算5个肘子的500g数量"]
+    },
+    {
+      "id": "xingyue-cauliflower-first",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 39,
+      "raw_text": "菜花6斤",
+      "expected": {"name": "菜花", "quantity": "6", "unit": "斤", "date_context": "11月4"},
+      "expected_behavior": ["与同日第45行相同但分别保留来源", "标记疑似重复供确认"],
+      "must_not": ["默默把两条去重"]
+    },
+    {
+      "id": "xingyue-cauliflower-repeat",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 45,
+      "raw_text": "菜花6斤",
+      "expected": {"name": "菜花", "quantity": "6", "unit": "斤", "date_context": "11月4"},
+      "expected_behavior": ["与同日第39行分别保留来源", "确认是误重复还是另加6斤后决定总量"],
+      "must_not": ["直接合并为12斤", "直接删掉第二条"]
+    },
+    {
+      "id": "xingyue-date-5-title",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 47,
+      "raw_text": "11月5号",
+      "expected": {"is_item": false, "date_context": "11月5号"},
+      "expected_behavior": ["之后项目进入11月5日来源上下文，不能并入前日"],
+      "must_not": ["日期标题导出为商品"]
+    },
+    {
+      "id": "xingyue-pickle-missing-quantity",
+      "station": "星月站",
+      "source_file": "../../original/星月站11.3下单.txt",
+      "source_line": 49,
+      "raw_text": "萝卜丁咸菜大袋的",
+      "expected": {"name": "萝卜丁咸菜", "quantity": null, "unit": null, "packaging_note": "大袋的", "date_context": "11月5号"},
+      "expected_behavior": ["没有数值数量，保留完整原文到待处理行", "目录的鲜萝卜丁不等于萝卜丁咸菜"],
+      "must_not": ["把大袋的解释成1袋", "将小水萝卜丁当咸菜"]
+    },
+    {
+      "id": "xueyuan-soy-oil-case-pack",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 4,
+      "raw_text": "豆油2桶",
+      "expected": {"name": "豆油", "quantity": "2", "unit": "桶"},
+      "expected_behavior": ["桶装和4桶整件是不同计价包装，明确规格后再计价"],
+      "must_not": ["把2桶直接作为2件4桶装计算"]
+    },
+    {
+      "id": "xueyuan-salad-oil-unmapped",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 5,
+      "raw_text": "色拉油1桶",
+      "expected": {"name": "色拉油", "quantity": "1", "unit": "桶"},
+      "expected_behavior": ["当前目录没有同名商品时保留原文并标记无匹配"],
+      "must_not": ["因为同属食用油就替换豆油或花生油"]
+    },
+    {
+      "id": "xueyuan-oyster-sauce-typo",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 10,
+      "raw_text": "海天上等耗油1瓶",
+      "expected": {"name": "海天上等耗油", "quantity": "1", "unit": "瓶"},
+      "expected_behavior": ["疑似耗/蚝错字仅作为候选线索，保留原始写法", "瓶装规格和商品身份待确认"],
+      "must_not": ["静默改写原文并视作同名确认"]
+    },
+    {
+      "id": "xueyuan-salt-chemical-separation",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 33,
+      "raw_text": "火碱3斤",
+      "expected": {"name": "火碱", "quantity": "3", "unit": "斤"},
+      "expected_behavior": ["目录无火碱时原文入待处理行，提示商品缺失"],
+      "must_not": ["把火碱匹配为面碱、小苏打或其他食品添加剂"]
+    },
+    {
+      "id": "xueyuan-cabbage-count-vs-weight",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 34,
+      "raw_text": "白菜3颗",
+      "expected": {"name": "白菜", "quantity": "3", "unit": "颗"},
+      "expected_behavior": ["与按斤订单不同的数量单位", "目录按500g计价时需实称"],
+      "must_not": ["将3颗等同3斤"]
+    },
+    {
+      "id": "xueyuan-carp-cleaned",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 37,
+      "raw_text": "鲤鱼5条收拾好",
+      "expected": {"name": "鲤鱼", "quantity": "5", "unit": "条", "processing_note": "收拾好"},
+      "expected_behavior": ["保留收拾好加工要求", "目录按重量计价时需实称或明确规则"],
+      "must_not": ["丢掉加工备注", "将5条直接视为5个500g计价单位"]
+    },
+    {
+      "id": "xueyuan-tofu-box-variety",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 40,
+      "raw_text": "豆腐10盒",
+      "expected": {"name": "豆腐", "quantity": "10", "unit": "盒"},
+      "expected_behavior": ["盒装虽能筛候选，豆腐品种与每盒规格未指定时保留疑点"],
+      "must_not": ["把10盒当成10斤或任一散称豆腐"]
+    },
+    {
+      "id": "xueyuan-fresh-raw-cut-hair",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 64,
+      "raw_text": "生猪手撩毛8个",
+      "expected": {"name": "生猪手", "quantity": "8", "unit": "个", "processing_note": "撩毛"},
+      "expected_behavior": ["撩毛可作为燎毛候选线索，保留原文", "与第55行猪手7斤作为两项保留；鲜生与熟制不能混同"],
+      "must_not": ["合并到猪手7斤", "凭8个直接算按500g计价金额"]
+    },
+    {
+      "id": "xueyuan-red-pepper-color",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 28,
+      "raw_text": "红色尖椒4斤",
+      "expected": {"name": "红色尖椒", "quantity": "4", "unit": "斤"},
+      "expected_behavior": ["红色是商品约束；候选不得忽略颜色"],
+      "must_not": ["只按尖椒二字自动选普通青色尖椒"]
+    },
+    {
+      "id": "xueyuan-two-small-cabbages",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 58,
+      "raw_text": "小白菜3颗",
+      "expected": {"name": "小白菜", "quantity": "3", "unit": "颗"},
+      "expected_behavior": ["小白菜区别于白菜，颗与重量需确认换算", "同站第25行小白菜1斤属不同数量表达"],
+      "must_not": ["与白菜3颗合并"]
+    },
+    {
+      "id": "xueyuan-canned-corn",
+      "station": "学院路站",
+      "source_file": "../../original/学院路站11.3下单.txt",
+      "source_line": 53,
+      "raw_text": "玉米粒罐头6罐",
+      "expected": {"name": "玉米粒罐头", "quantity": "6", "unit": "罐"},
+      "expected_behavior": ["罐头形态及罐单位是硬约束"],
+      "must_not": ["映射到冻玉米粒袋装"]
+    },
+    {
+      "id": "songbei-black-small-eggplant",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 2,
+      "raw_text": "小黑茄子13斤",
+      "expected": {"name": "小黑茄子", "quantity": "13", "unit": "斤"},
+      "expected_behavior": ["无同名目录项时可提紫茄子等语义候选，但颜色/品种不等同于已确认"],
+      "must_not": ["将小黑茄子直接改写为紫茄子"]
+    },
+    {
+      "id": "songbei-pork-ribs-cut",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 7,
+      "raw_text": "排骨5斤切块",
+      "expected": {"name": "排骨", "quantity": "5", "unit": "斤", "processing_note": "切块"},
+      "expected_behavior": ["保留切块加工要求", "整排、半排或切段候选需按需求比较"],
+      "must_not": ["忽略切块而按最高价选不相符部位"]
+    },
+    {
+      "id": "songbei-cooked-intestine",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 10,
+      "raw_text": "熟苦肠1斤",
+      "expected": {"name": "熟苦肠", "quantity": "1", "unit": "斤"},
+      "expected_behavior": ["熟制要求是硬约束；目录仅苦肠字样时需核对是否熟制"],
+      "must_not": ["把未注明熟制的苦肠自动视作完全相同"]
+    },
+    {
+      "id": "songbei-carp-pieces",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 5,
+      "raw_text": "鲤鱼3条",
+      "expected": {"name": "鲤鱼", "quantity": "3", "unit": "条"},
+      "expected_behavior": ["按条需求可保留，目录按重量计价仍需实称"],
+      "must_not": ["套用学院路站5条的重量或加工要求"]
+    },
+    {
+      "id": "songbei-egg-basket",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 21,
+      "raw_text": "厚皮鸡蛋1筐",
+      "expected": {"name": "厚皮鸡蛋", "quantity": "1", "unit": "筐"},
+      "expected_behavior": ["厚皮与一筐的规格均待确认，不能按普通鲜鸡蛋斤价直接结算"],
+      "must_not": ["从普通鸡蛋自动推断每筐重量"]
+    },
+    {
+      "id": "songbei-bagged-corn",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 24,
+      "raw_text": "玉米粒2袋",
+      "expected": {"name": "玉米粒", "quantity": "2", "unit": "袋"},
+      "expected_behavior": ["袋装与罐头互斥；袋装不同重量须进一步确认"],
+      "must_not": ["映射到玉米粒罐头"]
+    },
+    {
+      "id": "songbei-autumn-red-sausage",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 32,
+      "raw_text": "秋林红肠2斤",
+      "expected": {"name": "秋林红肠", "quantity": "2", "unit": "斤"},
+      "expected_behavior": ["秋林品牌限制候选；秋林里道斯作为近似线索需核对品牌映射"],
+      "must_not": ["因风味红肠价格不同而忽略秋林品牌"]
+    },
+    {
+      "id": "songbei-roman-lettuce-count",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 33,
+      "raw_text": "罗马生菜1颗",
+      "expected": {"name": "罗马生菜", "quantity": "1", "unit": "颗"},
+      "expected_behavior": ["目录生菜不能证明是罗马生菜", "按颗与按重量不能无凭据换算"],
+      "must_not": ["直接按普通生菜500g计价"]
+    },
+    {
+      "id": "songbei-chinese-number-sauce",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 44,
+      "raw_text": "一品鲜酱油一桶",
+      "expected": {"name": "一品鲜酱油", "quantity": "1", "unit": "桶"},
+      "expected_behavior": ["前一字是一品鲜品名，后一字是一桶数量", "没有品牌和桶大小时保留规格疑点"],
+      "must_not": ["拆成品名品鲜酱油", "将一品鲜的一计入数量"]
+    },
+    {
+      "id": "songbei-supply-bag-size",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 45,
+      "raw_text": "方便袋2捆小号",
+      "expected": {"name": "方便袋", "quantity": "2", "unit": "捆", "specification_note": "小号"},
+      "expected_behavior": ["保留小号规格，目录无同名商品时异常入表"],
+      "must_not": ["删掉非食材用品"]
+    },
+    {
+      "id": "songbei-five-color-rice",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 48,
+      "raw_text": "5色糙米10斤",
+      "expected": {"name": "5色糙米", "quantity": "10", "unit": "斤"},
+      "expected_behavior": ["5是混合品种描述的一部分，普通糙米只作候选线索", "混合比例/品种未明时不能用单一糙米替代"],
+      "must_not": ["将5解析成下单数量", "将5色糙米拆成两条商品"]
+    },
+    {
+      "id": "songbei-cassia-peeled",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 51,
+      "raw_text": "烟桂 1斤去皮的那种",
+      "expected": {"name": "烟桂", "quantity": "1", "unit": "斤", "processing_note": "去皮的那种"},
+      "expected_behavior": ["空格不拆成独立商品", "肉桂或桂皮只是候选，去皮要求需人工确定"],
+      "must_not": ["丢弃去皮要求", "直接将烟桂改成桂皮"]
+    },
+    {
+      "id": "songbei-add-scrubber-reference",
+      "station": "松北大道站",
+      "source_file": "../../original/松北大道站11.3下单.txt",
+      "source_line": 55,
+      "raw_text": "松北大道站再加这样的刷锅5个",
+      "expected": {"name": "刷锅", "quantity": "5", "unit": "个", "event": "追加", "reference_note": "这样的"},
+      "expected_behavior": ["保留追加事件和指定站点", "这样的缺可见参照物，目录无刷锅时原文标记待处理"],
+      "must_not": ["忽略末行", "凭这样的推断具体刷具规格"]
+    }
+  ]
+}

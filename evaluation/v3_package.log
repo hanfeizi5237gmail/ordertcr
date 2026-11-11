@@ -1,0 +1,10 @@
+{
+  "skill": {
+    "path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/dist/order-mapping.zip",
+    "sha256": "d323289fd45630bb5f2e448cbdc704f6b471ffd3839a086c1352f45702f88d9a"
+  },
+  "private_profiles": {
+    "path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/dist/order-mapping-reference-profiles.zip",
+    "sha256": "a991c04db5c5628319961aee83210177f6dc096aabcee15c23a42196031986f7"
+  }
+}

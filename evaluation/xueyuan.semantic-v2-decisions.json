@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "assessment": "non_blind_prior_manual_workbook_seen_in_same_conversation",
+  "input_scope": [
+    "original/学院路站11.3下单.txt",
+    "original/食堂食材基准价价格表10.12-10.18.xlsx"
+  ],
+  "note": "本轮选择时未以人工订单为答案，但此前同会话核验原件已读人工表；不可称真正盲测或独立未见数据成绩。只选商品身份，不提供invoice_quantity/实称/覆盖；有争议的唯一提案仍需审阅。",
+  "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+  "decisions": {
+    "学院路站11.3下单.txt:1:1": {
+      "code": "80005852",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“大米1袋”：大米候选同为25kg长粒香整袋；无品牌指定，在同规格同品类候选中挂牌价215高于145。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:2:2": {
+      "code": "80001148",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“小米4斤”：原名小米、米类、500g称重，与按斤需求匹配；排除小米辣与小米面。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:3:3": {
+      "code": "80001876",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“挂面7袋”：商品原名挂面、面类500g，作为未注明品牌的最接近通用品；7袋的包装重量仍需复核。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:6:6": {
+      "code": "80001298",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“海天鲜生抽1瓶”：海天酱油鲜味生抽500ml，鲜生抽为词序省略且瓶装吻合；排除1.9L小桶。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:7:7": {
+      "code": "80001857",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“东古酱油2瓶”：品牌东古、酱油、瓶装三个明确条件下，目录东古一品鲜500ML/瓶是唯一瓶装酱油，其他东古酱油为桶/整件；此处一品鲜是目录品名，不据此改写用户原文。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:8:8": {
+      "code": "80001841",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“冰糖4斤”：原名冰糖且500g按斤计价；不引入黄冰糖/单晶等未指定品种。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:9:9": {
+      "code": "80001837",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“白糖4斤”：原名白糖、500g称重，优于400g袋和100斤整包。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:10:10": {
+      "code": "80004513",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“海天上等耗油1瓶”：海天上等耗油疑为蚝油错字，目录海天上等蚝油1kg/瓶同时满足品牌、上等与瓶装；保留原文。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:13:13": {
+      "code": "80002082",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“水煮肉片料4包”：目录水煮肉片料100g与原名一致；包的具体克重仍需确认。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:14:14": {
+      "code": "80004512",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“番茄沙司2袋”：亨氏番茄沙司320g/袋与袋装吻合；同名同规格80002185挂牌价8.90，按同层最高价取15.00。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:15:15": {
+      "code": "80002344",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“重庆麻辣块1块”：目录唯一实体为名扬麻辣块90g×4块；重庆按描述来源地/风味而非明确名扬之外的品牌，商品身份可提案，单块与整包数量仍独立待审。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:17:17": {
+      "code": "80001589",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“香油1瓶”：美狮牌香油250ml是香油候选中明确小瓶装，区别桶装5kg/5L。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:19:19": {
+      "code": "80001863",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“粉条3斤”：目录粉条按斤500g与3斤称重需求最接近，排除宽粉/地瓜/土豆等指定品类。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:21:21": {
+      "code": "80003447",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“大葱4斤”：蔬菜大葱500g，精确品名与重量计价相合。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:22:22": {
+      "code": "80003727",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“小葱4斤”：蔬菜小葱500g，精确品名与重量计价相合。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:23:23": {
+      "code": "80003719",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“香菜2斤”：蔬菜香菜500g，排除香菜籽。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:24:24": {
+      "code": "80003439",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“臭菜1.5斤”：蔬菜臭菜500g，精确品名与重量计价相合。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:25:25": {
+      "code": "80003724",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“小白菜1斤”：蔬菜小白菜500g，不能与白菜合并。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:27:27": {
+      "code": "80003772",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“紫皮洋葱7斤”：紫皮洋葱与紫洋葱同义，选目录通用紫洋葱500g；优质紫洋葱有额外等级。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:28:28": {
+      "code": "80003500",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“红色尖椒4斤”：红色尖椒归一到蔬菜红尖椒500g，颜色是硬约束，不能选普通尖椒。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:29:29": {
+      "code": "80005958",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“五花肉7斤”：鲜猪五花肉500g为不限定精/下/切片的通用五花肉，排除其他部位加工。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:30:30": {
+      "code": "80005290",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“梅肉4斤”：目录云宴三花精选梅肉500g为唯一梅肉实体。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:34:34": {
+      "code": "80003409",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“白菜3颗”：蔬菜白菜500g，按颗需求可先定商品身份但重量另审。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:35:35": {
+      "code": "80003517",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“黄瓜8斤”：蔬菜黄瓜500g，排除酸黄瓜、黄瓜干、老黄瓜。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:36:36": {
+      "code": "80004911",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“干豆腐8斤”：北大荒干豆腐500g为未指定丝/扣/加厚的片状干豆腐；与豆骅堂称重同为500g，挂牌价6.99高于6.00。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:37:37": {
+      "code": "80003133",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“鲤鱼5条收拾好”：鲜活鲤鱼500g是未限定江鲤鱼品种的通用候选；收拾好为加工备注，条到重量另审。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:38:38": {
+      "code": "80003748",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“油菜3斤”：蔬菜油菜500g，精确品名与重量计价相合。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:41:41": {
+      "code": "80003657",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“蒜苔6斤”：蔬菜蒜苔（绿帽）500g为目录唯一蒜苔商品。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:44:44": {
+      "code": "80003527",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“尖椒7斤”：蔬菜尖椒500g与原名精确，红尖椒和地产尖椒有额外限定。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:45:45": {
+      "code": "80000101",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“红肠2斤”：红肠无品牌要求；同为500g的可比红肠中农大红肠46.47挂牌价最高。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:46:46": {
+      "code": "80005851",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“粉肠2斤”：粉肠无品牌要求；同为500g的可比粉肠中一手店粉肠33.52挂牌价最高。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:48:48": {
+      "code": "80004094",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“咸鸭蛋25个”：咸鸭蛋原名精确，目录计价单位为个。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:50:50": {
+      "code": "80005399",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“排骨6斤”：云宴三花猪排骨肉500g为未指定部位/切段的通用猪排骨，较同类鲜猪排骨肉14.99挂牌价15.99更高。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:51:51": {
+      "code": "80003749",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“油豆角6斤”：蔬菜油豆角500g与原名精确；地产油豆角有额外产地限定。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:52:52": {
+      "code": "80003786",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“橘子12斤”：目录无同名橘子，黄岩/云南蜜桔均为500g鲜橘类且原文不限制产地；按可比挂牌价云南蜜桔7.00高于黄岩6.53，作为语义近义提案，不推断实际供货产地。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:53:53": {
+      "code": "80005844",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“玉米粒罐头6罐”：目录甘竹玉米粒罐头425g唯一明确罐头产品，排除冻玉米粒袋装。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:54:54": {
+      "code": "80004313",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“娃娃菜4包”：娃娃菜袋装唯一目录项；包与袋为包装口语近义，按袋计价关系另审。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:56:56": {
+      "code": "80003532",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“豇豆角6斤”：蔬菜豇豆角500g，与原名精确；排除泡豇豆角。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:57:57": {
+      "code": "80001004",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“里脊6斤”：鲜猪里脊500g是未限定切片/肉丝/小里脊的通用猪里脊；牛羊异物种排除。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:58:58": {
+      "code": "80003724",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“小白菜3颗”：小白菜商品身份精确；3颗到500g计价重量未确认。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:59:59": {
+      "code": "80003608",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“青椒6斤”：蔬菜青椒/大辣椒500g，青椒精确同义。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:61:61": {
+      "code": "80005703",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“香蕉12斤”：优选佳农香蕉与优质香蕉同为500g，未指定品牌/等级时按同层最高挂牌价5.99。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:64:64": {
+      "code": "80000767",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "原文“生猪手撩毛8个”：生猪前手（燎毛）500g与生猪手撩毛语义和加工要求相合；8个到斤的实重另审。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    }
+  },
+  "unresolved": {
+    "学院路站11.3下单.txt:4:4": {
+      "raw_text": "豆油2桶",
+      "reason": "豆油两种九三5L桶分别一级与三级，挂牌价相同；原文不含等级，不能唯一决定产品身份。"
+    },
+    "学院路站11.3下单.txt:5:5": {
+      "raw_text": "色拉油1桶",
+      "reason": "目录无色拉油同义且规格可确认的SKU，不能把豆油/花生油当作同物。"
+    },
+    "学院路站11.3下单.txt:11:11": {
+      "raw_text": "盐4袋",
+      "reason": "普通食用盐有加碘、无碘、低钠等不同品种和规格；原文只写盐4袋，不能自行定为加碘盐。候选80002987/80002159/80002342。",
+      "candidate_code": "80002987"
+    },
+    "学院路站11.3下单.txt:12:12": {
+      "raw_text": "太太乐鸡精1袋",
+      "reason": "太太乐鸡精同名1kg和454g两种袋装，价格不可跨规格比较；需袋规格。"
+    },
+    "学院路站11.3下单.txt:16:16": {
+      "raw_text": "太阳岛香辣酱1袋",
+      "reason": "太阳岛香辣酱目录仅太阳岛蒜蓉辣酱、黄豆酱及豆瓣酱，口味/品类不同。"
+    },
+    "学院路站11.3下单.txt:18:18": {
+      "raw_text": "树椒丝1斤",
+      "reason": "树椒丝目录有树椒段/片和普通辣椒丝/川椒丝；切丝形态与树椒品种无法同时满足。"
+    },
+    "学院路站11.3下单.txt:20:20": {
+      "raw_text": "腐竹2袋",
+      "reason": "腐竹500g(80001869)和1kg(80001868)都是袋装且同品类，原文无袋重量，SKU身份仍不唯一。",
+      "candidate_code": "80001869"
+    },
+    "学院路站11.3下单.txt:26:26": {
+      "raw_text": "旱黄瓜5.5斤",
+      "reason": "旱黄瓜是明确品种要求；目录普通黄瓜80003517缺旱黄瓜规格，不能把近义候选直接确认为相同商品。",
+      "candidate_code": "80003517"
+    },
+    "学院路站11.3下单.txt:31:31": {
+      "raw_text": "净肉4斤",
+      "reason": "净肉具体指哪种猪肉部位和切形不明；精肉(金锣)80005972或精肉块80005964只是候选，需确认别名。",
+      "candidate_code": "80005972"
+    },
+    "学院路站11.3下单.txt:32:32": {
+      "raw_text": "盐酥鸡3袋",
+      "reason": "盐酥鸡目录无同名预制鸡商品；盐焗鸡粉和小酥肉不是盐酥鸡。"
+    },
+    "学院路站11.3下单.txt:33:33": {
+      "raw_text": "火碱3斤",
+      "reason": "目录无火碱；面碱/食用碱是不同化学用途，禁止近义误配。"
+    },
+    "学院路站11.3下单.txt:39:39": {
+      "raw_text": "豆芽3斤",
+      "reason": "豆芽可能为绿豆芽或黄豆芽，目录多个500g品种；原文未给品种。"
+    },
+    "学院路站11.3下单.txt:40:40": {
+      "raw_text": "豆腐10盒",
+      "reason": "豆腐10盒说明盒装，但内酯豆腐80003396是特定品种；原文未指定内酯、老豆腐或绢豆腐，不能仅按盒装定品种。",
+      "candidate_code": "80003396"
+    },
+    "学院路站11.3下单.txt:42:42": {
+      "raw_text": "鸡胸肉6斤",
+      "reason": "鸡胸肉可为鲜品80000391或冷冻单品80000335等，鲜冻影响商品身份；原文未说明。",
+      "candidate_code": "80000391"
+    },
+    "学院路站11.3下单.txt:43:43": {
+      "raw_text": "土豆15斤",
+      "reason": "土豆候选含大885、优质新土豆、新土豆等不同品种/等级；原文未指明，不将最高价跨品种硬套。",
+      "candidate_code": "80003671"
+    },
+    "学院路站11.3下单.txt:47:47": {
+      "raw_text": "腊肠2斤",
+      "reason": "腊肠候选广式80000072与秋林酱福80000071风味不同，未说明风味不能跨风味按挂牌价选。",
+      "candidate_code": "80000072"
+    },
+    "学院路站11.3下单.txt:49:49": {
+      "raw_text": "鸡翅6斤",
+      "reason": "鸡翅有中、根、尖及冻鲜不同部位/状态，不能以最高价跨部位决定。"
+    },
+    "学院路站11.3下单.txt:55:55": {
+      "raw_text": "猪手7斤",
+      "reason": "猪手冻80001051与熟制一手店猪手80000083形态不同；原文猪手7斤未说明生熟/鲜冻，身份不确定。",
+      "candidate_code": "80001051"
+    },
+    "学院路站11.3下单.txt:60:60": {
+      "raw_text": "牛奶3箱",
+      "reason": "牛奶箱装有品牌、纯牛奶/酸牛奶、瓶袋盒与箱内件数差异，无单一身份。"
+    },
+    "学院路站11.3下单.txt:62:62": {
+      "raw_text": "洗洁精1桶",
+      "reason": "目录无洗洁精SKU。"
+    },
+    "学院路站11.3下单.txt:63:63": {
+      "raw_text": "桌布10个",
+      "reason": "目录无桌布SKU，不能凭台布或清洁用品近义补价。"
+    }
+  },
+  "counts": {
+    "chat_items": 64,
+    "agent_identity_proposals": 43,
+    "unresolved_identity": 21,
+    "quantity_overrides": 0
+  }
+}

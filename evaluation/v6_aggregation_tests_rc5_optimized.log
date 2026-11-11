@@ -1,0 +1,11 @@
+test_bad_metrics_and_denominator_are_detected (__main__.AggregationTests.test_bad_metrics_and_denominator_are_detected) ... ok
+test_fixed_source_limits_and_not_achievable (__main__.AggregationTests.test_fixed_source_limits_and_not_achievable) ... ok
+test_full_and_subset_stay_separate_with_missing_ablation_visible (__main__.AggregationTests.test_full_and_subset_stay_separate_with_missing_ablation_visible) ... ok
+test_historical_not_upgraded_to_candidate_proof (__main__.AggregationTests.test_historical_not_upgraded_to_candidate_proof) ... ok
+test_legacy_control_handled_is_included_in_c (__main__.AggregationTests.test_legacy_control_handled_is_included_in_c) ... ok
+test_zero_automatic_is_undefined_and_outside_paths_rejected (__main__.AggregationTests.test_zero_automatic_is_undefined_and_outside_paths_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

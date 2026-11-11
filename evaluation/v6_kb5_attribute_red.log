@@ -1,0 +1,33 @@
+test_box_request_keeps_single_pack_witness_without_pricing_it (test_knowledge_v6.SharedKnowledgeTests.test_box_request_keeps_single_pack_witness_without_pricing_it) ... ok
+test_candidate_only_and_missing_selector_do_not_force_selection (test_knowledge_v6.SharedKnowledgeTests.test_candidate_only_and_missing_selector_do_not_force_selection) ... ok
+test_conflicting_rules_and_explicit_constraints_stay_manual (test_knowledge_v6.SharedKnowledgeTests.test_conflicting_rules_and_explicit_constraints_stay_manual) ... ok
+test_shared_concept_reresolves_codes_and_prices (test_knowledge_v6.SharedKnowledgeTests.test_shared_concept_reresolves_codes_and_prices) ... ok
+test_unresolved_brand_package_requirement_cannot_auto_select (test_knowledge_v6.SharedKnowledgeTests.test_unresolved_brand_package_requirement_cannot_auto_select) ... ok
+test_explicit_post_quantity_attributes_require_catalog_evidence (test_knowledge_v6.VersionFiveLanguageRulesTests.test_explicit_post_quantity_attributes_require_catalog_evidence) ... 
+  test_explicit_post_quantity_attributes_require_catalog_evidence (test_knowledge_v6.VersionFiveLanguageRulesTests.test_explicit_post_quantity_attributes_require_catalog_evidence) (alias='西蓝花', notes='冷冻') ... FAIL
+  test_explicit_post_quantity_attributes_require_catalog_evidence (test_knowledge_v6.VersionFiveLanguageRulesTests.test_explicit_post_quantity_attributes_require_catalog_evidence) (alias='黑芝麻粒', notes='熟制') ... FAIL
+test_new_explicit_brand_is_not_silently_dropped (test_knowledge_v6.VersionFiveLanguageRulesTests.test_new_explicit_brand_is_not_silently_dropped) ... ok
+test_rules_requery_current_catalog_without_storing_answers (test_knowledge_v6.VersionFiveLanguageRulesTests.test_rules_requery_current_catalog_without_storing_answers) ... ok
+test_unproven_cashew_and_freeze_are_candidate_only (test_knowledge_v6.VersionFiveLanguageRulesTests.test_unproven_cashew_and_freeze_are_candidate_only) ... ok
+test_weight_conversion_and_unknown_packaging (test_knowledge_v6.VersionFiveLanguageRulesTests.test_weight_conversion_and_unknown_packaging) ... ok
+
+======================================================================
+FAIL: test_explicit_post_quantity_attributes_require_catalog_evidence (test_knowledge_v6.VersionFiveLanguageRulesTests.test_explicit_post_quantity_attributes_require_catalog_evidence) (alias='西蓝花', notes='冷冻')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_knowledge_v6.py", line 156, in test_explicit_post_quantity_attributes_require_catalog_evidence
+    self.assertNotEqual(row['status'], 'matched')
+AssertionError: 'matched' == 'matched'
+
+======================================================================
+FAIL: test_explicit_post_quantity_attributes_require_catalog_evidence (test_knowledge_v6.VersionFiveLanguageRulesTests.test_explicit_post_quantity_attributes_require_catalog_evidence) (alias='黑芝麻粒', notes='熟制')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_knowledge_v6.py", line 156, in test_explicit_post_quantity_attributes_require_catalog_evidence
+    self.assertNotEqual(row['status'], 'matched')
+AssertionError: 'matched' == 'matched'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.031s
+
+FAILED (failures=2)

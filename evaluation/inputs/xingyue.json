@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "batch_id": "xingyue-20261103-review",
+  "company": "xingyue",
+  "shipping_date": "2026-11-03",
+  "mode": "order",
+  "date_policy": "single",
+  "date_policy_confirmed": false,
+  "delivery_confirmed": false,
+  "publish": false,
+  "test_only": true,
+  "config": {
+    "schema_version": 1,
+    "companies_confirmed": false,
+    "companies": [
+      {
+        "company_id": "songbei",
+        "full_name": "松北大道消防救援站",
+        "aliases": [
+          "松北大道站"
+        ],
+        "finance_name": "消防队松北大道站"
+      },
+      {
+        "company_id": "xingyue",
+        "full_name": "星月街消防站",
+        "aliases": [
+          "星月站"
+        ],
+        "finance_name": "消防队星月街站"
+      },
+      {
+        "company_id": "xueyuan",
+        "full_name": "学院路消防救援",
+        "aliases": [
+          "学院路站"
+        ],
+        "finance_name": "消防队学院路站"
+      }
+    ],
+    "default_discount": "0.95",
+    "numbering": {
+      "confirmed": false,
+      "prefix": "OR_",
+      "daily_start": 0
+    },
+    "output_policies": {
+      "standard_order": "sample_exact",
+      "finance": "sample_exact",
+      "dual_confirmed": false
+    },
+    "aliases": {},
+    "unit_rules": {},
+    "finance": {
+      "confirmed": false,
+      "price_source": "discounted_catalog",
+      "tax_freight_confirmed": false,
+      "receipt_date": null,
+      "order_number_mode": "OR",
+      "merchant_names_confirmed": false
+    }
+  },
+  "chat_files": [
+    "original/星月站11.3下单.txt"
+  ],
+  "decisions": {
+    "星月站11.3下单.txt:16:13": {
+      "code": "80003671",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30最高。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:19:16": {
+      "code": "80003657",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "蒜苔对应目录唯一蒜苔（绿帽）项，500g计价；未改变原始8斤。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:26:23": {
+      "code": "80003525",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "架豆王对应目录架豆王（豆角），品种明确且500g计价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:39:34": {
+      "code": "80003436",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "菜花在蔬菜类仅有青梗菜花这一500g候选；本行单独保留，不与后续重复行合并。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:44:39": {
+      "code": "80000358",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "鸡腿块明确鸡腿部位和切块加工；正大鸡腿肉切块500g最贴合，非泛鸡肉块或预制鸡块。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:45:40": {
+      "code": "80003436",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "菜花在蔬菜类仅有青梗菜花这一500g候选；重复需求独立保留，是否另加仍由人工核定。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    }
+  }
+}

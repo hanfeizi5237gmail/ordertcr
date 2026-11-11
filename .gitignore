@@ -1,0 +1,36 @@
+# 依赖
+node_modules/
+
+# 批次输出：客户真实订单与结算产物，含业务数据，不入库
+outputs/
+
+# 逐轮评估转储与生成的表格留本机，报告文本入库
+evaluation/v*/
+evaluation/tmp/
+evaluation/forward_runtime/
+evaluation/rendered*/
+evaluation/**/*.xlsx
+evaluation/**/*.ndjson
+evaluation/**/*.inspect.json
+!evaluation/*.md
+!evaluation/*.json
+!evaluation/*.py
+
+# 原始业务表按只读基线留档；如需下架取消注释
+# original/
+
+# 打包产物
+dist/
+
+# 本机脚本缓存与系统文件
+__pycache__/
+*.pyc
+.DS_Store
+
+# 符号链接与运行态状态库（编号台账、目录快照含业务数据）
+node_modules
+**/node_modules
+evaluation/business_runtime/
+evaluation/semantic_v2_runtime/
+evaluation/forward_runtime/
+*.sqlite3

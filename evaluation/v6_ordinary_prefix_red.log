@@ -1,0 +1,43 @@
+test_canned_corn_never_crosses_frozen_or_different_pack_sizes (test_knowledge_v6.OrdinaryDemandRulesTests.test_canned_corn_never_crosses_frozen_or_different_pack_sizes) ... ok
+test_full_oyster_series_and_explicit_bottle_resolve_current_size (test_knowledge_v6.OrdinaryDemandRulesTests.test_full_oyster_series_and_explicit_bottle_resolve_current_size) ... ok
+test_generic_banana_prefers_current_price_but_respects_explicit_brand (test_knowledge_v6.OrdinaryDemandRulesTests.test_generic_banana_prefers_current_price_but_respects_explicit_brand) ... ERROR
+test_plain_dry_tofu_excludes_thick_and_processed_records (test_knowledge_v6.OrdinaryDemandRulesTests.test_plain_dry_tofu_excludes_thick_and_processed_records) ... ERROR
+test_plain_vegetable_concepts_do_not_select_different_varieties (test_knowledge_v6.OrdinaryDemandRulesTests.test_plain_vegetable_concepts_do_not_select_different_varieties) ... ok
+test_trailing_variety_and_thickness_cannot_be_dropped (test_knowledge_v6.OrdinaryDemandRulesTests.test_trailing_variety_and_thickness_cannot_be_dropped) ... ok
+test_unknown_units_keep_identity_candidates_without_pricing (test_knowledge_v6.OrdinaryDemandRulesTests.test_unknown_units_keep_identity_candidates_without_pricing) ... ok
+test_box_request_keeps_single_pack_witness_without_pricing_it (test_knowledge_v6.SharedKnowledgeTests.test_box_request_keeps_single_pack_witness_without_pricing_it) ... ok
+test_candidate_context_does_not_override_weight_order (test_knowledge_v6.SharedKnowledgeTests.test_candidate_context_does_not_override_weight_order) ... ok
+test_candidate_only_and_missing_selector_do_not_force_selection (test_knowledge_v6.SharedKnowledgeTests.test_candidate_only_and_missing_selector_do_not_force_selection) ... ok
+test_conflicting_rules_and_explicit_constraints_stay_manual (test_knowledge_v6.SharedKnowledgeTests.test_conflicting_rules_and_explicit_constraints_stay_manual) ... ok
+test_shared_concept_reresolves_codes_and_prices (test_knowledge_v6.SharedKnowledgeTests.test_shared_concept_reresolves_codes_and_prices) ... ok
+test_unit_condition_does_not_erase_known_concept_candidates (test_knowledge_v6.SharedKnowledgeTests.test_unit_condition_does_not_erase_known_concept_candidates) ... ok
+test_unknown_brand_shows_unbranded_concept_only_as_conditional (test_knowledge_v6.SharedKnowledgeTests.test_unknown_brand_shows_unbranded_concept_only_as_conditional) ... ok
+test_unresolved_brand_package_requirement_cannot_auto_select (test_knowledge_v6.SharedKnowledgeTests.test_unresolved_brand_package_requirement_cannot_auto_select) ... ok
+test_explicit_post_quantity_attributes_require_catalog_evidence (test_knowledge_v6.VersionFiveLanguageRulesTests.test_explicit_post_quantity_attributes_require_catalog_evidence) ... ok
+test_new_explicit_brand_is_not_silently_dropped (test_knowledge_v6.VersionFiveLanguageRulesTests.test_new_explicit_brand_is_not_silently_dropped) ... ok
+test_rules_requery_current_catalog_without_storing_answers (test_knowledge_v6.VersionFiveLanguageRulesTests.test_rules_requery_current_catalog_without_storing_answers) ... ok
+test_unproven_cashew_and_freeze_are_candidate_only (test_knowledge_v6.VersionFiveLanguageRulesTests.test_unproven_cashew_and_freeze_are_candidate_only) ... ok
+test_weight_conversion_and_unknown_packaging (test_knowledge_v6.VersionFiveLanguageRulesTests.test_weight_conversion_and_unknown_packaging) ... ok
+
+======================================================================
+ERROR: test_generic_banana_prefers_current_price_but_respects_explicit_brand (test_knowledge_v6.OrdinaryDemandRulesTests.test_generic_banana_prefers_current_price_but_respects_explicit_brand)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_knowledge_v6.py", line 264, in test_generic_banana_prefers_current_price_but_respects_explicit_brand
+    self.assertEqual(self.row('普通香蕉', records)['selected']['code'], 'b')
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_plain_dry_tofu_excludes_thick_and_processed_records (test_knowledge_v6.OrdinaryDemandRulesTests.test_plain_dry_tofu_excludes_thick_and_processed_records)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_knowledge_v6.py", line 221, in test_plain_dry_tofu_excludes_thick_and_processed_records
+    self.assertEqual(self.row('普通干豆腐', records)['selected']['code'], 'b')
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.027s
+
+FAILED (errors=2)

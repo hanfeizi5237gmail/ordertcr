@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "batch_id": "example-raw",
+  "shipping_date": "2026-11-12",
+  "chat_files": ["本批聊天.txt"],
+  "matching_mode": "shared",
+  "test_only": true,
+  "config": {
+    "schema_version": 1,
+    "companies_confirmed": false,
+    "companies": [{"company_id": "example", "full_name": "示例公司全称", "aliases": ["示例公司"], "finance_name": "示例公司"}],
+    "default_discount": "0.95",
+    "numbering": {"confirmed": false, "prefix": "OR_", "daily_start": 0},
+    "aliases": {}, "unit_rules": {},
+    "output_policies": {"standard_order": "sample_exact", "finance": "sample_exact"},
+    "finance": {"confirmed": false, "merchant_names_confirmed": false, "tax_freight_confirmed": false}
+  }
+}

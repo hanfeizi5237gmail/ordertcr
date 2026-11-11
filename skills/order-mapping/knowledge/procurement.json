@@ -1,0 +1,4706 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "purple_onion_name",
+      "aliases": [
+        "紫洋葱",
+        "紫皮洋葱"
+      ],
+      "concept": "紫皮洋葱是紫洋葱的颜色称谓，保留紫色约束",
+      "selector": {
+        "names": [
+          "紫洋葱",
+          "优质紫洋葱"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「紫洋葱10斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「优质紫洋葱」",
+          "reason": "人工商品含紫色，目录同为紫洋葱；不同品质仍需目录筛选"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「紫皮洋葱7斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「优质紫洋葱」",
+          "reason": "紫皮与紫洋葱为同色称谓，人工商品保留紫色"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "不能将紫色改为黄洋葱；同色不同品质仍需比对"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "oyster_sauce_typo",
+      "aliases": [
+        "海天上等耗油",
+        "海天上等蚝油"
+      ],
+      "concept": "海天上等蚝油系列瓶装的耗油错写",
+      "selector": {
+        "names": [
+          "海天上等蚝油 1kg/瓶"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "瓶"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「海天上等耗油1瓶」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「海天上等蚝油1kg/瓶」",
+          "reason": "品牌和上等系列相同，耗油应按蚝油检索；原文未给瓶净重"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB7普通需求复核：海天上等蚝油系列瓶装的耗油错写",
+          "reason": "海天品牌、上等系列及瓶装均明确；当前唯一符合的目录名含1kg/瓶，可按当前目录瓶装计价，不猜历史包装"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "仅限同品牌同上等系列的瓶需求；显式容量不符或出现不同不可比规格则待核",
+        "其他海天蚝油系列不得替代上等系列；箱到瓶的包装关系不能猜测"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "synonym"
+    },
+    {
+      "id": "red_pointed_pepper",
+      "aliases": [
+        "红色尖椒"
+      ],
+      "concept": "红色尖椒，红色是硬约束",
+      "selector": {
+        "names": [
+          "红尖椒"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「红色尖椒4斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「红尖椒」",
+          "reason": "红尖椒保留原文红色；不能以地产尖椒替代"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "颜色、品种不一致须阻断；加工要求需另核"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "chicken_leg_chunks",
+      "aliases": [
+        "鸡腿块"
+      ],
+      "concept": "鸡腿肉切块，鸡腿部位不可降为泛称鸡肉块",
+      "selector": {
+        "names": [
+          "正大鸡腿肉切块"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「鸡腿块6斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「鸡肉块」",
+          "reason": "人工表鸡肉块只说明历史替代，目录有更精确的鸡腿肉切块"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "鸡肉块/鸡胸肉块不等同鸡腿块；鲜冻形态仍须核实"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "chicken_chunks",
+      "aliases": [
+        "鸡块"
+      ],
+      "concept": "按斤生鲜鸡肉块，不是裹粉熟制鸡块",
+      "selector": {
+        "names": [
+          "鸡肉块"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「鸡块5斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「鸡肉块」",
+          "reason": "原文泛称鸡块，人工商品为鸡肉块，不能借此覆盖鸡腿块"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "明确鸡腿/鸡胸部位或熟制/裹粉时不适用，计价数量另核"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "plum_pork",
+      "aliases": [
+        "梅肉"
+      ],
+      "concept": "未注明切片、切丝、切块的鲜猪梅花肉；同500g计价候选可按等价最高价规则选择",
+      "selector": {
+        "names": [
+          "鲜猪梅花肉（金锣）",
+          "冷鲜梅花肉"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「梅肉4斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「鲜猪梅花肉（金锣）」",
+          "reason": "人工商品为鲜猪梅花肉；同类目录有不同形态和品牌"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "片/丝/块与鲜冻明确要求需另判，不取历史品牌或实配量"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "sandwich_ham_spelling",
+      "aliases": [
+        "三明治火腿"
+      ],
+      "concept": "三明治/三文治同音称呼",
+      "selector": {
+        "names": [
+          "双汇三文治方火腿400g",
+          "三文治方火腿2kg"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "个"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「三明治火腿1个」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「三文治方火腿2kg」",
+          "reason": "人工商品使用三文治写法；一整个与2kg计价关系未独立确认"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "400g与2kg不同规格；原文一个未定包装重量"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "msg_name",
+      "aliases": [
+        "味素",
+        "味精"
+      ],
+      "concept": "味素味精由目录明确互标，质量需求优先同500g计价层，不跨包装比较总价",
+      "selector": {
+        "names": [
+          "红梅味精（味素）",
+          "双桥味精（味素）",
+          "中粮味素（味精）",
+          "中粮味素预装（味精）",
+          "梅花味素（味精）",
+          "红梅大师傅味精（味素）"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "不预装",
+          "不要预装",
+          "红梅",
+          "双桥",
+          "梅花",
+          "大师傅"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「味素5斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「中粮味素预装（味精）」",
+          "reason": "人工商品直接标注味素（味精）；品牌是历史选择"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 msg_name",
+          "reason": "味素味精由目录明确互标，质量需求优先同500g计价层，不跨包装比较总价",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "不预装",
+        "不要预装",
+        "红梅",
+        "双桥",
+        "梅花",
+        "大师傅",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "中粮味素预装（味精）"
+        ],
+        "category": "调料类",
+        "spec": "500g"
+      },
+      "reviewed_candidate_names": [
+        "红梅味精（味素）",
+        "双桥味精（味素）",
+        "中粮味素（味精）",
+        "中粮味素预装（味精）",
+        "梅花味素（味精）",
+        "红梅大师傅味精（味素）"
+      ]
+    },
+    {
+      "id": "fresh_egg_thick_shell",
+      "aliases": [
+        "厚皮鸡蛋"
+      ],
+      "concept": "鲜鸡蛋并保留厚皮供货品质要求",
+      "selector": {
+        "names": [
+          "鲜鸡蛋"
+        ],
+        "category": "蛋类"
+      },
+      "conditions": {
+        "request_units": [
+          "筐"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「厚皮鸡蛋1筐」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「鲜鸡蛋」",
+          "reason": "人工商品鲜鸡蛋只证明品类，厚皮品质须另由供货核对"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "目录鲜鸡蛋未保证厚皮；每筐重量未知"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "fresh_cucumber_variety",
+      "aliases": [
+        "旱黄瓜"
+      ],
+      "concept": "旱黄瓜特定品种，泛称黄瓜仅供候选",
+      "selector": {
+        "names": [
+          "黄瓜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「旱黄瓜5.5斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「旱黄瓜」",
+          "reason": "人工表写旱黄瓜，目录仅泛称黄瓜不能证明品种"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "不得用老黄瓜或水果黄瓜替代；泛称黄瓜不自动确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "romaine_variety",
+      "aliases": [
+        "罗马生菜"
+      ],
+      "concept": "罗马生菜品种要求，普通生菜仅供候选",
+      "selector": {
+        "names": [
+          "生菜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "颗"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「罗马生菜1颗」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「西生菜」",
+          "reason": "人工表西生菜与罗马品种不等同，目录泛称生菜无品种证据"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "西生菜不是罗马生菜的同义词；颗到重量未确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "beef_roll",
+      "aliases": [
+        "牛肉卷"
+      ],
+      "concept": "牛肉卷可检索肥牛肉片候选，卷与片形态待核",
+      "selector": {
+        "names": [
+          "大庄园肥牛肉片"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「牛肉卷1斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「大庄园肥牛肉片」",
+          "reason": "人工表肥牛肉片是采购参考，目录有相近但不同规格肉片"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "同名还存在500g/480g规格，不可凭历史品牌固定身份"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "corn_kernels_pack",
+      "aliases": [
+        "玉米粒"
+      ],
+      "concept": "玉米粒袋装候选，非罐装",
+      "selector": {
+        "names": [
+          "冻玉米粒嘉利得0.9kg*10袋/件"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「玉米粒2袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「美国厨师原味玉米粒425g/罐」",
+          "reason": "人工罐装与聊天袋装冲突，目录存在袋装冻玉米粒候选"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "冻品/整件中单袋的计价关系未确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "sour_cabbage_pack",
+      "aliases": [
+        "酸菜"
+      ],
+      "concept": "酸菜候选须分单袋与整箱",
+      "selector": {
+        "names": [
+          "翠花酸菜750g",
+          "农大酸菜750g",
+          "农大酸菜7",
+          "黑大酸菜",
+          "黑大酸菜500g",
+          "翠花酸菜500G"
+        ]
+      },
+      "conditions": {},
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「酸菜4袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「翠花酸菜750g」",
+          "reason": "人工商品为单袋酸菜，仅可作为候选证据"
+        },
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「酸菜1箱」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「翠花酸菜750g」",
+          "reason": "人工表单袋及配货数量不证明每箱净重或件数"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "品类、包装净重不同，不可直接等价或用旧实配换算"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "baby_cabbage_pack",
+      "aliases": [
+        "娃娃菜"
+      ],
+      "concept": "目录唯一娃娃菜袋装可定身份，包与袋的数量关系不推定",
+      "selector": {
+        "names": [
+          "娃娃菜袋装"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "散装",
+          "非袋装",
+          "不要袋装"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「娃娃菜1包」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「娃娃菜袋装」",
+          "reason": "历史人工表可提供袋装候选；不证明原文包与目录袋的数量关系"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「娃娃菜4包」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「娃娃菜袋装」",
+          "reason": "历史人工表可提供袋装候选；不证明原文包与目录袋的数量关系"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 baby_cabbage_pack",
+          "reason": "目录唯一娃娃菜袋装可定身份，包与袋的数量关系不推定",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "散装",
+        "非袋装",
+        "不要袋装",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "reviewed_candidate_names": [
+        "娃娃菜袋装"
+      ]
+    },
+    {
+      "id": "tofu_form",
+      "aliases": [
+        "豆腐"
+      ],
+      "concept": "盒装泛称豆腐优先当前明确按盒的普通豆腐候选，不视为老豆腐同义",
+      "selector": {
+        "names": [
+          "北大荒老豆腐",
+          "北大荒精品老豆腐",
+          "北大荒内酯豆腐400G/盒",
+          "北大荒绢豆腐",
+          "卤水豆腐",
+          "北大荒水豆腐"
+        ],
+        "category": "豆制品"
+      },
+      "conditions": {
+        "request_units": [
+          "盒"
+        ],
+        "notes_excludes": [
+          "老豆腐",
+          "绢豆腐",
+          "卤水",
+          "水豆腐",
+          "不要内酯",
+          "非内酯",
+          "冻",
+          "硬",
+          "嫩"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「豆腐7盒」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「北大荒老豆腐」",
+          "reason": "人工表老豆腐是同站偏好，不能把泛称推广为固定品牌或老嫩类型"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「豆腐10盒」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「北大荒老豆腐」",
+          "reason": "两站相同人工采购不等于所有站均要老豆腐"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 tofu_form",
+          "reason": "盒装泛称豆腐优先当前明确按盒的普通豆腐候选，不视为老豆腐同义",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "老豆腐",
+        "绢豆腐",
+        "卤水",
+        "水豆腐",
+        "不要内酯",
+        "非内酯",
+        "冻",
+        "硬",
+        "嫩",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "北大荒内酯豆腐400G/盒"
+        ],
+        "category": "豆制品",
+        "spec": "盒"
+      },
+      "reviewed_candidate_names": [
+        "卤水豆腐",
+        "北大荒内酯豆腐400G/盒",
+        "北大荒老豆腐",
+        "北大荒绢豆腐",
+        "北大荒精品老豆腐",
+        "北大荒水豆腐"
+      ],
+      "excluded_candidate_names": {
+        "一手店素鸡豆腐": "素鸡加工形态不是普通豆腐本体，不能以同为豆制品替代。"
+      }
+    },
+    {
+      "id": "sweet_oil_bottle",
+      "aliases": [
+        "香油"
+      ],
+      "concept": "瓶装芝麻香油，品牌及瓶容量由原文或用户确认",
+      "selector": {
+        "names": [
+          "李锦记纯香芝麻油",
+          "美狮牌香油"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "瓶"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「香油1瓶」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「李锦记纯香芝麻油410ml（1*12）」",
+          "reason": "人工采购李锦记410ml为本站选择；装箱说明不把一瓶变十二瓶"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "不同品牌/容量不自动互换；装箱描述不作为数量"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "rice_whole_bag",
+      "aliases": [
+        "大米"
+      ],
+      "concept": "当前目录两种25kg长粒香大米同规格可按等价最高价选商品身份",
+      "selector": {
+        "names": [
+          "玉福泉长粒香大米",
+          "磨盘山长粒香大米"
+        ],
+        "category": "米类"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「大米1袋」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「优谷大米」",
+          "reason": "人工优谷品牌不在当前目录；25kg候选是本次同规格比较结果"
+        },
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「大米1袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「优谷大米」",
+          "reason": "两站人工优谷不能固化当前目录另一品牌"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "一袋净重仍须核定，不能以人工25kg反填需求；明确品牌/品种另判"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "soy_salad_oil",
+      "aliases": [
+        "色拉油"
+      ],
+      "concept": "色拉油是食用油用途描述，非九三大豆油品牌承诺",
+      "selector": {
+        "names": [
+          "九三非转基因大豆油一级5L/桶"
+        ],
+        "category": "食用油"
+      },
+      "conditions": {
+        "request_units": [
+          "桶"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「色拉油2桶」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「九三非转基因大豆油一级5L/桶」",
+          "reason": "该站人工采购九三一级5L/桶，仅是公司偏好"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「色拉油1桶」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「九三非转基因大豆油一级5L/桶」",
+          "reason": "另一站相同采购仍不能证明所有色拉油都指定九三"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "油种、精炼等级、品牌、每桶容量须先确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "ginger_scallion_pepper_name",
+      "aliases": [
+        "青椒"
+      ],
+      "concept": "青椒保留绿色椒类，不能改为红尖椒",
+      "selector": {
+        "names": [
+          "青椒/大辣椒"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「青椒6斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「青椒/大辣椒」",
+          "reason": "人工商品青椒/大辣椒与原文青椒同色类；不是红色尖椒"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "青椒与尖椒的辣度、品种差异需另核"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "fresh_potato",
+      "aliases": [
+        "土豆",
+        "马铃薯"
+      ],
+      "concept": "普通鲜马铃薯；原文未要求新土豆时当前目录的普通土豆项最贴合",
+      "selector": {
+        "names": [
+          "土豆（大885）"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「土豆15斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「土豆（大885）」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「土豆（大885）」",
+          "reason": "三站原句均写普通土豆；目录蔬菜另列新土豆，加工粉/干不属于鲜蔬；普通项更贴近未限定需求"
+        },
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「土豆30斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「土豆（大885）」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「土豆（大885）」",
+          "reason": "三站原句均写普通土豆；目录蔬菜另列新土豆，加工粉/干不属于鲜蔬；普通项更贴近未限定需求"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「土豆15斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「土豆（大885）」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「土豆（大885）」",
+          "reason": "三站原句均写普通土豆；目录蔬菜另列新土豆，加工粉/干不属于鲜蔬；普通项更贴近未限定需求"
+        },
+        {
+          "source": "user_instruction",
+          "locator": "本轮要求中的“土豆(马铃薯)、西红柿(番茄)、蒜瓣(去皮蒜)”",
+          "reason": "用户给出的同义词或加工示例；当前原始聊天只证实其中原词，细分条件仍以目录和原文核定"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "目录另列新土豆；大885规格若与用户明确大小要求冲突须另判；加工土豆干/粉/淀粉不适用"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "fresh_scallion",
+      "aliases": [
+        "大葱"
+      ],
+      "concept": "鲜大葱原料",
+      "selector": {
+        "names": [
+          "大葱"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「大葱4斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「大葱」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「大葱」",
+          "reason": "两站原句均为大葱，目录蔬菜单品同名；牛肉大葱饺子属加工食品"
+        },
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「大葱5斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「大葱」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「大葱」",
+          "reason": "两站原句均为大葱，目录蔬菜单品同名；牛肉大葱饺子属加工食品"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "含大葱的饺子馅不是鲜大葱，明确加工/产地要求另判"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "fresh_carrot",
+      "aliases": [
+        "胡萝卜"
+      ],
+      "concept": "普通鲜胡萝卜",
+      "selector": {
+        "names": [
+          "胡萝卜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「胡萝卜2斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「胡萝卜」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「胡萝卜」",
+          "reason": "两站原句为普通胡萝卜，目录另列带泥交付状态；原文未要求带泥"
+        },
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「胡萝卜5斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「胡萝卜」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「胡萝卜」",
+          "reason": "两站原句为普通胡萝卜，目录另列带泥交付状态；原文未要求带泥"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "带泥是另列交付状态；胡萝卜鸡丸不适用"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "fresh_pointed_pepper",
+      "aliases": [
+        "尖椒"
+      ],
+      "concept": "普通鲜尖椒未限定产地时，普通与地产同500g候选按最高现价优先；红色及其他品种另核",
+      "selector": {
+        "names": [
+          "尖椒",
+          "地产尖椒"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「尖椒20斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「地产尖椒」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「尖椒」",
+          "reason": "原句未限定产地；普通尖椒与地产尖椒均为本规则已审普通鲜尖椒适配层，按同500g最高现价选择；红色不进入该层"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「尖椒7斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「地产尖椒」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「尖椒」",
+          "reason": "原句未限定产地；普通尖椒与地产尖椒均为本规则已审普通鲜尖椒适配层，按同500g最高现价选择；红色不进入该层"
+        },
+        {
+          "source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "locator": "规范名称「尖椒、地产尖椒」",
+          "reason": "地产为产地限定，原文未限产地；同属普通鲜尖椒且同500g计价，可按最高挂牌价；红尖椒仍为颜色约束不混入"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "不含红色尖椒或明确其他品种；不能跨不同规格比较"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "fresh_celery",
+      "aliases": [
+        "芹菜"
+      ],
+      "concept": "鲜芹菜原料",
+      "selector": {
+        "names": [
+          "芹菜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「芹菜3斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「芹菜」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「芹菜」",
+          "reason": "原句和人工商品均是芹菜，当前目录蔬菜中同名且没有相邻芹菜品种"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "明确西芹/其他品种及熟制腌制要求另判"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "fresh_garlic_cloves",
+      "aliases": [
+        "蒜瓣"
+      ],
+      "concept": "鲜蒜瓣原料；未证明已去皮",
+      "selector": {
+        "names": [
+          "蒜瓣"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「蒜瓣3斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「蒜瓣」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「蒜瓣」",
+          "reason": "原句蒜瓣与目录蒜瓣同名；整头大蒜和袋装大蒜另列，目录未写去皮"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "去皮是额外加工要求，蒜瓣不保证去皮；整头/袋装大蒜不等价"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "peeled_garlic_requirement",
+      "aliases": [
+        "去皮蒜"
+      ],
+      "concept": "去皮蒜可检索蒜瓣候选，但去皮交付须确认",
+      "selector": {
+        "names": [
+          "蒜瓣"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "user_instruction",
+          "locator": "本轮要求中的“土豆(马铃薯)、西红柿(番茄)、蒜瓣(去皮蒜)”",
+          "reason": "用户给出的同义词或加工示例；当前原始聊天只证实其中原词，细分条件仍以目录和原文核定"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "目录没有去皮蒜独立名称，不能假定蒜瓣已去皮"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "fresh_tomato",
+      "aliases": [
+        "西红柿",
+        "番茄",
+        "普通西红柿"
+      ],
+      "concept": "普通菜用番茄优先蔬菜毛粉柿子，不把水果小果番茄视作同义",
+      "selector": {
+        "names": [
+          "毛粉柿子",
+          "草莓柿子",
+          "千禧柿子",
+          "草莓春桃柿子",
+          "子弹头柿子",
+          "圣女果（黄色）",
+          "圣女果"
+        ]
+      },
+      "conditions": {
+        "notes_excludes": [
+          "圣女果",
+          "黄色",
+          "非毛粉",
+          "不要毛粉",
+          "小果",
+          "草莓",
+          "千禧"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「西红柿2斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「毛粉柿子」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「毛粉柿子」",
+          "reason": "原句西红柿是鲜蔬，目录毛粉柿子为唯一蔬菜番茄候选但毛粉是未给出的品种"
+        },
+        {
+          "source": "user_instruction",
+          "locator": "本轮要求中的“土豆(马铃薯)、西红柿(番茄)、蒜瓣(去皮蒜)”",
+          "reason": "用户给出的同义词或加工示例；当前原始聊天只证实其中原词，细分条件仍以目录和原文核定"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 fresh_tomato",
+          "reason": "全目录普通菜用番茄最接近层为蔬菜毛粉柿子；泛称允许此品种适配，不要求原文重复全部目录附加描述。",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "圣女果",
+        "黄色",
+        "非毛粉",
+        "不要毛粉",
+        "小果",
+        "草莓",
+        "千禧",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "毛粉柿子"
+        ],
+        "category": "蔬菜"
+      },
+      "reviewed_candidate_names": [
+        "圣女果（黄色）",
+        "草莓柿子",
+        "圣女果",
+        "千禧柿子",
+        "草莓春桃柿子",
+        "子弹头柿子",
+        "毛粉柿子"
+      ]
+    },
+    {
+      "id": "fresh_cucumber",
+      "aliases": [
+        "黄瓜"
+      ],
+      "concept": "普通鲜黄瓜",
+      "selector": {
+        "names": [
+          "黄瓜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「黄瓜5斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「黄瓜」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「黄瓜」",
+          "reason": "两站原句普通黄瓜，目录同名蔬菜与老黄瓜、水果黄瓜、黄瓜干、酸黄瓜分列"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「黄瓜8斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「黄瓜」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「黄瓜」",
+          "reason": "两站原句普通黄瓜，目录同名蔬菜与老黄瓜、水果黄瓜、黄瓜干、酸黄瓜分列"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "旱/老/水果黄瓜是不同品种；酸黄瓜、干黄瓜和牛肉黄瓜条不适用"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "fresh_leaf_lettuce",
+      "aliases": [
+        "油麦菜"
+      ],
+      "concept": "鲜油麦菜原料",
+      "selector": {
+        "names": [
+          "油麦菜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「油麦菜5斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「油麦菜」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「油麦菜」",
+          "reason": "两站原句和目录蔬菜油麦菜同名；无其他加工或品种分支"
+        },
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「油麦菜18斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「油麦菜」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「油麦菜」",
+          "reason": "两站原句和目录蔬菜油麦菜同名；无其他加工或品种分支"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "干制/加工或不同叶菜品种另判"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "fresh_shiitake",
+      "aliases": [
+        "香菇"
+      ],
+      "concept": "鲜香菇原料",
+      "selector": {
+        "names": [
+          "香菇"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「香菇3斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「香菇」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「香菇」",
+          "reason": "原句香菇在鲜菜订单语境中，目录鲜蔬香菇与干香菇、香菇贡丸分列"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "明确干香菇或香菇贡丸不适用；鲜干状态不明须核"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "pork_heart_cut",
+      "aliases": [
+        "护心肉"
+      ],
+      "concept": "护心肉候选须先辨猪/牛物种",
+      "selector": {
+        "names": [
+          "生猪护心肉",
+          "云宴三花猪护心肉",
+          "牛护心肉"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「护心肉5斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「生猪护心肉」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「生猪护心肉、云宴三花猪护心肉、牛护心肉」",
+          "reason": "两站历史人工商品为猪护心肉，目录同时有牛护心肉，原句没指定物种"
+        },
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「护心肉10斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「生猪护心肉」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「生猪护心肉、云宴三花猪护心肉、牛护心肉」",
+          "reason": "两站历史人工商品为猪护心肉，目录同时有牛护心肉，原句没指定物种"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "猪/牛不等价；历史人工猪肉不能变跨公司物种授权"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "chili_segments",
+      "aliases": [
+        "辣椒段"
+      ],
+      "concept": "未限定品种辣度的辣椒段优先普通干段，不以特辣高价跨层",
+      "selector": {
+        "names": [
+          "干辣椒段",
+          "树椒段",
+          "特辣辣椒段",
+          "川椒段/树椒段特辣",
+          "川椒段/树椒段"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "鲜",
+          "特辣",
+          "树椒",
+          "川椒",
+          "不辣",
+          "不要干",
+          "非干"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「辣椒段3斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「干辣椒段」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "规范名称「干辣椒段、特辣辣椒段」",
+          "reason": "原句辣椒段未写干燥/辣度，目录仅干辣椒段与特辣辣椒段两种加工限定"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 chili_segments",
+          "reason": "未限定品种辣度的辣椒段优先普通干段，不以特辣高价跨层",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "鲜",
+        "特辣",
+        "树椒",
+        "川椒",
+        "不辣",
+        "不要干",
+        "非干",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "干辣椒段"
+        ],
+        "category": "调料类"
+      },
+      "reviewed_candidate_names": [
+        "干辣椒段",
+        "树椒段",
+        "特辣辣椒段",
+        "川椒段/树椒段特辣",
+        "川椒段/树椒段"
+      ]
+    },
+    {
+      "id": "agent_review_red_pepper",
+      "aliases": [
+        "红椒"
+      ],
+      "concept": "红色鲜椒泛称，红尖椒/红美人椒/红泰椒等不能无依据选定",
+      "selector": {
+        "names": [
+          "彩椒",
+          "红尖椒",
+          "美人椒（红）",
+          "泰椒（红色）",
+          "小米辣（红辣椒）"
+        ]
+      },
+      "conditions": {},
+      "evidence": [
+        {
+          "source": "evaluation/v6/agent_forward/messages.txt",
+          "locator": "原文「红椒各2斤」",
+          "reason": "红椒缺品种/辣度/形态；并列青椒提示鲜蔬，彩椒需确认红色供货，红尖椒/红美人椒/红泰椒/小米红辣椒为不同品种及价位，不能以最高价跨品种选择；排除干辣椒和花椒油。"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "不能以价高跨品种或跨包装定商品；名称同义不等于可替代"
+      ],
+      "validation_status": "independent_agent_reviewed_local_not_real_order",
+      "kind": "constraint"
+    },
+    {
+      "id": "agent_review_cumin_powder",
+      "aliases": [
+        "孜然粉"
+      ],
+      "concept": "孜然粉的包装规格与计价量须独立核定",
+      "selector": {
+        "names": [
+          "裕盛孜然粉",
+          "孜然粉",
+          "孜然粉（斤）"
+        ]
+      },
+      "conditions": {},
+      "evidence": [
+        {
+          "source": "evaluation/v6/agent_forward/messages.txt",
+          "locator": "原文「孜然粉2」",
+          "reason": "孜然粉2无单位；25g裕盛包装与两条500g计价项不可直接比价。若确认为斤且普通散装，500g候选应比挂牌价31.45与34.00，但当前没有单位和规格确认。"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "不能以价高跨品种或跨包装定商品；名称同义不等于可替代"
+      ],
+      "validation_status": "independent_agent_reviewed_local_not_real_order",
+      "kind": "constraint"
+    },
+    {
+      "id": "green_bean_jiadou",
+      "aliases": [
+        "架豆王"
+      ],
+      "concept": "架豆王，保留明确豆角品种",
+      "selector": {
+        "names": [
+          "架豆王（豆角）"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {},
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「架豆王5斤」",
+          "reason": "目录名称架豆王（豆角）的括号为类别说明，同一品种，不将豆角泛称定为架豆王"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "油豆角/豇豆不是架豆王同义词"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "pumpkin_piece_candidates",
+      "aliases": [
+        "窝瓜",
+        "普通窝瓜"
+      ],
+      "concept": "普通窝瓜同名整品优先；个数不证明重量",
+      "selector": {
+        "name_contains": [
+          "窝瓜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "贝贝",
+          "板栗",
+          "不要普通",
+          "非普通"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「窝瓜1个」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "按名称与分类检索当前目录",
+          "reason": "泛称窝瓜可包含不同品种；个到500g需实称；仅作候选，不继承旧商品选择或实配数量"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 pumpkin_piece_candidates",
+          "reason": "普通窝瓜同名整品优先；个数不证明重量",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "贝贝",
+        "板栗",
+        "不要普通",
+        "非普通",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "窝瓜"
+        ],
+        "category": "蔬菜"
+      },
+      "reviewed_candidate_names": [
+        "板栗窝瓜",
+        "贝贝窝瓜",
+        "窝瓜"
+      ]
+    },
+    {
+      "id": "xiangqi_bag_candidates",
+      "aliases": [
+        "香其酱"
+      ],
+      "concept": "香其酱存在不同规格和形态；不能从袋数猜净重",
+      "selector": {
+        "names": [
+          "香其酱",
+          "香其酱120g",
+          "香其酱（熟酱）"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「香其酱10袋」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "按名称与分类检索当前目录",
+          "reason": "香其酱存在不同规格和形态；不能从袋数猜净重；仅作候选，不继承旧商品选择或实配数量"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "名称、包装和计价关系尚待核对；不得据此自动定品或补造数量"
+      ],
+      "validation_status": "local_catalog_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "donggu_soy_bottle_candidates",
+      "aliases": [
+        "东古酱油"
+      ],
+      "concept": "东古酱油瓶装需求优先明确瓶装一品鲜；不跨明确系列或其他品牌",
+      "selector": {
+        "names": [
+          "东古一品鲜500ML/瓶",
+          "东古一品鲜特级酿造酱油",
+          "东古一品鲜酱油5L/桶",
+          "东古黄豆酱油2L/桶",
+          "东古黄豆酱油（5L*2桶）",
+          "东古海鲜酱油"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "瓶"
+        ],
+        "notes_excludes": [
+          "不要一品鲜",
+          "非一品鲜",
+          "海鲜",
+          "老抽",
+          "红烧",
+          "千禾"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「东古酱油2瓶」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "按名称与分类检索当前目录",
+          "reason": "同品牌一品鲜是酱油候选，容量和瓶包装须核对；仅作候选，不继承旧商品选择或实配数量"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 donggu_soy_bottle_candidates",
+          "reason": "东古酱油瓶装需求优先明确瓶装一品鲜；不跨明确系列或其他品牌",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "不要一品鲜",
+        "非一品鲜",
+        "海鲜",
+        "老抽",
+        "红烧",
+        "千禾",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "东古一品鲜500ML/瓶"
+        ],
+        "category": "调料类"
+      },
+      "reviewed_candidate_names": [
+        "东古黄豆酱油2L/桶",
+        "东古一品鲜特级酿造酱油",
+        "东古一品鲜500ML/瓶",
+        "东古一品鲜酱油5L/桶",
+        "东古黄豆酱油（5L*2桶）",
+        "东古海鲜酱油"
+      ]
+    },
+    {
+      "id": "dried_yuba_bag_candidates",
+      "aliases": [
+        "腐竹"
+      ],
+      "concept": "腐竹的袋净重和目录500g、1kg之间的对应关系未知",
+      "selector": {
+        "names": [
+          "腐竹",
+          "腐竹1kg"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「腐竹2袋」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "按名称与分类检索当前目录",
+          "reason": "腐竹的袋净重和目录500g、1kg之间的对应关系未知；仅作候选，不继承旧商品选择或实配数量"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "名称、包装和计价关系尚待核对；不得据此自动定品或补造数量"
+      ],
+      "validation_status": "local_catalog_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "tomato_sauce_bag_candidates",
+      "aliases": [
+        "番茄沙司"
+      ],
+      "concept": "袋装泛称番茄沙司优先明确单袋320g同层，按当前最高价选择",
+      "selector": {
+        "name_contains": [
+          "番茄沙司"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ],
+        "notes_excludes": [
+          "味好美",
+          "凤球唛",
+          "250g",
+          "340g",
+          "1kg",
+          "不要亨氏",
+          "非亨氏"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「番茄沙司2袋」",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "按名称与分类检索当前目录",
+          "reason": "番茄沙司有多种品牌与规格，袋装及单袋净重需核对；仅作候选，不继承旧商品选择或实配数量"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 tomato_sauce_bag_candidates",
+          "reason": "袋装泛称番茄沙司优先明确单袋320g同层，按当前最高价选择",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "味好美",
+        "凤球唛",
+        "250g",
+        "340g",
+        "1kg",
+        "不要亨氏",
+        "非亨氏",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "亨氏番茄沙司320G/袋",
+          "亨氏番茄沙司 320g/袋"
+        ],
+        "category": "调料类"
+      },
+      "reviewed_candidate_names": [
+        "味好美番茄沙司",
+        "凤球唛番茄沙司1kg*6桶/件",
+        "亨氏番茄沙司320G/袋",
+        "番茄沙司250g",
+        "亨氏番茄沙司 320g/袋"
+      ]
+    },
+    {
+      "id": "fresh_green_bean_candidates",
+      "aliases": [
+        "豆角",
+        "普通豆角"
+      ],
+      "concept": "泛称豆角优先目录直接互标基础层，其他品种仅供核对",
+      "selector": {
+        "names": [
+          "架豆王（豆角）",
+          "豇豆角",
+          "油豆角",
+          "地产油豆角"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "豇豆",
+          "油豆角",
+          "不要架豆王",
+          "非架豆王"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "locator": "Sheet0 蔬菜分类：架豆王（豆角）、豇豆角、油豆角、地产油豆角",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_locator": "按名称与分类检索当前目录",
+          "reason": "豆角泛称不能确定架豆王、豇豆或油豆角；不包含酸制菜；仅作候选，不继承旧商品选择或实配数量"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 fresh_green_bean_candidates",
+          "reason": "当前目录括号直接把架豆王标为豆角；不能反向把所有油豆角和豇豆写成同义。",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "豇豆",
+        "油豆角",
+        "不要架豆王",
+        "非架豆王",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "架豆王（豆角）"
+        ],
+        "category": "蔬菜"
+      },
+      "reviewed_candidate_names": [
+        "架豆王（豆角）",
+        "豇豆角",
+        "油豆角",
+        "地产油豆角"
+      ]
+    },
+    {
+      "id": "peeled_qingsun",
+      "aliases": [
+        "去皮青笋"
+      ],
+      "concept": "明确去皮的青笋/莴笋",
+      "selector": {
+        "names": [
+          "去皮莴笋（青笋）"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_explicit_synonym",
+          "source": "current_catalog",
+          "locator": "original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第886行，材料编号80003710，名称「去皮莴笋（青笋）」；此为本次对照目录位置，原审阅时的目录快照指纹未保留。",
+          "reason": "目录完整名称同时写明去皮、莴笋和青笋。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "不得忽略去皮要求；普通青笋不能冒充去皮",
+        "鲜冻、品牌或包装明确冲突时待核"
+      ],
+      "validation_status": "catalog_reviewed_local_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "iron_yam",
+      "aliases": [
+        "铁棍山药"
+      ],
+      "concept": "铁棍山药",
+      "selector": {
+        "names": [
+          "铁杆山药/铁棍山药"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_explicit_synonym",
+          "source": "current_catalog",
+          "locator": "original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第865行，材料编号80003666，名称「铁杆山药/铁棍山药」；此为本次对照目录位置，原审阅时的目录快照指纹未保留。",
+          "reason": "目录斜杠两侧明确列出铁杆山药与铁棍山药。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "麻山药是不同品种",
+        "原文明确品牌/形态/包装须另核"
+      ],
+      "validation_status": "catalog_reviewed_local_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "korla_pear_grade_one",
+      "aliases": [
+        "一级库尔勒香梨"
+      ],
+      "concept": "一级库尔勒香梨",
+      "selector": {
+        "names": [
+          "库尔勒香梨一级"
+        ],
+        "category": "水果类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_explicit_synonym",
+          "source": "current_catalog",
+          "locator": "original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第27行，材料编号80003961，名称「库尔勒香梨一级」；此为本次对照目录位置，原审阅时的目录快照指纹未保留。",
+          "reason": "目录完整名称包含库尔勒、香梨及一级，仅调整词序。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "等级或产地、品种明确不符不得替代",
+        "包装和重量计价须分别核定"
+      ],
+      "validation_status": "catalog_reviewed_local_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "seaweed_weight_name",
+      "aliases": [
+        "紫菜"
+      ],
+      "concept": "称重紫菜",
+      "selector": {
+        "names": [
+          "紫菜（斤）"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_explicit_synonym",
+          "source": "current_catalog",
+          "locator": "original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第545行，材料编号80002723，名称「紫菜（斤）」；此为本次对照目录位置，原审阅时的目录快照指纹未保留。",
+          "reason": "目录名称含紫菜及斤的计价说明，不将斤理解为额外品种。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "海苔、加工成品不等同",
+        "袋盒数不能推断净重"
+      ],
+      "validation_status": "catalog_reviewed_local_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "oyster_mushroom_name",
+      "aliases": [
+        "平菇"
+      ],
+      "concept": "鲜平菇",
+      "selector": {
+        "names": [
+          "平菇（鲜蘑）"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_explicit_synonym",
+          "source": "current_catalog",
+          "locator": "original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第876行，材料编号80003681，名称「平菇（鲜蘑）」；此为本次对照目录位置，原审阅时的目录快照指纹未保留。",
+          "reason": "目录完整名称含平菇与鲜蘑，括号为对该商品的解释。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "泛称鲜蘑不能反向限定平菇",
+        "干制、包装与其他菌菇不同"
+      ],
+      "validation_status": "catalog_reviewed_local_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "broccoli_spelling",
+      "aliases": [
+        "西蓝花"
+      ],
+      "concept": "西兰花名称变体",
+      "selector": {
+        "names": [
+          "西兰花"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第880行，材料编号80003687，名称「西兰花」；目录名称本身不证明同义关系。",
+          "reason": "常见中文名称变体的语言推断，非用户确认或独立未见验证。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "菜花及其他甘蓝不自动等同",
+        "明确品牌、冷冻、罐装等要求不得省略"
+      ],
+      "validation_status": "linguistic_inference_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "coix_grain_name",
+      "aliases": [
+        "薏仁米"
+      ],
+      "concept": "薏米名称变体",
+      "selector": {
+        "names": [
+          "薏米"
+        ],
+        "category": "米类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第1341行，材料编号80001102，名称「薏米」；目录名称本身不证明同义关系。",
+          "reason": "常见中文名称变体的语言推断，非用户确认或独立未见验证。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "袋或盒的净重不明不可推断计价量",
+        "明确品牌和加工要求须核验"
+      ],
+      "validation_status": "linguistic_inference_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "dried_daylily_name",
+      "aliases": [
+        "干金针菜"
+      ],
+      "concept": "干黄花菜名称变体",
+      "selector": {
+        "names": [
+          "干黄花菜"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第336行，材料编号80001872，名称「干黄花菜」；目录名称本身不证明同义关系。",
+          "reason": "干金针菜与干黄花菜同称的语言推断；干制条件不可去掉。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "金针菇与黄花鱼不是黄花菜",
+        "鲜干状态不可互换"
+      ],
+      "validation_status": "linguistic_inference_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "yellow_apple_name",
+      "aliases": [
+        "黄元帅"
+      ],
+      "concept": "黄元帅苹果简称",
+      "selector": {
+        "names": [
+          "黄元帅苹果"
+        ],
+        "category": "水果类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第29行，材料编号80003972，名称「黄元帅苹果」；目录名称本身不证明同义关系。",
+          "reason": "黄元帅作为该苹果品种简称的语言推断。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "不能变为其他苹果品种或苹果醋",
+        "包装、等级有明确要求须核验"
+      ],
+      "validation_status": "linguistic_inference_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "dried_longan_typo",
+      "aliases": [
+        "干桂园肉"
+      ],
+      "concept": "干桂圆肉的形近字纠错",
+      "selector": {
+        "names": [
+          "干桂圆肉"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第521行，材料编号80002475，名称「干桂圆肉」；目录名称本身不证明同义关系。",
+          "reason": "完整词组中园/圆为可能误写；限定干制与果肉。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "整颗桂圆、鲜龙眼不能未经确认替代果肉",
+        "不能用单字模糊匹配其他商品"
+      ],
+      "validation_status": "linguistic_inference_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "black_sesame_seed_name",
+      "aliases": [
+        "黑芝麻粒"
+      ],
+      "concept": "黑芝麻整粒",
+      "selector": {
+        "names": [
+          "黑芝麻"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第546行，材料编号80002724，名称「黑芝麻」；目录名称本身不证明同义关系。",
+          "reason": "黑芝麻粒与黑芝麻原料的语言推断，目录不标注生熟，不能补造。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "黑芝麻粉、馅、元宵与白芝麻不是整粒",
+        "目录未标生熟，明确生熟需核验",
+        "盒袋数量不可推断净重"
+      ],
+      "validation_status": "linguistic_inference_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "potato_885_synonym",
+      "aliases": [
+        "马铃薯（大885）"
+      ],
+      "concept": "大885马铃薯",
+      "selector": {
+        "names": [
+          "土豆（大885）"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第867行，材料编号80003671，名称「土豆（大885）」；目录名称本身不证明同义关系。",
+          "reason": "马铃薯和土豆为常见名称变体，同时保留大885限定。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "马铃薯淀粉、土豆粉条与地瓜不等同鲜土豆",
+        "新土豆未证明满足大885限定"
+      ],
+      "validation_status": "linguistic_inference_not_independent",
+      "kind": "synonym"
+    },
+    {
+      "id": "raw_cashew_candidate",
+      "aliases": [
+        "生腰果仁"
+      ],
+      "concept": "生腰果仁参考候选",
+      "selector": {
+        "names": [
+          "生腰果"
+        ],
+        "category": "米类"
+      },
+      "conditions": {},
+      "evidence": [
+        {
+          "kind": "linguistic_inference",
+          "source": "linguistic_inference",
+          "locator": "语言推断原始出处及审阅定位未保留；仅可复核候选名称：original/食堂食材基准价价格表10.12-10.18.xlsx，Sheet0第1384行，材料编号80005736，名称「生腰果」；目录名称本身不证明同义关系。",
+          "reason": "去壳果仁与目录生腰果的交付形态仍需核对。"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "生腰果是否去壳未知",
+        "炭烧腰果是不同加工状态"
+      ],
+      "validation_status": "candidate_only_not_independent",
+      "kind": "constraint"
+    },
+    {
+      "id": "arctic_shrimp_candidate",
+      "aliases": [
+        "北极冰虾80*100",
+        "冷冻北极冰虾80*100"
+      ],
+      "concept": "未限定鲜活或非冷冻的北极冰虾80*100，按当前目录匹配并保留冷冻描述",
+      "selector": {
+        "names": [
+          "冷冻北极冰虾80*100"
+        ],
+        "category": "水产品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "鲜",
+          "活",
+          "牌",
+          "不要冷冻",
+          "不冷冻",
+          "非冷冻",
+          "未冷冻",
+          "不接受冷冻",
+          "不要冻",
+          "不冻",
+          "非冻",
+          "别冻"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_name_match",
+          "source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "locator": "Sheet0 材料名称：冷冻北极冰虾80*100",
+          "reason": "目录名称包含原文完整品名和规格；未限定鲜活或非冷冻时按最接近的明确需求选择，并展示冷冻描述。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "鲜/冻要求明确时不得替代",
+        "80*100不证明每袋净重"
+      ],
+      "validation_status": "catalog_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "white_sugar_package_candidates",
+      "concept": "白糖是该请求的上位日常表述；目录中的白砂糖和绵白糖均为可进一步确认的白糖品类，但颗粒/用法不同；无颜色限定的砂糖只能列条件候选，不能断言一定为白砂糖。",
+      "aliases": [
+        "白糖"
+      ],
+      "selector": {
+        "names": [
+          "白糖",
+          "白砂糖",
+          "银霞绵白糖",
+          "银霞白糖(100斤)",
+          "红光白糖",
+          "韩国细幼砂糖",
+          "砂糖"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "袋",
+          "包"
+        ]
+      },
+      "kind": "candidate",
+      "applicable": "candidate_only",
+      "conflicts": [
+        "类型、颜色、生熟和包装未证明，不能自动替代或推断袋盒净重"
+      ],
+      "validation_status": "independent_catalog_name_review_only",
+      "evidence": [
+        {
+          "kind": "independent_static_catalog_review",
+          "source": "食堂食材基准价价格表10.12-10.18.xlsx",
+          "source_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "locator": "Sheet0 315, 314, 221, 549, 793, 215, 612",
+          "reason": "白糖是该请求的上位日常表述；目录中的白砂糖和绵白糖均为可进一步确认的白糖品类，但颗粒/用法不同；无颜色限定的砂糖只能列条件候选，不能断言一定为白砂糖。"
+        }
+      ],
+      "candidate_reasons": {
+        "白糖": "品名直接相符，规格500g；未标每袋净重。",
+        "白砂糖": "白糖的一种可能品类；需要确认颗粒类型及袋装重量。",
+        "银霞绵白糖": "白糖的一种可能品类，品牌和绵白颗粒形态需符合实际需求，目录400g不证明每袋。",
+        "银霞白糖(100斤)": "品名直接相关但为100斤挂牌规格；未标实际袋装及每袋净重，不能把2袋视为200斤。",
+        "红光白糖": "白糖名称直接相关，400g规格和品牌是否满足实际需求需要确认，未标每袋。",
+        "韩国细幼砂糖": "砂糖可为相关白糖类型，但名称未明确白色，需核颜色、细幼形态、2.5kg与袋装对应。",
+        "砂糖": "未标颜色、细分类型和袋装净重，仅在确认是可接受的白糖后保留。"
+      }
+    },
+    {
+      "id": "black_sesame_package_candidates",
+      "concept": "黑芝麻指黑色芝麻原料；“熟芝麻”未注明颜色，是否黑芝麻只能作为弱条件候选。黑芝麻粉/馅/元宵/汤圆的加工形态不同。",
+      "aliases": [
+        "黑芝麻"
+      ],
+      "selector": {
+        "names": [
+          "黑芝麻",
+          "熟芝麻"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "盒",
+          "袋",
+          "包"
+        ]
+      },
+      "kind": "candidate",
+      "applicable": "candidate_only",
+      "conflicts": [
+        "类型、颜色、生熟和包装未证明，不能自动替代或推断袋盒净重"
+      ],
+      "validation_status": "independent_catalog_name_review_only",
+      "evidence": [
+        {
+          "kind": "independent_static_catalog_review",
+          "source": "食堂食材基准价价格表10.12-10.18.xlsx",
+          "source_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "locator": "Sheet0 546, 628",
+          "reason": "黑芝麻指黑色芝麻原料；“熟芝麻”未注明颜色，是否黑芝麻只能作为弱条件候选。黑芝麻粉/馅/元宵/汤圆的加工形态不同。"
+        }
+      ],
+      "candidate_reasons": {
+        "黑芝麻": "品名直接相符，规格500g；目录未给每盒净重、盒装依据或生熟信息。",
+        "熟芝麻": "有芝麻原料概念，但未标黑白颜色；只有确认其为黑芝麻且熟制符合需求后才是候选，且盒重未知。"
+      }
+    },
+    {
+      "id": "ordinary_dry_tofu",
+      "aliases": [
+        "干豆腐",
+        "普通干豆腐"
+      ],
+      "concept": "普通整片干豆腐称重需求",
+      "selector": {
+        "names": [
+          "豆骅堂干豆腐（称重）",
+          "北大荒干豆腐"
+        ],
+        "category": "豆制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB7普通需求复核：普通整片干豆腐称重需求",
+          "reason": "两个目录项均为普通干豆腐整品且500g同计价基础；加厚、丝、卷、扣增加原文未要求的形态，普通整品更接近原文。"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "商品匹配先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "未指定品牌不构成默认品牌约束；不跨明确形态、品种或不可比包装"
+        },
+        {
+          "kind": "linguistic_scope",
+          "source": "references/shared-knowledge.md",
+          "locator": "普通前缀",
+          "reason": "普通明确指基础整品，不是品牌或特殊变种；仅在已审阅概念内支持普通前缀，不通用删除其他属性"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "不适用干豆腐丝/卷/扣/五香或明确加厚要求",
+        "原文明确品牌须满足；规格变为不可比时待核"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "synonym"
+    },
+    {
+      "id": "garlic_sprout_plain",
+      "aliases": [
+        "蒜苔",
+        "蒜薹",
+        "普通蒜苔",
+        "普通蒜薹"
+      ],
+      "concept": "蒜苔名称及绿帽目录描述",
+      "selector": {
+        "names": [
+          "蒜苔（绿帽）"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB7普通需求复核：蒜苔名称及绿帽目录描述",
+          "reason": "蒜薹与蒜苔为规范写法变体，绿帽是当前蒜苔商品描述；泛称原文无不同品种约束，不以目录附加描述本身阻断普通需求。"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "商品匹配先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "未指定品牌不构成默认品牌约束；不跨明确形态、品种或不可比包装"
+        },
+        {
+          "kind": "linguistic_scope",
+          "source": "references/shared-knowledge.md",
+          "locator": "普通前缀",
+          "reason": "普通明确指基础整品，不是品牌或特殊变种；仅在已审阅概念内支持普通前缀，不通用删除其他属性"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "不等同蒜苗/蒜黄；明确其他品种或鲜冻加工要求须另核",
+        "计件包装不推断重量"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "synonym"
+    },
+    {
+      "id": "cabbage_plain",
+      "aliases": [
+        "甘蓝",
+        "大头菜",
+        "普通甘蓝",
+        "普通大头菜"
+      ],
+      "concept": "普通甘蓝与目录大头菜互名",
+      "selector": {
+        "names": [
+          "大头菜/甘蓝"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {},
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB7普通需求复核：普通甘蓝与目录大头菜互名",
+          "reason": "目录用斜线直接互标大头菜与甘蓝；紫甘蓝和牛心甘蓝是额外品种，不作为普通泛称首选。"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "商品匹配先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "未指定品牌不构成默认品牌约束；不跨明确形态、品种或不可比包装"
+        },
+        {
+          "kind": "linguistic_scope",
+          "source": "references/shared-knowledge.md",
+          "locator": "普通前缀",
+          "reason": "普通明确指基础整品，不是品牌或特殊变种；仅在已审阅概念内支持普通前缀，不通用删除其他属性"
+        },
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 cabbage_plain",
+          "reason": "目录斜线直接互标身份不因请求为颗而失效；颗到重量仍由单位模块待核。"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "不适用紫甘蓝、牛心甘蓝、腌制或冷冻要求"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "synonym"
+    },
+    {
+      "id": "canned_corn_plain",
+      "aliases": [
+        "玉米粒罐头",
+        "普通玉米粒罐头"
+      ],
+      "concept": "普通原味玉米粒罐装需求",
+      "selector": {
+        "names": [
+          "美国厨师原味玉米粒425g/罐",
+          "甘竹玉米粒罐头"
+        ]
+      },
+      "conditions": {
+        "request_units": [
+          "罐"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB7普通需求复核：普通原味玉米粒罐装需求",
+          "reason": "两项均普通玉米粒罐装且当前425g同计价基础；原味未增加特殊调味，未指定品牌时按当前价。冻袋装与400g商品不在等价池。"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "商品匹配先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "未指定品牌不构成默认品牌约束；不跨明确形态、品种或不可比包装"
+        },
+        {
+          "kind": "linguistic_scope",
+          "source": "references/shared-knowledge.md",
+          "locator": "普通前缀",
+          "reason": "普通明确指基础整品，不是品牌或特殊变种；仅在已审阅概念内支持普通前缀，不通用删除其他属性"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "冻玉米粒/袋装需求不能替换罐头",
+        "显式品牌规格须满足；新目录规格不可比时待核"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "synonym"
+    },
+    {
+      "id": "banana_plain",
+      "aliases": [
+        "香蕉",
+        "普通香蕉"
+      ],
+      "concept": "普通鲜香蕉整果称重需求",
+      "selector": {
+        "names": [
+          "优质香蕉",
+          "优选佳农香蕉"
+        ],
+        "category": "水果类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB7普通需求复核：普通鲜香蕉整果称重需求",
+          "reason": "当前两项均普通香蕉整果500g，优质/优选为未形成可量化规格差别的目录描述；无指定品牌时比较当前挂牌价。"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "商品匹配先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "未指定品牌不构成默认品牌约束；不跨明确形态、品种或不可比包装"
+        },
+        {
+          "kind": "linguistic_scope",
+          "source": "references/shared-knowledge.md",
+          "locator": "普通前缀",
+          "reason": "普通明确指基础整品，不是品牌或特殊变种；仅在已审阅概念内支持普通前缀，不通用删除其他属性"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "明确佳农等品牌、品种、大小、加工或鲜冻条件须满足",
+        "不将其他水果、香蕉片或箱件换算为称重量"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "synonym"
+    },
+    {
+      "id": "lower_pork_belly_plain",
+      "aliases": [
+        "下五花肉",
+        "普通下五花肉"
+      ],
+      "concept": "普通下五花肉整品最接近层",
+      "selector": {
+        "names": [
+          "云宴三花下五花肉"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ],
+        "notes_excludes": [
+          "去皮",
+          "带皮"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB9普通需求复核：普通下五花肉整品最接近层",
+          "reason": "目录名直接满足下五花肉；原文无去皮/切割要求，普通整品优先于额外去皮形态"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "属于当前泛称需求的普通候选选择，不构成跨品牌替代的永久授权"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "去皮、切片等加工需求不得删除",
+        "普通五花/精五花未证明是指定下五花，不进入自动层"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "conditional"
+    },
+    {
+      "id": "red_sausage_plain",
+      "aliases": [
+        "红肠",
+        "普通红肠"
+      ],
+      "concept": "普通红肠称重的同名品牌候选",
+      "selector": {
+        "names": [
+          "一手店红肠",
+          "农大红肠",
+          "秋林里道斯红肠"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB9普通需求复核：普通红肠称重的同名品牌候选",
+          "reason": "三个完整名称均为红肠、500g同基础且原文无品牌限制，按当前最高价；风味红肠额外风味描述不自动当普通层"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "属于当前泛称需求的普通候选选择，不构成跨品牌替代的永久授权"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "明确原文品牌时必须满足；不是把这些品牌声明为同义词",
+        "风味、儿童、松江、腊肠或切片不能跨普通红肠层",
+        "规格不可比时不自动选"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "conditional"
+    },
+    {
+      "id": "starch_sausage_plain",
+      "aliases": [
+        "粉肠",
+        "普通粉肠"
+      ],
+      "concept": "普通粉肠称重的同名品牌候选",
+      "selector": {
+        "names": [
+          "裕昌粉肠",
+          "农大粉肠",
+          "一手店粉肠",
+          "哈信诚粉肠"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB9普通需求复核：普通粉肠称重的同名品牌候选",
+          "reason": "四个完整目录名均为粉肠、500g同基础；未指定品牌时符合原文的普通同名层按当前价；风味项不当自动等价"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "属于当前泛称需求的普通候选选择，不构成跨品牌替代的永久授权"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "品牌为明确需求时不可跨越；不同肠类不互换",
+        "切片等加工需求仍需目录正证据",
+        "不比较不同规格价格"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "conditional"
+    },
+    {
+      "id": "wood_ear_plain",
+      "aliases": [
+        "木耳",
+        "普通木耳"
+      ],
+      "concept": "普通木耳最接近未指定大小的基础层",
+      "selector": {
+        "names": [
+          "优质木耳"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB9普通需求复核：普通木耳最接近未指定大小的基础层",
+          "reason": "优质木耳是目录中直接普通木耳层；黑山秋/小木耳增加原文未指定的大小品种，不以高价跨越普通层"
+        },
+        {
+          "kind": "user_business_policy",
+          "source": "用户共享采购知识优化要求",
+          "locator": "先满足当前需求约束，再在最接近需求的等价候选中按最高基准价优先",
+          "reason": "属于当前泛称需求的普通候选选择，不构成跨品牌替代的永久授权"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "明确小木耳/黑山秋木耳或鲜熟冻需求不能省略",
+        "斤到袋/盒无关系不得计价"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "conditional"
+    },
+    {
+      "id": "lower_pork_belly_peeled",
+      "aliases": [
+        "下五花肉",
+        "普通下五花肉",
+        "去皮下五花肉",
+        "去皮下五花"
+      ],
+      "concept": "明确去皮下五花肉需求",
+      "selector": {
+        "names": [
+          "冷鲜去皮下五花（金锣）"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "kg",
+          "g",
+          "克",
+          "公斤",
+          "千克",
+          "两"
+        ],
+        "notes_contains": [
+          "去皮"
+        ],
+        "notes_excludes": [
+          "不要去皮",
+          "不去皮",
+          "带皮"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB10去皮下五花条件",
+          "reason": "目录明确下五花+去皮+500g称重；原文未限品牌或鲜冻时可满足，下五花2斤去皮直接按当前500g计价，不使用人工实称"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "明确不同品牌/部位或其他加工要求不能省略",
+        "无去皮要求时不得把去皮当普通整品首选",
+        "当前目录下架或改名失效时不沿用旧SKU"
+      ],
+      "validation_status": "catalog_reviewed_synthetic_regression_required",
+      "kind": "conditional"
+    },
+    {
+      "id": "onion_generic",
+      "aliases": [
+        "洋葱",
+        "普通洋葱"
+      ],
+      "concept": "未指定颜色的鲜洋葱同500g普通整品层按当前价选择；颜色不是同义",
+      "selector": {
+        "name_contains": [
+          "洋葱"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "黄洋葱",
+          "白洋葱",
+          "紫洋葱",
+          "红洋葱",
+          "不要紫",
+          "切",
+          "粉",
+          "腌",
+          "冻"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 onion_generic",
+          "reason": "未指定颜色的鲜洋葱同500g普通整品层按当前价选择；颜色不是同义",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "黄洋葱",
+        "白洋葱",
+        "紫洋葱",
+        "红洋葱",
+        "不要紫",
+        "切",
+        "粉",
+        "腌",
+        "冻",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "黄洋葱",
+          "紫洋葱",
+          "优质紫洋葱"
+        ],
+        "category": "蔬菜"
+      },
+      "reviewed_candidate_names": [
+        "黄洋葱",
+        "紫洋葱",
+        "优质紫洋葱"
+      ]
+    },
+    {
+      "id": "cauliflower_generic",
+      "aliases": [
+        "菜花",
+        "普通菜花"
+      ],
+      "concept": "普通菜花可由青梗菜花满足，排除韭菜花调味品",
+      "selector": {
+        "name_contains": [
+          "菜花"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "不要青梗",
+          "非青梗",
+          "白菜花",
+          "紧实",
+          "冻",
+          "切"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 cauliflower_generic",
+          "reason": "普通菜花可由青梗菜花满足，排除韭菜花调味品",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "不要青梗",
+        "非青梗",
+        "白菜花",
+        "紧实",
+        "冻",
+        "切",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "青梗菜花"
+        ],
+        "category": "蔬菜"
+      },
+      "reviewed_candidate_names": [
+        "青梗菜花"
+      ]
+    },
+    {
+      "id": "eggplant_generic",
+      "aliases": [
+        "茄子",
+        "普通茄子"
+      ],
+      "concept": "未限定色形的普通茄子优先目录地产茄子",
+      "selector": {
+        "name_contains": [
+          "茄子"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "小黑",
+          "黑茄",
+          "绿茄",
+          "紫茄",
+          "圆茄",
+          "长茄",
+          "切",
+          "冻"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 eggplant_generic",
+          "reason": "未限定色形的普通茄子优先目录地产茄子",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "小黑",
+        "黑茄",
+        "绿茄",
+        "紫茄",
+        "圆茄",
+        "长茄",
+        "切",
+        "冻",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "地产茄子"
+        ],
+        "category": "蔬菜"
+      },
+      "reviewed_candidate_names": [
+        "绿茄子",
+        "地产茄子",
+        "紫茄子",
+        "圆茄子"
+      ]
+    },
+    {
+      "id": "bean_sprout_generic",
+      "aliases": [
+        "豆芽",
+        "普通豆芽"
+      ],
+      "concept": "泛称豆芽允许普通绿黄豆芽适配，不将豆种和特殊芽形作为同义",
+      "selector": {
+        "name_contains": [
+          "豆芽"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "绿豆芽",
+          "黄豆芽",
+          "豆嘴",
+          "长芽",
+          "中芽",
+          "不要绿",
+          "不要黄",
+          "冻"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 bean_sprout_generic",
+          "reason": "泛称豆芽允许普通绿黄豆芽适配，不将豆种和特殊芽形作为同义",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "绿豆芽",
+        "黄豆芽",
+        "豆嘴",
+        "长芽",
+        "中芽",
+        "不要绿",
+        "不要黄",
+        "冻",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "笨绿豆芽",
+          "黄豆芽",
+          "北大荒绿豆芽"
+        ],
+        "category": "蔬菜"
+      },
+      "reviewed_candidate_names": [
+        "笨绿豆芽",
+        "巧芽绿豆芽",
+        "黄豆芽",
+        "北大荒绿豆芽",
+        "长芽黄豆芽（称重）",
+        "中芽黄豆芽（称重）",
+        "豆嘴黄豆芽（称重）",
+        "长芽绿豆芽（称重）",
+        "长绿豆芽（长芽）"
+      ]
+    },
+    {
+      "id": "starch_noodle_generic",
+      "aliases": [
+        "粉条",
+        "普通粉条"
+      ],
+      "concept": "称重泛称粉条优先当前直接粉条按斤普通层",
+      "selector": {
+        "name_contains": [
+          "粉条"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "土豆",
+          "红薯",
+          "地瓜",
+          "宽",
+          "细",
+          "手工",
+          "酸辣"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 starch_noodle_generic",
+          "reason": "称重泛称粉条优先当前直接粉条按斤普通层",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "土豆",
+        "红薯",
+        "地瓜",
+        "宽",
+        "细",
+        "手工",
+        "酸辣",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "粉条按斤"
+        ],
+        "category": "调料类",
+        "spec": "500g"
+      },
+      "reviewed_candidate_names": [
+        "小捆手工红薯粉条酸辣粉",
+        "土豆粉条（宽粉）",
+        "土豆粉条",
+        "红薯粉条",
+        "粉条1kg",
+        "粉条按斤",
+        "宽粉条",
+        "地瓜粉条"
+      ]
+    },
+    {
+      "id": "yipinxian_bucket",
+      "aliases": [
+        "一品鲜酱油"
+      ],
+      "concept": "泛称一品鲜桶装优先目录明确5L/桶项",
+      "selector": {
+        "name_contains": [
+          "一品鲜"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "桶"
+        ],
+        "notes_excludes": [
+          "千禾",
+          "不要东古",
+          "非东古"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 yipinxian_bucket",
+          "reason": "泛称一品鲜桶装优先目录明确5L/桶项",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "千禾",
+        "不要东古",
+        "非东古",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "东古一品鲜酱油5L/桶"
+        ],
+        "category": "调料类"
+      },
+      "reviewed_candidate_names": [
+        "千禾一品鲜特级生抽",
+        "东古一品鲜特级酿造酱油",
+        "东古一品鲜500ML/瓶",
+        "东古一品鲜酱油5L/桶"
+      ]
+    },
+    {
+      "id": "chicken_strip_bag",
+      "aliases": [
+        "鸡柳"
+      ],
+      "concept": "泛称袋装鸡柳优先当前明确800g/袋记录",
+      "selector": {
+        "name_contains": [
+          "鸡柳"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ],
+        "notes_excludes": [
+          "川香",
+          "不要雪花",
+          "非雪花"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 chicken_strip_bag",
+          "reason": "泛称袋装鸡柳优先当前明确800g/袋记录",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "川香",
+        "不要雪花",
+        "非雪花",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "正大雪花鸡柳800g/袋"
+        ],
+        "category": "方便食品"
+      },
+      "reviewed_candidate_names": [
+        "正大雪花鸡柳800g/袋",
+        "正大川香鸡柳1kg"
+      ]
+    },
+    {
+      "id": "chicken_leg_cut_request",
+      "aliases": [
+        "鸡腿"
+      ],
+      "concept": "鸡腿明确切块需求优先同部位切块项",
+      "selector": {
+        "names": [
+          "正大鸡大腿",
+          "正大鸡腿肉切块",
+          "正大无骨鸡腿肉（1kg/袋）",
+          "正大鲜鸡边腿",
+          "正大鲜鸡排腿",
+          "正大鸡全腿（四连腿）",
+          "冻鸡琵琶腿40.50（称重）",
+          "正大鸡大腿(四连腿)",
+          "正大鸡腿（鲜）"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "不要切",
+          "不切",
+          "非切",
+          "琵琶",
+          "整腿",
+          "去骨",
+          "带骨"
+        ],
+        "notes_contains": [
+          "切块"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 chicken_leg_cut_request",
+          "reason": "鸡腿明确切块需求优先同部位切块项",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "不要切",
+        "不切",
+        "非切",
+        "琵琶",
+        "整腿",
+        "去骨",
+        "带骨",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "正大鸡腿肉切块"
+        ],
+        "category": "肉制品"
+      },
+      "reviewed_candidate_names": [
+        "正大鸡大腿",
+        "正大鸡腿肉切块",
+        "正大无骨鸡腿肉（1kg/袋）",
+        "正大鲜鸡边腿",
+        "正大鲜鸡排腿",
+        "正大鸡全腿（四连腿）",
+        "冻鸡琵琶腿40.50（称重）",
+        "正大鸡大腿(四连腿)",
+        "正大鸡腿（鲜）"
+      ]
+    },
+    {
+      "id": "songhua_chicken_leg_piece",
+      "aliases": [
+        "松花鸡腿"
+      ],
+      "concept": "松花鸡腿按个需求只在当前按个普通层比较，称重项仅供核对",
+      "selector": {
+        "name_contains": [
+          "松花鸡腿"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "个"
+        ],
+        "notes_excludes": [
+          "风味",
+          "称重"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 songhua_chicken_leg_piece",
+          "reason": "松花鸡腿按个需求只在当前按个普通层比较，称重项仅供核对",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "风味",
+        "称重",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "一手店松花鸡腿",
+          "农大松花鸡腿"
+        ],
+        "category": "方便食品",
+        "spec": "个"
+      },
+      "reviewed_candidate_names": [
+        "一手店松花鸡腿",
+        "风味松花鸡腿 称重",
+        "农大松花鸡腿"
+      ]
+    },
+    {
+      "id": "carp_identity",
+      "aliases": [
+        "鲤鱼"
+      ],
+      "concept": "未限定品种的鲜活鲤鱼同500g层按当前价选品；条数不推重量",
+      "selector": {
+        "name_contains": [
+          "鲤鱼"
+        ],
+        "category": "水产品"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "不要江",
+          "非江",
+          "冷冻",
+          "不要活",
+          "不活",
+          "鱼段"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 carp_identity",
+          "reason": "未限定品种的鲜活鲤鱼同500g层按当前价选品；条数不推重量",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "不要江",
+        "非江",
+        "冷冻",
+        "不要活",
+        "不活",
+        "鱼段",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "鲜活江鲤鱼",
+          "鲜活鲤鱼"
+        ],
+        "category": "水产品"
+      },
+      "reviewed_candidate_names": [
+        "鲜活江鲤鱼",
+        "鲜活鲤鱼"
+      ]
+    },
+    {
+      "id": "blood_sausage_identity",
+      "aliases": [
+        "血肠"
+      ],
+      "concept": "普通血肠可关联目录风味血肠；根数不推重量",
+      "selector": {
+        "name_contains": [
+          "血肠"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "notes_excludes": [
+          "不要风味",
+          "非风味",
+          "生",
+          "熟",
+          "鲜"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 blood_sausage_identity",
+          "reason": "普通血肠可关联目录风味血肠；根数不推重量",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "不要风味",
+        "非风味",
+        "生",
+        "熟",
+        "鲜",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "风味血肠"
+        ],
+        "category": "方便食品"
+      },
+      "reviewed_candidate_names": [
+        "风味血肠"
+      ]
+    },
+    {
+      "id": "cutlassfish_whole",
+      "aliases": [
+        "刀鱼"
+      ],
+      "concept": "普通刀鱼优先当前冷鲜整鱼，已切段不进入自动层",
+      "selector": {
+        "name_contains": [
+          "刀鱼"
+        ],
+        "category": "水产品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "切",
+          "段",
+          "冻",
+          "鲜活",
+          "不要冷鲜",
+          "不冷鲜"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 cutlassfish_whole",
+          "reason": "普通刀鱼优先当前冷鲜整鱼，已切段不进入自动层",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "切",
+        "段",
+        "冻",
+        "鲜活",
+        "不要冷鲜",
+        "不冷鲜",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "冷鲜刀鱼350-450"
+        ],
+        "category": "水产品"
+      },
+      "reviewed_candidate_names": [
+        "刀鱼段7-9",
+        "刀鱼段8-10",
+        "冷鲜刀鱼350-450"
+      ]
+    },
+    {
+      "id": "pork_mince_generic",
+      "aliases": [
+        "猪肉馅"
+      ],
+      "concept": "普通猪肉馅同500g当前价择优，不跨动物和额外部位需求",
+      "selector": {
+        "names": [
+          "云宴三花猪精肉馅",
+          "鲜猪前槽肉馅（金锣）"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "不要前槽",
+          "非前槽",
+          "后腿",
+          "里脊",
+          "肥瘦",
+          "纯瘦",
+          "全瘦"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 pork_mince_generic",
+          "reason": "普通猪肉馅同500g当前价择优，不跨动物和额外部位需求",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "不要前槽",
+        "非前槽",
+        "后腿",
+        "里脊",
+        "肥瘦",
+        "纯瘦",
+        "全瘦",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "reviewed_candidate_names": [
+        "云宴三花猪精肉馅",
+        "鲜猪前槽肉馅（金锣）"
+      ]
+    },
+    {
+      "id": "pork_belly_generic",
+      "aliases": [
+        "五花肉"
+      ],
+      "concept": "普通五花肉优先普通整品层，去皮下五花和切加工只供核对",
+      "selector": {
+        "names": [
+          "冷鲜精五花肉（金锣）",
+          "鲜猪五花肉（金锣）",
+          "云宴三花下五花肉",
+          "冷鲜去皮下五花（金锣）",
+          "五花肉片（金锣切片）",
+          "五花肉块（金锣切块）"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "上五花",
+          "下五花",
+          "去皮",
+          "带皮",
+          "切",
+          "腊"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 pork_belly_generic",
+          "reason": "普通五花肉优先普通整品层，去皮下五花和切加工只供核对",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "上五花",
+        "下五花",
+        "去皮",
+        "带皮",
+        "切",
+        "腊",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "冷鲜精五花肉（金锣）",
+          "鲜猪五花肉（金锣）"
+        ],
+        "category": "肉制品"
+      },
+      "reviewed_candidate_names": [
+        "云宴三花下五花肉",
+        "冷鲜精五花肉（金锣）",
+        "冷鲜去皮下五花（金锣）",
+        "鲜猪五花肉（金锣）",
+        "五花肉片（金锣切片）",
+        "五花肉块（金锣切块）"
+      ]
+    },
+    {
+      "id": "qiulin_red_sausage",
+      "aliases": [
+        "秋林红肠"
+      ],
+      "concept": "明确秋林红肠仅关联保留秋林品牌词的目录红肠，不跨农大替代",
+      "selector": {
+        "names": [
+          "秋林里道斯红肠"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "儿童",
+          "哈尔滨风味",
+          "不要里道斯",
+          "非里道斯"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 qiulin_red_sausage",
+          "reason": "明确秋林红肠仅关联保留秋林品牌词的目录红肠，不跨农大替代",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "儿童",
+        "哈尔滨风味",
+        "不要里道斯",
+        "非里道斯",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "reviewed_candidate_names": [
+        "秋林里道斯红肠"
+      ]
+    },
+    {
+      "id": "shredded_meat_generic",
+      "aliases": [
+        "肉丝"
+      ],
+      "concept": "未限定动物部位的普通肉丝优先直接精肉丝称重；不宣称目录未写动物为猪",
+      "selector": {
+        "names": [
+          "精肉丝称重（金锣）",
+          "里脊肉丝（精品手工切）",
+          "梅花肉丝"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ],
+        "notes_excludes": [
+          "猪",
+          "牛",
+          "羊",
+          "鸡",
+          "鸭",
+          "里脊",
+          "梅花",
+          "前槽",
+          "后腿"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 shredded_meat_generic",
+          "reason": "未限定动物部位的普通肉丝优先直接精肉丝称重；不宣称目录未写动物为猪",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "generic_request",
+      "conflicts": [
+        "猪",
+        "牛",
+        "羊",
+        "鸡",
+        "鸭",
+        "里脊",
+        "梅花",
+        "前槽",
+        "后腿",
+        "未列出的品牌/品种/形态及包装要求需语义审阅；不继承历史实配量或旧价"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "selection_selector": {
+        "names": [
+          "精肉丝称重（金锣）"
+        ],
+        "category": "肉制品"
+      },
+      "reviewed_candidate_names": [
+        "里脊肉丝（精品手工切）",
+        "梅花肉丝",
+        "精肉丝称重（金锣）"
+      ]
+    },
+    {
+      "id": "milk_box_generic",
+      "aliases": [
+        "牛奶"
+      ],
+      "concept": "普通箱装牛奶优先当前明确按箱计价记录；无需猜每箱支数",
+      "selector": {
+        "names": [
+          "完达山纯牛奶（小枕）",
+          "蒙牛特仑苏纯牛奶",
+          "蒙牛纯牛奶240ml*16/件 （枕式）",
+          "蒙牛纯牛奶200ml*24盒/件",
+          "伊利核桃牛奶（枕式）190ml*16",
+          "伊利枕式纯牛奶(小枕)240ml*16",
+          "完达山纯牛奶全脂牛奶(大盒)",
+          "完达山臻醇牛奶250ml",
+          "蒙牛核桃牛奶(枕袋)"
+        ]
+      },
+      "selection_selector": {
+        "names": [
+          "完达山臻醇牛奶250ml"
+        ],
+        "category": "奶（饮料）",
+        "spec": "箱"
+      },
+      "conditions": {
+        "request_units": [
+          "箱"
+        ],
+        "notes_excludes": [
+          "纯牛奶",
+          "脱脂",
+          "低脂",
+          "全脂",
+          "无乳糖",
+          "高钙",
+          "核桃",
+          "酸奶",
+          "不要完达山",
+          "非完达山"
+        ]
+      },
+      "kind": "generic_request",
+      "applicable": "conditional",
+      "conflicts": [
+        "指定脂肪/配料/纯奶等级须有目录正证据；不将件、盒、袋当箱或补造箱内数量"
+      ],
+      "validation_status": "catalog_reviewed_local_targeted_tests_passed_full_regression_pending",
+      "evidence": [
+        {
+          "kind": "catalog_constraint_review",
+          "source": "references/shared-knowledge.md",
+          "locator": "KB13 milk_box_generic",
+          "reason": "全目录奶及相关名称审查，唯一牛奶名称且规格直接标箱的记录可按原箱计价，未知箱内数量不妨碍箱价计算。"
+        }
+      ],
+      "reviewed_candidate_names": [
+        "完达山纯牛奶（小枕）",
+        "蒙牛特仑苏纯牛奶",
+        "蒙牛纯牛奶240ml*16/件 （枕式）",
+        "蒙牛纯牛奶200ml*24盒/件",
+        "伊利核桃牛奶（枕式）190ml*16",
+        "伊利枕式纯牛奶(小枕)240ml*16",
+        "完达山纯牛奶全脂牛奶(大盒)",
+        "完达山臻醇牛奶250ml",
+        "蒙牛核桃牛奶(枕袋)"
+      ]
+    },
+    {
+      "id": "kb16_mulberry_dry",
+      "aliases": [
+        "桑葚干",
+        "干桑葚",
+        "干的桑葚",
+        "桑葚要干的",
+        "干制的桑葚",
+        "桑葚干制品"
+      ],
+      "concept": "桑葚干表达仅在明确干制且基础名为桑葚时归并",
+      "selector": {
+        "names": [
+          "桑葚干（斤）"
+        ],
+        "category": "调料类"
+      },
+      "selection_selector": {
+        "names": [
+          "桑葚干（斤）"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_mulberry_dry",
+          "reason": "桑葚干表达仅在明确干制且基础名为桑葚时归并",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "基础名、干鲜/加工/盐/形态任一属性不同不得归并",
+        "不同包装或计价规格不能自动替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "桑葚干（斤）"
+      ],
+      "excluded_candidate_names": {}
+    },
+    {
+      "id": "kb16_celery_stem_dry",
+      "aliases": [
+        "贡菜干",
+        "干贡菜",
+        "干的贡菜",
+        "贡菜拿干的",
+        "干制贡菜",
+        "贡菜要干制的"
+      ],
+      "concept": "贡菜干表达仅在明确干制且基础名为贡菜时归并",
+      "selector": {
+        "names": [
+          "干 贡菜（斤）"
+        ],
+        "category": "调料类"
+      },
+      "selection_selector": {
+        "names": [
+          "干 贡菜（斤）"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_celery_stem_dry",
+          "reason": "贡菜干表达仅在明确干制且基础名为贡菜时归并",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "基础名、干鲜/加工/盐/形态任一属性不同不得归并",
+        "不同包装或计价规格不能自动替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "干 贡菜（斤）"
+      ],
+      "excluded_candidate_names": {}
+    },
+    {
+      "id": "kb16_gluten_dry_large",
+      "aliases": [
+        "干烤麸大片",
+        "大片干烤麸",
+        "烤麸干大片",
+        "大片的干烤麸",
+        "烤麸干的大片",
+        "干制烤麸要大片"
+      ],
+      "concept": "烤麸、干制和大片三个约束必须同时满足",
+      "selector": {
+        "names": [
+          "烤麸干(大片)"
+        ],
+        "category": "面类"
+      },
+      "selection_selector": {
+        "names": [
+          "烤麸干(大片)"
+        ],
+        "category": "面类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_gluten_dry_large",
+          "reason": "烤麸、干制和大片三个约束必须同时满足",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "基础名、干鲜/加工/盐/形态任一属性不同不得归并",
+        "不同包装或计价规格不能自动替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "烤麸干(大片)"
+      ],
+      "excluded_candidate_names": {}
+    },
+    {
+      "id": "kb16_seaweed_cured_fresh",
+      "aliases": [
+        "鲜海带扣带盐",
+        "带盐鲜海带扣",
+        "鲜的带盐海带扣",
+        "海带扣鲜的带盐",
+        "带盐的鲜海带扣",
+        "鲜海带扣要带盐"
+      ],
+      "concept": "海带扣、鲜和带盐三个约束必须同时满足",
+      "selector": {
+        "names": [
+          "鲜海带扣（带盐）"
+        ],
+        "category": "水产品"
+      },
+      "selection_selector": {
+        "names": [
+          "鲜海带扣（带盐）"
+        ],
+        "category": "水产品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_seaweed_cured_fresh",
+          "reason": "海带扣、鲜和带盐三个约束必须同时满足",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "基础名、干鲜/加工/盐/形态任一属性不同不得归并",
+        "不同包装或计价规格不能自动替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "鲜海带扣（带盐）"
+      ],
+      "excluded_candidate_names": {}
+    },
+    {
+      "id": "kb16_frozen_flounder_head",
+      "aliases": [
+        "鲽鱼头要冷冻的",
+        "冷冻的鲽鱼头",
+        "鲽鱼头冷冻品"
+      ],
+      "concept": "鲽鱼头明确冷冻语序变体",
+      "selector": {
+        "names": [
+          "冷冻鲽鱼头"
+        ],
+        "category": "水产品"
+      },
+      "selection_selector": {
+        "names": [
+          "冷冻鲽鱼头"
+        ],
+        "category": "水产品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_frozen_flounder_head",
+          "reason": "鲽鱼头明确冷冻语序变体",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "明确冷冻/冰鲜/鲜属性必须保留",
+        "指定品牌、包装或其他形态不得由此规则替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "冷冻鲽鱼头"
+      ],
+      "excluded_candidate_names": {}
+    },
+    {
+      "id": "kb16_iced_squid_tentacle",
+      "aliases": [
+        "鱿鱼须要冰鲜的",
+        "冰鲜的鱿鱼须",
+        "鱿鱼须冰鲜品",
+        "冰鲜鱿鱼须"
+      ],
+      "concept": "鱿鱼须明确冰鲜语序变体",
+      "selector": {
+        "names": [
+          "冰鲜鱿鱼须"
+        ],
+        "category": "水产品"
+      },
+      "selection_selector": {
+        "names": [
+          "冰鲜鱿鱼须"
+        ],
+        "category": "水产品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_iced_squid_tentacle",
+          "reason": "鱿鱼须明确冰鲜语序变体",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "明确冷冻/冰鲜/鲜属性必须保留",
+        "指定品牌、包装或其他形态不得由此规则替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "冰鲜鱿鱼须"
+      ],
+      "excluded_candidate_names": {}
+    },
+    {
+      "id": "kb16_frozen_tilapia_slice",
+      "aliases": [
+        "鲷鱼片要冷冻的",
+        "冷冻的鲷鱼片",
+        "鲷鱼片冷冻的",
+        "鲷鱼片冷冻",
+        "冷冻的鲷鱼切片",
+        "鲷鱼切片冷冻的"
+      ],
+      "concept": "鲷鱼片明确冷冻语序变体",
+      "selector": {
+        "names": [
+          "冷冻鲷鱼片"
+        ],
+        "category": "水产品"
+      },
+      "selection_selector": {
+        "names": [
+          "冷冻鲷鱼片"
+        ],
+        "category": "水产品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_frozen_tilapia_slice",
+          "reason": "鲷鱼片明确冷冻语序变体",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "明确冷冻/冰鲜/鲜属性必须保留",
+        "指定品牌、包装或其他形态不得由此规则替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "冷冻鲷鱼片"
+      ],
+      "excluded_candidate_names": {}
+    },
+    {
+      "id": "kb16_fresh_lily_slice",
+      "aliases": [
+        "百合片要鲜的",
+        "鲜的百合切片",
+        "百合切片鲜的"
+      ],
+      "concept": "百合片明确鲜及切片表达变体",
+      "selector": {
+        "names": [
+          "鲜百合片"
+        ],
+        "category": "蔬菜"
+      },
+      "selection_selector": {
+        "names": [
+          "鲜百合片"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤",
+          "两",
+          "kg",
+          "公斤",
+          "千克",
+          "g",
+          "克"
+        ]
+      },
+      "evidence": [
+        {
+          "kind": "catalog_constraint_and_scoped_language_review",
+          "source": "references/kb16-reviewed-concepts.md",
+          "locator": "kb16_fresh_lily_slice",
+          "reason": "百合片明确鲜及切片表达变体",
+          "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+          "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+        }
+      ],
+      "applicable": "conditional",
+      "kind": "synonym",
+      "conflicts": [
+        "明确冷冻/冰鲜/鲜属性必须保留",
+        "指定品牌、包装或其他形态不得由此规则替代",
+        "不绑定旧SKU、旧价或历史实配量"
+      ],
+      "validation_status": "observed_synthetic_development_regression_not_independent_customer_acceptance",
+      "reviewed_candidate_names": [
+        "鲜百合片"
+      ],
+      "excluded_candidate_names": {}
+    }
+  ],
+  "unit_rules": [
+    {
+      "id": "chicken_fillet_bag_piece",
+      "selector": {
+        "names": [
+          "正大雪花鸡柳800g/袋"
+        ],
+        "category": "方便食品"
+      },
+      "request_unit": "袋",
+      "price_unit": "袋",
+      "factor": "1",
+      "allow_fractional": false,
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「鸡柳2袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「正大雪花鸡柳800g/袋」",
+          "reason": "当前目录名称明确800g/袋；一袋是一个未拆包装，而非旧实际重量"
+        }
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "applicable": "conditional",
+      "conflicts": [
+        "其他鸡柳品牌或不同袋规格不沿用"
+      ]
+    },
+    {
+      "id": "tomato_sauce_bag_piece",
+      "selector": {
+        "names": [
+          "亨氏番茄沙司 320g/袋",
+          "亨氏番茄沙司320G/袋"
+        ],
+        "category": "调料类"
+      },
+      "request_unit": "袋",
+      "price_unit": "袋",
+      "factor": "1",
+      "allow_fractional": false,
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「番茄沙司2袋」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「亨氏番茄沙司320g/袋」",
+          "reason": "目录名称明示320g/袋；每袋作整包装候选，品牌和规格仍须先确定"
+        }
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "applicable": "conditional",
+      "conflicts": [
+        "原文未确认亨氏/320g时不得仅凭此单位规则定商品"
+      ]
+    }
+  ],
+  "expression_rules": [
+    {
+      "id": "explicit_attribute_order",
+      "kind": "attribute_order",
+      "concept": "相同基础品名及全部明确属性的前后置，兼容当前目录类别和计价括号标签",
+      "attributes": {
+        "冷冻": [
+          "冷冻的",
+          "冷冻"
+        ],
+        "鲜活": [
+          "鲜活的",
+          "鲜活"
+        ],
+        "熟制": [
+          "熟制的",
+          "熟制"
+        ],
+        "带皮": [
+          "带皮的",
+          "带皮"
+        ],
+        "去皮": [
+          "去皮的",
+          "去皮"
+        ],
+        "带骨": [
+          "带骨的",
+          "带骨"
+        ],
+        "去骨": [
+          "去骨的",
+          "去骨"
+        ],
+        "带盐": [
+          "带盐的",
+          "带盐"
+        ],
+        "鲜": [
+          "鲜的"
+        ],
+        "大片": [
+          "大片的",
+          "大片"
+        ],
+        "大号": [
+          "大号的",
+          "大号",
+          "(大)"
+        ],
+        "中号": [
+          "中号的",
+          "中号",
+          "(中号)"
+        ],
+        "小号": [
+          "小号的",
+          "小号",
+          "(小号)"
+        ],
+        "进口": [
+          "进口的",
+          "进口"
+        ],
+        "清真": [
+          "清真的",
+          "清真"
+        ],
+        "冰鲜": [
+          "冰鲜的",
+          "冰鲜"
+        ]
+      },
+      "category_labels": {
+        "调料类": [
+          "调料用",
+          "调料"
+        ]
+      },
+      "pricing_labels": {
+        "斤": [
+          "mass_g",
+          "500"
+        ]
+      },
+      "protected_compounds": [
+        "冷冻干燥",
+        "冷冻干",
+        "冻干"
+      ],
+      "evidence": [
+        {
+          "source": "references/shared-knowledge.md",
+          "locator": "共享表达结构：仅基础名和全部明确属性相同；由当前目录名称和计价规格提供证据",
+          "reason": "有边界的语序归一，不对未列明词或品牌作同义推断，不绑定商品SKU或旧价"
+        },
+        {
+          "source": "references/shared-knowledge.md",
+          "locator": "KB17关系表达：基础名与所有属性逐段组成当前目录名称",
+          "reason": "连接词与属性标签在完整语法中识别，目录须正向证明完整组合；不同组成结果保留歧义，干制/干品只作显式干形态，非任意词序替换"
+        },
+        {
+          "source": "references/shared-knowledge.md",
+          "locator": "KB18完整关系结构：基础名的属性款、要属性的基础名、基础名逗号要求属性",
+          "reason": "只剥离完整语法连接，所有商品及属性逐字保留，由当前目录完整组合提供正证；保留相异组成歧义和未知词，不加入逐商品答案"
+        },
+        {
+          "source": "references/shared-knowledge.md",
+          "locator": "KB19未见关系表达：选属性的商品、商品请按属性供货、属性前置及属性商品要",
+          "reason": "仅剥离已配置连接词和供货标记；完整组合必须由当前目录同一记录证明，未知词、否定、加工和包装不删除"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "基础品名或任何属性不同不得归并",
+        "不通用移动单字干，不删除未知词、品牌、包装量",
+        "异规格或并列最高价须核定",
+        "不证明包装数量、实称或加工履约",
+        "关系表达不删除未知词、否定或加工动作；多个组成对应不同商品时保留全部候选，不以最高价消歧",
+        "属性款/前置要/逗号要求仅在完整结构适用，不删除未被当前目录证明的品牌、加工、包装及其他词"
+      ],
+      "validation_status": "synthetic_development_regression_not_real_orders",
+      "relations": {
+        "connectors": [
+          "要",
+          "按",
+          "选",
+          "请按"
+        ],
+        "markers": [
+          "品种",
+          "等级",
+          "产地",
+          "形态",
+          "部位",
+          "要求",
+          "供货"
+        ],
+        "context_prefixes": [
+          "这批",
+          "本次"
+        ],
+        "modifier_aliases": {
+          "干制": "干",
+          "干品": "干"
+        },
+        "prefix_connectors": [
+          "选"
+        ],
+        "suffix_connectors": [
+          "要"
+        ]
+      }
+    }
+  ],
+  "knowledge_version": 19
+}

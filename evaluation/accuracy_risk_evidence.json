@@ -1,0 +1,396 @@
+{
+  "analysis_type": "read_only_current_code_risk_diagnostics",
+  "scope": "解析函数/确定性匹配器诊断与已存v5结果复核，未运行真实Agent语义选品、未写业务运行状态",
+  "parser_probes": [
+    {
+      "case": "常规分隔",
+      "input": "土豆5斤，白菜3斤",
+      "parsed": [
+        {
+          "name": "土豆",
+          "quantity": "5",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        },
+        {
+          "name": "白菜",
+          "quantity": "3",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "斜杠分隔",
+      "input": "土豆5斤/白菜3斤",
+      "parsed": [
+        {
+          "name": "土豆5斤/白菜",
+          "quantity": "3",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "无分隔",
+      "input": "土豆5斤白菜3斤",
+      "parsed": [
+        {
+          "name": "土豆5斤白菜",
+          "quantity": "3",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "嵌套包装规格",
+      "input": "鸡腿2袋（每袋5斤）",
+      "parsed": [
+        {
+          "name": "鸡腿2袋（每袋",
+          "quantity": "5",
+          "unit": "斤",
+          "notes": "）",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "分数数量",
+      "input": "食盐1/2袋",
+      "parsed": [
+        {
+          "name": "食盐1/",
+          "quantity": "2",
+          "unit": "袋",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "半数量",
+      "input": "鸡蛋半筐",
+      "parsed": [
+        {
+          "name": "鸡蛋半筐",
+          "quantity": null,
+          "unit": null,
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": [
+            {
+              "code": "missing_quantity",
+              "message": "原文没有可确定的数量"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "共享数量",
+      "input": "青椒、红椒各5斤",
+      "parsed": [
+        {
+          "name": "青椒",
+          "quantity": null,
+          "unit": null,
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": [
+            {
+              "code": "missing_quantity",
+              "message": "原文没有可确定的数量"
+            }
+          ]
+        },
+        {
+          "name": "红椒各",
+          "quantity": "5",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "前置数量",
+      "input": "5斤土豆",
+      "parsed": [
+        {
+          "name": "5斤土豆",
+          "quantity": null,
+          "unit": null,
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": [
+            {
+              "code": "missing_quantity",
+              "message": "原文没有可确定的数量"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "相对日期",
+      "input": "明天要的菜\n土豆5斤",
+      "parsed": [
+        {
+          "name": "明天要的菜",
+          "quantity": null,
+          "unit": null,
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": [
+            {
+              "code": "missing_quantity",
+              "message": "原文没有可确定的数量"
+            }
+          ]
+        },
+        {
+          "name": "土豆",
+          "quantity": "5",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "点号日期",
+      "input": "11.3\n土豆5斤",
+      "parsed": [
+        {
+          "name": "11.3",
+          "quantity": null,
+          "unit": null,
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": [
+            {
+              "code": "missing_quantity",
+              "message": "原文没有可确定的数量"
+            }
+          ]
+        },
+        {
+          "name": "土豆",
+          "quantity": "5",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "case": "口语取消",
+      "input": "土豆5斤\n土豆算了",
+      "parsed": [
+        {
+          "name": "土豆",
+          "quantity": "5",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        },
+        {
+          "name": "土豆算了",
+          "quantity": null,
+          "unit": null,
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": [
+            {
+              "code": "missing_quantity",
+              "message": "原文没有可确定的数量"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "case": "站点前缀",
+      "input": "星月站：土豆5斤",
+      "parsed": [
+        {
+          "name": "星月站：土豆",
+          "quantity": "5",
+          "unit": "斤",
+          "notes": "",
+          "date_context": null,
+          "event": null,
+          "target_station": null,
+          "issues": []
+        }
+      ]
+    }
+  ],
+  "matcher_profile_ablation": {
+    "basis": "同159历史事件、132可核人工SKU；只比较match_item；不是完整skill或冷启动Agent准确率",
+    "station": {
+      "songbei": {
+        "with_profile": {
+          "events": 53,
+          "manual_sku_denominator": 44,
+          "manual_sku_correct": 40,
+          "product_matched": 41
+        },
+        "without_profile": {
+          "events": 53,
+          "manual_sku_denominator": 44,
+          "manual_sku_correct": 11,
+          "product_matched": 14
+        }
+      },
+      "xingyue": {
+        "with_profile": {
+          "events": 42,
+          "manual_sku_denominator": 35,
+          "manual_sku_correct": 34,
+          "product_matched": 36
+        },
+        "without_profile": {
+          "events": 42,
+          "manual_sku_denominator": 35,
+          "manual_sku_correct": 11,
+          "product_matched": 17
+        }
+      },
+      "xueyuan": {
+        "with_profile": {
+          "events": 64,
+          "manual_sku_denominator": 53,
+          "manual_sku_correct": 53,
+          "product_matched": 57
+        },
+        "without_profile": {
+          "events": 64,
+          "manual_sku_denominator": 53,
+          "manual_sku_correct": 16,
+          "product_matched": 19
+        }
+      }
+    },
+    "with_profile_correct": 127,
+    "without_profile_correct": 38,
+    "denominator": 132
+  },
+  "synthetic_brand_guard_probe": {
+    "request": "恒都牛肉5斤",
+    "catalog_fixture": [
+      {
+        "code": "synthetic-probe-1",
+        "name": "牛肉",
+        "spec": "500g",
+        "price": "25",
+        "category": "肉制品"
+      }
+    ],
+    "wrong_alias_fixture": true,
+    "product_status": "matched",
+    "selected": {
+      "code": "synthetic-probe-1",
+      "name": "牛肉",
+      "spec": "500g",
+      "price": "25",
+      "category": "肉制品"
+    },
+    "issues": [],
+    "meaning": "证明有限品牌词表不能拒绝所有错误别名；不是在真实公司订单发现该错误"
+  },
+  "v5_profile_only_status_counts": {
+    "matched": 94,
+    "needs_review": 48,
+    "unmapped": 12,
+    "ambiguous": 5
+  },
+  "v5_profile_only_product_status_counts": {
+    "matched": 134,
+    "unmapped": 25
+  },
+  "v5_profile_only_quantity_status_counts": {
+    "matched": 103,
+    "needs_review": 56
+  },
+  "v5_profile_only_issue_counts": {
+    "quantity_conversion": 31,
+    "unmapped": 12,
+    "semantic_review": 13,
+    "missing_unit": 1,
+    "date_context": 13,
+    "duplicate_event": 2,
+    "missing_quantity": 1,
+    "unresolved_reference": 1
+  },
+  "original_sha_before": {
+    "学院路站11.3.xlsx": "7b7a6e800761bae8c02777285bb39b66f4e0330ab690c495c500a18ec6381c70",
+    "学院路站11.3下单.txt": "f25079aff542bb0c9ef93071f046cfd4390b571facc023c73df65449908e69db",
+    "星月站11.3.xlsx": "d1cbb18cfd2f753212089375cc95302799f9049ee2593350e9764e1647b34ea6",
+    "星月站11.3下单.txt": "aed84347392534ce2329419c35df66cbcdb3f328198761448217878511f24606",
+    "松北大道站11.3.xlsx": "2ad247895670c8f458ea74ea751c513cbdf6857d2bd3c33f1ee5166519cc53d2",
+    "松北大道站11.3下单.txt": "41ae7f52e951e1f5e30d48532f0fcd4632cfac5f1cedf16ec8c4e14abfdd2297",
+    "汶岂喜菜进账10.31.xlsx": "fd2879ed40c33c7e80496e9a28acf993f1fd2361d0fe78e87e257a513cf59053",
+    "食堂食材基准价价格表10.12-10.18.xlsx": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+  },
+  "original_sha_after": {
+    "学院路站11.3.xlsx": "7b7a6e800761bae8c02777285bb39b66f4e0330ab690c495c500a18ec6381c70",
+    "学院路站11.3下单.txt": "f25079aff542bb0c9ef93071f046cfd4390b571facc023c73df65449908e69db",
+    "星月站11.3.xlsx": "d1cbb18cfd2f753212089375cc95302799f9049ee2593350e9764e1647b34ea6",
+    "星月站11.3下单.txt": "aed84347392534ce2329419c35df66cbcdb3f328198761448217878511f24606",
+    "松北大道站11.3.xlsx": "2ad247895670c8f458ea74ea751c513cbdf6857d2bd3c33f1ee5166519cc53d2",
+    "松北大道站11.3下单.txt": "41ae7f52e951e1f5e30d48532f0fcd4632cfac5f1cedf16ec8c4e14abfdd2297",
+    "汶岂喜菜进账10.31.xlsx": "fd2879ed40c33c7e80496e9a28acf993f1fd2361d0fe78e87e257a513cf59053",
+    "食堂食材基准价价格表10.12-10.18.xlsx": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+  },
+  "original_unchanged": true
+}

@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "source_item_count": 159,
+  "exported_order_rows": 159,
+  "finance_detail_rows": 159,
+  "catalog_record_count": 1647,
+  "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+  "semantic_decision_bundle": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/semantic_decisions.json",
+  "agent_decision_count": 18,
+  "scenarios": [
+    {
+      "station": "松北大道站",
+      "source_items": 53,
+      "exported_rows": 53,
+      "status_counts": {
+        "ambiguous": 22,
+        "matched": 15,
+        "needs_review": 8,
+        "unmapped": 8
+      },
+      "checks": 390,
+      "agent_decisions": 4,
+      "seconds": 0.4207,
+      "manifest": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/songbei-20261103-review/d025ea9c48f06e51-b483de74/manifest.json",
+      "standard": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/songbei-20261103-review/d025ea9c48f06e51-b483de74/测试_下单需求_待配送_待人工处理.xlsx",
+      "subtotal": "427.234",
+      "candidate_count": 101
+    },
+    {
+      "station": "星月站",
+      "source_items": 42,
+      "exported_rows": 42,
+      "status_counts": {
+        "ambiguous": 16,
+        "needs_review": 12,
+        "matched": 12,
+        "unmapped": 2
+      },
+      "checks": 319,
+      "agent_decisions": 6,
+      "seconds": 0.3119,
+      "manifest": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xingyue-20261103-review/c08b2a32064dde5f-8096e09c/manifest.json",
+      "standard": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xingyue-20261103-review/c08b2a32064dde5f-8096e09c/测试_下单需求_待配送_待人工处理.xlsx",
+      "subtotal": "428.545",
+      "candidate_count": 76
+    },
+    {
+      "station": "学院路站",
+      "source_items": 64,
+      "exported_rows": 64,
+      "status_counts": {
+        "ambiguous": 24,
+        "matched": 22,
+        "needs_review": 11,
+        "unmapped": 7
+      },
+      "checks": 479,
+      "agent_decisions": 8,
+      "seconds": 0.4606,
+      "manifest": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/c5dd5d8e91408b96-5b3b99c1/manifest.json",
+      "standard": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/c5dd5d8e91408b96-5b3b99c1/测试_下单需求_待配送_待人工处理.xlsx",
+      "subtotal": "684.057",
+      "candidate_count": 151
+    }
+  ],
+  "merged_finance": {
+    "schema_version": 1,
+    "finance_draft": true,
+    "test_only": true,
+    "catalog": {
+      "version_id": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "source_name": "食堂食材基准价价格表10.12-10.18.xlsx",
+      "received_at": "2026-11-07T06:43:29.920246+00:00"
+    },
+    "row_count": 159,
+    "order_count": 3,
+    "total": "1539.836",
+    "source_manifests": [
+      "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/songbei-20261103-review/d025ea9c48f06e51-b483de74/manifest.json",
+      "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xingyue-20261103-review/c08b2a32064dde5f-8096e09c/manifest.json",
+      "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/c5dd5d8e91408b96-5b3b99c1/manifest.json"
+    ],
+    "files": {
+      "finance": {
+        "path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/merged/merged-76b864d58c74f3db-0d087bc2/测试_合并财务记账_预估草稿.xlsx",
+        "sha256": "40e70e2a2e05c0a9ce6f48f2380e9e243a1db090bb84327f70cbbf351db037c2"
+      }
+    }
+  },
+  "original_hashes_unchanged": true,
+  "original_sha256": {
+    "星月站11.3下单.txt": "aed84347392534ce2329419c35df66cbcdb3f328198761448217878511f24606",
+    "星月站11.3.xlsx": "d1cbb18cfd2f753212089375cc95302799f9049ee2593350e9764e1647b34ea6",
+    "学院路站11.3下单.txt": "f25079aff542bb0c9ef93071f046cfd4390b571facc023c73df65449908e69db",
+    "食堂食材基准价价格表10.12-10.18.xlsx": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+    "松北大道站11.3.xlsx": "2ad247895670c8f458ea74ea751c513cbdf6857d2bd3c33f1ee5166519cc53d2",
+    "汶岂喜菜进账10.31.xlsx": "fd2879ed40c33c7e80496e9a28acf993f1fd2361d0fe78e87e257a513cf59053",
+    "松北大道站11.3下单.txt": "41ae7f52e951e1f5e30d48532f0fcd4632cfac5f1cedf16ec8c4e14abfdd2297",
+    "学院路站11.3.xlsx": "7b7a6e800761bae8c02777285bb39b66f4e0330ab690c495c500a18ec6381c70"
+  },
+  "total_seconds": 2.2824,
+  "limitations": [
+    "示例公司、日期、实配、财务与编号未由真实使用者初始化，均为标记测试的需求复核件/预估财务草稿",
+    "匹配覆盖率不是业务准确率；历史人工表的未记录改量/漏项不能作为原文自动转换真值",
+    "未在千问办公、WorkBuddy、实际订单系统或财务系统验收"
+  ]
+}

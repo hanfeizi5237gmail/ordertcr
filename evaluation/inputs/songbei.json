@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "batch_id": "songbei-20261103-review",
+  "company": "songbei",
+  "shipping_date": "2026-11-03",
+  "mode": "order",
+  "date_policy": "single",
+  "date_policy_confirmed": false,
+  "delivery_confirmed": false,
+  "publish": false,
+  "test_only": true,
+  "config": {
+    "schema_version": 1,
+    "companies_confirmed": false,
+    "companies": [
+      {
+        "company_id": "songbei",
+        "full_name": "松北大道消防救援站",
+        "aliases": [
+          "松北大道站"
+        ],
+        "finance_name": "消防队松北大道站"
+      },
+      {
+        "company_id": "xingyue",
+        "full_name": "星月街消防站",
+        "aliases": [
+          "星月站"
+        ],
+        "finance_name": "消防队星月街站"
+      },
+      {
+        "company_id": "xueyuan",
+        "full_name": "学院路消防救援",
+        "aliases": [
+          "学院路站"
+        ],
+        "finance_name": "消防队学院路站"
+      }
+    ],
+    "default_discount": "0.95",
+    "numbering": {
+      "confirmed": false,
+      "prefix": "OR_",
+      "daily_start": 0
+    },
+    "output_policies": {
+      "standard_order": "sample_exact",
+      "finance": "sample_exact",
+      "dual_confirmed": false
+    },
+    "aliases": {},
+    "unit_rules": {},
+    "finance": {
+      "confirmed": false,
+      "price_source": "discounted_catalog",
+      "tax_freight_confirmed": false,
+      "receipt_date": null,
+      "order_number_mode": "OR",
+      "merchant_names_confirmed": false
+    }
+  },
+  "chat_files": [
+    "original/松北大道站11.3下单.txt"
+  ],
+  "decisions": {
+    "松北大道站11.3下单.txt:12:12": {
+      "code": "80003671",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30最高。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "松北大道站11.3下单.txt:32:32": {
+      "code": "80000105",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "秋林是明确品牌约束；秋林里道斯红肠500g符合，不能改用价格更高的农大红肠。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "松北大道站11.3下单.txt:44:44": {
+      "code": "80001858",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "一品鲜酱油要求一桶；目录中东古一品鲜5L/桶为唯一桶装一品鲜酱油。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "松北大道站11.3下单.txt:54:52": {
+      "code": "80005703",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的香蕉；两项500g香蕉中优选佳农5.99为最高挂牌价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    }
+  }
+}

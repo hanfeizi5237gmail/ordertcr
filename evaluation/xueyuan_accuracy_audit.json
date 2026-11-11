@@ -1,0 +1,134 @@
+{
+  "purpose": "historical_discrepancy_and_acceptance_not_independent_accuracy",
+  "sources_sha256": {
+    "chat": "f25079aff542bb0c9ef93071f046cfd4390b571facc023c73df65449908e69db",
+    "manual": "7b7a6e800761bae8c02777285bb39b66f4e0330ab690c495c500a18ec6381c70",
+    "catalog": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+  },
+  "counts": {
+    "chat_items": 64,
+    "manual_detail_rows": 63,
+    "aligned_pairs": 62,
+    "chat_only": 2,
+    "manual_only": 1,
+    "numeric_quantity_difference": {
+      "numerator": 23,
+      "denominator": 62,
+      "percent": 37.1,
+      "note": "原始数字不同，不保证计价单位可比"
+    },
+    "comparable_weight_difference": {
+      "numerator": 20,
+      "denominator": 36,
+      "percent": 55.56,
+      "note": "仅聊天斤与人工500g/斤列；原因未核实，可能实称或改量"
+    },
+    "different_display_name": {
+      "numerator": 42,
+      "denominator": 62,
+      "percent": 67.74,
+      "note": "名称不同不等于品牌错误；含目录规范名称与修饰词"
+    },
+    "old_catalog_price_difference": {
+      "numerator": 2,
+      "denominator": 53,
+      "percent": 3.77,
+      "note": "仅人工名称+规格唯一定位当前目录的行"
+    },
+    "fitted_sku_match": {
+      "numerator": 53,
+      "denominator": 53,
+      "percent": 100.0,
+      "note": "同一人工样本学习和核验，不能外推未来预测准确率"
+    },
+    "catalog_covered_fraction_of_aligned": {
+      "numerator": 53,
+      "denominator": 62,
+      "percent": 85.48
+    }
+  },
+  "examples": {
+    "comparable_weight_changed_chat_lines": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      35,
+      38,
+      41,
+      42,
+      43,
+      45,
+      46,
+      52,
+      55,
+      56,
+      59,
+      61
+    ],
+    "numeric_quantity_changed_chat_lines": [
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      34,
+      35,
+      37,
+      38,
+      41,
+      42,
+      43,
+      45,
+      46,
+      52,
+      55,
+      56,
+      59,
+      61
+    ],
+    "price_conflicts": [
+      {
+        "chat_line": 4,
+        "manual_row": 5,
+        "manual_price": "73.9",
+        "catalog_code": "80001297"
+      },
+      {
+        "chat_line": 5,
+        "manual_row": 6,
+        "manual_price": "73.9",
+        "catalog_code": "80001291"
+      }
+    ],
+    "chat_only_lines": [
+      58,
+      64
+    ],
+    "manual_only": [
+      {
+        "manual": {
+          "row": 64,
+          "name": "蒜瓣",
+          "spec": "500g",
+          "quantity": "5",
+          "price": "8.88"
+        },
+        "reason": "聊天无蒜瓣来源，人工增项不可当成自动识别真值"
+      }
+    ]
+  },
+  "evidence_limits": [
+    "人工订单为历史噪声参考，未见逐项称重日志/取消/替代授权，不能归因数量差异",
+    "同表生成profile并同表评价存在样本泄漏，未见独立时段/站点验收",
+    "无当前生产价适用期或真实财务导入回执"
+  ]
+}

@@ -1,0 +1,46 @@
+test_box_request_keeps_single_pack_witness_without_pricing_it (test_knowledge_v6.SharedKnowledgeTests.test_box_request_keeps_single_pack_witness_without_pricing_it) ... ok
+test_candidate_context_does_not_override_weight_order (test_knowledge_v6.SharedKnowledgeTests.test_candidate_context_does_not_override_weight_order) ... FAIL
+test_candidate_only_and_missing_selector_do_not_force_selection (test_knowledge_v6.SharedKnowledgeTests.test_candidate_only_and_missing_selector_do_not_force_selection) ... ok
+test_conflicting_rules_and_explicit_constraints_stay_manual (test_knowledge_v6.SharedKnowledgeTests.test_conflicting_rules_and_explicit_constraints_stay_manual) ... ok
+test_shared_concept_reresolves_codes_and_prices (test_knowledge_v6.SharedKnowledgeTests.test_shared_concept_reresolves_codes_and_prices) ... ok
+test_unit_condition_does_not_erase_known_concept_candidates (test_knowledge_v6.SharedKnowledgeTests.test_unit_condition_does_not_erase_known_concept_candidates) ... ok
+test_unknown_brand_shows_unbranded_concept_only_as_conditional (test_knowledge_v6.SharedKnowledgeTests.test_unknown_brand_shows_unbranded_concept_only_as_conditional) ... FAIL
+test_unresolved_brand_package_requirement_cannot_auto_select (test_knowledge_v6.SharedKnowledgeTests.test_unresolved_brand_package_requirement_cannot_auto_select) ... ok
+test_explicit_post_quantity_attributes_require_catalog_evidence (test_knowledge_v6.VersionFiveLanguageRulesTests.test_explicit_post_quantity_attributes_require_catalog_evidence) ... ok
+test_new_explicit_brand_is_not_silently_dropped (test_knowledge_v6.VersionFiveLanguageRulesTests.test_new_explicit_brand_is_not_silently_dropped) ... ok
+test_rules_requery_current_catalog_without_storing_answers (test_knowledge_v6.VersionFiveLanguageRulesTests.test_rules_requery_current_catalog_without_storing_answers) ... FAIL
+test_unproven_cashew_and_freeze_are_candidate_only (test_knowledge_v6.VersionFiveLanguageRulesTests.test_unproven_cashew_and_freeze_are_candidate_only) ... ok
+test_weight_conversion_and_unknown_packaging (test_knowledge_v6.VersionFiveLanguageRulesTests.test_weight_conversion_and_unknown_packaging) ... ok
+
+======================================================================
+FAIL: test_candidate_context_does_not_override_weight_order (test_knowledge_v6.SharedKnowledgeTests.test_candidate_context_does_not_override_weight_order)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_knowledge_v6.py", line 91, in test_candidate_context_does_not_override_weight_order
+    self.assertEqual(ordinary['status'], 'matched')
+AssertionError: 'needs_review' != 'matched'
+- needs_review
++ matched
+
+
+======================================================================
+FAIL: test_unknown_brand_shows_unbranded_concept_only_as_conditional (test_knowledge_v6.SharedKnowledgeTests.test_unknown_brand_shows_unbranded_concept_only_as_conditional)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_knowledge_v6.py", line 105, in test_unknown_brand_shows_unbranded_concept_only_as_conditional
+    self.assertEqual({r['code'] for r in row['candidates']}, {'plain'})
+AssertionError: Items in the second set but not the first:
+'plain'
+
+======================================================================
+FAIL: test_rules_requery_current_catalog_without_storing_answers (test_knowledge_v6.VersionFiveLanguageRulesTests.test_rules_requery_current_catalog_without_storing_answers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_knowledge_v6.py", line 132, in test_rules_requery_current_catalog_without_storing_answers
+    self.assertEqual(self.kb['knowledge_version'], 6)
+AssertionError: 5 != 6
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.029s
+
+FAILED (failures=3)

@@ -1,0 +1,29 @@
+{
+  "baseline_checks": 85,
+  "baseline_errors": 0,
+  "tampered_errors": [
+    {
+      "code": "finance_detail",
+      "where": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/audit_tmp/self_test/outputs/self_test-g1/8754ba0e8e9183e6-db01b4cd/manifest.json:chat.txt:2:1",
+      "detail": ""
+    },
+    {
+      "code": "merge_detail",
+      "where": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/audit_tmp/self_test/outputs/merged/merged-04e120a3543d387b-12d4321e/测试_合并财务记账_预估草稿.xlsx:2",
+      "detail": ""
+    }
+  ],
+  "baseline_stats": {
+    "event_count": 3,
+    "result_events": 3,
+    "manifest_count": 2,
+    "ledger_rows": 3,
+    "standard_rows": 3,
+    "finance_rows": 3,
+    "merged_rows": 3,
+    "matched": 2,
+    "unresolved": 1,
+    "candidate_rows": 1,
+    "raw_chat_bytes_verified": true
+  }
+}

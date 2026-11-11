@@ -1,0 +1,24 @@
+{
+  "20261108": {
+    "samples": {
+      "single_station_random_split": 14,
+      "single_station_reorder": 3,
+      "cross_station_random_combinations": 12,
+      "counterfactual_company": 12,
+      "negative_unpartitioned": 1
+    },
+    "source_events": 159,
+    "sha256": "60fa09ae46c59e7258b1c7eb36e7568878f33790de186a726f2f7124b342e0c4"
+  },
+  "20261109": {
+    "samples": {
+      "single_station_random_split": 12,
+      "single_station_reorder": 3,
+      "cross_station_random_combinations": 12,
+      "counterfactual_company": 12,
+      "negative_unpartitioned": 1
+    },
+    "source_events": 159,
+    "sha256": "6794122e698fbbb1fa310410e4f87561bc7f4dba9f97f27158cc2e50452e51ae"
+  }
+}

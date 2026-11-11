@@ -1,0 +1,1800 @@
+{
+  "schema_version": 1,
+  "purpose": "真实聊天与当前目录的独立前向逐项语义决策；仅将decisions映射合入批次，未决项仍保留待处理",
+  "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+  "catalog_source": "食堂食材基准价价格表10.12-10.18.xlsx",
+  "input_scope": [
+    "学院路站11.3下单.txt",
+    "星月站11.3下单.txt",
+    "松北大道站11.3下单.txt"
+  ],
+  "item_counts": {
+    "学院路站11.3下单.txt": 64,
+    "星月站11.3下单.txt": 42,
+    "松北大道站11.3下单.txt": 53
+  },
+  "coverage": {
+    "total_items": 159,
+    "exact_auto_matched": 38,
+    "agent_decisions": 18,
+    "retained_unresolved": 103
+  },
+  "decisions": {
+    "学院路站11.3下单.txt:27:27": {
+      "code": "80004785",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "紫皮洋葱对应目录紫洋葱；500g可比项中优质紫洋葱3.99高于紫洋葱1.99。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:28:28": {
+      "code": "80003500",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "红色是硬约束；红尖椒为目录中唯一红色尖椒，500g计价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:41:41": {
+      "code": "80003657",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "蒜苔对应目录唯一蒜苔（绿帽）项，500g计价；未改变原始6斤。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:43:43": {
+      "code": "80003671",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30，高于新土豆1.29和优质新土豆2.49。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:45:45": {
+      "code": "80000101",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的红肠；同为500g红肠项，农大46.47为最高挂牌价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:46:46": {
+      "code": "80005851",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的粉肠；同为500g粉肠项，一手店33.52为最高挂牌价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:59:59": {
+      "code": "80003608",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "青椒/大辣椒对应聊天青椒，目录唯一该鲜菜项，500g计价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:61:61": {
+      "code": "80005703",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的香蕉；两项500g香蕉中优选佳农5.99高于优质香蕉3.99。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:16:13": {
+      "code": "80003671",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30最高。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:19:16": {
+      "code": "80003657",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "蒜苔对应目录唯一蒜苔（绿帽）项，500g计价；未改变原始8斤。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:26:23": {
+      "code": "80003525",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "架豆王对应目录架豆王（豆角），品种明确且500g计价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:39:34": {
+      "code": "80003436",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "菜花在蔬菜类仅有青梗菜花这一500g候选；本行单独保留，不与后续重复行合并。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:44:39": {
+      "code": "80000358",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "鸡腿块明确鸡腿部位和切块加工；正大鸡腿肉切块500g最贴合，非泛鸡肉块或预制鸡块。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "星月站11.3下单.txt:45:40": {
+      "code": "80003436",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "菜花在蔬菜类仅有青梗菜花这一500g候选；重复需求独立保留，是否另加仍由人工核定。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "松北大道站11.3下单.txt:12:12": {
+      "code": "80003671",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30最高。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "松北大道站11.3下单.txt:32:32": {
+      "code": "80000105",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "秋林是明确品牌约束；秋林里道斯红肠500g符合，不能改用价格更高的农大红肠。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "松北大道站11.3下单.txt:44:44": {
+      "code": "80001858",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "一品鲜酱油要求一桶；目录中东古一品鲜5L/桶为唯一桶装一品鲜酱油。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "松北大道站11.3下单.txt:54:52": {
+      "code": "80005703",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的香蕉；两项500g香蕉中优选佳农5.99为最高挂牌价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    }
+  },
+  "exact_auto_matches": [
+    {
+      "line_id": "学院路站11.3下单.txt:2:2",
+      "name": "小米",
+      "code": "80001148"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:8:8",
+      "name": "冰糖",
+      "code": "80001841"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:9:9",
+      "name": "白糖",
+      "code": "80001837"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:21:21",
+      "name": "大葱",
+      "code": "80003447"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:22:22",
+      "name": "小葱",
+      "code": "80003727"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:23:23",
+      "name": "香菜",
+      "code": "80003719"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:24:24",
+      "name": "臭菜",
+      "code": "80003439"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:25:25",
+      "name": "小白菜",
+      "code": "80003724"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:35:35",
+      "name": "黄瓜",
+      "code": "80003517"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:38:38",
+      "name": "油菜",
+      "code": "80003748"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:44:44",
+      "name": "尖椒",
+      "code": "80003527"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:48:48",
+      "name": "咸鸭蛋",
+      "code": "80004094"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:51:51",
+      "name": "油豆角",
+      "code": "80003749"
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:56:56",
+      "name": "豇豆角",
+      "code": "80003532"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:8:8",
+      "name": "白糖",
+      "code": "80001837"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:18:15",
+      "name": "青萝卜",
+      "code": "80003609"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:20:17",
+      "name": "胡萝卜",
+      "code": "80003508"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:21:18",
+      "name": "香菇",
+      "code": "80003673"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:22:19",
+      "name": "油麦菜",
+      "code": "80003751"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:23:20",
+      "name": "尖椒",
+      "code": "80003527"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:24:21",
+      "name": "大葱",
+      "code": "80003447"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:27:24",
+      "name": "黄瓜",
+      "code": "80003517"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:29:26",
+      "name": "紫洋葱",
+      "code": "80003772"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:35:30",
+      "name": "油豆角",
+      "code": "80003749"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:36:31",
+      "name": "窝瓜",
+      "code": "80003685"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:40:35",
+      "name": "白菜",
+      "code": "80003409"
+    },
+    {
+      "line_id": "星月站11.3下单.txt:41:36",
+      "name": "黄瓜",
+      "code": "80003517"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:3:3",
+      "name": "尖椒",
+      "code": "80003527"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:6:6",
+      "name": "大葱",
+      "code": "80003447"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:13:13",
+      "name": "黄瓜",
+      "code": "80003517"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:16:16",
+      "name": "胡萝卜",
+      "code": "80003508"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:25:25",
+      "name": "油麦菜",
+      "code": "80003751"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:29:29",
+      "name": "油菜",
+      "code": "80003748"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:31:31",
+      "name": "芹菜",
+      "code": "80003605"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:35:35",
+      "name": "冬瓜",
+      "code": "80003467"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:36:36",
+      "name": "银耳",
+      "code": "80001988"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:42:42",
+      "name": "蒜瓣",
+      "code": "80003652"
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:50:48",
+      "name": "花椒粒",
+      "code": "80002965"
+    }
+  ],
+  "unresolved": [
+    {
+      "line_id": "学院路站11.3下单.txt:1:1",
+      "raw_text": "大米1袋",
+      "name": "大米",
+      "quantity": "1",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004609",
+        "80005694",
+        "80005852"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:3:3",
+      "raw_text": "挂面7袋",
+      "name": "挂面",
+      "quantity": "7",
+      "unit": "袋",
+      "status": "needs_review",
+      "reason": "缺少袋到500g的已确认换算关系",
+      "candidate_codes": [
+        "80001876"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:4:4",
+      "raw_text": "豆油2桶",
+      "name": "豆油",
+      "quantity": "2",
+      "unit": "桶",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001357",
+        "80001369",
+        "80001643",
+        "80001781",
+        "80002062",
+        "80002259",
+        "80001291",
+        "80001297",
+        "80005868"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:5:5",
+      "raw_text": "色拉油1桶",
+      "name": "色拉油",
+      "quantity": "1",
+      "unit": "桶",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:6:6",
+      "raw_text": "海天鲜生抽1瓶",
+      "name": "海天鲜生抽",
+      "quantity": "1",
+      "unit": "瓶",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001298",
+        "80001664",
+        "80002024"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:7:7",
+      "raw_text": "东古酱油2瓶",
+      "name": "东古酱油",
+      "quantity": "2",
+      "unit": "瓶",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001357",
+        "80001504",
+        "80001858",
+        "80002259",
+        "80004674"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:10:10",
+      "raw_text": "海天上等耗油1瓶",
+      "name": "海天上等耗油",
+      "quantity": "1",
+      "unit": "瓶",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:11:11",
+      "raw_text": "盐4袋",
+      "name": "盐",
+      "quantity": "4",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80001335",
+        "80001581",
+        "80001636",
+        "80002159",
+        "80002342",
+        "80002987",
+        "80005759",
+        "80005761",
+        "80005764",
+        "80006082",
+        "80001984",
+        "80004119",
+        "80005755",
+        "80005756",
+        "80005757",
+        "80005858",
+        "80004395",
+        "80005863",
+        "80008646",
+        "80005738"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:12:12",
+      "raw_text": "太太乐鸡精1袋",
+      "name": "太太乐鸡精",
+      "quantity": "1",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "同名商品的包装或规格不能按挂牌价直接比较",
+      "candidate_codes": [
+        "80001608",
+        "80001955"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:13:13",
+      "raw_text": "水煮肉片料4包",
+      "name": "水煮肉片料",
+      "quantity": "4",
+      "unit": "包",
+      "status": "needs_review",
+      "reason": "缺少包到100g的已确认换算关系",
+      "candidate_codes": [
+        "80002082"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:14:14",
+      "raw_text": "番茄沙司2袋",
+      "name": "番茄沙司",
+      "quantity": "2",
+      "unit": "袋",
+      "status": "needs_review",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004224"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:15:15",
+      "raw_text": "重庆麻辣块1块",
+      "name": "重庆麻辣块",
+      "quantity": "1",
+      "unit": "块",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80002344"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:16:16",
+      "raw_text": "太阳岛香辣酱1袋",
+      "name": "太阳岛香辣酱",
+      "quantity": "1",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80001302",
+        "80001465",
+        "80002291",
+        "80004540"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:17:17",
+      "raw_text": "香油1瓶",
+      "name": "香油",
+      "quantity": "1",
+      "unit": "瓶",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001429",
+        "80001436",
+        "80001589",
+        "80001779",
+        "80002040",
+        "80005062"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:18:18",
+      "raw_text": "树椒丝1斤",
+      "name": "树椒丝",
+      "quantity": "1",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80002902",
+        "80002953",
+        "80003006"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:19:19",
+      "raw_text": "粉条3斤",
+      "name": "粉条",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001307",
+        "80001317",
+        "80001318",
+        "80001321",
+        "80001862",
+        "80001863",
+        "80002886",
+        "80002916"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:20:20",
+      "raw_text": "腐竹2袋",
+      "name": "腐竹",
+      "quantity": "2",
+      "unit": "袋",
+      "status": "needs_review",
+      "reason": "缺少袋到500g的已确认换算关系",
+      "candidate_codes": [
+        "80001869"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:26:26",
+      "raw_text": "旱黄瓜5.5斤",
+      "name": "旱黄瓜",
+      "quantity": "5.5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001889",
+        "80004595",
+        "80004637",
+        "80004648",
+        "80003517",
+        "80003562",
+        "80003641",
+        "80005509",
+        "80004362",
+        "80004819"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:29:29",
+      "raw_text": "五花肉7斤",
+      "name": "五花肉",
+      "quantity": "7",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80005962",
+        "80005963"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:30:30",
+      "raw_text": "梅肉4斤",
+      "name": "梅肉",
+      "quantity": "4",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80004198",
+        "80004199",
+        "80005290",
+        "80005524",
+        "80005946",
+        "80005955"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:31:31",
+      "raw_text": "净肉4斤",
+      "name": "净肉",
+      "quantity": "4",
+      "unit": "斤",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:32:32",
+      "raw_text": "盐酥鸡3袋",
+      "name": "盐酥鸡",
+      "quantity": "3",
+      "unit": "袋",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:33:33",
+      "raw_text": "火碱3斤",
+      "name": "火碱",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:34:34",
+      "raw_text": "白菜3颗",
+      "name": "白菜",
+      "quantity": "3",
+      "unit": "颗",
+      "status": "needs_review",
+      "reason": "缺少颗到500g的已确认换算关系",
+      "candidate_codes": [
+        "80003409"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:36:36",
+      "raw_text": "干豆腐8斤",
+      "name": "干豆腐",
+      "quantity": "8",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80004287",
+        "80004288"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:37:37",
+      "raw_text": "鲤鱼5条收拾好",
+      "name": "鲤鱼",
+      "quantity": "5",
+      "unit": "条",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003132",
+        "80003133"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:39:39",
+      "raw_text": "豆芽3斤",
+      "name": "豆芽",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003386",
+        "80003391",
+        "80003393",
+        "80004283",
+        "80004389",
+        "80004390",
+        "80004391",
+        "80004432",
+        "80004666"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:40:40",
+      "raw_text": "豆腐10盒",
+      "name": "豆腐",
+      "quantity": "10",
+      "unit": "盒",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000089",
+        "80003374",
+        "80003396",
+        "80003399",
+        "80003400",
+        "80004282",
+        "80004499"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:42:42",
+      "raw_text": "鸡胸肉6斤",
+      "name": "鸡胸肉",
+      "quantity": "6",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000333",
+        "80000334",
+        "80000335",
+        "80000391"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:47:47",
+      "raw_text": "腊肠2斤",
+      "name": "腊肠",
+      "quantity": "2",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000071",
+        "80000072"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:49:49",
+      "raw_text": "鸡翅6斤",
+      "name": "鸡翅",
+      "quantity": "6",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001476",
+        "80000326",
+        "80000328",
+        "80000343",
+        "80000344",
+        "80000346",
+        "80000375",
+        "80000377",
+        "8004479",
+        "80000094"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:50:50",
+      "raw_text": "排骨6斤",
+      "name": "排骨",
+      "quantity": "6",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80005399",
+        "80005956",
+        "80005967",
+        "80005968",
+        "80005969",
+        "80008713"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:52:52",
+      "raw_text": "橘子12斤",
+      "name": "橘子",
+      "quantity": "12",
+      "unit": "斤",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:53:53",
+      "raw_text": "玉米粒罐头6罐",
+      "name": "玉米粒罐头",
+      "quantity": "6",
+      "unit": "罐",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80005844"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:54:54",
+      "raw_text": "娃娃菜4包",
+      "name": "娃娃菜",
+      "quantity": "4",
+      "unit": "包",
+      "status": "needs_review",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004313"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:55:55",
+      "raw_text": "猪手7斤",
+      "name": "猪手",
+      "quantity": "7",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000767",
+        "80001051",
+        "80000083"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:57:57",
+      "raw_text": "里脊6斤",
+      "name": "里脊",
+      "quantity": "6",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000724",
+        "80001004",
+        "80004188",
+        "80004189",
+        "80004190",
+        "80004191",
+        "80005553",
+        "80005949",
+        "80005959"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:58:58",
+      "raw_text": "小白菜3颗",
+      "name": "小白菜",
+      "quantity": "3",
+      "unit": "颗",
+      "status": "needs_review",
+      "reason": "缺少颗到500g的已确认换算关系",
+      "candidate_codes": [
+        "80003724"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:60:60",
+      "raw_text": "牛奶3箱",
+      "name": "牛奶",
+      "quantity": "3",
+      "unit": "箱",
+      "status": "ambiguous",
+      "reason": "仅见单品参考候选，缺每箱件数和每箱净重，不能将1箱当成1袋或计价单位",
+      "candidate_codes": [
+        "80005817",
+        "80004048",
+        "80004049",
+        "80004071",
+        "80004087",
+        "80004254",
+        "80004798",
+        "80004802",
+        "80004803",
+        "80004804",
+        "80004806",
+        "80004835",
+        "80004836",
+        "80005020",
+        "80005762",
+        "80005841",
+        "80008680"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:62:62",
+      "raw_text": "洗洁精1桶",
+      "name": "洗洁精",
+      "quantity": "1",
+      "unit": "桶",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:63:63",
+      "raw_text": "桌布10个",
+      "name": "桌布",
+      "quantity": "10",
+      "unit": "个",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:64:64",
+      "raw_text": "生猪手撩毛8个",
+      "name": "生猪手",
+      "quantity": "8",
+      "unit": "个",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000767"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:1:1",
+      "raw_text": "冷面1大包",
+      "name": "冷面",
+      "quantity": "1",
+      "unit": "大包",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001908",
+        "80003009",
+        "80006120"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:2:2",
+      "raw_text": "蒜蓉辣酱10斤",
+      "name": "蒜蓉辣酱",
+      "quantity": "10",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001573",
+        "80001624",
+        "80001960",
+        "80002267",
+        "80002638",
+        "80002644"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:3:3",
+      "raw_text": "饺子皮300个",
+      "name": "饺子皮",
+      "quantity": "300",
+      "unit": "个",
+      "status": "needs_review",
+      "reason": "缺少个到500g的已确认换算关系",
+      "candidate_codes": [
+        "80002043"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:4:4",
+      "raw_text": "猪肉馅3斤",
+      "name": "猪肉馅",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80005093",
+        "80005957"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:5:5",
+      "raw_text": "三明治火腿1个",
+      "name": "三明治火腿",
+      "quantity": "1",
+      "unit": "个",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001893",
+        "80001937",
+        "80002045",
+        "80002068",
+        "80004135",
+        "80005845"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:6:6",
+      "raw_text": "桃李面包片1大包",
+      "name": "桃李面包片",
+      "quantity": "1",
+      "unit": "大包",
+      "status": "needs_review",
+      "reason": "缺少大包到700g(20片)的已确认换算关系",
+      "candidate_codes": [
+        "80005696"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:7:7",
+      "raw_text": "香其酱10袋",
+      "name": "香其酱",
+      "quantity": "10",
+      "unit": "袋",
+      "status": "needs_review",
+      "reason": "缺少袋到120g的已确认换算关系",
+      "candidate_codes": [
+        "80002586"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:9:9",
+      "raw_text": "味素5斤",
+      "name": "味素",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001368",
+        "80001435",
+        "80001489",
+        "80001510",
+        "80002640",
+        "80002942",
+        "80000044"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:10:10",
+      "raw_text": "孜然粉2",
+      "name": "孜然粉",
+      "quantity": "2",
+      "unit": null,
+      "status": "needs_review",
+      "reason": "原文数量缺少单位; 原始单位缺失，无法确定计价数量",
+      "candidate_codes": [
+        "80002006"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:14:11",
+      "raw_text": "护心肉10斤",
+      "name": "护心肉",
+      "quantity": "10",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000759",
+        "80005032",
+        "80008722"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:15:12",
+      "raw_text": "鳕鱼10斤",
+      "name": "鳕鱼",
+      "quantity": "10",
+      "unit": "斤",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003213"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:17:14",
+      "raw_text": "酸菜1箱",
+      "name": "酸菜",
+      "quantity": "1",
+      "unit": "箱",
+      "status": "ambiguous",
+      "reason": "仅见单品参考候选，缺每箱件数和每箱净重，不能将1箱当成1袋或计价单位",
+      "candidate_codes": [
+        "80001925",
+        "80001926",
+        "80001928",
+        "80004109",
+        "80004557",
+        "80001927"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:25:22",
+      "raw_text": "鸡块5斤",
+      "name": "鸡块",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80004195",
+        "80004381",
+        "80005274"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:28:25",
+      "raw_text": "虾仁3斤",
+      "name": "虾仁",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80002927",
+        "80005511",
+        "80003179",
+        "80003180",
+        "80003181",
+        "80003182"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:30:27",
+      "raw_text": "木耳2斤",
+      "name": "木耳",
+      "quantity": "2",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80002878",
+        "80004233"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:31:28",
+      "raw_text": "鸡丸1袋",
+      "name": "鸡丸",
+      "quantity": "1",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004133",
+        "80004152"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:32:29",
+      "raw_text": "鱼豆腐1袋",
+      "name": "鱼豆腐",
+      "quantity": "1",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004132",
+        "80004266",
+        "80005730"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:37:32",
+      "raw_text": "玉米段1袋",
+      "name": "玉米段",
+      "quantity": "1",
+      "unit": "袋",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "星月站11.3下单.txt:38:33",
+      "raw_text": "猪肘去毛5个",
+      "name": "猪肘",
+      "quantity": "5",
+      "unit": "个",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80004207",
+        "80004209",
+        "80004211",
+        "80004919",
+        "80005951",
+        "80005961"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:42:37",
+      "raw_text": "豆角5斤",
+      "name": "豆角",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001934",
+        "80005809",
+        "80003525",
+        "80003532",
+        "80003749",
+        "80005898"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:43:38",
+      "raw_text": "刀鱼5斤",
+      "name": "刀鱼",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003230",
+        "80004147",
+        "8004470"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:48:41",
+      "raw_text": "茄子10斤",
+      "name": "茄子",
+      "quantity": "10",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003578",
+        "80003580",
+        "80003766",
+        "80005704"
+      ]
+    },
+    {
+      "line_id": "星月站11.3下单.txt:49:42",
+      "raw_text": "萝卜丁咸菜大袋的",
+      "name": "萝卜丁咸菜",
+      "quantity": null,
+      "unit": null,
+      "status": "unmapped",
+      "reason": "目录未见同品种的萝卜丁咸菜；其他咸菜品种不可替代",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:1:1",
+      "raw_text": "里脊3斤",
+      "name": "里脊",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000724",
+        "80001004",
+        "80004188",
+        "80004189",
+        "80004190",
+        "80004191",
+        "80005553",
+        "80005949",
+        "80005959"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:2:2",
+      "raw_text": "小黑茄子13斤",
+      "name": "小黑茄子",
+      "quantity": "13",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003578",
+        "80003580",
+        "80003766",
+        "80005704"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:4:4",
+      "raw_text": "豆腐7盒",
+      "name": "豆腐",
+      "quantity": "7",
+      "unit": "盒",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000089",
+        "80003374",
+        "80003396",
+        "80003399",
+        "80003400",
+        "80004282",
+        "80004499"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:5:5",
+      "raw_text": "鲤鱼3条",
+      "name": "鲤鱼",
+      "quantity": "3",
+      "unit": "条",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003132",
+        "80003133"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:7:7",
+      "raw_text": "排骨5斤切块",
+      "name": "排骨",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80005399",
+        "80005956",
+        "80005967",
+        "80005968",
+        "80005969",
+        "80008713"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:8:8",
+      "raw_text": "酸菜4袋",
+      "name": "酸菜",
+      "quantity": "4",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80001925",
+        "80001926",
+        "80001928",
+        "80004109",
+        "80004557",
+        "80001927"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:9:9",
+      "raw_text": "血肠1根",
+      "name": "血肠",
+      "quantity": "1",
+      "unit": "根",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000041"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:10:10",
+      "raw_text": "熟苦肠1斤",
+      "name": "熟苦肠",
+      "quantity": "1",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000554",
+        "80000059"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:11:11",
+      "raw_text": "下五花肉2斤",
+      "name": "下五花肉",
+      "quantity": "2",
+      "unit": "斤",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80005146"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:14:14",
+      "raw_text": "干豆腐4斤",
+      "name": "干豆腐",
+      "quantity": "4",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80004287",
+        "80004288"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:15:15",
+      "raw_text": "肉丝3斤",
+      "name": "肉丝",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80004189",
+        "80005524",
+        "80005965"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:17:17",
+      "raw_text": "鸡腿5斤切块",
+      "name": "鸡腿",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000347",
+        "80000358",
+        "80000371",
+        "80000372",
+        "80000383",
+        "80004423",
+        "80004425",
+        "80005740",
+        "80006066",
+        "80000007",
+        "80000046",
+        "80000100"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:18:18",
+      "raw_text": "白菜2颗",
+      "name": "白菜",
+      "quantity": "2",
+      "unit": "颗",
+      "status": "needs_review",
+      "reason": "缺少颗到500g的已确认换算关系",
+      "candidate_codes": [
+        "80003409"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:19:19",
+      "raw_text": "西红柿2斤",
+      "name": "西红柿",
+      "quantity": "2",
+      "unit": "斤",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:20:20",
+      "raw_text": "松花鸡腿2个",
+      "name": "松花鸡腿",
+      "quantity": "2",
+      "unit": "个",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000007",
+        "80000046",
+        "80000100"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:21:21",
+      "raw_text": "厚皮鸡蛋1筐",
+      "name": "厚皮鸡蛋",
+      "quantity": "1",
+      "unit": "筐",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80004089"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:22:22",
+      "raw_text": "窝瓜1个",
+      "name": "窝瓜",
+      "quantity": "1",
+      "unit": "个",
+      "status": "needs_review",
+      "reason": "缺少个到500g的已确认换算关系",
+      "candidate_codes": [
+        "80003685"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:23:23",
+      "raw_text": "鸡爪3袋",
+      "name": "鸡爪",
+      "quantity": "3",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80000336",
+        "80000393",
+        "80004358"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:24:24",
+      "raw_text": "玉米粒2袋",
+      "name": "玉米粒",
+      "quantity": "2",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80001859",
+        "80001918"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:26:26",
+      "raw_text": "护心肉5斤",
+      "name": "护心肉",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80000759",
+        "80005032",
+        "80008722"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:27:27",
+      "raw_text": "鸡柳2袋",
+      "name": "鸡柳",
+      "quantity": "2",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004379",
+        "80004983"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:28:28",
+      "raw_text": "甘蓝3颗",
+      "name": "甘蓝",
+      "quantity": "3",
+      "unit": "颗",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003455",
+        "80003762",
+        "80004694"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:30:30",
+      "raw_text": "豆角5斤",
+      "name": "豆角",
+      "quantity": "5",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001934",
+        "80005809",
+        "80003525",
+        "80003532",
+        "80003749",
+        "80005898"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:33:33",
+      "raw_text": "罗马生菜1颗",
+      "name": "罗马生菜",
+      "quantity": "1",
+      "unit": "颗",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003632",
+        "80003691",
+        "80003692",
+        "80003767"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:34:34",
+      "raw_text": "娃娃菜1包",
+      "name": "娃娃菜",
+      "quantity": "1",
+      "unit": "包",
+      "status": "needs_review",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004313"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:37:37",
+      "raw_text": "白萝卜1根",
+      "name": "白萝卜",
+      "quantity": "1",
+      "unit": "根",
+      "status": "needs_review",
+      "reason": "缺少根到500g的已确认换算关系",
+      "candidate_codes": [
+        "80003412"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:38:38",
+      "raw_text": "牛肉卷1斤",
+      "name": "牛肉卷",
+      "quantity": "1",
+      "unit": "斤",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:39:39",
+      "raw_text": "虾仁1斤",
+      "name": "虾仁",
+      "quantity": "1",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80002927",
+        "80005511",
+        "80003179",
+        "80003180",
+        "80003181",
+        "80003182"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:40:40",
+      "raw_text": "大米1袋",
+      "name": "大米",
+      "quantity": "1",
+      "unit": "袋",
+      "status": "ambiguous",
+      "reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+      "candidate_codes": [
+        "80004609",
+        "80005694",
+        "80005852"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:41:41",
+      "raw_text": "色拉油2桶",
+      "name": "色拉油",
+      "quantity": "2",
+      "unit": "桶",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:43:43",
+      "raw_text": "洋葱4斤",
+      "name": "洋葱",
+      "quantity": "4",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80003745",
+        "80003772",
+        "80004785"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:45:45",
+      "raw_text": "方便袋2捆小号",
+      "name": "方便袋",
+      "quantity": "2",
+      "unit": "捆",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:46:46",
+      "raw_text": "胶皮手套1副",
+      "name": "胶皮手套",
+      "quantity": "1",
+      "unit": "副",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:48:47",
+      "raw_text": "5色糙米10斤",
+      "name": "5色糙米",
+      "quantity": "10",
+      "unit": "斤",
+      "status": "needs_review",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001121"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:51:49",
+      "raw_text": "烟桂 1斤去皮的那种",
+      "name": "烟桂",
+      "quantity": "1",
+      "unit": "斤",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:52:50",
+      "raw_text": "辣椒段3斤",
+      "name": "辣椒段",
+      "quantity": "3",
+      "unit": "斤",
+      "status": "ambiguous",
+      "reason": "商品仅有语义候选，需人工确认",
+      "candidate_codes": [
+        "80001873",
+        "80001959"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:53:51",
+      "raw_text": "橘子10斤",
+      "name": "橘子",
+      "quantity": "10",
+      "unit": "斤",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:55:53",
+      "raw_text": "松北大道站再加这样的刷锅5个",
+      "name": "刷锅",
+      "quantity": "5",
+      "unit": "个",
+      "status": "unmapped",
+      "reason": "当前目录没有合理候选",
+      "candidate_codes": []
+    }
+  ],
+  "limitations": [
+    "未读取人工订单作为答案；目录标价仅为10.12-10.18，不证明11.3有效",
+    "模型决策仅决定本次目录SKU，未覆盖原数量/单位，不确认实配或财务税运",
+    "星月重复菜花与跨日需求仍需人工确认后才能形成完整正式订单"
+  ]
+}

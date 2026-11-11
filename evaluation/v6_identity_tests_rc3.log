@@ -1,0 +1,9 @@
+test_manual_reference_mismatch_remains_undefined (__main__.Tests.test_manual_reference_mismatch_remains_undefined) ... ok
+test_matched_product_even_when_quantity_review_and_wrong_sku (__main__.Tests.test_matched_product_even_when_quantity_review_and_wrong_sku) ... ok
+test_missing_and_duplicate_preserve_outcomes (__main__.Tests.test_missing_and_duplicate_preserve_outcomes) ... ok
+test_unresolved_and_source_mismatch_do_not_become_correct (__main__.Tests.test_unresolved_and_source_mismatch_do_not_become_correct) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

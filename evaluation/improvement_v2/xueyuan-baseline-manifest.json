@@ -1,0 +1,3850 @@
+{
+  "batch_id": "xueyuan-20261103-review",
+  "blockers": [
+    "公司全称和简称范围尚未确认",
+    "发货日期及日期语义尚未确认",
+    "42条商品/数量/单位/日期或重复事件仍待确认",
+    "订单编号策略和起点尚未确认"
+  ],
+  "catalog": {
+    "received_at": "2026-11-07T06:10:57.707228+00:00",
+    "sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+    "source_name": "食堂食材基准价价格表10.12-10.18.xlsx",
+    "version_id": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687"
+  },
+  "config_sha256": "6a487a8949704c38f29c8eb698aa9e0accb700bb48e20a6723e6e9320516cdf5",
+  "digest": "caa9c15e97209b05647bae90a77e3347b8eb8a72408600b576533d575e823c08",
+  "files": {
+    "finance": {
+      "path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/caa9c15e97209b05-82b9a952/测试_财务记账_预估草稿.xlsx",
+      "sha256": "ccfba3092a51d6043fc4eb7d444c41bec262e1562de703296a5c4a0f9484d84e"
+    },
+    "ledger": {
+      "path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/caa9c15e97209b05-82b9a952/ledger.json",
+      "sha256": "354474cb53df73082b62920c6e0810b8e1fe09101f6a4d8a1a3cc05e2aedbeae"
+    },
+    "standard": {
+      "path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/caa9c15e97209b05-82b9a952/测试_下单需求_待配送_待人工处理.xlsx",
+      "sha256": "d79bce4bf5978a6de71c34511844897675771dbf39508d32c06f7abcaa4d38ff"
+    }
+  },
+  "finance_draft": true,
+  "finance_reasons": [
+    "公司全称和简称范围尚未确认",
+    "发货日期及日期语义尚未确认",
+    "42条商品/数量/单位/日期或重复事件仍待确认",
+    "订单编号策略和起点尚未确认",
+    "当前是需求/待配送，缺少已确认实配依据",
+    "财务价格来源尚未确认",
+    "税运口径尚未确认",
+    "财务商户名尚未确认",
+    "收货日期尚未确认",
+    "当前为预览/复核，未发布正式流水"
+  ],
+  "identity": "01575b3ce3209faa9379a56d2bcfd118d950e1f075b693251b89e8b3029cacc2",
+  "manifest_path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/caa9c15e97209b05-82b9a952/manifest.json",
+  "order": {
+    "company_id": "xueyuan",
+    "company_name": "学院路消防救援",
+    "finance_name": "消防队学院路站",
+    "mode": "order",
+    "order_number": null,
+    "receipt_date": null,
+    "rows": [
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "米类",
+            "code": "80004609",
+            "name": "大黄米",
+            "price": "4.98",
+            "row": 1380,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "米类",
+            "code": "80005694",
+            "name": "玉福泉长粒香大米",
+            "price": "145.00",
+            "row": 1382,
+            "sheet": "Sheet0",
+            "spec": "25kg"
+          },
+          {
+            "category": "米类",
+            "code": "80005852",
+            "name": "磨盘山长粒香大米",
+            "price": "215.00",
+            "row": 1386,
+            "sheet": "Sheet0",
+            "spec": "25kg"
+          }
+        ],
+        "char_end": 4,
+        "char_start": 0,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:1:1",
+        "match_reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+        "name": "大米",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "大米1袋",
+        "selected": null,
+        "source_line": 1,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": "17.062",
+        "candidates": [
+          {
+            "category": "米类",
+            "code": "80001148",
+            "name": "小米",
+            "price": "4.49",
+            "row": 1363,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 9,
+        "char_start": 5,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "17.062",
+        "invoice_quantity": "4",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:2:2",
+        "match_reason": "",
+        "name": "小米",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "4",
+        "quantity_basis": "requested",
+        "raw_text": "小米4斤",
+        "selected": {
+          "category": "米类",
+          "code": "80001148",
+          "name": "小米",
+          "price": "4.49",
+          "row": 1363,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 2,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "4.2655"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "面类",
+            "code": "80001876",
+            "name": "挂面",
+            "price": "3.71",
+            "row": 1405,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 14,
+        "char_start": 10,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "quantity_conversion",
+            "message": "缺少袋到500g的已确认换算关系"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:3:3",
+        "match_reason": "",
+        "name": "挂面",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "7",
+        "raw_text": "挂面7袋",
+        "selected": {
+          "category": "面类",
+          "code": "80001876",
+          "name": "挂面",
+          "price": "3.71",
+          "row": 1405,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 3,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001357",
+            "name": "东古黄豆酱油2L/桶",
+            "price": "11.50",
+            "row": 107,
+            "sheet": "Sheet0",
+            "spec": "2L"
+          },
+          {
+            "category": "调料类",
+            "code": "80001369",
+            "name": "老干妈风味豆豉油制辣椒",
+            "price": "15.88",
+            "row": 110,
+            "sheet": "Sheet0",
+            "spec": "210g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001643",
+            "name": "香其黄豆酱油",
+            "price": "10.00",
+            "row": 257,
+            "sheet": "Sheet0",
+            "spec": "2L"
+          },
+          {
+            "category": "调料类",
+            "code": "80001781",
+            "name": "香其黄豆酱油（2L）",
+            "price": "10.00",
+            "row": 304,
+            "sheet": "Sheet0",
+            "spec": "2L"
+          },
+          {
+            "category": "调料类",
+            "code": "80002062",
+            "name": "老干妈牛肉末豆豉油辣椒210g",
+            "price": "13.53",
+            "row": 446,
+            "sheet": "Sheet0",
+            "spec": "210g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002259",
+            "name": "东古黄豆酱油（5L*2桶）",
+            "price": "46.35",
+            "row": 489,
+            "sheet": "Sheet0",
+            "spec": "5升"
+          },
+          {
+            "category": "食用油",
+            "code": "80001291",
+            "name": "九三非转基因大豆油一级5L/桶",
+            "price": "65.90",
+            "row": 1265,
+            "sheet": "Sheet0",
+            "spec": "5L"
+          },
+          {
+            "category": "食用油",
+            "code": "80001297",
+            "name": "九三非转基因大豆油三级5L/桶",
+            "price": "65.90",
+            "row": 1266,
+            "sheet": "Sheet0",
+            "spec": "5L"
+          },
+          {
+            "category": "食用油",
+            "code": "80005868",
+            "name": "古榨非转基因压榨豆油",
+            "price": "400.00",
+            "row": 1268,
+            "sheet": "Sheet0",
+            "spec": "4桶*5L"
+          }
+        ],
+        "char_end": 19,
+        "char_start": 15,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:4:4",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "豆油",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "2",
+        "raw_text": "豆油2桶",
+        "selected": null,
+        "source_line": 4,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "桶",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 25,
+        "char_start": 20,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:5:5",
+        "match_reason": "当前目录没有合理候选",
+        "name": "色拉油",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "色拉油1桶",
+        "selected": null,
+        "source_line": 5,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "桶",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001298",
+            "name": "海天酱油鲜味生抽",
+            "price": "7.65",
+            "row": 78,
+            "sheet": "Sheet0",
+            "spec": "500ml"
+          },
+          {
+            "category": "调料类",
+            "code": "80001664",
+            "name": "海天鲜味生抽（小桶）",
+            "price": "21.50",
+            "row": 266,
+            "sheet": "Sheet0",
+            "spec": "1.9L"
+          },
+          {
+            "category": "调料类",
+            "code": "80002024",
+            "name": "海天生抽4.9L*2桶/件",
+            "price": "69.41",
+            "row": 422,
+            "sheet": "Sheet0",
+            "spec": "4.9L"
+          }
+        ],
+        "char_end": 33,
+        "char_start": 26,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:6:6",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "海天鲜生抽",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "海天鲜生抽1瓶",
+        "selected": null,
+        "source_line": 6,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "瓶",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001357",
+            "name": "东古黄豆酱油2L/桶",
+            "price": "11.50",
+            "row": 107,
+            "sheet": "Sheet0",
+            "spec": "2L"
+          },
+          {
+            "category": "调料类",
+            "code": "80001504",
+            "name": "东古一品鲜特级酿造酱油",
+            "price": "25.29",
+            "row": 179,
+            "sheet": "Sheet0",
+            "spec": "1.2L"
+          },
+          {
+            "category": "调料类",
+            "code": "80001858",
+            "name": "东古一品鲜酱油5L/桶",
+            "price": "81.76",
+            "row": 326,
+            "sheet": "Sheet0",
+            "spec": "5L"
+          },
+          {
+            "category": "调料类",
+            "code": "80002259",
+            "name": "东古黄豆酱油（5L*2桶）",
+            "price": "46.35",
+            "row": 489,
+            "sheet": "Sheet0",
+            "spec": "5升"
+          },
+          {
+            "category": "调料类",
+            "code": "80004674",
+            "name": "东古海鲜酱油",
+            "price": "95.76",
+            "row": 689,
+            "sheet": "Sheet0",
+            "spec": "5L*2"
+          }
+        ],
+        "char_end": 40,
+        "char_start": 34,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:7:7",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "东古酱油",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "2",
+        "raw_text": "东古酱油2瓶",
+        "selected": null,
+        "source_line": 7,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "瓶",
+        "unit_price": null
+      },
+      {
+        "amount": "37.43",
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001841",
+            "name": "冰糖",
+            "price": "9.85",
+            "row": 319,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 45,
+        "char_start": 41,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "37.43",
+        "invoice_quantity": "4",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:8:8",
+        "match_reason": "",
+        "name": "冰糖",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "4",
+        "quantity_basis": "requested",
+        "raw_text": "冰糖4斤",
+        "selected": {
+          "category": "调料类",
+          "code": "80001841",
+          "name": "冰糖",
+          "price": "9.85",
+          "row": 319,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 8,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "9.3575"
+      },
+      {
+        "amount": "22.762",
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001837",
+            "name": "白糖",
+            "price": "5.99",
+            "row": 315,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 50,
+        "char_start": 46,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "22.762",
+        "invoice_quantity": "4",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:9:9",
+        "match_reason": "",
+        "name": "白糖",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "4",
+        "quantity_basis": "requested",
+        "raw_text": "白糖4斤",
+        "selected": {
+          "category": "调料类",
+          "code": "80001837",
+          "name": "白糖",
+          "price": "5.99",
+          "row": 315,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 9,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "5.6905"
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 59,
+        "char_start": 51,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:10:10",
+        "match_reason": "当前目录没有合理候选",
+        "name": "海天上等耗油",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "海天上等耗油1瓶",
+        "selected": null,
+        "source_line": 10,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "瓶",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001335",
+            "name": "中盐竹盐",
+            "price": "8.82",
+            "row": 100,
+            "sheet": "Sheet0",
+            "spec": "250g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001581",
+            "name": "中盐粉碎洗涤盐",
+            "price": "1.76",
+            "row": 218,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001636",
+            "name": "椒盐",
+            "price": "4.71",
+            "row": 252,
+            "sheet": "Sheet0",
+            "spec": "20g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002159",
+            "name": "中盐未加碘盐",
+            "price": "2.06",
+            "row": 474,
+            "sheet": "Sheet0",
+            "spec": "400g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002342",
+            "name": "中盐未加碘低钠盐（350克/袋）",
+            "price": "2.40",
+            "row": 502,
+            "sheet": "Sheet0",
+            "spec": "350g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002987",
+            "name": "中盐精制加碘盐",
+            "price": "1.76",
+            "row": 611,
+            "sheet": "Sheet0",
+            "spec": "350g"
+          },
+          {
+            "category": "调料类",
+            "code": "80005759",
+            "name": "盐渍香椿芽",
+            "price": "14.71",
+            "row": 723,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80005761",
+            "name": "安佳无盐黄油块(正装原味)",
+            "price": "70.00",
+            "row": 724,
+            "sheet": "Sheet0",
+            "spec": "454g"
+          },
+          {
+            "category": "调料类",
+            "code": "80005764",
+            "name": "盐渍雪里红(散斤)",
+            "price": "7.65",
+            "row": 725,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80006082",
+            "name": "嘉文盐焗鸡粉",
+            "price": "21.76",
+            "row": 762,
+            "sheet": "Sheet0",
+            "spec": "20g*10袋"
+          },
+          {
+            "category": "水产品",
+            "code": "80001984",
+            "name": "盐渍海带丝",
+            "price": "28.82",
+            "row": 1180,
+            "sheet": "Sheet0",
+            "spec": "2.5kg"
+          },
+          {
+            "category": "水产品",
+            "code": "80004119",
+            "name": "无盐海米",
+            "price": "32.25",
+            "row": 1224,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "水产品",
+            "code": "80005755",
+            "name": "鲜海带根（带盐）",
+            "price": "7.94",
+            "row": 1245,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "水产品",
+            "code": "80005756",
+            "name": "鲜海带扣（带盐）",
+            "price": "10.00",
+            "row": 1246,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "水产品",
+            "code": "80005757",
+            "name": "鲜海带丝（带盐）",
+            "price": "10.00",
+            "row": 1247,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "水产品",
+            "code": "80005858",
+            "name": "无盐虾米",
+            "price": "32.94",
+            "row": 1252,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "方便食品",
+            "code": "80004395",
+            "name": "烧饼（豆沙.糖.油盐）",
+            "price": "2.60",
+            "row": 1505,
+            "sheet": "Sheet0",
+            "spec": "个"
+          },
+          {
+            "category": "方便食品",
+            "code": "80005863",
+            "name": "碱水蝴蝶饼干（海盐味）",
+            "price": "18.24",
+            "row": 1575,
+            "sheet": "Sheet0",
+            "spec": "90g"
+          },
+          {
+            "category": "方便食品",
+            "code": "80008646",
+            "name": "展艺低糖椒盐紫苏馅",
+            "price": "42.94",
+            "row": 1593,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "豆制品",
+            "code": "80005738",
+            "name": "盐渍干豆皮",
+            "price": "3.29",
+            "row": 1647,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 63,
+        "char_start": 60,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:11:11",
+        "match_reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+        "name": "盐",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "4",
+        "raw_text": "盐4袋",
+        "selected": null,
+        "source_line": 11,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001608",
+            "name": "太太乐鸡精",
+            "price": "35.00",
+            "row": 235,
+            "sheet": "Sheet0",
+            "spec": "1kg"
+          },
+          {
+            "category": "调料类",
+            "code": "80001955",
+            "name": "太太乐鸡精",
+            "price": "21.76",
+            "row": 379,
+            "sheet": "Sheet0",
+            "spec": "454g"
+          }
+        ],
+        "char_end": 71,
+        "char_start": 64,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "different_specs",
+            "message": "同名商品的包装或规格不能按挂牌价直接比较"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:12:12",
+        "match_reason": "",
+        "name": "太太乐鸡精",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "太太乐鸡精1袋",
+        "selected": null,
+        "source_line": 12,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80002082",
+            "name": "水煮肉片料",
+            "price": "14.71",
+            "row": 455,
+            "sheet": "Sheet0",
+            "spec": "100g"
+          }
+        ],
+        "char_end": 79,
+        "char_start": 72,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "quantity_conversion",
+            "message": "缺少包到100g的已确认换算关系"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:13:13",
+        "match_reason": "",
+        "name": "水煮肉片料",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "4",
+        "raw_text": "水煮肉片料4包",
+        "selected": {
+          "category": "调料类",
+          "code": "80002082",
+          "name": "水煮肉片料",
+          "price": "14.71",
+          "row": 455,
+          "sheet": "Sheet0",
+          "spec": "100g"
+        },
+        "source_line": 13,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "包",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80004224",
+            "name": "番茄沙司250g",
+            "price": "8.24",
+            "row": 646,
+            "sheet": "Sheet0",
+            "spec": "250g"
+          }
+        ],
+        "char_end": 86,
+        "char_start": 80,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:14:14",
+        "match_reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+        "name": "番茄沙司",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "2",
+        "raw_text": "番茄沙司2袋",
+        "selected": null,
+        "source_line": 14,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80002344",
+            "name": "名扬麻辣块",
+            "price": "42.94",
+            "row": 503,
+            "sheet": "Sheet0",
+            "spec": "90g*4块"
+          }
+        ],
+        "char_end": 94,
+        "char_start": 87,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:15:15",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "重庆麻辣块",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "重庆麻辣块1块",
+        "selected": null,
+        "source_line": 15,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "块",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001302",
+            "name": "李锦记香辣酱",
+            "price": "15.80",
+            "row": 82,
+            "sheet": "Sheet0",
+            "spec": "205g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001465",
+            "name": "美乐香辣酱",
+            "price": "13.53",
+            "row": 158,
+            "sheet": "Sheet0",
+            "spec": "350g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002291",
+            "name": "美乐香辣酱",
+            "price": "13.53",
+            "row": 493,
+            "sheet": "Sheet0",
+            "spec": "350g"
+          },
+          {
+            "category": "调料类",
+            "code": "80004540",
+            "name": "佐香园香辣酱360g",
+            "price": "7.40",
+            "row": 670,
+            "sheet": "Sheet0",
+            "spec": "360g"
+          }
+        ],
+        "char_end": 103,
+        "char_start": 95,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:16:16",
+        "match_reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+        "name": "太阳岛香辣酱",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "太阳岛香辣酱1袋",
+        "selected": null,
+        "source_line": 16,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001429",
+            "name": "老干妈香辣脆油辣椒",
+            "price": "14.71",
+            "row": 140,
+            "sheet": "Sheet0",
+            "spec": "210g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001436",
+            "name": "海底捞浓香红油火锅底料",
+            "price": "12.90",
+            "row": 145,
+            "sheet": "Sheet0",
+            "spec": "150g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001589",
+            "name": "美狮牌香油",
+            "price": "25.29",
+            "row": 224,
+            "sheet": "Sheet0",
+            "spec": "250ml"
+          },
+          {
+            "category": "调料类",
+            "code": "80001779",
+            "name": "香油（5KG/桶）",
+            "price": "122.35",
+            "row": 303,
+            "sheet": "Sheet0",
+            "spec": "5kg"
+          },
+          {
+            "category": "调料类",
+            "code": "80002040",
+            "name": "鸡笼山芝麻香油 5L/桶",
+            "price": "111.76",
+            "row": 433,
+            "sheet": "Sheet0",
+            "spec": "5L"
+          },
+          {
+            "category": "调料类",
+            "code": "80005062",
+            "name": "李锦记纯香芝麻油",
+            "price": "22.80",
+            "row": 696,
+            "sheet": "Sheet0",
+            "spec": "410ml"
+          }
+        ],
+        "char_end": 108,
+        "char_start": 104,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:17:17",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "香油",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "香油1瓶",
+        "selected": null,
+        "source_line": 17,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "瓶",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80002902",
+            "name": "辣椒丝",
+            "price": "32.35",
+            "row": 572,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002953",
+            "name": "川椒丝",
+            "price": "31.76",
+            "row": 594,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80003006",
+            "name": "川椒丝（特细）",
+            "price": "30.00",
+            "row": 615,
+            "sheet": "Sheet0",
+            "spec": "250g"
+          }
+        ],
+        "char_end": 114,
+        "char_start": 109,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:18:18",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "树椒丝",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "树椒丝1斤",
+        "selected": null,
+        "source_line": 18,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001307",
+            "name": "小捆手工红薯粉条酸辣粉",
+            "price": "9.35",
+            "row": 85,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001317",
+            "name": "土豆粉条（宽粉）",
+            "price": "6.47",
+            "row": 91,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001318",
+            "name": "土豆粉条",
+            "price": "6.99",
+            "row": 92,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001321",
+            "name": "红薯粉条",
+            "price": "9.80",
+            "row": 94,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80001862",
+            "name": "粉条1kg",
+            "price": "16.81",
+            "row": 329,
+            "sheet": "Sheet0",
+            "spec": "1kg"
+          },
+          {
+            "category": "调料类",
+            "code": "80001863",
+            "name": "粉条按斤",
+            "price": "6.99",
+            "row": 330,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002886",
+            "name": "宽粉条",
+            "price": "7.06",
+            "row": 570,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80002916",
+            "name": "地瓜粉条",
+            "price": "6.99",
+            "row": 577,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 119,
+        "char_start": 115,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:19:19",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "粉条",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "3",
+        "raw_text": "粉条3斤",
+        "selected": null,
+        "source_line": 19,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001869",
+            "name": "腐竹",
+            "price": "16.90",
+            "row": 334,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 124,
+        "char_start": 120,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "quantity_conversion",
+            "message": "缺少袋到500g的已确认换算关系"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:20:20",
+        "match_reason": "",
+        "name": "腐竹",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "2",
+        "raw_text": "腐竹2袋",
+        "selected": {
+          "category": "调料类",
+          "code": "80001869",
+          "name": "腐竹",
+          "price": "16.90",
+          "row": 334,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 20,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": "7.562",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003447",
+            "name": "大葱",
+            "price": "1.99",
+            "row": 808,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 129,
+        "char_start": 125,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "7.562",
+        "invoice_quantity": "4",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:21:21",
+        "match_reason": "",
+        "name": "大葱",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "4",
+        "quantity_basis": "requested",
+        "raw_text": "大葱4斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003447",
+          "name": "大葱",
+          "price": "1.99",
+          "row": 808,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 21,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "1.8905"
+      },
+      {
+        "amount": "15.162",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003727",
+            "name": "小葱",
+            "price": "3.99",
+            "row": 891,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 134,
+        "char_start": 130,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "15.162",
+        "invoice_quantity": "4",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:22:22",
+        "match_reason": "",
+        "name": "小葱",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "4",
+        "quantity_basis": "requested",
+        "raw_text": "小葱4斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003727",
+          "name": "小葱",
+          "price": "3.99",
+          "row": 891,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 22,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "3.7905"
+      },
+      {
+        "amount": "17.081",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003719",
+            "name": "香菜",
+            "price": "8.99",
+            "row": 888,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 139,
+        "char_start": 135,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "17.081",
+        "invoice_quantity": "2",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:23:23",
+        "match_reason": "",
+        "name": "香菜",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "2",
+        "quantity_basis": "requested",
+        "raw_text": "香菜2斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003719",
+          "name": "香菜",
+          "price": "8.99",
+          "row": 888,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 23,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "8.5405"
+      },
+      {
+        "amount": "16.017",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003439",
+            "name": "臭菜",
+            "price": "11.24",
+            "row": 806,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 146,
+        "char_start": 140,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "16.017",
+        "invoice_quantity": "1.5",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:24:24",
+        "match_reason": "",
+        "name": "臭菜",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "1.5",
+        "quantity_basis": "requested",
+        "raw_text": "臭菜1.5斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003439",
+          "name": "臭菜",
+          "price": "11.24",
+          "row": 806,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 24,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "10.678"
+      },
+      {
+        "amount": "5.6905",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003724",
+            "name": "小白菜",
+            "price": "5.99",
+            "row": 890,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 152,
+        "char_start": 147,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "5.6905",
+        "invoice_quantity": "1",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:25:25",
+        "match_reason": "",
+        "name": "小白菜",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "1",
+        "quantity_basis": "requested",
+        "raw_text": "小白菜1斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003724",
+          "name": "小白菜",
+          "price": "5.99",
+          "row": 890,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 25,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "5.6905"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001889",
+            "name": "黄瓜干",
+            "price": "35.06",
+            "row": 347,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80004595",
+            "name": "黄瓜钱",
+            "price": "46.00",
+            "row": 678,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "调料类",
+            "code": "80004637",
+            "name": "酸黄瓜",
+            "price": "9.00",
+            "row": 685,
+            "sheet": "Sheet0",
+            "spec": "700g"
+          },
+          {
+            "category": "调料类",
+            "code": "80004648",
+            "name": "俄式酸黄瓜 330克/袋",
+            "price": "7.60",
+            "row": 687,
+            "sheet": "Sheet0",
+            "spec": "330g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80003517",
+            "name": "黄瓜",
+            "price": "3.49",
+            "row": 819,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80003562",
+            "name": "老黄瓜",
+            "price": "3.49",
+            "row": 835,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80003641",
+            "name": "水果黄瓜",
+            "price": "5.99",
+            "row": 855,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80005509",
+            "name": "优质黄瓜花",
+            "price": "39.90",
+            "row": 945,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80004362",
+            "name": "清真牛黄瓜条",
+            "price": "39.50",
+            "row": 1082,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80004819",
+            "name": "皓月牛肉黄瓜条",
+            "price": "59.99",
+            "row": 1090,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 160,
+        "char_start": 153,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:26:26",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "旱黄瓜",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "5.5",
+        "raw_text": "旱黄瓜5.5斤",
+        "selected": null,
+        "source_line": 26,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": "26.5335",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80004785",
+            "name": "优质紫洋葱",
+            "price": "3.99",
+            "row": 942,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 167,
+        "char_start": 161,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80004785",
+          "confirmed_by": "agent",
+          "reason": "紫皮洋葱对应目录紫洋葱；500g可比项中优质紫洋葱3.99高于紫洋葱1.99。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "紫皮洋葱对应目录紫洋葱；500g可比项中优质紫洋葱3.99高于紫洋葱1.99。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "26.5335",
+        "invoice_quantity": "7",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:27:27",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "紫皮洋葱",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "7",
+        "quantity_basis": "requested",
+        "raw_text": "紫皮洋葱7斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80004785",
+          "name": "优质紫洋葱",
+          "price": "3.99",
+          "row": 942,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 27,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "3.7905"
+      },
+      {
+        "amount": "15.162",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003500",
+            "name": "红尖椒",
+            "price": "3.99",
+            "row": 816,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 174,
+        "char_start": 168,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80003500",
+          "confirmed_by": "agent",
+          "reason": "红色是硬约束；红尖椒为目录中唯一红色尖椒，500g计价。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "红色是硬约束；红尖椒为目录中唯一红色尖椒，500g计价。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "15.162",
+        "invoice_quantity": "4",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:28:28",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "红色尖椒",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "4",
+        "quantity_basis": "requested",
+        "raw_text": "红色尖椒4斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003500",
+          "name": "红尖椒",
+          "price": "3.99",
+          "row": 816,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 28,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "3.7905"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "肉制品",
+            "code": "80005962",
+            "name": "五花肉片（金锣切片）",
+            "price": "13.99",
+            "row": 1154,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005963",
+            "name": "五花肉块（金锣切块）",
+            "price": "13.99",
+            "row": 1155,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 180,
+        "char_start": 175,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:29:29",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "五花肉",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "7",
+        "raw_text": "五花肉7斤",
+        "selected": null,
+        "source_line": 29,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "肉制品",
+            "code": "80004198",
+            "name": "梅花肉块",
+            "price": "15.99",
+            "row": 1070,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80004199",
+            "name": "梅花肉片",
+            "price": "15.99",
+            "row": 1071,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005290",
+            "name": "云宴三花精选梅肉",
+            "price": "18.99",
+            "row": 1107,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005524",
+            "name": "梅花肉丝",
+            "price": "15.99",
+            "row": 1111,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005946",
+            "name": "冷鲜梅花肉",
+            "price": "12.99",
+            "row": 1138,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005955",
+            "name": "鲜猪梅花肉（金锣）",
+            "price": "14.99",
+            "row": 1147,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 185,
+        "char_start": 181,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:30:30",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "梅肉",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "4",
+        "raw_text": "梅肉4斤",
+        "selected": null,
+        "source_line": 30,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 190,
+        "char_start": 186,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:31:31",
+        "match_reason": "当前目录没有合理候选",
+        "name": "净肉",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "4",
+        "raw_text": "净肉4斤",
+        "selected": null,
+        "source_line": 31,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 196,
+        "char_start": 191,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:32:32",
+        "match_reason": "当前目录没有合理候选",
+        "name": "盐酥鸡",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "3",
+        "raw_text": "盐酥鸡3袋",
+        "selected": null,
+        "source_line": 32,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "袋",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 201,
+        "char_start": 197,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:33:33",
+        "match_reason": "当前目录没有合理候选",
+        "name": "火碱",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "3",
+        "raw_text": "火碱3斤",
+        "selected": null,
+        "source_line": 33,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003409",
+            "name": "白菜",
+            "price": "1.29",
+            "row": 798,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 206,
+        "char_start": 202,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "quantity_conversion",
+            "message": "缺少颗到500g的已确认换算关系"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:34:34",
+        "match_reason": "",
+        "name": "白菜",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "3",
+        "raw_text": "白菜3颗",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003409",
+          "name": "白菜",
+          "price": "1.29",
+          "row": 798,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 34,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "颗",
+        "unit_price": null
+      },
+      {
+        "amount": "26.524",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003517",
+            "name": "黄瓜",
+            "price": "3.49",
+            "row": 819,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 211,
+        "char_start": 207,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "26.524",
+        "invoice_quantity": "8",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:35:35",
+        "match_reason": "",
+        "name": "黄瓜",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "8",
+        "quantity_basis": "requested",
+        "raw_text": "黄瓜8斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003517",
+          "name": "黄瓜",
+          "price": "3.49",
+          "row": 819,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 35,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "3.3155"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "豆制品",
+            "code": "80004287",
+            "name": "干豆腐扣",
+            "price": "7.06",
+            "row": 1641,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "豆制品",
+            "code": "80004288",
+            "name": "干豆腐丝",
+            "price": "6.99",
+            "row": 1642,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 217,
+        "char_start": 212,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:36:36",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "干豆腐",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "8",
+        "raw_text": "干豆腐8斤",
+        "selected": null,
+        "source_line": 36,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "水产品",
+            "code": "80003132",
+            "name": "鲜活江鲤鱼",
+            "price": "14.99",
+            "row": 1185,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "水产品",
+            "code": "80003133",
+            "name": "鲜活鲤鱼",
+            "price": "10.00",
+            "row": 1186,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 225,
+        "char_start": 218,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:37:37",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "鲤鱼",
+        "notes": "收拾好",
+        "price_unit": null,
+        "quantity": "5",
+        "raw_text": "鲤鱼5条收拾好",
+        "selected": null,
+        "source_line": 37,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "条",
+        "unit_price": null
+      },
+      {
+        "amount": "4.2465",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003748",
+            "name": "油菜",
+            "price": "1.49",
+            "row": 897,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 230,
+        "char_start": 226,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "4.2465",
+        "invoice_quantity": "3",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:38:38",
+        "match_reason": "",
+        "name": "油菜",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "3",
+        "quantity_basis": "requested",
+        "raw_text": "油菜3斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003748",
+          "name": "油菜",
+          "price": "1.49",
+          "row": 897,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 38,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "1.4155"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003386",
+            "name": "笨绿豆芽",
+            "price": "0.99",
+            "row": 795,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80003391",
+            "name": "巧芽绿豆芽",
+            "price": "3.50",
+            "row": 796,
+            "sheet": "Sheet0",
+            "spec": "350g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80003393",
+            "name": "黄豆芽",
+            "price": "1.99",
+            "row": 797,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80004283",
+            "name": "北大荒绿豆芽",
+            "price": "3.29",
+            "row": 912,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80004389",
+            "name": "长芽黄豆芽（称重）",
+            "price": "2.10",
+            "row": 930,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80004390",
+            "name": "中芽黄豆芽（称重）",
+            "price": "4.00",
+            "row": 931,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80004391",
+            "name": "豆嘴黄豆芽（称重）",
+            "price": "5.00",
+            "row": 932,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80004432",
+            "name": "长芽绿豆芽（称重）",
+            "price": "2.10",
+            "row": 933,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "蔬菜",
+            "code": "80004666",
+            "name": "长绿豆芽（长芽）",
+            "price": "2.04",
+            "row": 938,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 235,
+        "char_start": 231,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:39:39",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "豆芽",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "3",
+        "raw_text": "豆芽3斤",
+        "selected": null,
+        "source_line": 39,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "豆制品",
+            "code": "80000089",
+            "name": "一手店素鸡豆腐",
+            "price": "11.80",
+            "row": 1624,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "豆制品",
+            "code": "80003374",
+            "name": "卤水豆腐",
+            "price": "2.94",
+            "row": 1628,
+            "sheet": "Sheet0",
+            "spec": "块"
+          },
+          {
+            "category": "豆制品",
+            "code": "80003396",
+            "name": "北大荒内酯豆腐400G/盒",
+            "price": "3.50",
+            "row": 1633,
+            "sheet": "Sheet0",
+            "spec": "盒"
+          },
+          {
+            "category": "豆制品",
+            "code": "80003399",
+            "name": "北大荒老豆腐",
+            "price": "5.00",
+            "row": 1634,
+            "sheet": "Sheet0",
+            "spec": "490g"
+          },
+          {
+            "category": "豆制品",
+            "code": "80003400",
+            "name": "北大荒绢豆腐",
+            "price": "4.50",
+            "row": 1635,
+            "sheet": "Sheet0",
+            "spec": "400g"
+          },
+          {
+            "category": "豆制品",
+            "code": "80004282",
+            "name": "北大荒精品老豆腐",
+            "price": "5.00",
+            "row": 1639,
+            "sheet": "Sheet0",
+            "spec": "490g"
+          },
+          {
+            "category": "豆制品",
+            "code": "80004499",
+            "name": "北大荒水豆腐",
+            "price": "2.50",
+            "row": 1644,
+            "sheet": "Sheet0",
+            "spec": "块"
+          }
+        ],
+        "char_end": 241,
+        "char_start": 236,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:40:40",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "豆腐",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "10",
+        "raw_text": "豆腐10盒",
+        "selected": null,
+        "source_line": 40,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "盒",
+        "unit_price": null
+      },
+      {
+        "amount": "51.243",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003657",
+            "name": "蒜苔（绿帽）",
+            "price": "8.99",
+            "row": 862,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 246,
+        "char_start": 242,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80003657",
+          "confirmed_by": "agent",
+          "reason": "蒜苔对应目录唯一蒜苔（绿帽）项，500g计价；未改变原始6斤。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "蒜苔对应目录唯一蒜苔（绿帽）项，500g计价；未改变原始6斤。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "51.243",
+        "invoice_quantity": "6",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:41:41",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "蒜苔",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "6",
+        "quantity_basis": "requested",
+        "raw_text": "蒜苔6斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003657",
+          "name": "蒜苔（绿帽）",
+          "price": "8.99",
+          "row": 862,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 41,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "8.5405"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "肉制品",
+            "code": "80000333",
+            "name": "正大单冻鸡胸肉1kg",
+            "price": "19.41",
+            "row": 983,
+            "sheet": "Sheet0",
+            "spec": "1kg"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000334",
+            "name": "正大单冻鸡胸肉2kg",
+            "price": "37.06",
+            "row": 984,
+            "sheet": "Sheet0",
+            "spec": "2kg"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000335",
+            "name": "正大单冻鸡胸肉500g",
+            "price": "10.35",
+            "row": 985,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000391",
+            "name": "正大鲜鸡胸肉",
+            "price": "7.99",
+            "row": 1005,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 252,
+        "char_start": 247,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:42:42",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "鸡胸肉",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "6",
+        "raw_text": "鸡胸肉6斤",
+        "selected": null,
+        "source_line": 42,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": "47.025",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003671",
+            "name": "土豆（大885）",
+            "price": "3.30",
+            "row": 867,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 258,
+        "char_start": 253,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80003671",
+          "confirmed_by": "agent",
+          "reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30，高于新土豆1.29和优质新土豆2.49。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30，高于新土豆1.29和优质新土豆2.49。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "47.025",
+        "invoice_quantity": "15",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:43:43",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "土豆",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "15",
+        "quantity_basis": "requested",
+        "raw_text": "土豆15斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003671",
+          "name": "土豆（大885）",
+          "price": "3.30",
+          "row": 867,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 43,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "3.135"
+      },
+      {
+        "amount": "16.5585",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003527",
+            "name": "尖椒",
+            "price": "2.49",
+            "row": 823,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 263,
+        "char_start": 259,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "16.5585",
+        "invoice_quantity": "7",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:44:44",
+        "match_reason": "",
+        "name": "尖椒",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "7",
+        "quantity_basis": "requested",
+        "raw_text": "尖椒7斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003527",
+          "name": "尖椒",
+          "price": "2.49",
+          "row": 823,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 44,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "2.3655"
+      },
+      {
+        "amount": "88.293",
+        "candidates": [
+          {
+            "category": "方便食品",
+            "code": "80000101",
+            "name": "农大红肠",
+            "price": "46.47",
+            "row": 1466,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 268,
+        "char_start": 264,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80000101",
+          "confirmed_by": "agent",
+          "reason": "未限定品牌的红肠；同为500g红肠项，农大46.47为最高挂牌价。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "未限定品牌的红肠；同为500g红肠项，农大46.47为最高挂牌价。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "88.293",
+        "invoice_quantity": "2",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:45:45",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "红肠",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "2",
+        "quantity_basis": "requested",
+        "raw_text": "红肠2斤",
+        "selected": {
+          "category": "方便食品",
+          "code": "80000101",
+          "name": "农大红肠",
+          "price": "46.47",
+          "row": 1466,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 45,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "44.1465"
+      },
+      {
+        "amount": "63.688",
+        "candidates": [
+          {
+            "category": "方便食品",
+            "code": "80005851",
+            "name": "一手店粉肠",
+            "price": "33.52",
+            "row": 1573,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 273,
+        "char_start": 269,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80005851",
+          "confirmed_by": "agent",
+          "reason": "未限定品牌的粉肠；同为500g粉肠项，一手店33.52为最高挂牌价。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "未限定品牌的粉肠；同为500g粉肠项，一手店33.52为最高挂牌价。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "63.688",
+        "invoice_quantity": "2",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:46:46",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "粉肠",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "2",
+        "quantity_basis": "requested",
+        "raw_text": "粉肠2斤",
+        "selected": {
+          "category": "方便食品",
+          "code": "80005851",
+          "name": "一手店粉肠",
+          "price": "33.52",
+          "row": 1573,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 46,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "31.844"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "方便食品",
+            "code": "80000071",
+            "name": "秋林里道斯酱福腊肠",
+            "price": "39.41",
+            "row": 1448,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "方便食品",
+            "code": "80000072",
+            "name": "风味广式腊肠",
+            "price": "18.24",
+            "row": 1449,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 278,
+        "char_start": 274,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:47:47",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "腊肠",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "2",
+        "raw_text": "腊肠2斤",
+        "selected": null,
+        "source_line": 47,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": "66.025",
+        "candidates": [
+          {
+            "category": "蛋类",
+            "code": "80004094",
+            "name": "咸鸭蛋",
+            "price": "2.78",
+            "row": 1328,
+            "sheet": "Sheet0",
+            "spec": "个"
+          }
+        ],
+        "char_end": 285,
+        "char_start": 279,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "66.025",
+        "invoice_quantity": "25",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:48:48",
+        "match_reason": "",
+        "name": "咸鸭蛋",
+        "notes": "",
+        "price_unit": "个",
+        "quantity": "25",
+        "quantity_basis": "requested",
+        "raw_text": "咸鸭蛋25个",
+        "selected": {
+          "category": "蛋类",
+          "code": "80004094",
+          "name": "咸鸭蛋",
+          "price": "2.78",
+          "row": 1328,
+          "sheet": "Sheet0",
+          "spec": "个"
+        },
+        "source_line": 48,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "个",
+        "unit_price": "2.641"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "调料类",
+            "code": "80001476",
+            "name": "麦味宝奥尔良鸡翅腌料",
+            "price": "28.82",
+            "row": 164,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000326",
+            "name": "正大单冻鸡翅根",
+            "price": "13.90",
+            "row": 981,
+            "sheet": "Sheet0",
+            "spec": "1斤"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000328",
+            "name": "正大单冻鸡翅中（1kg/袋）",
+            "price": "59.50",
+            "row": 982,
+            "sheet": "Sheet0",
+            "spec": "1kg"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000343",
+            "name": "正大单冻鸡翅根（1kg/袋）",
+            "price": "35.80",
+            "row": 988,
+            "sheet": "Sheet0",
+            "spec": "1kg/袋"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000344",
+            "name": "正大鸡翅尖",
+            "price": "17.06",
+            "row": 989,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000346",
+            "name": "正大鸡翅中（冻）（1kg/袋）",
+            "price": "49.90",
+            "row": 990,
+            "sheet": "Sheet0",
+            "spec": "1kg"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000375",
+            "name": "正大鲜鸡翅根（鲜）",
+            "price": "8.99",
+            "row": 1000,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80000377",
+            "name": "正大鲜鸡翅中",
+            "price": "32.99",
+            "row": 1001,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "8004479",
+            "name": "正大鸡翅根（冻）",
+            "price": "13.90",
+            "row": 1179,
+            "sheet": "Sheet0",
+            "spec": "1斤"
+          },
+          {
+            "category": "方便食品",
+            "code": "80000094",
+            "name": "一手店鸡翅根",
+            "price": "52.80",
+            "row": 1461,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 290,
+        "char_start": 286,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:49:49",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "鸡翅",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "6",
+        "raw_text": "鸡翅6斤",
+        "selected": null,
+        "source_line": 49,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "肉制品",
+            "code": "80005399",
+            "name": "云宴三花猪排骨肉",
+            "price": "15.99",
+            "row": 1109,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005956",
+            "name": "鲜猪排骨肉（金锣）",
+            "price": "14.99",
+            "row": 1148,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005967",
+            "name": "金锣鲜猪排骨（全排切段）",
+            "price": "14.99",
+            "row": 1159,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005968",
+            "name": "金锣鲜猪排骨（半排切段）",
+            "price": "25.99",
+            "row": 1160,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005969",
+            "name": "金锣鲜猪排骨（纯肋条排骨切段）",
+            "price": "32.99",
+            "row": 1161,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80008713",
+            "name": "大庄园鲜羊排（带骨）",
+            "price": "45.50",
+            "row": 1172,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 295,
+        "char_start": 291,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:50:50",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "排骨",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "6",
+        "raw_text": "排骨6斤",
+        "selected": null,
+        "source_line": 50,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": "28.443",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003749",
+            "name": "油豆角",
+            "price": "4.99",
+            "row": 898,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 301,
+        "char_start": 296,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "28.443",
+        "invoice_quantity": "6",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:51:51",
+        "match_reason": "",
+        "name": "油豆角",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "6",
+        "quantity_basis": "requested",
+        "raw_text": "油豆角6斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003749",
+          "name": "油豆角",
+          "price": "4.99",
+          "row": 898,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 51,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "4.7405"
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 307,
+        "char_start": 302,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:52:52",
+        "match_reason": "当前目录没有合理候选",
+        "name": "橘子",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "12",
+        "raw_text": "橘子12斤",
+        "selected": null,
+        "source_line": 52,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "方便食品",
+            "code": "80005844",
+            "name": "甘竹玉米粒罐头",
+            "price": "7.60",
+            "row": 1571,
+            "sheet": "Sheet0",
+            "spec": "425g"
+          }
+        ],
+        "char_end": 315,
+        "char_start": 308,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:53:53",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "玉米粒罐头",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "6",
+        "raw_text": "玉米粒罐头6罐",
+        "selected": null,
+        "source_line": 53,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "罐",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80004313",
+            "name": "娃娃菜袋装",
+            "price": "6.50",
+            "row": 924,
+            "sheet": "Sheet0",
+            "spec": "袋"
+          }
+        ],
+        "char_end": 321,
+        "char_start": 316,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:54:54",
+        "match_reason": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对",
+        "name": "娃娃菜",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "4",
+        "raw_text": "娃娃菜4包",
+        "selected": null,
+        "source_line": 54,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "包",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "肉制品",
+            "code": "80000767",
+            "name": "生猪前手（燎毛）",
+            "price": "24.99",
+            "row": 1050,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80001051",
+            "name": "猪手冻",
+            "price": "19.99",
+            "row": 1062,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "方便食品",
+            "code": "80000083",
+            "name": "一手店猪手",
+            "price": "45.80",
+            "row": 1453,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 326,
+        "char_start": 322,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:55:55",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "猪手",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "7",
+        "raw_text": "猪手7斤",
+        "selected": null,
+        "source_line": 55,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": "27.36",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003532",
+            "name": "豇豆角",
+            "price": "4.80",
+            "row": 825,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 332,
+        "char_start": 327,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "27.36",
+        "invoice_quantity": "6",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:56:56",
+        "match_reason": "",
+        "name": "豇豆角",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "6",
+        "quantity_basis": "requested",
+        "raw_text": "豇豆角6斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003532",
+          "name": "豇豆角",
+          "price": "4.80",
+          "row": 825,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 56,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "4.56"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "肉制品",
+            "code": "80000724",
+            "name": "清真牛里脊",
+            "price": "46.47",
+            "row": 1031,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80001004",
+            "name": "鲜猪里脊",
+            "price": "12.99",
+            "row": 1060,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80004188",
+            "name": "里脊肉片（精品手工切）",
+            "price": "13.99",
+            "row": 1065,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80004189",
+            "name": "里脊肉丝（精品手工切）",
+            "price": "13.99",
+            "row": 1066,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80004190",
+            "name": "里脊肉块（精品手工切）",
+            "price": "13.99",
+            "row": 1067,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80004191",
+            "name": "里脊肉丁（精品手工切）",
+            "price": "13.99",
+            "row": 1068,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005553",
+            "name": "羊里脊",
+            "price": "45.80",
+            "row": 1114,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005949",
+            "name": "冷鲜小里脊肉（金锣）",
+            "price": "15.99",
+            "row": 1141,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          },
+          {
+            "category": "肉制品",
+            "code": "80005959",
+            "name": "鲜猪精里脊（金锣）",
+            "price": "12.99",
+            "row": 1151,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 337,
+        "char_start": 333,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:57:57",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "里脊",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "6",
+        "raw_text": "里脊6斤",
+        "selected": null,
+        "source_line": 57,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003724",
+            "name": "小白菜",
+            "price": "5.99",
+            "row": 890,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 343,
+        "char_start": 338,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "quantity_conversion",
+            "message": "缺少颗到500g的已确认换算关系"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:58:58",
+        "match_reason": "",
+        "name": "小白菜",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "3",
+        "raw_text": "小白菜3颗",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003724",
+          "name": "小白菜",
+          "price": "5.99",
+          "row": 890,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 58,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "颗",
+        "unit_price": null
+      },
+      {
+        "amount": "15.903",
+        "candidates": [
+          {
+            "category": "蔬菜",
+            "code": "80003608",
+            "name": "青椒/大辣椒",
+            "price": "2.79",
+            "row": 848,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 348,
+        "char_start": 344,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80003608",
+          "confirmed_by": "agent",
+          "reason": "青椒/大辣椒对应聊天青椒，目录唯一该鲜菜项，500g计价。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "青椒/大辣椒对应聊天青椒，目录唯一该鲜菜项，500g计价。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "15.903",
+        "invoice_quantity": "6",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:59:59",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "青椒",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "6",
+        "quantity_basis": "requested",
+        "raw_text": "青椒6斤",
+        "selected": {
+          "category": "蔬菜",
+          "code": "80003608",
+          "name": "青椒/大辣椒",
+          "price": "2.79",
+          "row": 848,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 59,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "2.6505"
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "奶（饮料）",
+            "code": "80004048",
+            "name": "完达山纯牛奶（小枕）",
+            "price": "36.50",
+            "row": 1270,
+            "sheet": "Sheet0",
+            "spec": "240ml*16袋"
+          },
+          {
+            "category": "奶（饮料）",
+            "code": "80004087",
+            "name": "蒙牛纯牛奶240ml*16/件 （枕式）",
+            "price": "44.50",
+            "row": 1281,
+            "sheet": "Sheet0",
+            "spec": "240ml*16袋"
+          },
+          {
+            "category": "奶（饮料）",
+            "code": "80004254",
+            "name": "蒙牛纯牛奶200ml*24盒/件",
+            "price": "59.80",
+            "row": 1285,
+            "sheet": "Sheet0",
+            "spec": "24盒"
+          },
+          {
+            "category": "奶（饮料）",
+            "code": "80005841",
+            "name": "完达山臻醇牛奶250ml",
+            "price": "44.51",
+            "row": 1309,
+            "sheet": "Sheet0",
+            "spec": "箱"
+          },
+          {
+            "category": "奶（饮料）",
+            "code": "80008680",
+            "name": "蒙牛核桃牛奶(枕袋)",
+            "price": "46.47",
+            "row": 1321,
+            "sheet": "Sheet0",
+            "spec": "190ml*16袋"
+          }
+        ],
+        "char_end": 353,
+        "char_start": 349,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "仅见单品参考候选，缺每箱件数和每箱净重，不能将1箱当成1袋或计价单位"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:60:60",
+        "match_reason": "仅见单品参考候选，缺每箱件数和每箱净重，不能将1箱当成1袋或计价单位",
+        "name": "牛奶",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "3",
+        "raw_text": "牛奶3箱",
+        "selected": null,
+        "source_line": 60,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "ambiguous",
+        "target_station": null,
+        "unit": "箱",
+        "unit_price": null
+      },
+      {
+        "amount": "68.286",
+        "candidates": [
+          {
+            "category": "水果类",
+            "code": "80005703",
+            "name": "优选佳农香蕉",
+            "price": "5.99",
+            "row": 59,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 359,
+        "char_start": 354,
+        "date_context": null,
+        "decision": {
+          "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+          "code": "80005703",
+          "confirmed_by": "agent",
+          "reason": "未限定品牌的香蕉；两项500g香蕉中优选佳农5.99高于优质香蕉3.99。",
+          "selection_basis": "constraints_then_highest_price"
+        },
+        "decision_reason": "未限定品牌的香蕉；两项500g香蕉中优选佳农5.99高于优质香蕉3.99。",
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": "68.286",
+        "invoice_quantity": "12",
+        "issues": [],
+        "line_id": "学院路站11.3下单.txt:61:61",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "香蕉",
+        "notes": "",
+        "price_unit": "500g",
+        "quantity": "12",
+        "quantity_basis": "requested",
+        "raw_text": "香蕉12斤",
+        "selected": {
+          "category": "水果类",
+          "code": "80005703",
+          "name": "优选佳农香蕉",
+          "price": "5.99",
+          "row": 59,
+          "sheet": "Sheet0",
+          "spec": "500g"
+        },
+        "source_line": 61,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "matched",
+        "target_station": null,
+        "unit": "斤",
+        "unit_price": "5.6905"
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 365,
+        "char_start": 360,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:62:62",
+        "match_reason": "当前目录没有合理候选",
+        "name": "洗洁精",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "1",
+        "raw_text": "洗洁精1桶",
+        "selected": null,
+        "source_line": 62,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "桶",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [],
+        "char_end": 371,
+        "char_start": 366,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "unmapped",
+            "message": "当前目录没有合理候选"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:63:63",
+        "match_reason": "当前目录没有合理候选",
+        "name": "桌布",
+        "notes": "",
+        "price_unit": null,
+        "quantity": "10",
+        "raw_text": "桌布10个",
+        "selected": null,
+        "source_line": 63,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "unmapped",
+        "target_station": null,
+        "unit": "个",
+        "unit_price": null
+      },
+      {
+        "amount": null,
+        "candidates": [
+          {
+            "category": "肉制品",
+            "code": "80000767",
+            "name": "生猪前手（燎毛）",
+            "price": "24.99",
+            "row": 1050,
+            "sheet": "Sheet0",
+            "spec": "500g"
+          }
+        ],
+        "char_end": 379,
+        "char_start": 372,
+        "date_context": null,
+        "discount": "0.95",
+        "event": null,
+        "finance_amount": null,
+        "invoice_quantity": null,
+        "issues": [
+          {
+            "code": "semantic_review",
+            "message": "商品仅有语义候选，需人工确认"
+          }
+        ],
+        "line_id": "学院路站11.3下单.txt:64:64",
+        "match_reason": "商品仅有语义候选，需人工确认",
+        "name": "生猪手",
+        "notes": "撩毛",
+        "price_unit": null,
+        "quantity": "8",
+        "raw_text": "生猪手撩毛8个",
+        "selected": null,
+        "source_line": 64,
+        "source_name": "学院路站11.3下单.txt",
+        "status": "needs_review",
+        "target_station": null,
+        "unit": "个",
+        "unit_price": null
+      }
+    ],
+    "shipping_date": "2026-11-03"
+  },
+  "row_count": 64,
+  "rules_sha256": "4a4f87b1015eeb0d715003139804bfe3aab74752533be46734e3aac62b9e2377",
+  "schema_version": 1,
+  "status": "needs_confirmation",
+  "test_only": true,
+  "totals": {
+    "finance": "684.057",
+    "finance_minus_standard": "0",
+    "standard": "684.057",
+    "standard_cent": "684.06",
+    "standard_exact": "684.057"
+  },
+  "unresolved_count": 42
+}

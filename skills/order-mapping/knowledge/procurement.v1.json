@@ -1,0 +1,809 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "purple_onion_name",
+      "aliases": [
+        "紫洋葱",
+        "紫皮洋葱"
+      ],
+      "concept": "紫皮洋葱是紫洋葱的颜色称谓，保留紫色约束",
+      "selector": {
+        "names": [
+          "紫洋葱",
+          "优质紫洋葱"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「紫洋葱10斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「优质紫洋葱」",
+          "reason": "人工商品含紫色，目录同为紫洋葱；不同品质仍需目录筛选"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「紫皮洋葱7斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「优质紫洋葱」",
+          "reason": "紫皮与紫洋葱为同色称谓，人工商品保留紫色"
+        }
+      ],
+      "applicable": "general",
+      "conflicts": [
+        "不能将紫色改为黄洋葱；同色不同品质仍需比对"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "oyster_sauce_typo",
+      "aliases": [
+        "海天上等耗油"
+      ],
+      "concept": "海天上等蚝油，耗油为蚝油误写",
+      "selector": {
+        "names": [
+          "海天上等蚝油 1kg/瓶"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "瓶"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「海天上等耗油1瓶」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「海天上等蚝油1kg/瓶」",
+          "reason": "品牌和上等系列相同，耗油应按蚝油检索；原文未给瓶净重"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "同品牌其他瓶装容量、系列不能因错别字自动排除"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "red_pointed_pepper",
+      "aliases": [
+        "红色尖椒"
+      ],
+      "concept": "红色尖椒，红色是硬约束",
+      "selector": {
+        "names": [
+          "红尖椒"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「红色尖椒4斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「红尖椒」",
+          "reason": "红尖椒保留原文红色；不能以地产尖椒替代"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "颜色、品种不一致须阻断；加工要求需另核"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "chicken_leg_chunks",
+      "aliases": [
+        "鸡腿块"
+      ],
+      "concept": "鸡腿肉切块，鸡腿部位不可降为泛称鸡肉块",
+      "selector": {
+        "names": [
+          "正大鸡腿肉切块"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「鸡腿块6斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「鸡肉块」",
+          "reason": "人工表鸡肉块只说明历史替代，目录有更精确的鸡腿肉切块"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "鸡肉块/鸡胸肉块不等同鸡腿块；鲜冻形态仍须核实"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "chicken_chunks",
+      "aliases": [
+        "鸡块"
+      ],
+      "concept": "鸡肉块，未明示鸡腿或鸡胸",
+      "selector": {
+        "names": [
+          "鸡肉块"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「鸡块5斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「鸡肉块」",
+          "reason": "原文泛称鸡块，人工商品为鸡肉块，不能借此覆盖鸡腿块"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "鸡腿块等明确部位不适用；鲜冻/带骨等需复核"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "plum_pork",
+      "aliases": [
+        "梅肉"
+      ],
+      "concept": "猪梅花肉，保留梅花部位",
+      "selector": {
+        "names": [
+          "鲜猪梅花肉（金锣）",
+          "冷鲜梅花肉",
+          "梅花肉块",
+          "梅花肉片",
+          "梅花肉丝"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「梅肉4斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「鲜猪梅花肉（金锣）」",
+          "reason": "人工商品为鲜猪梅花肉；同类目录有不同形态和品牌"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "块、片、丝、冷鲜与品牌不能凭简称混同"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "sandwich_ham_spelling",
+      "aliases": [
+        "三明治火腿"
+      ],
+      "concept": "三明治/三文治同音写法，方火腿规格待核",
+      "selector": {
+        "names": [
+          "三文治方火腿2kg"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "个"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「三明治火腿1个」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「三文治方火腿2kg」",
+          "reason": "人工商品使用三文治写法；一整个与2kg计价关系未独立确认"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "每个净重不明，不生成计价数量"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "msg_name",
+      "aliases": [
+        "味素"
+      ],
+      "concept": "味素与味精为同种调味概念",
+      "selector": {
+        "names": [
+          "中粮味素预装（味精）"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「味素5斤」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「中粮味素预装（味精）」",
+          "reason": "人工商品直接标注味素（味精）；品牌是历史选择"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "品牌、散装/预装仍需比对，不能固化中粮品牌"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "synonym"
+    },
+    {
+      "id": "fresh_egg_thick_shell",
+      "aliases": [
+        "厚皮鸡蛋"
+      ],
+      "concept": "鲜鸡蛋并保留厚皮供货品质要求",
+      "selector": {
+        "names": [
+          "鲜鸡蛋"
+        ],
+        "category": "蛋类"
+      },
+      "conditions": {
+        "request_units": [
+          "筐"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「厚皮鸡蛋1筐」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「鲜鸡蛋」",
+          "reason": "人工商品鲜鸡蛋只证明品类，厚皮品质须另由供货核对"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "目录鲜鸡蛋未保证厚皮；每筐重量未知"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "fresh_cucumber_variety",
+      "aliases": [
+        "旱黄瓜"
+      ],
+      "concept": "旱黄瓜特定品种，泛称黄瓜仅供候选",
+      "selector": {
+        "names": [
+          "黄瓜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「旱黄瓜5.5斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「旱黄瓜」",
+          "reason": "人工表写旱黄瓜，目录仅泛称黄瓜不能证明品种"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "不得用老黄瓜或水果黄瓜替代；泛称黄瓜不自动确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "romaine_variety",
+      "aliases": [
+        "罗马生菜"
+      ],
+      "concept": "罗马生菜品种要求，普通生菜仅供候选",
+      "selector": {
+        "names": [
+          "生菜"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "颗"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「罗马生菜1颗」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「西生菜」",
+          "reason": "人工表西生菜与罗马品种不等同，目录泛称生菜无品种证据"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "西生菜不是罗马生菜的同义词；颗到重量未确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "beef_roll",
+      "aliases": [
+        "牛肉卷"
+      ],
+      "concept": "薄切可卷的牛肉商品，保留肉型与规格",
+      "selector": {
+        "names": [
+          "大庄园肥牛肉片"
+        ],
+        "category": "肉制品"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「牛肉卷1斤」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「大庄园肥牛肉片」",
+          "reason": "人工表肥牛肉片是采购参考，目录有相近但不同规格肉片"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "卷/片造型、肥瘦部位、品牌和规格须确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "corn_kernels_pack",
+      "aliases": [
+        "玉米粒"
+      ],
+      "concept": "玉米粒袋装需求，不能替换罐装",
+      "selector": {
+        "names": [
+          "冻玉米粒嘉利得0.9kg*10袋/件"
+        ],
+        "category": "方便食品"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「玉米粒2袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「美国厨师原味玉米粒425g/罐」",
+          "reason": "人工罐装与聊天袋装冲突，目录存在袋装冻玉米粒候选"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "袋/罐不可互换；冻鲜和整件内袋净重须核定"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "sour_cabbage_pack",
+      "aliases": [
+        "酸菜"
+      ],
+      "concept": "酸菜仅保留食材与包装候选，不固化品牌",
+      "selector": {
+        "names": [
+          "翠花酸菜750g",
+          "农大酸菜750g",
+          "农大酸菜7",
+          "黑大酸菜",
+          "黑大酸菜500g",
+          "翠花酸菜500G"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {},
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「酸菜4袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「翠花酸菜750g」",
+          "reason": "人工商品为单袋酸菜，仅可作为候选证据"
+        },
+        {
+          "source": "original/星月站11.3下单.txt",
+          "locator": "原文「酸菜1箱」",
+          "manual_source": "original/星月站11.3.xlsx",
+          "manual_locator": "商品「翠花酸菜750g」",
+          "reason": "人工表单袋及配货数量不证明每箱净重或件数"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "单袋与整箱不能等价；鱼酸菜调料/酸菜馅不是同品"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "baby_cabbage_pack",
+      "aliases": [
+        "娃娃菜"
+      ],
+      "concept": "娃娃菜袋装，包/袋仅在明确同一完整包装时可等同",
+      "selector": {
+        "names": [
+          "娃娃菜袋装"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "包",
+          "袋"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「娃娃菜1包」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「娃娃菜袋装」",
+          "reason": "目录规格与人工商品写袋装，包装商品可作为同一件候选"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「娃娃菜4包」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「娃娃菜袋装」",
+          "reason": "另一站同样用包描述目录袋装商品"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "只识别商品身份；其他包装规格或拆袋需重验"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "tofu_form",
+      "aliases": [
+        "豆腐"
+      ],
+      "concept": "豆腐泛称需区分老豆腐、嫩豆腐、冻豆腐和鱼豆腐",
+      "selector": {
+        "names": [
+          "北大荒老豆腐",
+          "豆腐王"
+        ],
+        "category": "豆制品"
+      },
+      "conditions": {
+        "request_units": [
+          "盒"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「豆腐7盒」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「北大荒老豆腐」",
+          "reason": "人工表老豆腐是同站偏好，不能把泛称推广为固定品牌或老嫩类型"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「豆腐10盒」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「北大荒老豆腐」",
+          "reason": "两站相同人工采购不等于所有站均要老豆腐"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "老嫩种类、品牌和每盒重量需确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    },
+    {
+      "id": "sweet_oil_bottle",
+      "aliases": [
+        "香油"
+      ],
+      "concept": "瓶装芝麻香油，品牌及瓶容量由原文或用户确认",
+      "selector": {
+        "names": [
+          "李锦记纯香芝麻油",
+          "美狮牌香油"
+        ],
+        "category": "调料类"
+      },
+      "conditions": {
+        "request_units": [
+          "瓶"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「香油1瓶」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「李锦记纯香芝麻油410ml（1*12）」",
+          "reason": "人工采购李锦记410ml为本站选择；装箱说明不把一瓶变十二瓶"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "不同品牌/容量不自动互换；装箱描述不作为数量"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "rice_whole_bag",
+      "aliases": [
+        "大米"
+      ],
+      "concept": "大米整袋需求，25kg与品牌需核",
+      "selector": {
+        "names": [
+          "玉福泉长粒香大米",
+          "磨盘山长粒香大米"
+        ],
+        "category": "米类"
+      },
+      "conditions": {
+        "request_units": [
+          "袋"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「大米1袋」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「优谷大米」",
+          "reason": "人工优谷品牌不在当前目录；25kg候选是本次同规格比较结果"
+        },
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「大米1袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「优谷大米」",
+          "reason": "两站人工优谷不能固化当前目录另一品牌"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "袋净重、品种、品牌未给时不固定商品；不可用旧价"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "soy_salad_oil",
+      "aliases": [
+        "色拉油"
+      ],
+      "concept": "色拉油是食用油用途描述，非九三大豆油品牌承诺",
+      "selector": {
+        "names": [
+          "九三非转基因大豆油一级5L/桶"
+        ],
+        "category": "食用油"
+      },
+      "conditions": {
+        "request_units": [
+          "桶"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「色拉油2桶」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「九三非转基因大豆油一级5L/桶」",
+          "reason": "该站人工采购九三一级5L/桶，仅是公司偏好"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「色拉油1桶」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「九三非转基因大豆油一级5L/桶」",
+          "reason": "另一站相同采购仍不能证明所有色拉油都指定九三"
+        }
+      ],
+      "applicable": "candidate_only",
+      "conflicts": [
+        "油种、精炼等级、品牌、每桶容量须先确认"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "conditional"
+    },
+    {
+      "id": "ginger_scallion_pepper_name",
+      "aliases": [
+        "青椒"
+      ],
+      "concept": "青椒保留绿色椒类，不能改为红尖椒",
+      "selector": {
+        "names": [
+          "青椒/大辣椒"
+        ],
+        "category": "蔬菜"
+      },
+      "conditions": {
+        "request_units": [
+          "斤"
+        ]
+      },
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「青椒6斤」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「青椒/大辣椒」",
+          "reason": "人工商品青椒/大辣椒与原文青椒同色类；不是红色尖椒"
+        }
+      ],
+      "applicable": "conditional",
+      "conflicts": [
+        "青椒与尖椒的辣度、品种差异需另核"
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "kind": "constraint"
+    }
+  ],
+  "unit_rules": [
+    {
+      "id": "baby_cabbage_bag_piece",
+      "selector": {
+        "names": [
+          "娃娃菜袋装"
+        ],
+        "category": "蔬菜"
+      },
+      "request_unit": "包",
+      "price_unit": "袋",
+      "factor": "1",
+      "allow_fractional": false,
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「娃娃菜1包」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「娃娃菜袋装」",
+          "reason": "目录规格为袋且人工表袋装；仅完整包装包/袋同件，不取历史实配量"
+        },
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「娃娃菜4包」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「娃娃菜袋装」",
+          "reason": "第二站同一完整袋装商品的包称呼；不能推及其他包装"
+        }
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "applicable": "conditional",
+      "conflicts": [
+        "只在目录确认为整袋出售且原文包指同一整袋时适用"
+      ]
+    },
+    {
+      "id": "chicken_fillet_bag_piece",
+      "selector": {
+        "names": [
+          "正大雪花鸡柳800g/袋"
+        ],
+        "category": "方便食品"
+      },
+      "request_unit": "袋",
+      "price_unit": "袋",
+      "factor": "1",
+      "allow_fractional": false,
+      "evidence": [
+        {
+          "source": "original/松北大道站11.3下单.txt",
+          "locator": "原文「鸡柳2袋」",
+          "manual_source": "original/松北大道站11.3.xlsx",
+          "manual_locator": "商品「正大雪花鸡柳800g/袋」",
+          "reason": "当前目录名称明确800g/袋；一袋是一个未拆包装，而非旧实际重量"
+        }
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "applicable": "conditional",
+      "conflicts": [
+        "其他鸡柳品牌或不同袋规格不沿用"
+      ]
+    },
+    {
+      "id": "tomato_sauce_bag_piece",
+      "selector": {
+        "names": [
+          "亨氏番茄沙司 320g/袋",
+          "亨氏番茄沙司320G/袋"
+        ],
+        "category": "调料类"
+      },
+      "request_unit": "袋",
+      "price_unit": "袋",
+      "factor": "1",
+      "allow_fractional": false,
+      "evidence": [
+        {
+          "source": "original/学院路站11.3下单.txt",
+          "locator": "原文「番茄沙司2袋」",
+          "manual_source": "original/学院路站11.3.xlsx",
+          "manual_locator": "商品「亨氏番茄沙司320g/袋」",
+          "reason": "目录名称明示320g/袋；每袋作整包装候选，品牌和规格仍须先确定"
+        }
+      ],
+      "validation_status": "historical_reviewed_not_forward_validated",
+      "applicable": "conditional",
+      "conflicts": [
+        "原文未确认亨氏/320g时不得仅凭此单位规则定商品"
+      ]
+    }
+  ]
+}

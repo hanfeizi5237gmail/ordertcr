@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "scope": "独立首次使用者路径；只用SKILL.md、示例资产、原始价格表及星月聊天输入；没有使用实现测试。",
+  "python": "/Users/hanfei/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "cli": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/scripts/order_mapping.py",
+  "working_directory": "/tmp",
+  "runtime_root": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/state",
+  "commands": [
+    {
+      "subcommand": "--help",
+      "arguments": [],
+      "exit_code": 0,
+      "observed": "列出catalog-register、catalog-current、catalog-withdraw、parse、validate-config、run、merge-finance。"
+    },
+    {
+      "subcommand": "catalog-register",
+      "arguments": [
+        "--runtime",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/state",
+        "--file",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/original/食堂食材基准价价格表10.12-10.18.xlsx"
+      ],
+      "exit_code": 0,
+      "observed": "版本及SHA均为6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687；登记1647条。"
+    },
+    {
+      "subcommand": "validate-config",
+      "arguments": [
+        "--config",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/assets/company-config.example.json"
+      ],
+      "exit_code": 0,
+      "observed": "valid=true、company_count=1、companies_confirmed=false。"
+    },
+    {
+      "subcommand": "catalog-current",
+      "arguments": [
+        "--runtime",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/state"
+      ],
+      "exit_code": 0,
+      "observed": "从独立状态重读相同目录版本及1647条记录。"
+    },
+    {
+      "subcommand": "run",
+      "arguments": [
+        "--runtime",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/state",
+        "--batch",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/assets/batch.example.json",
+        "--output",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/example_output"
+      ],
+      "exit_code": 0,
+      "observed": "示例1行；status=needs_confirmation，unresolved_count=0，test_only=true，finance_draft=true；公司、日期语义、编号待确认。标准订单编号格空且有原生批注。"
+    },
+    {
+      "subcommand": "run",
+      "arguments": [
+        "--runtime",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/state",
+        "--batch",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/batch.chat_files.json",
+        "--output",
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/chat_output"
+      ],
+      "exit_code": 0,
+      "observed": "从/tmp执行，batch文件位于evaluation/forward_runtime，chat_files使用../../original/星月站11.3下单.txt；返回42行、未决33行、测试财务草稿。"
+    }
+  ],
+  "asset_batch_output": {
+    "manifest": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/example_output/DEMO_ONLY_001/aa01b54b7c4a650c-3968716a/manifest.json",
+    "standard": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/example_output/DEMO_ONLY_001/aa01b54b7c4a650c-3968716a/测试_下单需求_待配送_待人工处理.xlsx",
+    "finance": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/example_output/DEMO_ONLY_001/aa01b54b7c4a650c-3968716a/测试_财务记账_预估草稿.xlsx",
+    "rules_sha256": "4b664eff147271ecdf9e34a55f2f4f5269a897a05be70571bc8dce5f2727f601"
+  },
+  "chat_batch_output": {
+    "input": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/batch.chat_files.json",
+    "manifest": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/chat_output/FORWARD_XINGYUE_001/89d0d99cf1040c1c-cc3c7846/manifest.json",
+    "standard": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/chat_output/FORWARD_XINGYUE_001/89d0d99cf1040c1c-cc3c7846/测试_下单需求_待配送_待人工处理.xlsx",
+    "finance": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/forward_runtime/chat_output/FORWARD_XINGYUE_001/89d0d99cf1040c1c-cc3c7846/测试_财务记账_预估草稿.xlsx",
+    "rules_sha256": "a821494cfb191acb72f28a5c1c68eff05e008adac29856bdf68d2128b1442ee1",
+    "row_count": 42,
+    "unresolved_count": 33,
+    "color_counts": {
+      "yellow_00FFF2CC": 32,
+      "red_00FCE4D6": 1,
+      "uncolored": 9
+    },
+    "d_column_comments": 42,
+    "b_column_assigned_numbers": 0,
+    "confirmed_amount_subtotal": "232.9685",
+    "date_context_and_duplicate_observed": "两个菜花6斤均保留并标duplicate_event；11月4/5行标date_context。"
+  },
+  "passed_checks": [
+    "CLI帮助与文档约定命令一致。",
+    "无已保存目录的独立状态注册价格表后，catalog-current能重读持久版本及SHA。",
+    "示例配置校验通过且明确companies_confirmed=false，不冒充真实公司。",
+    "示例批次输出测试/需求/待配送/财务草稿，预览编号为空，并在A1、B2、D1写原生说明/来源批注。",
+    "跨cwd的chat_files相对批次JSON父目录解析，完整提取星月42个商品表述。",
+    "星月42条订单行全部有D列原生批注；33个异常行整行A:J标色，未知价格和金额为空；合计标已确认金额小计并说明33个未计项。",
+    "孜然粉2缺单位、饺子皮300个缺重量换算、重复菜花、11月4/5日期和玉米段无候选均以原文/问题保留。"
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "source": "星月站11.3下单.txt:17",
+      "output_cell": "下单需求_待复核!D15",
+      "issue": "酸菜1箱的全部候选批注包含750g单袋、鱼酸菜及500g单袋，未按明确的箱装约束筛除。",
+      "impact": "人工看到的“合理候选”集合含不满足需求包装或品类的商品；最高价比较与人工复核可能误选。"
+    },
+    {
+      "severity": "medium",
+      "source": "星月站11.3下单.txt:31",
+      "output_cell": "下单需求_待复核!D29",
+      "issue": "鸡丸1袋的候选批注包含“安井鸡肉丸 称重”500g，无法由目录证明是一袋。",
+      "impact": "包装约束没有完整作用于候选集合。"
+    },
+    {
+      "severity": "medium",
+      "source": "星月站11.3下单.txt:49",
+      "output_cell": "下单需求_待复核!D43",
+      "issue": "萝卜丁咸菜大袋的缺数量和明确品种，批注把雪里红、芥菜疙瘩等不同品种列为合理候选，并标ambiguous。",
+      "impact": "目录未见可满足萝卜丁咸菜的条目，候选过宽；仍保持未知金额为空，未实际误记账。"
+    }
+  ],
+  "limits": [
+    "两次run的rules_sha256不同，主实现同期有改动；本报告分别记录每次manifest指纹，不把两次产物用于回归差异归因。",
+    "未设置真实公司、号段、配送或财务确认；不测试正式发布/真实财务入账。",
+    "未在千问办公、WorkBuddy或真实订单/财务系统导入。"
+  ],
+  "rerun_after_candidate_fixes": {
+    "status": "passed",
+    "row_count": 42,
+    "unresolved_count": 33,
+    "date_policy": "by_date",
+    "date_policy_behavior": "未确认时生成待复核草稿并阻塞；确认后要求按日期拆批",
+    "candidate_fixes": [
+      "酸菜排除鱼酸菜/调料/馅",
+      "鸡丸仅保留明确袋装候选并提示缺每袋净重",
+      "萝卜丁咸菜无同品种目录项时unmapped"
+    ],
+    "rules_sha256": "5d608f74ab415ab662615849e4f202700e558fe96f1b6e5f3d1bdfe485f81d07"
+  }
+}

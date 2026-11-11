@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "xlsx_rows_verified": 159,
+  "money_totals_match_manifest": true,
+  "native_comments_verified": true,
+  "skill_links_broken": [],
+  "previews": [
+    {
+      "batch_id": "songbei-20261103-v2",
+      "returncode": 0,
+      "images": [
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/rendered-v2/songbei-20261103-v2/测试_下单需求_待配送_待人工处理.xlsx.png"
+      ]
+    },
+    {
+      "batch_id": "xingyue-20261103-v2",
+      "returncode": 0,
+      "images": [
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/rendered-v2/xingyue-20261103-v2/测试_下单需求_待配送_待人工处理.xlsx.png"
+      ]
+    },
+    {
+      "batch_id": "xueyuan-20261103-v2",
+      "returncode": 0,
+      "images": [
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/rendered-v2/xueyuan-20261103-v2/测试_下单需求_待配送_待人工处理.xlsx.png"
+      ]
+    }
+  ],
+  "limitations": [
+    "缩略图不能验证原生批注浮窗；批注由openpyxl逐项复读",
+    "未执行真实宿主或订单/财务系统导入"
+  ]
+}

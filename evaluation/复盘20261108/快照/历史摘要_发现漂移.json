@@ -1,0 +1,2086 @@
+{
+  "schema_version": 1,
+  "phase": "kb19_final_history",
+  "created_at_utc": "2026-11-08T13:35:11.006041+00:00",
+  "scope": "旧冻结 oracle 历史回归诊断；不代表当前正式 C、独立准确率或真实订单验收",
+  "runner": {
+    "exit_code": 0,
+    "launcher_log": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v7/kb19_final_history_launcher.log",
+    "run_count": 540,
+    "case_count": 180,
+    "row_count": 4653,
+    "seeds": [
+      6108,
+      6109,
+      6112
+    ],
+    "modes": [
+      "catalog_only",
+      "shared",
+      "shared_with_company_contract"
+    ],
+    "oracle_sha256": "0439f944a2fcb830270841ddf0ca219ab4f9cb7320d0b2a835b1287aeed8e6bc",
+    "same_oracle_as_kb17": true,
+    "scorer_sha256": "ff33a6b9b942442cb86aacbf576e5ec527e02efbd574910d64fe3a4fc9d3a37b"
+  },
+  "integrity": {
+    "execution_errors": 0,
+    "input_output_mismatches": 0,
+    "audit_error_count": 0,
+    "original_sha_unchanged": true,
+    "protected_roots_unchanged": true,
+    "verification_gate": {
+      "integrity_passed": true,
+      "business_expectations_passed": false,
+      "acceptance_verified": false,
+      "verified": false,
+      "reasons": [
+        "oracle_expected_case_mismatch",
+        "threshold_not_met",
+        "control_expectation_pending",
+        "independent_holdout_unverified"
+      ],
+      "integrity_reasons": [],
+      "business_reasons": [
+        "oracle_expected_case_mismatch"
+      ],
+      "acceptance_reasons": [
+        "threshold_not_met",
+        "control_expectation_pending",
+        "independent_holdout_unverified"
+      ],
+      "coverage_errors": [],
+      "thresholds": {
+        "shared": {
+          "overall": {
+            "A": 53.0193,
+            "B": 28.3043,
+            "input_events": 1551,
+            "automatic": 828,
+            "passed": false
+          },
+          "company:songbei": {
+            "A": 44.0329,
+            "B": 20.4981,
+            "input_events": 522,
+            "automatic": 243,
+            "passed": false
+          },
+          "company:xingyue": {
+            "A": 65.614,
+            "B": 42.1171,
+            "input_events": 444,
+            "automatic": 285,
+            "passed": false
+          },
+          "company:xueyuan": {
+            "A": 47.8114,
+            "B": 24.3986,
+            "input_events": 582,
+            "automatic": 297,
+            "passed": false
+          },
+          "scenario:single_station_split": {
+            "A": 49.004,
+            "B": 25.7862,
+            "input_events": 477,
+            "automatic": 251,
+            "passed": false
+          },
+          "scenario:single_station_reorder": {
+            "A": 48.7805,
+            "B": 25.1572,
+            "input_events": 477,
+            "automatic": 246,
+            "passed": false
+          },
+          "scenario:cross_station_combination": {
+            "A": 48.2353,
+            "B": 25.7862,
+            "input_events": 477,
+            "automatic": 255,
+            "passed": false
+          },
+          "company_scenario:songbei:single_station_split": {
+            "A": 42.3077,
+            "B": 20.7547,
+            "input_events": 159,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:songbei:single_station_reorder": {
+            "A": 42.3077,
+            "B": 20.7547,
+            "input_events": 159,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:songbei:cross_station_combination": {
+            "A": 42.3077,
+            "B": 20.7547,
+            "input_events": 159,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:xingyue:single_station_split": {
+            "A": 56.7568,
+            "B": 33.3333,
+            "input_events": 126,
+            "automatic": 74,
+            "passed": false
+          },
+          "company_scenario:xingyue:single_station_reorder": {
+            "A": 58.3333,
+            "B": 33.3333,
+            "input_events": 126,
+            "automatic": 72,
+            "passed": false
+          },
+          "company_scenario:xingyue:cross_station_combination": {
+            "A": 53.8462,
+            "B": 33.3333,
+            "input_events": 126,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:xueyuan:single_station_split": {
+            "A": 48.4848,
+            "B": 25.0,
+            "input_events": 192,
+            "automatic": 99,
+            "passed": false
+          },
+          "company_scenario:xueyuan:single_station_reorder": {
+            "A": 46.875,
+            "B": 23.4375,
+            "input_events": 192,
+            "automatic": 96,
+            "passed": false
+          },
+          "company_scenario:xueyuan:cross_station_combination": {
+            "A": 48.4848,
+            "B": 25.0,
+            "input_events": 192,
+            "automatic": 99,
+            "passed": false
+          }
+        },
+        "shared_with_company_contract": {
+          "overall": {
+            "A": 53.0193,
+            "B": 28.3043,
+            "input_events": 1551,
+            "automatic": 828,
+            "passed": false
+          },
+          "company:songbei": {
+            "A": 44.0329,
+            "B": 20.4981,
+            "input_events": 522,
+            "automatic": 243,
+            "passed": false
+          },
+          "company:xingyue": {
+            "A": 65.614,
+            "B": 42.1171,
+            "input_events": 444,
+            "automatic": 285,
+            "passed": false
+          },
+          "company:xueyuan": {
+            "A": 47.8114,
+            "B": 24.3986,
+            "input_events": 582,
+            "automatic": 297,
+            "passed": false
+          },
+          "scenario:single_station_split": {
+            "A": 49.004,
+            "B": 25.7862,
+            "input_events": 477,
+            "automatic": 251,
+            "passed": false
+          },
+          "scenario:single_station_reorder": {
+            "A": 48.7805,
+            "B": 25.1572,
+            "input_events": 477,
+            "automatic": 246,
+            "passed": false
+          },
+          "scenario:cross_station_combination": {
+            "A": 48.2353,
+            "B": 25.7862,
+            "input_events": 477,
+            "automatic": 255,
+            "passed": false
+          },
+          "company_scenario:songbei:single_station_split": {
+            "A": 42.3077,
+            "B": 20.7547,
+            "input_events": 159,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:songbei:single_station_reorder": {
+            "A": 42.3077,
+            "B": 20.7547,
+            "input_events": 159,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:songbei:cross_station_combination": {
+            "A": 42.3077,
+            "B": 20.7547,
+            "input_events": 159,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:xingyue:single_station_split": {
+            "A": 56.7568,
+            "B": 33.3333,
+            "input_events": 126,
+            "automatic": 74,
+            "passed": false
+          },
+          "company_scenario:xingyue:single_station_reorder": {
+            "A": 58.3333,
+            "B": 33.3333,
+            "input_events": 126,
+            "automatic": 72,
+            "passed": false
+          },
+          "company_scenario:xingyue:cross_station_combination": {
+            "A": 53.8462,
+            "B": 33.3333,
+            "input_events": 126,
+            "automatic": 78,
+            "passed": false
+          },
+          "company_scenario:xueyuan:single_station_split": {
+            "A": 48.4848,
+            "B": 25.0,
+            "input_events": 192,
+            "automatic": 99,
+            "passed": false
+          },
+          "company_scenario:xueyuan:single_station_reorder": {
+            "A": 46.875,
+            "B": 23.4375,
+            "input_events": 192,
+            "automatic": 96,
+            "passed": false
+          },
+          "company_scenario:xueyuan:cross_station_combination": {
+            "A": 48.4848,
+            "B": 25.0,
+            "input_events": 192,
+            "automatic": 99,
+            "passed": false
+          }
+        }
+      }
+    }
+  },
+  "historical_scenario_coverage": {
+    "catalog_only": {
+      "6108": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 2,
+            "candidate_witness_missing": 10,
+            "not_automatic": 8,
+            "spec": 8,
+            "invoice_quantity": 8,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 3,
+            "candidate_witness_missing": 10,
+            "not_automatic": 9,
+            "spec": 8,
+            "invoice_quantity": 9,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "candidate_witness_missing": 10,
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 2,
+            "not_automatic": 8,
+            "spec": 8,
+            "invoice_quantity": 8,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xingyue": 42,
+            "xueyuan": 64,
+            "songbei": 53
+          }
+        }
+      },
+      "6109": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 2,
+            "candidate_witness_missing": 10,
+            "not_automatic": 8,
+            "spec": 8,
+            "invoice_quantity": 8,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 3,
+            "candidate_witness_missing": 10,
+            "not_automatic": 9,
+            "spec": 8,
+            "invoice_quantity": 9,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "not_automatic": 8,
+            "code": 10,
+            "name": 10,
+            "spec": 8,
+            "invoice_quantity": 8,
+            "candidate_witness_missing": 10,
+            "required_issues": 2,
+            "unit_price": 2,
+            "amount": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xueyuan": 64,
+            "xingyue": 42,
+            "songbei": 53
+          }
+        }
+      },
+      "6112": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 2,
+            "candidate_witness_missing": 10,
+            "not_automatic": 8,
+            "spec": 8,
+            "invoice_quantity": 8
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 3,
+            "candidate_witness_missing": 10,
+            "not_automatic": 9,
+            "spec": 8,
+            "invoice_quantity": 9
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "candidate_witness_missing": 10,
+            "code": 10,
+            "name": 10,
+            "unit_price": 2,
+            "amount": 2,
+            "not_automatic": 8,
+            "spec": 8,
+            "invoice_quantity": 8
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xueyuan": 64,
+            "songbei": 53,
+            "xingyue": 42
+          }
+        }
+      }
+    },
+    "shared": {
+      "6108": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 2,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 2,
+            "required_issues": 2,
+            "amount": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "required_issues": 2,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xingyue": 42,
+            "xueyuan": 64,
+            "songbei": 53
+          }
+        }
+      },
+      "6109": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 2,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 2,
+            "required_issues": 2,
+            "amount": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "candidate_witness_missing": 1,
+            "required_issues": 2,
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xueyuan": 64,
+            "xingyue": 42,
+            "songbei": 53
+          }
+        }
+      },
+      "6112": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 2,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 2,
+            "amount": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xueyuan": 64,
+            "songbei": 53,
+            "xingyue": 42
+          }
+        }
+      }
+    },
+    "shared_with_company_contract": {
+      "6108": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 2,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 2,
+            "required_issues": 2,
+            "amount": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "required_issues": 2,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xingyue": 42,
+            "xueyuan": 64,
+            "songbei": 53
+          }
+        }
+      },
+      "6109": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1,
+            "required_issues": 2
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 2,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 2,
+            "required_issues": 2,
+            "amount": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "candidate_witness_missing": 1,
+            "required_issues": 2,
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xueyuan": 64,
+            "xingyue": 42,
+            "songbei": 53
+          }
+        }
+      },
+      "6112": {
+        "single_station_split": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "single_station_reorder": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 2,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 2,
+            "amount": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "songbei": 53,
+            "xingyue": 42,
+            "xueyuan": 64
+          }
+        },
+        "cross_station_combination": {
+          "row_count": 159,
+          "unique_source_event_ids": 159,
+          "duplicate_source_event_ids": 0,
+          "drift_errors": {
+            "source_trace": 0,
+            "quantity": 0,
+            "unit": 0,
+            "company": 0,
+            "date": 0,
+            "event_state": 0
+          },
+          "all_errors": {
+            "manual_required": 10,
+            "unknown_amount": 10,
+            "candidate_witness_missing": 1,
+            "not_automatic": 1,
+            "code": 1,
+            "name": 1,
+            "spec": 1,
+            "invoice_quantity": 1
+          },
+          "event_coverage_complete": true,
+          "company_counts": {
+            "xueyuan": 64,
+            "songbei": 53,
+            "xingyue": 42
+          }
+        }
+      }
+    }
+  },
+  "legacy_metrics_comparison": {
+    "shared": {
+      "kb17": {
+        "input_events": 1551,
+        "automatic": 828,
+        "automatic_correct": 439,
+        "manual_correct": 486,
+        "control_handled_correct": 36,
+        "A": 53.0193,
+        "B": 28.3043,
+        "C": 61.96,
+        "automatic_undefined": 298,
+        "A_known": 82.8302,
+        "known_automatic": 530,
+        "known_automatic_correct": 439,
+        "undefined_expectations": 463,
+        "unexpected_outputs": 0,
+        "missing_outputs": 0,
+        "failure_categories": {
+          "manual_required": 91,
+          "unknown_amount": 91,
+          "candidate_witness_missing": 9,
+          "not_automatic": 15,
+          "code": 9,
+          "name": 9,
+          "spec": 9,
+          "invoice_quantity": 9,
+          "required_issues": 12,
+          "amount": 6
+        }
+      },
+      "kb19": {
+        "input_events": 1551,
+        "automatic": 828,
+        "automatic_correct": 439,
+        "manual_correct": 486,
+        "control_handled_correct": 30,
+        "A": 53.0193,
+        "B": 28.3043,
+        "C": 61.5732,
+        "automatic_undefined": 298,
+        "A_known": 82.8302,
+        "known_automatic": 530,
+        "known_automatic_correct": 439,
+        "undefined_expectations": 463,
+        "unexpected_outputs": 0,
+        "missing_outputs": 0,
+        "failure_categories": {
+          "manual_required": 91,
+          "unknown_amount": 91,
+          "candidate_witness_missing": 9,
+          "not_automatic": 15,
+          "code": 9,
+          "name": 9,
+          "spec": 9,
+          "invoice_quantity": 21,
+          "required_issues": 12,
+          "amount": 6
+        }
+      }
+    },
+    "shared_with_company_contract": {
+      "kb17": {
+        "input_events": 1551,
+        "automatic": 828,
+        "automatic_correct": 439,
+        "manual_correct": 486,
+        "control_handled_correct": 36,
+        "A": 53.0193,
+        "B": 28.3043,
+        "C": 61.96,
+        "automatic_undefined": 298,
+        "A_known": 82.8302,
+        "known_automatic": 530,
+        "known_automatic_correct": 439,
+        "undefined_expectations": 463,
+        "unexpected_outputs": 0,
+        "missing_outputs": 0,
+        "failure_categories": {
+          "manual_required": 91,
+          "unknown_amount": 91,
+          "candidate_witness_missing": 9,
+          "not_automatic": 15,
+          "code": 9,
+          "name": 9,
+          "spec": 9,
+          "invoice_quantity": 9,
+          "required_issues": 12,
+          "amount": 6
+        }
+      },
+      "kb19": {
+        "input_events": 1551,
+        "automatic": 828,
+        "automatic_correct": 439,
+        "manual_correct": 486,
+        "control_handled_correct": 30,
+        "A": 53.0193,
+        "B": 28.3043,
+        "C": 61.5732,
+        "automatic_undefined": 298,
+        "A_known": 82.8302,
+        "known_automatic": 530,
+        "known_automatic_correct": 439,
+        "undefined_expectations": 463,
+        "unexpected_outputs": 0,
+        "missing_outputs": 0,
+        "failure_categories": {
+          "manual_required": 91,
+          "unknown_amount": 91,
+          "candidate_witness_missing": 9,
+          "not_automatic": 15,
+          "code": 9,
+          "name": 9,
+          "spec": 9,
+          "invoice_quantity": 21,
+          "required_issues": 12,
+          "amount": 6
+        }
+      }
+    }
+  },
+  "shared_80_132": {
+    "value": "80/132",
+    "status": "pre-existing legacy historical-SKU identity diagnostic; this runner does not recompute it and it is not formal C or independent accuracy",
+    "source": "evaluation/v7/kb19_accuracy_risk_analysis.md"
+  },
+  "finance": {
+    "mechanical_audit_error_count": 0,
+    "runs_with_audit_errors": 0,
+    "score_row_finance_error_counts": {
+      "unit_price": 18,
+      "amount": 36
+    },
+    "note": "score-row amount/unit mismatches are scorer diagnostics; mechanical workbook finance audit errors are zero"
+  },
+  "invoice_quantity_added_vs_kb17": {
+    "total_mode_rows": 12,
+    "unique_event_instances": 6,
+    "by_mode": {
+      "shared": 6,
+      "shared_with_company_contract": 6
+    },
+    "by_scenario": {
+      "same_quantity_without_explicit_append": 6,
+      "single_station_reorder": 6
+    },
+    "events": [
+      {
+        "mode": "shared",
+        "case_id": "6108-duplicate",
+        "seed": 6108,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "水妈妈木薯淀粉，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001315",
+          "name": "水妈妈木薯淀粉",
+          "spec": "500g",
+          "price": "12.35"
+        },
+        "source": {
+          "source_name": "6108-duplicate.txt",
+          "source_line": 2,
+          "line_id": "6108-duplicate.txt:2:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6108-xueyuan-reorder-all",
+        "seed": 6108,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6108-xueyuan-reorder-all.txt",
+          "source_line": 32,
+          "line_id": "6108-xueyuan-reorder-all.txt:32:32"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6109-duplicate",
+        "seed": 6109,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "香菜籽，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001524",
+          "name": "香菜籽",
+          "spec": "500g",
+          "price": "32.35"
+        },
+        "source": {
+          "source_name": "6109-duplicate.txt",
+          "source_line": 2,
+          "line_id": "6109-duplicate.txt:2:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6109-xueyuan-reorder-all",
+        "seed": 6109,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6109-xueyuan-reorder-all.txt",
+          "source_line": 52,
+          "line_id": "6109-xueyuan-reorder-all.txt:52:52"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6112-duplicate",
+        "seed": 6112,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "白圆牛筋面，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001838",
+          "name": "白圆牛筋面",
+          "spec": "500g",
+          "price": "5.29"
+        },
+        "source": {
+          "source_name": "6112-duplicate.txt",
+          "source_line": 7,
+          "line_id": "6112-duplicate.txt:7:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6112-xueyuan-reorder-all",
+        "seed": 6112,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_pending"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6112-xueyuan-reorder-all.txt",
+          "source_line": 122,
+          "line_id": "6112-xueyuan-reorder-all.txt:122:35"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      }
+    ],
+    "all_mode_rows": [
+      {
+        "mode": "shared",
+        "case_id": "6108-duplicate",
+        "seed": 6108,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "水妈妈木薯淀粉，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001315",
+          "name": "水妈妈木薯淀粉",
+          "spec": "500g",
+          "price": "12.35"
+        },
+        "source": {
+          "source_name": "6108-duplicate.txt",
+          "source_line": 2,
+          "line_id": "6108-duplicate.txt:2:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6108-xueyuan-reorder-all",
+        "seed": 6108,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6108-xueyuan-reorder-all.txt",
+          "source_line": 32,
+          "line_id": "6108-xueyuan-reorder-all.txt:32:32"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6109-duplicate",
+        "seed": 6109,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "香菜籽，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001524",
+          "name": "香菜籽",
+          "spec": "500g",
+          "price": "32.35"
+        },
+        "source": {
+          "source_name": "6109-duplicate.txt",
+          "source_line": 2,
+          "line_id": "6109-duplicate.txt:2:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6109-xueyuan-reorder-all",
+        "seed": 6109,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6109-xueyuan-reorder-all.txt",
+          "source_line": 52,
+          "line_id": "6109-xueyuan-reorder-all.txt:52:52"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6112-duplicate",
+        "seed": 6112,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "白圆牛筋面，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001838",
+          "name": "白圆牛筋面",
+          "spec": "500g",
+          "price": "5.29"
+        },
+        "source": {
+          "source_name": "6112-duplicate.txt",
+          "source_line": 7,
+          "line_id": "6112-duplicate.txt:7:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared",
+        "case_id": "6112-xueyuan-reorder-all",
+        "seed": 6112,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_pending"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6112-xueyuan-reorder-all.txt",
+          "source_line": 122,
+          "line_id": "6112-xueyuan-reorder-all.txt:122:35"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared_with_company_contract",
+        "case_id": "6108-duplicate",
+        "seed": 6108,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "水妈妈木薯淀粉，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001315",
+          "name": "水妈妈木薯淀粉",
+          "spec": "500g",
+          "price": "12.35"
+        },
+        "source": {
+          "source_name": "6108-duplicate.txt",
+          "source_line": 2,
+          "line_id": "6108-duplicate.txt:2:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared_with_company_contract",
+        "case_id": "6108-xueyuan-reorder-all",
+        "seed": 6108,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6108-xueyuan-reorder-all.txt",
+          "source_line": 32,
+          "line_id": "6108-xueyuan-reorder-all.txt:32:32"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared_with_company_contract",
+        "case_id": "6109-duplicate",
+        "seed": 6109,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "香菜籽，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001524",
+          "name": "香菜籽",
+          "spec": "500g",
+          "price": "32.35"
+        },
+        "source": {
+          "source_name": "6109-duplicate.txt",
+          "source_line": 2,
+          "line_id": "6109-duplicate.txt:2:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared_with_company_contract",
+        "case_id": "6109-xueyuan-reorder-all",
+        "seed": 6109,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6109-xueyuan-reorder-all.txt",
+          "source_line": 52,
+          "line_id": "6109-xueyuan-reorder-all.txt:52:52"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared_with_company_contract",
+        "case_id": "6112-duplicate",
+        "seed": 6112,
+        "scenario": "same_quantity_without_explicit_append",
+        "source_event_id": null,
+        "raw_text": "白圆牛筋面，数量2斤",
+        "company": "songbei",
+        "date_expected": "2026-11-10",
+        "date_actual": "2026-11-10",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "2",
+        "invoice_quantity_expected": "2",
+        "quantity_actual": "2",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_predecessor_ambiguous",
+          "duplicate_event"
+        ],
+        "selected_catalog": {
+          "code": "80001838",
+          "name": "白圆牛筋面",
+          "spec": "500g",
+          "price": "5.29"
+        },
+        "source": {
+          "source_name": "6112-duplicate.txt",
+          "source_line": 7,
+          "line_id": "6112-duplicate.txt:7:2"
+        },
+        "old_errors": [],
+        "new_errors": [
+          "invoice_quantity"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "2",
+        "invoice_quantity_new_actual": null
+      },
+      {
+        "mode": "shared_with_company_contract",
+        "case_id": "6112-xueyuan-reorder-all",
+        "seed": 6112,
+        "scenario": "single_station_reorder",
+        "source_event_id": "学院路站11.3下单.txt:25:25",
+        "raw_text": "小白菜1斤",
+        "company": "xueyuan",
+        "date_expected": "2026-11-03",
+        "date_actual": "2026-11-03",
+        "unit_expected": "斤",
+        "unit_actual": "斤",
+        "quantity_expected": "1",
+        "invoice_quantity_expected": "1",
+        "quantity_actual": "1",
+        "invoice_quantity_actual": null,
+        "quantity_status_old": "matched",
+        "quantity_status_new": "needs_review",
+        "event_state_actual": "pending",
+        "status_actual": "needs_review",
+        "issues_actual": [
+          "event_pending"
+        ],
+        "selected_catalog": {
+          "code": "80003724",
+          "name": "小白菜",
+          "spec": "500g",
+          "price": "5.99"
+        },
+        "source": {
+          "source_name": "6112-xueyuan-reorder-all.txt",
+          "source_line": 122,
+          "line_id": "6112-xueyuan-reorder-all.txt:122:35"
+        },
+        "old_errors": [
+          "not_automatic",
+          "amount"
+        ],
+        "new_errors": [
+          "not_automatic",
+          "invoice_quantity",
+          "amount"
+        ],
+        "classification": "pending_or_duplicate_semantic_expectation_mismatch",
+        "invoice_quantity_old_actual": "1",
+        "invoice_quantity_new_actual": null
+      }
+    ],
+    "conclusion": "six unique control/pending event instances are duplicated across two shared modes, yielding +12 diagnostics; current quantity remains equal to expected and current output intentionally blanks invoice_quantity while relation is pending/duplicate. This is a semantic/scorer expectation mismatch, not evidence of a real quantity parse regression."
+  },
+  "not_run_after_completion": [
+    "no new runner",
+    "no rule or parameter changes",
+    "no production/original/oracle/expected edits"
+  ]
+}

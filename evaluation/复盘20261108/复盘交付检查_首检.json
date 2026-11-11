@@ -1,0 +1,70 @@
+{
+  "scope": "retrospective_document_and_preservation_integrity_only_no_mapping_or_tests",
+  "created_local": "2026-11-08T21:51:43.079724+08:00",
+  "goal_status": "paused",
+  "optimization_resumed": false,
+  "new_mapping_execution": false,
+  "core_tests_rerun": false,
+  "formal_skill_or_knowledge_changed": false,
+  "checkpoint_comparison": {
+    "original_sha256": {
+      "files_checked": 8,
+      "mismatches": []
+    },
+    "skill_sha256": {
+      "files_checked": 51,
+      "mismatches": []
+    },
+    "evidence_sha256": {
+      "files_checked": 11,
+      "mismatches": [
+        {
+          "path": "evaluation/v7/kb19_final_history/summary.json",
+          "expected": "2feb47beb147d97978cadc417fd959e404bf3f37fcfae4f86cd216af3870a721",
+          "actual": "b6ff04df5ab329882aceb0577548f33dc4bbc3e590e03594018bf6b24f998aeb"
+        }
+      ]
+    }
+  },
+  "same_159_csv": {
+    "rows": 159,
+    "unique_ids": 159,
+    "stations": {
+      "songbei": 53,
+      "xingyue": 42,
+      "xueyuan": 64
+    },
+    "fixed_sku_events": 132,
+    "kb19_outcomes": {
+      "unselected": 35,
+      "different_sku": 17,
+      "correct": 80
+    },
+    "transitions_match_saved_json": true
+  },
+  "local_document_links": {
+    "checked": 50,
+    "missing": []
+  },
+  "deliverables": {
+    "方案复盘与推荐.md": "411d71291df552da714bc82d0531aebfd3c24721f4139ad2a311ebe6d0fd8f07",
+    "调用链审查.md": "1bbc60ae488211da8fd3303e077d44fb4b29f1006afdc63fe77f584ca28f1a36",
+    "共享知识边界审查.md": "fc3e7a9063428545366450a0c7a264bc772672caf740a089fc38eff2de9c9e32",
+    "既有证据对照.json": "4065072933cfd42fd2726bb5db3b028960a868a9f446a0af9975981c3d4122f6",
+    "159事件版本逐项对照.csv": "14f92c3ab40a563aec8c82b5680c1c6d1452f138e56a40abeae8c83c374f4782",
+    "暂停检查点.json": "94b885278f1ceed2ba4c25110d158063f2094a384986e0de3f1286f4617ad467",
+    "构建既有证据对照.py": "b475fefe9c52ac072ad22c9eb0a48a743bbb3553fea0e82cb74f2fb736e83059"
+  },
+  "status_documents": {
+    "task_plan.md": "20e774a00bd3c457f6c29ca74cb34d6cb8f7c6e263b7893a71052da3ec699ceb",
+    "执行清单.md": "4618c7b3b7e929d52a49dd24590aadfe87a83b8eb725b8de077a9572cd107c33"
+  },
+  "unverified": [
+    "Agent semantic normal-flow acceptance",
+    "complete reasonable candidate sets",
+    "Qianwen Office and WorkBuddy host compatibility",
+    "new real business orders",
+    "95 percent business acceptance"
+  ],
+  "passed": false
+}

@@ -1,0 +1,1398 @@
+{
+  "source_record": "业务样例核对.md",
+  "scope": "八原件只读；标准订单与财务逐行计算、缓存合计和SHA复核",
+  "sources": [
+    {
+      "file": "学院路站11.3.xlsx",
+      "bytes": 15463,
+      "sha256": "7b7a6e800761bae8c02777285bb39b66f4e0330ab690c495c500a18ec6381c70",
+      "baseline_sha256": "7b7a6e800761bae8c02777285bb39b66f4e0330ab690c495c500a18ec6381c70",
+      "matches_baseline": true
+    },
+    {
+      "file": "学院路站11.3下单.txt",
+      "bytes": 864,
+      "sha256": "f25079aff542bb0c9ef93071f046cfd4390b571facc023c73df65449908e69db",
+      "baseline_sha256": "f25079aff542bb0c9ef93071f046cfd4390b571facc023c73df65449908e69db",
+      "matches_baseline": true
+    },
+    {
+      "file": "星月站11.3.xlsx",
+      "bytes": 13618,
+      "sha256": "d1cbb18cfd2f753212089375cc95302799f9049ee2593350e9764e1647b34ea6",
+      "baseline_sha256": "d1cbb18cfd2f753212089375cc95302799f9049ee2593350e9764e1647b34ea6",
+      "matches_baseline": true
+    },
+    {
+      "file": "星月站11.3下单.txt",
+      "bytes": 622,
+      "sha256": "aed84347392534ce2329419c35df66cbcdb3f328198761448217878511f24606",
+      "baseline_sha256": "aed84347392534ce2329419c35df66cbcdb3f328198761448217878511f24606",
+      "matches_baseline": true
+    },
+    {
+      "file": "松北大道站11.3.xlsx",
+      "bytes": 14584,
+      "sha256": "2ad247895670c8f458ea74ea751c513cbdf6857d2bd3c33f1ee5166519cc53d2",
+      "baseline_sha256": "2ad247895670c8f458ea74ea751c513cbdf6857d2bd3c33f1ee5166519cc53d2",
+      "matches_baseline": true
+    },
+    {
+      "file": "松北大道站11.3下单.txt",
+      "bytes": 753,
+      "sha256": "41ae7f52e951e1f5e30d48532f0fcd4632cfac5f1cedf16ec8c4e14abfdd2297",
+      "baseline_sha256": "41ae7f52e951e1f5e30d48532f0fcd4632cfac5f1cedf16ec8c4e14abfdd2297",
+      "matches_baseline": true
+    },
+    {
+      "file": "汶岂喜菜进账10.31.xlsx",
+      "bytes": 17395,
+      "sha256": "fd2879ed40c33c7e80496e9a28acf993f1fd2361d0fe78e87e257a513cf59053",
+      "baseline_sha256": "fd2879ed40c33c7e80496e9a28acf993f1fd2361d0fe78e87e257a513cf59053",
+      "matches_baseline": true
+    },
+    {
+      "file": "食堂食材基准价价格表10.12-10.18.xlsx",
+      "bytes": 87779,
+      "sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "baseline_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "matches_baseline": true
+    }
+  ],
+  "standard_orders": [
+    {
+      "file": "松北大道站11.3.xlsx",
+      "sheet": "松北大道",
+      "detail_rows": 52,
+      "header": [
+        "发货日期",
+        "订单编号",
+        "所属公司",
+        "商品名称",
+        "规格",
+        "配货数量",
+        "原价",
+        "折扣率",
+        "配货单价",
+        "销售金额"
+      ],
+      "row_checks": [
+        {
+          "row": 2,
+          "ok": true
+        },
+        {
+          "row": 3,
+          "ok": true
+        },
+        {
+          "row": 4,
+          "ok": true
+        },
+        {
+          "row": 5,
+          "ok": true
+        },
+        {
+          "row": 6,
+          "ok": true
+        },
+        {
+          "row": 7,
+          "ok": true
+        },
+        {
+          "row": 8,
+          "ok": true
+        },
+        {
+          "row": 9,
+          "ok": true
+        },
+        {
+          "row": 10,
+          "ok": true
+        },
+        {
+          "row": 11,
+          "ok": true
+        },
+        {
+          "row": 12,
+          "ok": true
+        },
+        {
+          "row": 13,
+          "ok": true
+        },
+        {
+          "row": 14,
+          "ok": true
+        },
+        {
+          "row": 15,
+          "ok": true
+        },
+        {
+          "row": 16,
+          "ok": true
+        },
+        {
+          "row": 17,
+          "ok": true
+        },
+        {
+          "row": 18,
+          "ok": true
+        },
+        {
+          "row": 19,
+          "ok": true
+        },
+        {
+          "row": 20,
+          "ok": true
+        },
+        {
+          "row": 21,
+          "ok": true
+        },
+        {
+          "row": 22,
+          "ok": true
+        },
+        {
+          "row": 23,
+          "ok": true
+        },
+        {
+          "row": 24,
+          "ok": true
+        },
+        {
+          "row": 25,
+          "ok": true
+        },
+        {
+          "row": 26,
+          "ok": true
+        },
+        {
+          "row": 27,
+          "ok": true
+        },
+        {
+          "row": 28,
+          "ok": true
+        },
+        {
+          "row": 29,
+          "ok": true
+        },
+        {
+          "row": 30,
+          "ok": true
+        },
+        {
+          "row": 31,
+          "ok": true
+        },
+        {
+          "row": 32,
+          "ok": true
+        },
+        {
+          "row": 33,
+          "ok": true
+        },
+        {
+          "row": 34,
+          "ok": true
+        },
+        {
+          "row": 35,
+          "ok": true
+        },
+        {
+          "row": 36,
+          "ok": true
+        },
+        {
+          "row": 37,
+          "ok": true
+        },
+        {
+          "row": 38,
+          "ok": true
+        },
+        {
+          "row": 39,
+          "ok": true
+        },
+        {
+          "row": 40,
+          "ok": true
+        },
+        {
+          "row": 41,
+          "ok": true
+        },
+        {
+          "row": 42,
+          "ok": true
+        },
+        {
+          "row": 43,
+          "ok": true
+        },
+        {
+          "row": 44,
+          "ok": true
+        },
+        {
+          "row": 45,
+          "ok": true
+        },
+        {
+          "row": 46,
+          "ok": true
+        },
+        {
+          "row": 47,
+          "ok": true
+        },
+        {
+          "row": 48,
+          "ok": true
+        },
+        {
+          "row": 49,
+          "ok": true
+        },
+        {
+          "row": 50,
+          "ok": true
+        },
+        {
+          "row": 51,
+          "ok": true
+        },
+        {
+          "row": 52,
+          "ok": true
+        },
+        {
+          "row": 53,
+          "ok": true
+        }
+      ],
+      "exact_total": "2652.75530",
+      "rounded_at_total": "2652.76",
+      "sum_of_rounded_lines": "2652.78",
+      "sum_after_unit_price_rounded": "2653.21",
+      "total_formula": "=SUM(J2:J53)",
+      "cached_total": "2652.7553"
+    },
+    {
+      "file": "星月站11.3.xlsx",
+      "sheet": "星月",
+      "detail_rows": 39,
+      "header": [
+        "发货日期",
+        "订单编号",
+        "所属公司",
+        "商品名称",
+        "规格",
+        "配送数量",
+        "原价",
+        "折扣率",
+        "配货单价",
+        "销售金额"
+      ],
+      "row_checks": [
+        {
+          "row": 2,
+          "ok": true
+        },
+        {
+          "row": 3,
+          "ok": true
+        },
+        {
+          "row": 4,
+          "ok": true
+        },
+        {
+          "row": 5,
+          "ok": true
+        },
+        {
+          "row": 6,
+          "ok": true
+        },
+        {
+          "row": 7,
+          "ok": true
+        },
+        {
+          "row": 8,
+          "ok": true
+        },
+        {
+          "row": 9,
+          "ok": true
+        },
+        {
+          "row": 10,
+          "ok": true
+        },
+        {
+          "row": 11,
+          "ok": true
+        },
+        {
+          "row": 12,
+          "ok": true
+        },
+        {
+          "row": 13,
+          "ok": true
+        },
+        {
+          "row": 14,
+          "ok": true
+        },
+        {
+          "row": 15,
+          "ok": true
+        },
+        {
+          "row": 16,
+          "ok": true
+        },
+        {
+          "row": 17,
+          "ok": true
+        },
+        {
+          "row": 18,
+          "ok": true
+        },
+        {
+          "row": 19,
+          "ok": true
+        },
+        {
+          "row": 20,
+          "ok": true
+        },
+        {
+          "row": 21,
+          "ok": true
+        },
+        {
+          "row": 22,
+          "ok": true
+        },
+        {
+          "row": 23,
+          "ok": true
+        },
+        {
+          "row": 24,
+          "ok": true
+        },
+        {
+          "row": 25,
+          "ok": true
+        },
+        {
+          "row": 26,
+          "ok": true
+        },
+        {
+          "row": 27,
+          "ok": true
+        },
+        {
+          "row": 28,
+          "ok": true
+        },
+        {
+          "row": 29,
+          "ok": true
+        },
+        {
+          "row": 30,
+          "ok": true
+        },
+        {
+          "row": 31,
+          "ok": true
+        },
+        {
+          "row": 32,
+          "ok": true
+        },
+        {
+          "row": 33,
+          "ok": true
+        },
+        {
+          "row": 34,
+          "ok": true
+        },
+        {
+          "row": 35,
+          "ok": true
+        },
+        {
+          "row": 36,
+          "ok": true
+        },
+        {
+          "row": 37,
+          "ok": true
+        },
+        {
+          "row": 38,
+          "ok": true
+        },
+        {
+          "row": 39,
+          "ok": true
+        },
+        {
+          "row": 40,
+          "ok": true
+        }
+      ],
+      "exact_total": "2557.37074",
+      "rounded_at_total": "2557.37",
+      "sum_of_rounded_lines": "2557.40",
+      "sum_after_unit_price_rounded": "2557.65",
+      "total_formula": "=SUM(J2:J40)",
+      "cached_total": "2557.37074"
+    },
+    {
+      "file": "学院路站11.3.xlsx",
+      "sheet": "学院路",
+      "detail_rows": 63,
+      "header": [
+        "发货日期",
+        "订单编号",
+        "所属公司",
+        "商品名称",
+        "规格",
+        "配货数量",
+        "原价",
+        "折扣率",
+        "配货单价",
+        "销售金额"
+      ],
+      "row_checks": [
+        {
+          "row": 2,
+          "ok": true
+        },
+        {
+          "row": 3,
+          "ok": true
+        },
+        {
+          "row": 4,
+          "ok": true
+        },
+        {
+          "row": 5,
+          "ok": true
+        },
+        {
+          "row": 6,
+          "ok": true
+        },
+        {
+          "row": 7,
+          "ok": true
+        },
+        {
+          "row": 8,
+          "ok": true
+        },
+        {
+          "row": 9,
+          "ok": true
+        },
+        {
+          "row": 10,
+          "ok": true
+        },
+        {
+          "row": 11,
+          "ok": true
+        },
+        {
+          "row": 12,
+          "ok": true
+        },
+        {
+          "row": 13,
+          "ok": true
+        },
+        {
+          "row": 14,
+          "ok": true
+        },
+        {
+          "row": 15,
+          "ok": true
+        },
+        {
+          "row": 16,
+          "ok": true
+        },
+        {
+          "row": 17,
+          "ok": true
+        },
+        {
+          "row": 18,
+          "ok": true
+        },
+        {
+          "row": 19,
+          "ok": true
+        },
+        {
+          "row": 20,
+          "ok": true
+        },
+        {
+          "row": 21,
+          "ok": true
+        },
+        {
+          "row": 22,
+          "ok": true
+        },
+        {
+          "row": 23,
+          "ok": true
+        },
+        {
+          "row": 24,
+          "ok": true
+        },
+        {
+          "row": 25,
+          "ok": true
+        },
+        {
+          "row": 26,
+          "ok": true
+        },
+        {
+          "row": 27,
+          "ok": true
+        },
+        {
+          "row": 28,
+          "ok": true
+        },
+        {
+          "row": 29,
+          "ok": true
+        },
+        {
+          "row": 30,
+          "ok": true
+        },
+        {
+          "row": 31,
+          "ok": true
+        },
+        {
+          "row": 32,
+          "ok": true
+        },
+        {
+          "row": 33,
+          "ok": true
+        },
+        {
+          "row": 34,
+          "ok": true
+        },
+        {
+          "row": 35,
+          "ok": true
+        },
+        {
+          "row": 36,
+          "ok": true
+        },
+        {
+          "row": 37,
+          "ok": true
+        },
+        {
+          "row": 38,
+          "ok": true
+        },
+        {
+          "row": 39,
+          "ok": true
+        },
+        {
+          "row": 40,
+          "ok": true
+        },
+        {
+          "row": 41,
+          "ok": true
+        },
+        {
+          "row": 42,
+          "ok": true
+        },
+        {
+          "row": 43,
+          "ok": true
+        },
+        {
+          "row": 44,
+          "ok": true
+        },
+        {
+          "row": 45,
+          "ok": true
+        },
+        {
+          "row": 46,
+          "ok": true
+        },
+        {
+          "row": 47,
+          "ok": true
+        },
+        {
+          "row": 48,
+          "ok": true
+        },
+        {
+          "row": 49,
+          "ok": true
+        },
+        {
+          "row": 50,
+          "ok": true
+        },
+        {
+          "row": 51,
+          "ok": true
+        },
+        {
+          "row": 52,
+          "ok": true
+        },
+        {
+          "row": 53,
+          "ok": true
+        },
+        {
+          "row": 54,
+          "ok": true
+        },
+        {
+          "row": 55,
+          "ok": true
+        },
+        {
+          "row": 56,
+          "ok": true
+        },
+        {
+          "row": 57,
+          "ok": true
+        },
+        {
+          "row": 58,
+          "ok": true
+        },
+        {
+          "row": 59,
+          "ok": true
+        },
+        {
+          "row": 60,
+          "ok": true
+        },
+        {
+          "row": 61,
+          "ok": true
+        },
+        {
+          "row": 62,
+          "ok": true
+        },
+        {
+          "row": 63,
+          "ok": true
+        },
+        {
+          "row": 64,
+          "ok": true
+        }
+      ],
+      "exact_total": "3524.60317",
+      "rounded_at_total": "3524.60",
+      "sum_of_rounded_lines": "3524.62",
+      "sum_after_unit_price_rounded": "3524.92",
+      "total_formula": "=SUM(J2:J64)",
+      "cached_total": "3524.60317"
+    }
+  ],
+  "finance": {
+    "file": "汶岂喜菜进账10.31.xlsx",
+    "detail_rows": 152,
+    "row_checks": [
+      {
+        "row": 2,
+        "ok": true
+      },
+      {
+        "row": 3,
+        "ok": true
+      },
+      {
+        "row": 4,
+        "ok": true
+      },
+      {
+        "row": 5,
+        "ok": true
+      },
+      {
+        "row": 6,
+        "ok": true
+      },
+      {
+        "row": 7,
+        "ok": true
+      },
+      {
+        "row": 8,
+        "ok": true
+      },
+      {
+        "row": 9,
+        "ok": true
+      },
+      {
+        "row": 10,
+        "ok": true
+      },
+      {
+        "row": 11,
+        "ok": true
+      },
+      {
+        "row": 12,
+        "ok": true
+      },
+      {
+        "row": 13,
+        "ok": true
+      },
+      {
+        "row": 14,
+        "ok": true
+      },
+      {
+        "row": 15,
+        "ok": true
+      },
+      {
+        "row": 16,
+        "ok": true
+      },
+      {
+        "row": 17,
+        "ok": true
+      },
+      {
+        "row": 18,
+        "ok": true
+      },
+      {
+        "row": 19,
+        "ok": true
+      },
+      {
+        "row": 20,
+        "ok": true
+      },
+      {
+        "row": 21,
+        "ok": true
+      },
+      {
+        "row": 22,
+        "ok": true
+      },
+      {
+        "row": 23,
+        "ok": true
+      },
+      {
+        "row": 24,
+        "ok": true
+      },
+      {
+        "row": 25,
+        "ok": true
+      },
+      {
+        "row": 26,
+        "ok": true
+      },
+      {
+        "row": 27,
+        "ok": true
+      },
+      {
+        "row": 28,
+        "ok": true
+      },
+      {
+        "row": 29,
+        "ok": true
+      },
+      {
+        "row": 30,
+        "ok": true
+      },
+      {
+        "row": 31,
+        "ok": true
+      },
+      {
+        "row": 32,
+        "ok": true
+      },
+      {
+        "row": 33,
+        "ok": true
+      },
+      {
+        "row": 34,
+        "ok": true
+      },
+      {
+        "row": 35,
+        "ok": true
+      },
+      {
+        "row": 36,
+        "ok": true
+      },
+      {
+        "row": 37,
+        "ok": true
+      },
+      {
+        "row": 38,
+        "ok": true
+      },
+      {
+        "row": 39,
+        "ok": true
+      },
+      {
+        "row": 40,
+        "ok": true
+      },
+      {
+        "row": 41,
+        "ok": true
+      },
+      {
+        "row": 42,
+        "ok": true
+      },
+      {
+        "row": 43,
+        "ok": true
+      },
+      {
+        "row": 44,
+        "ok": true
+      },
+      {
+        "row": 45,
+        "ok": true
+      },
+      {
+        "row": 46,
+        "ok": true
+      },
+      {
+        "row": 47,
+        "ok": true
+      },
+      {
+        "row": 48,
+        "ok": true
+      },
+      {
+        "row": 49,
+        "ok": true
+      },
+      {
+        "row": 50,
+        "ok": true
+      },
+      {
+        "row": 51,
+        "ok": true
+      },
+      {
+        "row": 52,
+        "ok": true
+      },
+      {
+        "row": 53,
+        "ok": true
+      },
+      {
+        "row": 54,
+        "ok": true
+      },
+      {
+        "row": 55,
+        "ok": true
+      },
+      {
+        "row": 56,
+        "ok": true
+      },
+      {
+        "row": 57,
+        "ok": true
+      },
+      {
+        "row": 58,
+        "ok": true
+      },
+      {
+        "row": 59,
+        "ok": true
+      },
+      {
+        "row": 60,
+        "ok": true
+      },
+      {
+        "row": 61,
+        "ok": true
+      },
+      {
+        "row": 62,
+        "ok": true
+      },
+      {
+        "row": 63,
+        "ok": true
+      },
+      {
+        "row": 64,
+        "ok": true
+      },
+      {
+        "row": 65,
+        "ok": true
+      },
+      {
+        "row": 66,
+        "ok": true
+      },
+      {
+        "row": 67,
+        "ok": true
+      },
+      {
+        "row": 68,
+        "ok": true
+      },
+      {
+        "row": 69,
+        "ok": true
+      },
+      {
+        "row": 70,
+        "ok": true
+      },
+      {
+        "row": 71,
+        "ok": true
+      },
+      {
+        "row": 72,
+        "ok": true
+      },
+      {
+        "row": 73,
+        "ok": true
+      },
+      {
+        "row": 74,
+        "ok": true
+      },
+      {
+        "row": 75,
+        "ok": true
+      },
+      {
+        "row": 76,
+        "ok": true
+      },
+      {
+        "row": 77,
+        "ok": true
+      },
+      {
+        "row": 78,
+        "ok": true
+      },
+      {
+        "row": 79,
+        "ok": true
+      },
+      {
+        "row": 80,
+        "ok": true
+      },
+      {
+        "row": 81,
+        "ok": true
+      },
+      {
+        "row": 82,
+        "ok": true
+      },
+      {
+        "row": 83,
+        "ok": true
+      },
+      {
+        "row": 84,
+        "ok": true
+      },
+      {
+        "row": 85,
+        "ok": true
+      },
+      {
+        "row": 86,
+        "ok": true
+      },
+      {
+        "row": 87,
+        "ok": true
+      },
+      {
+        "row": 88,
+        "ok": true
+      },
+      {
+        "row": 89,
+        "ok": true
+      },
+      {
+        "row": 90,
+        "ok": true
+      },
+      {
+        "row": 91,
+        "ok": true
+      },
+      {
+        "row": 92,
+        "ok": true
+      },
+      {
+        "row": 93,
+        "ok": true
+      },
+      {
+        "row": 94,
+        "ok": true
+      },
+      {
+        "row": 95,
+        "ok": true
+      },
+      {
+        "row": 96,
+        "ok": true
+      },
+      {
+        "row": 97,
+        "ok": true
+      },
+      {
+        "row": 98,
+        "ok": true
+      },
+      {
+        "row": 99,
+        "ok": true
+      },
+      {
+        "row": 100,
+        "ok": true
+      },
+      {
+        "row": 101,
+        "ok": true
+      },
+      {
+        "row": 102,
+        "ok": true
+      },
+      {
+        "row": 103,
+        "ok": true
+      },
+      {
+        "row": 104,
+        "ok": true
+      },
+      {
+        "row": 105,
+        "ok": true
+      },
+      {
+        "row": 106,
+        "ok": true
+      },
+      {
+        "row": 107,
+        "ok": true
+      },
+      {
+        "row": 108,
+        "ok": true
+      },
+      {
+        "row": 109,
+        "ok": true
+      },
+      {
+        "row": 110,
+        "ok": true
+      },
+      {
+        "row": 111,
+        "ok": true
+      },
+      {
+        "row": 112,
+        "ok": true
+      },
+      {
+        "row": 113,
+        "ok": true
+      },
+      {
+        "row": 114,
+        "ok": true
+      },
+      {
+        "row": 115,
+        "ok": true
+      },
+      {
+        "row": 116,
+        "ok": true
+      },
+      {
+        "row": 117,
+        "ok": true
+      },
+      {
+        "row": 118,
+        "ok": true
+      },
+      {
+        "row": 119,
+        "ok": true
+      },
+      {
+        "row": 120,
+        "ok": true
+      },
+      {
+        "row": 121,
+        "ok": true
+      },
+      {
+        "row": 122,
+        "ok": true
+      },
+      {
+        "row": 123,
+        "ok": true
+      },
+      {
+        "row": 124,
+        "ok": true
+      },
+      {
+        "row": 125,
+        "ok": true
+      },
+      {
+        "row": 126,
+        "ok": true
+      },
+      {
+        "row": 127,
+        "ok": true
+      },
+      {
+        "row": 128,
+        "ok": true
+      },
+      {
+        "row": 129,
+        "ok": true
+      },
+      {
+        "row": 130,
+        "ok": true
+      },
+      {
+        "row": 131,
+        "ok": true
+      },
+      {
+        "row": 132,
+        "ok": true
+      },
+      {
+        "row": 133,
+        "ok": true
+      },
+      {
+        "row": 134,
+        "ok": true
+      },
+      {
+        "row": 135,
+        "ok": true
+      },
+      {
+        "row": 136,
+        "ok": true
+      },
+      {
+        "row": 137,
+        "ok": true
+      },
+      {
+        "row": 138,
+        "ok": true
+      },
+      {
+        "row": 139,
+        "ok": true
+      },
+      {
+        "row": 140,
+        "ok": true
+      },
+      {
+        "row": 141,
+        "ok": true
+      },
+      {
+        "row": 142,
+        "ok": true
+      },
+      {
+        "row": 143,
+        "ok": true
+      },
+      {
+        "row": 144,
+        "ok": true
+      },
+      {
+        "row": 145,
+        "ok": true
+      },
+      {
+        "row": 146,
+        "ok": true
+      },
+      {
+        "row": 147,
+        "ok": true
+      },
+      {
+        "row": 148,
+        "ok": true
+      },
+      {
+        "row": 149,
+        "ok": true
+      },
+      {
+        "row": 150,
+        "ok": true
+      },
+      {
+        "row": 151,
+        "ok": true
+      },
+      {
+        "row": 152,
+        "ok": true
+      },
+      {
+        "row": 153,
+        "ok": true
+      }
+    ],
+    "summary_rows": [
+      {
+        "row": 2,
+        "date": "2026-10-31",
+        "order_number": "PL129171441",
+        "merchant": "消防队星月街站",
+        "amount": "1137.47"
+      },
+      {
+        "row": 3,
+        "date": "2026-10-31",
+        "order_number": "PL129168925",
+        "merchant": "消防队松北大道站",
+        "amount": "2395.66"
+      },
+      {
+        "row": 4,
+        "date": "2026-10-31",
+        "order_number": "PL129167896",
+        "merchant": "消防队学院路站",
+        "amount": "1988.88"
+      }
+    ],
+    "aggregate": "5522.01",
+    "total_formula": "=SUM(D2:D4)",
+    "cached_total": "5522.01",
+    "header_semantics_note": "商品明细H列标为含税，订单明细D列标为不含税、运；金额相等并不能解释税运口径。"
+  },
+  "failures": [],
+  "passed": true
+}

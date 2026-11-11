@@ -1,0 +1,1460 @@
+{
+  "purpose": "reference_fitted_alignment_not_independent_accuracy",
+  "company_id": "songbei",
+  "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+  "manual_sha256": "2ad247895670c8f458ea74ea751c513cbdf6857d2bd3c33f1ee5166519cc53d2",
+  "chat_sha256": "41ae7f52e951e1f5e30d48532f0fcd4632cfac5f1cedf16ec8c4e14abfdd2297",
+  "counts": {
+    "chat_items": 53,
+    "manual_detail_rows": 52,
+    "chat_events_with_manual_link": 52,
+    "profile_eligible_events": 35,
+    "profile_aliases": 35,
+    "package_rules": 2
+  },
+  "rows": [
+    {
+      "line_id": "松北大道站11.3下单.txt:1:1",
+      "chat_line": 1,
+      "raw_text": "里脊3斤",
+      "parsed_name": "里脊",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "manual_row": 5,
+      "manual": {
+        "row": 5,
+        "name": "冷鲜小里脊肉（金锣）",
+        "spec": "500g",
+        "quantity": "3",
+        "price": "15.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80005949",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80005949"
+      ],
+      "catalog_price_candidates": [
+        "80005949"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:2:2",
+      "chat_line": 2,
+      "raw_text": "小黑茄子13斤",
+      "parsed_name": "小黑茄子",
+      "requested_quantity": "13",
+      "requested_unit": "斤",
+      "manual_row": 6,
+      "manual": {
+        "row": 6,
+        "name": "地产茄子",
+        "spec": "500g",
+        "quantity": "13.2",
+        "price": "5.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003580",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "小黑茄子要求特定品种，地产茄子不证明满足“小黑”约束",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003580"
+      ],
+      "catalog_price_candidates": [
+        "80003580"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:3:3",
+      "chat_line": 3,
+      "raw_text": "尖椒4斤",
+      "parsed_name": "尖椒",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "manual_row": null,
+      "manual": null,
+      "alignment_kind": "manual_missing",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "聊天尖椒4斤未见人工对应行，不能推断已取消或选择某SKU",
+      "unit_rule_exclusion": null
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:4:4",
+      "chat_line": 4,
+      "raw_text": "豆腐7盒",
+      "parsed_name": "豆腐",
+      "requested_quantity": "7",
+      "requested_unit": "盒",
+      "manual_row": 7,
+      "manual": {
+        "row": 7,
+        "name": "北大荒老豆腐",
+        "spec": "490g",
+        "quantity": "7",
+        "price": "5.00"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003399",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": "目录490g未注明每盒，人工7不证明7盒各490g",
+      "catalog_candidates_same_name_spec": [
+        "80003399"
+      ],
+      "catalog_price_candidates": [
+        "80003399"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:5:5",
+      "chat_line": 5,
+      "raw_text": "鲤鱼3条",
+      "parsed_name": "鲤鱼",
+      "requested_quantity": "3",
+      "requested_unit": "条",
+      "manual_row": 8,
+      "manual": {
+        "row": 8,
+        "name": "鲜活江鲤鱼",
+        "spec": "500g",
+        "quantity": "6.6",
+        "price": "14.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003132",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003132"
+      ],
+      "catalog_price_candidates": [
+        "80003132"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:6:6",
+      "chat_line": 6,
+      "raw_text": "大葱4斤",
+      "parsed_name": "大葱",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "manual_row": 52,
+      "manual": {
+        "row": 52,
+        "name": "大葱",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "1.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003447",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003447"
+      ],
+      "catalog_price_candidates": [
+        "80003447"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:7:7",
+      "chat_line": 7,
+      "raw_text": "排骨5斤切块",
+      "parsed_name": "排骨",
+      "requested_quantity": "5",
+      "requested_unit": "斤",
+      "manual_row": 9,
+      "manual": {
+        "row": 9,
+        "name": "金锣鲜猪排骨（纯肋条排骨切段）",
+        "spec": "500g",
+        "quantity": "5",
+        "price": "32.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80005969",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80005969"
+      ],
+      "catalog_price_candidates": [
+        "80005969"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:8:8",
+      "chat_line": 8,
+      "raw_text": "酸菜4袋",
+      "parsed_name": "酸菜",
+      "requested_quantity": "4",
+      "requested_unit": "袋",
+      "manual_row": 10,
+      "manual": {
+        "row": 10,
+        "name": "翠花酸菜750g",
+        "spec": "750g",
+        "quantity": "4",
+        "price": "7.9"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80001928",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": "目录750g未注明每袋，人工4不证明4袋各750g",
+      "catalog_candidates_same_name_spec": [
+        "80001928"
+      ],
+      "catalog_price_candidates": [
+        "80001928"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:9:9",
+      "chat_line": 9,
+      "raw_text": "血肠1根",
+      "parsed_name": "血肠",
+      "requested_quantity": "1",
+      "requested_unit": "根",
+      "manual_row": 11,
+      "manual": {
+        "row": 11,
+        "name": "风味血肠",
+        "spec": "500g",
+        "quantity": "1.5",
+        "price": "14.71"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000041",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80000041"
+      ],
+      "catalog_price_candidates": [
+        "80000041"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:10:10",
+      "chat_line": 10,
+      "raw_text": "熟苦肠1斤",
+      "parsed_name": "熟苦肠",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "manual_row": 12,
+      "manual": {
+        "row": 12,
+        "name": "风味苦肠",
+        "spec": "500g",
+        "quantity": "1.4",
+        "price": "45.29"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000059",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80000059"
+      ],
+      "catalog_price_candidates": [
+        "80000059"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:11:11",
+      "chat_line": 11,
+      "raw_text": "下五花肉2斤",
+      "parsed_name": "下五花肉",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "manual_row": 13,
+      "manual": {
+        "row": 13,
+        "name": "冷鲜精五花肉（金锣）",
+        "spec": "500g",
+        "quantity": "2",
+        "price": "15.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80005945",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "下五花肉与人工“精五花肉”部位可能不同",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80005945"
+      ],
+      "catalog_price_candidates": [
+        "80005945"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:12:12",
+      "chat_line": 12,
+      "raw_text": "土豆15斤",
+      "parsed_name": "土豆",
+      "requested_quantity": "15",
+      "requested_unit": "斤",
+      "manual_row": 14,
+      "manual": {
+        "row": 14,
+        "name": "土豆（大885）",
+        "spec": "500g",
+        "quantity": "15.4",
+        "price": "3.3"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003671",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003671"
+      ],
+      "catalog_price_candidates": [
+        "80003671"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:13:13",
+      "chat_line": 13,
+      "raw_text": "黄瓜5斤",
+      "parsed_name": "黄瓜",
+      "requested_quantity": "5",
+      "requested_unit": "斤",
+      "manual_row": 15,
+      "manual": {
+        "row": 15,
+        "name": "黄瓜",
+        "spec": "500g",
+        "quantity": "5.24",
+        "price": "3.49"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003517",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003517"
+      ],
+      "catalog_price_candidates": [
+        "80003517"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:14:14",
+      "chat_line": 14,
+      "raw_text": "干豆腐4斤",
+      "parsed_name": "干豆腐",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "manual_row": 16,
+      "manual": {
+        "row": 16,
+        "name": "北大荒干豆腐",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "6.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80004911",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80004911"
+      ],
+      "catalog_price_candidates": [
+        "80004911"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:15:15",
+      "chat_line": 15,
+      "raw_text": "肉丝3斤",
+      "parsed_name": "肉丝",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "manual_row": 17,
+      "manual": {
+        "row": 17,
+        "name": "精肉丝称重（金锣）",
+        "spec": "500g",
+        "quantity": "3",
+        "price": "14.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80005965",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80005965"
+      ],
+      "catalog_price_candidates": [
+        "80005965"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:16:16",
+      "chat_line": 16,
+      "raw_text": "胡萝卜2斤",
+      "parsed_name": "胡萝卜",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "manual_row": 18,
+      "manual": {
+        "row": 18,
+        "name": "胡萝卜",
+        "spec": "500g",
+        "quantity": "2.34",
+        "price": "1.49"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003508",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003508"
+      ],
+      "catalog_price_candidates": [
+        "80003508"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:17:17",
+      "chat_line": 17,
+      "raw_text": "鸡腿5斤切块",
+      "parsed_name": "鸡腿",
+      "requested_quantity": "5",
+      "requested_unit": "斤",
+      "manual_row": 19,
+      "manual": {
+        "row": 19,
+        "name": "正大鸡大腿",
+        "spec": "500g",
+        "quantity": "5",
+        "price": "9.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000347",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80000347"
+      ],
+      "catalog_price_candidates": [
+        "80000347"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:18:18",
+      "chat_line": 18,
+      "raw_text": "白菜2颗",
+      "parsed_name": "白菜",
+      "requested_quantity": "2",
+      "requested_unit": "颗",
+      "manual_row": 53,
+      "manual": {
+        "row": 53,
+        "name": "白菜",
+        "spec": "500g",
+        "quantity": "8.16",
+        "price": "1.29"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003409",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003409"
+      ],
+      "catalog_price_candidates": [
+        "80003409"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:19:19",
+      "chat_line": 19,
+      "raw_text": "西红柿2斤",
+      "parsed_name": "西红柿",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "manual_row": 20,
+      "manual": {
+        "row": 20,
+        "name": "毛粉柿子",
+        "spec": "500g",
+        "quantity": "2",
+        "price": "3.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003633",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003633"
+      ],
+      "catalog_price_candidates": [
+        "80003633"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:20:20",
+      "chat_line": 20,
+      "raw_text": "松花鸡腿2个",
+      "parsed_name": "松花鸡腿",
+      "requested_quantity": "2",
+      "requested_unit": "个",
+      "manual_row": 21,
+      "manual": {
+        "row": 21,
+        "name": "农大松花鸡腿",
+        "spec": "个",
+        "quantity": "2",
+        "price": "12.8"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000100",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80000100"
+      ],
+      "catalog_price_candidates": [
+        "80000100"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:21:21",
+      "chat_line": 21,
+      "raw_text": "厚皮鸡蛋1筐",
+      "parsed_name": "厚皮鸡蛋",
+      "requested_quantity": "1",
+      "requested_unit": "筐",
+      "manual_row": 22,
+      "manual": {
+        "row": 22,
+        "name": "鲜鸡蛋",
+        "spec": "500g",
+        "quantity": "30",
+        "price": "6.9"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80004089",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "厚皮鸡蛋明确品质特征，人工“鲜鸡蛋”不证明厚皮",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80004089"
+      ],
+      "catalog_price_candidates": [
+        "80004089"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:22:22",
+      "chat_line": 22,
+      "raw_text": "窝瓜1个",
+      "parsed_name": "窝瓜",
+      "requested_quantity": "1",
+      "requested_unit": "个",
+      "manual_row": 23,
+      "manual": {
+        "row": 23,
+        "name": "板栗窝瓜",
+        "spec": "500g",
+        "quantity": "3.06",
+        "price": "3.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003415",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003415"
+      ],
+      "catalog_price_candidates": [
+        "80003415"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:23:23",
+      "chat_line": 23,
+      "raw_text": "鸡爪3袋",
+      "parsed_name": "鸡爪",
+      "requested_quantity": "3",
+      "requested_unit": "袋",
+      "manual_row": 24,
+      "manual": {
+        "row": 24,
+        "name": "正大单冻鸡爪",
+        "spec": "1kg",
+        "quantity": "3",
+        "price": "44.50"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000336",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": "目录1kg未注明每袋，人工3可能为实称3kg而非3袋",
+      "catalog_candidates_same_name_spec": [
+        "80000336"
+      ],
+      "catalog_price_candidates": [
+        "80000336"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:24:24",
+      "chat_line": 24,
+      "raw_text": "玉米粒2袋",
+      "parsed_name": "玉米粒",
+      "requested_quantity": "2",
+      "requested_unit": "袋",
+      "manual_row": 25,
+      "manual": {
+        "row": 25,
+        "name": "美国厨师原味玉米粒425g/罐",
+        "spec": "425g",
+        "quantity": "3",
+        "price": "10.00"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80002070",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "玉米粒2袋被改为罐头3罐，包装和数量均不相符",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80002070"
+      ],
+      "catalog_price_candidates": [
+        "80002070"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:25:25",
+      "chat_line": 25,
+      "raw_text": "油麦菜5斤",
+      "parsed_name": "油麦菜",
+      "requested_quantity": "5",
+      "requested_unit": "斤",
+      "manual_row": 26,
+      "manual": {
+        "row": 26,
+        "name": "油麦菜",
+        "spec": "500g",
+        "quantity": "5.6",
+        "price": "3.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003751",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003751"
+      ],
+      "catalog_price_candidates": [
+        "80003751"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:26:26",
+      "chat_line": 26,
+      "raw_text": "护心肉5斤",
+      "parsed_name": "护心肉",
+      "requested_quantity": "5",
+      "requested_unit": "斤",
+      "manual_row": 27,
+      "manual": {
+        "row": 27,
+        "name": "生猪护心肉",
+        "spec": "500g",
+        "quantity": "5",
+        "price": "31"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000759",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80000759"
+      ],
+      "catalog_price_candidates": [
+        "80000759"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:27:27",
+      "chat_line": 27,
+      "raw_text": "鸡柳2袋",
+      "parsed_name": "鸡柳",
+      "requested_quantity": "2",
+      "requested_unit": "袋",
+      "manual_row": 28,
+      "manual": {
+        "row": 28,
+        "name": "正大雪花鸡柳800g/袋",
+        "spec": "800g",
+        "quantity": "2",
+        "price": "35"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80004379",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80004379"
+      ],
+      "catalog_price_candidates": [
+        "80004379"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:28:28",
+      "chat_line": 28,
+      "raw_text": "甘蓝3颗",
+      "parsed_name": "甘蓝",
+      "requested_quantity": "3",
+      "requested_unit": "颗",
+      "manual_row": 29,
+      "manual": {
+        "row": 29,
+        "name": "牛心甘蓝",
+        "spec": "500g",
+        "quantity": "5.18",
+        "price": "5"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80004694",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80004694"
+      ],
+      "catalog_price_candidates": [
+        "80004694"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:29:29",
+      "chat_line": 29,
+      "raw_text": "油菜1斤",
+      "parsed_name": "油菜",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "manual_row": 30,
+      "manual": {
+        "row": 30,
+        "name": "油菜",
+        "spec": "500g",
+        "quantity": "1.24",
+        "price": "1.49"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003748",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003748"
+      ],
+      "catalog_price_candidates": [
+        "80003748"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:30:30",
+      "chat_line": 30,
+      "raw_text": "豆角5斤",
+      "parsed_name": "豆角",
+      "requested_quantity": "5",
+      "requested_unit": "斤",
+      "manual_row": 31,
+      "manual": {
+        "row": 31,
+        "name": "架豆王（豆角）",
+        "spec": "500g",
+        "quantity": "5",
+        "price": "6.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003525",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "豆角不等于特定架豆王，需确认品种",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003525"
+      ],
+      "catalog_price_candidates": [
+        "80003525"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:31:31",
+      "chat_line": 31,
+      "raw_text": "芹菜3斤",
+      "parsed_name": "芹菜",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "manual_row": 32,
+      "manual": {
+        "row": 32,
+        "name": "芹菜",
+        "spec": "500g",
+        "quantity": "3.4",
+        "price": "1.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003605",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003605"
+      ],
+      "catalog_price_candidates": [
+        "80003605"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:32:32",
+      "chat_line": 32,
+      "raw_text": "秋林红肠2斤",
+      "parsed_name": "秋林红肠",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "manual_row": 33,
+      "manual": {
+        "row": 33,
+        "name": "农大红肠",
+        "spec": "500g",
+        "quantity": "2.2",
+        "price": "46.47"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000101",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "聊天明确秋林，人工农大红肠存在品牌冲突；不可学农大替代",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80000101"
+      ],
+      "catalog_price_candidates": [
+        "80000101"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:33:33",
+      "chat_line": 33,
+      "raw_text": "罗马生菜1颗",
+      "parsed_name": "罗马生菜",
+      "requested_quantity": "1",
+      "requested_unit": "颗",
+      "manual_row": 34,
+      "manual": {
+        "row": 34,
+        "name": "西生菜",
+        "spec": "500g",
+        "quantity": "0.46",
+        "price": "4.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003691",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "罗马生菜与人工西生菜品种不一致",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003691"
+      ],
+      "catalog_price_candidates": [
+        "80003691"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:34:34",
+      "chat_line": 34,
+      "raw_text": "娃娃菜1包",
+      "parsed_name": "娃娃菜",
+      "requested_quantity": "1",
+      "requested_unit": "包",
+      "manual_row": 35,
+      "manual": {
+        "row": 35,
+        "name": "娃娃菜袋装",
+        "spec": "袋",
+        "quantity": "1",
+        "price": "6.5"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80004313",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80004313"
+      ],
+      "catalog_price_candidates": [
+        "80004313"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:35:35",
+      "chat_line": 35,
+      "raw_text": "冬瓜3斤",
+      "parsed_name": "冬瓜",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "manual_row": 36,
+      "manual": {
+        "row": 36,
+        "name": "冬瓜",
+        "spec": "500g",
+        "quantity": "2.66",
+        "price": "1.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003467",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003467"
+      ],
+      "catalog_price_candidates": [
+        "80003467"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:36:36",
+      "chat_line": 36,
+      "raw_text": "银耳1斤",
+      "parsed_name": "银耳",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "manual_row": 37,
+      "manual": {
+        "row": 37,
+        "name": "优质银耳",
+        "spec": "500g",
+        "quantity": "1",
+        "price": "45.29"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80004244",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80004244"
+      ],
+      "catalog_price_candidates": [
+        "80004244"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:37:37",
+      "chat_line": 37,
+      "raw_text": "白萝卜1根",
+      "parsed_name": "白萝卜",
+      "requested_quantity": "1",
+      "requested_unit": "根",
+      "manual_row": 38,
+      "manual": {
+        "row": 38,
+        "name": "白萝卜",
+        "spec": "500g",
+        "quantity": "2.4",
+        "price": "1.79"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003412",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003412"
+      ],
+      "catalog_price_candidates": [
+        "80003412"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:38:38",
+      "chat_line": 38,
+      "raw_text": "牛肉卷1斤",
+      "parsed_name": "牛肉卷",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "manual_row": 39,
+      "manual": {
+        "row": 39,
+        "name": "大庄园肥牛肉片",
+        "spec": "500g",
+        "quantity": "2",
+        "price": "49.5"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80000448",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": false,
+      "exclusion": "牛肉卷与人工肥牛肉片形态不一致",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80000448"
+      ],
+      "catalog_price_candidates": [
+        "80000448"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:39:39",
+      "chat_line": 39,
+      "raw_text": "虾仁1斤",
+      "parsed_name": "虾仁",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "manual_row": 40,
+      "manual": {
+        "row": 40,
+        "name": "冷冻庆丰虾仁（特大号）",
+        "spec": "500g",
+        "quantity": "1",
+        "price": "44.7"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "人工商品无法按名称、规格和挂牌价唯一绑定当前目录SKU",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:40:40",
+      "chat_line": 40,
+      "raw_text": "大米1袋",
+      "parsed_name": "大米",
+      "requested_quantity": "1",
+      "requested_unit": "袋",
+      "manual_row": 41,
+      "manual": {
+        "row": 41,
+        "name": "优谷大米",
+        "spec": "25kg",
+        "quantity": "1",
+        "price": "231"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "人工商品无法按名称、规格和挂牌价唯一绑定当前目录SKU",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:41:41",
+      "chat_line": 41,
+      "raw_text": "色拉油2桶",
+      "parsed_name": "色拉油",
+      "requested_quantity": "2",
+      "requested_unit": "桶",
+      "manual_row": 42,
+      "manual": {
+        "row": 42,
+        "name": "九三非转基因大豆油一级5L/桶",
+        "spec": "5L",
+        "quantity": "2",
+        "price": "73.9"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80001291",
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "色拉油到九三大豆油无明确品牌/原料授权，人工价73.9与目录65.9也不一致",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80001291"
+      ],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:42:42",
+      "chat_line": 42,
+      "raw_text": "蒜瓣3斤",
+      "parsed_name": "蒜瓣",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "manual_row": 43,
+      "manual": {
+        "row": 43,
+        "name": "蒜瓣",
+        "spec": "500g",
+        "quantity": "3.12",
+        "price": "8.88"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80003652",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80003652"
+      ],
+      "catalog_price_candidates": [
+        "80003652"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:43:43",
+      "chat_line": 43,
+      "raw_text": "洋葱4斤",
+      "parsed_name": "洋葱",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "manual_row": 44,
+      "manual": {
+        "row": 44,
+        "name": "优质紫洋葱",
+        "spec": "500g",
+        "quantity": "4.4",
+        "price": "3.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80004785",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80004785"
+      ],
+      "catalog_price_candidates": [
+        "80004785"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:44:44",
+      "chat_line": 44,
+      "raw_text": "一品鲜酱油一桶",
+      "parsed_name": "一品鲜酱油",
+      "requested_quantity": "1",
+      "requested_unit": "桶",
+      "manual_row": 45,
+      "manual": {
+        "row": 45,
+        "name": "东古一品鲜酱油5L/桶",
+        "spec": "5L",
+        "quantity": "1",
+        "price": "81.76"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80001858",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80001858"
+      ],
+      "catalog_price_candidates": [
+        "80001858"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:45:45",
+      "chat_line": 45,
+      "raw_text": "方便袋2捆小号",
+      "parsed_name": "方便袋",
+      "requested_quantity": "2",
+      "requested_unit": "捆",
+      "manual_row": 46,
+      "manual": {
+        "row": 46,
+        "name": "一次性透明塑料袋（小）",
+        "spec": "包",
+        "quantity": "1",
+        "price": "6.3"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "人工商品无法按名称、规格和挂牌价唯一绑定当前目录SKU",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:46:46",
+      "chat_line": 46,
+      "raw_text": "胶皮手套1副",
+      "parsed_name": "胶皮手套",
+      "requested_quantity": "1",
+      "requested_unit": "副",
+      "manual_row": 47,
+      "manual": {
+        "row": 47,
+        "name": "橡胶手套",
+        "spec": "包",
+        "quantity": "1",
+        "price": "6.72"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "人工商品无法按名称、规格和挂牌价唯一绑定当前目录SKU",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:48:47",
+      "chat_line": 48,
+      "raw_text": "5色糙米10斤",
+      "parsed_name": "5色糙米",
+      "requested_quantity": "10",
+      "requested_unit": "斤",
+      "manual_row": 48,
+      "manual": {
+        "row": 48,
+        "name": "七色糙米2.5kg/袋",
+        "spec": "袋",
+        "quantity": "2",
+        "price": "42"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "聊天五色糙米与人工七色糙米不同，不能学替代及2袋数量",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:50:48",
+      "chat_line": 50,
+      "raw_text": "花椒粒1斤",
+      "parsed_name": "花椒粒",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "manual_row": 2,
+      "manual": {
+        "row": 2,
+        "name": "花椒粒",
+        "spec": "500g",
+        "quantity": "1",
+        "price": "45.29"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80002965",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80002965"
+      ],
+      "catalog_price_candidates": [
+        "80002965"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:51:49",
+      "chat_line": 51,
+      "raw_text": "烟桂 1斤去皮的那种",
+      "parsed_name": "烟桂",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "manual_row": 3,
+      "manual": {
+        "row": 3,
+        "name": "烟桂",
+        "spec": "500g",
+        "quantity": "1",
+        "price": "49"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "人工商品无法按名称、规格和挂牌价唯一绑定当前目录SKU",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:52:50",
+      "chat_line": 52,
+      "raw_text": "辣椒段3斤",
+      "parsed_name": "辣椒段",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "manual_row": 4,
+      "manual": {
+        "row": 4,
+        "name": "干辣椒段",
+        "spec": "500g",
+        "quantity": "3",
+        "price": "28.82"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80001873",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80001873"
+      ],
+      "catalog_price_candidates": [
+        "80001873"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:53:51",
+      "chat_line": 53,
+      "raw_text": "橘子10斤",
+      "parsed_name": "橘子",
+      "requested_quantity": "10",
+      "requested_unit": "斤",
+      "manual_row": 49,
+      "manual": {
+        "row": 49,
+        "name": "橘子",
+        "spec": "斤",
+        "quantity": "10.5",
+        "price": "9.1"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "人工商品无法按名称、规格和挂牌价唯一绑定当前目录SKU",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:54:52",
+      "chat_line": 54,
+      "raw_text": "香蕉10斤",
+      "parsed_name": "香蕉",
+      "requested_quantity": "10",
+      "requested_unit": "斤",
+      "manual_row": 50,
+      "manual": {
+        "row": 50,
+        "name": "优选佳农香蕉",
+        "spec": "500g",
+        "quantity": "10.7",
+        "price": "5.99"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": "80005703",
+      "catalog_price_matches_manual": true,
+      "profile_eligible": true,
+      "exclusion": null,
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [
+        "80005703"
+      ],
+      "catalog_price_candidates": [
+        "80005703"
+      ]
+    },
+    {
+      "line_id": "松北大道站11.3下单.txt:55:53",
+      "chat_line": 55,
+      "raw_text": "松北大道站再加这样的刷锅5个",
+      "parsed_name": "刷锅",
+      "requested_quantity": "5",
+      "requested_unit": "个",
+      "manual_row": 51,
+      "manual": {
+        "row": 51,
+        "name": "银丝洗碗海棉",
+        "spec": "包",
+        "quantity": "5",
+        "price": "3.5"
+      },
+      "alignment_kind": "ordered_name_anchor",
+      "manual_catalog_code": null,
+      "catalog_price_matches_manual": false,
+      "profile_eligible": false,
+      "exclusion": "人工商品无法按名称、规格和挂牌价唯一绑定当前目录SKU",
+      "unit_rule_exclusion": null,
+      "catalog_candidates_same_name_spec": [],
+      "catalog_price_candidates": []
+    }
+  ],
+  "limitations": [
+    "人工表可能反映实称、替代和人工增删，按顺序/名称对齐只代表参考，不是独立正确率",
+    "未向profile复制任何订单数量、实际称重或价格",
+    "品种、品牌、包装冲突仅作为差异留在alignment中，不复用为别名"
+  ]
+}

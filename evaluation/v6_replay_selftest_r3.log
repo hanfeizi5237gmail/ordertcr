@@ -1,0 +1,12 @@
+test_active_change_is_control_not_automatic_output (test_v6_replay_audit.ReplayAuditTests.test_active_change_is_control_not_automatic_output) ... ok
+test_active_or_unresolved_does_not_accept_inactive (test_v6_replay_audit.ReplayAuditTests.test_active_or_unresolved_does_not_accept_inactive) ... ok
+test_duplicate_is_unresolved_with_issue_and_blank_amount (test_v6_replay_audit.ReplayAuditTests.test_duplicate_is_unresolved_with_issue_and_blank_amount) ... ok
+test_gate_rejects_all_integrity_errors_with_equal_counts (test_v6_replay_audit.ReplayAuditTests.test_gate_rejects_all_integrity_errors_with_equal_counts) ... ok
+test_pending_is_reported_for_all_actions_even_when_output_missing (test_v6_replay_audit.ReplayAuditTests.test_pending_is_reported_for_all_actions_even_when_output_missing) ... ok
+test_resolved_cancellation_accepts_control_record_without_candidates (test_v6_replay_audit.ReplayAuditTests.test_resolved_cancellation_accepts_control_record_without_candidates) ... ok
+test_superseded_and_inactive_are_retained_with_blank_amount (test_v6_replay_audit.ReplayAuditTests.test_superseded_and_inactive_are_retained_with_blank_amount) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+OK

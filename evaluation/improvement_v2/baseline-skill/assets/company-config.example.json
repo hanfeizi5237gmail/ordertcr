@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "companies": [
+    {
+      "company_id": "DEMO_ONLY",
+      "full_name": "示例公司（请替换并确认）",
+      "aliases": [],
+      "finance_name": "示例商户（请替换并确认）"
+    }
+  ],
+  "companies_confirmed": false,
+  "default_discount": "0.95",
+  "numbering": {
+    "confirmed": false,
+    "prefix": "OR_",
+    "daily_start": 0
+  },
+  "output_policies": {
+    "standard_order": "sample_exact",
+    "finance": "sample_exact",
+    "dual_confirmed": false
+  },
+  "aliases": {},
+  "unit_rules": {},
+  "finance": {
+    "confirmed": false,
+    "price_source": "discounted_catalog",
+    "tax_freight_confirmed": false,
+    "receipt_date": null,
+    "order_number_mode": "OR",
+    "merchant_names_confirmed": false
+  }
+}

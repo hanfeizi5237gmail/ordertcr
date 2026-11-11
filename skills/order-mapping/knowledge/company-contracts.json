@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "contracts": [],
+  "notes": "当前材料仅为历史采购结果，没有经用户明确确认的公司特殊约定。正常识别不加载旧profile。新增约定需company_id、kind=user_confirmed_contract的证据及概念规则，不存SKU、旧价格或历史实配量。"
+}

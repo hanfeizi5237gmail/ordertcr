@@ -1,0 +1,1410 @@
+{
+  "passed": true,
+  "scope": "metamorphic_profile_generalization_not_unseen_customer_accuracy",
+  "quantity_variants": 159,
+  "five_item_separator_trials": 100,
+  "negative_explicit_brand_checks": 106,
+  "seed": 20261107,
+  "quantity_checks": [
+    {
+      "raw": "东古酱油1瓶",
+      "selected_code": "80001857",
+      "passed": true
+    },
+    {
+      "raw": "东古酱油7瓶",
+      "selected_code": "80001857",
+      "passed": true
+    },
+    {
+      "raw": "东古酱油19瓶",
+      "selected_code": "80001857",
+      "passed": true
+    },
+    {
+      "raw": "五花肉1斤",
+      "selected_code": "80005945",
+      "passed": true
+    },
+    {
+      "raw": "五花肉7斤",
+      "selected_code": "80005945",
+      "passed": true
+    },
+    {
+      "raw": "五花肉19斤",
+      "selected_code": "80005945",
+      "passed": true
+    },
+    {
+      "raw": "冰糖1斤",
+      "selected_code": "80001841",
+      "passed": true
+    },
+    {
+      "raw": "冰糖7斤",
+      "selected_code": "80001841",
+      "passed": true
+    },
+    {
+      "raw": "冰糖19斤",
+      "selected_code": "80001841",
+      "passed": true
+    },
+    {
+      "raw": "净肉1斤",
+      "selected_code": "80005964",
+      "passed": true
+    },
+    {
+      "raw": "净肉7斤",
+      "selected_code": "80005964",
+      "passed": true
+    },
+    {
+      "raw": "净肉19斤",
+      "selected_code": "80005964",
+      "passed": true
+    },
+    {
+      "raw": "咸鸭蛋1个",
+      "selected_code": "80004094",
+      "passed": true
+    },
+    {
+      "raw": "咸鸭蛋7个",
+      "selected_code": "80004094",
+      "passed": true
+    },
+    {
+      "raw": "咸鸭蛋19个",
+      "selected_code": "80004094",
+      "passed": true
+    },
+    {
+      "raw": "土豆1斤",
+      "selected_code": "80003671",
+      "passed": true
+    },
+    {
+      "raw": "土豆7斤",
+      "selected_code": "80003671",
+      "passed": true
+    },
+    {
+      "raw": "土豆19斤",
+      "selected_code": "80003671",
+      "passed": true
+    },
+    {
+      "raw": "大葱1斤",
+      "selected_code": "80003447",
+      "passed": true
+    },
+    {
+      "raw": "大葱7斤",
+      "selected_code": "80003447",
+      "passed": true
+    },
+    {
+      "raw": "大葱19斤",
+      "selected_code": "80003447",
+      "passed": true
+    },
+    {
+      "raw": "太太乐鸡精1袋",
+      "selected_code": "80001608",
+      "passed": true
+    },
+    {
+      "raw": "太太乐鸡精7袋",
+      "selected_code": "80001608",
+      "passed": true
+    },
+    {
+      "raw": "太太乐鸡精19袋",
+      "selected_code": "80001608",
+      "passed": true
+    },
+    {
+      "raw": "娃娃菜1包",
+      "selected_code": "80004313",
+      "passed": true
+    },
+    {
+      "raw": "娃娃菜7包",
+      "selected_code": "80004313",
+      "passed": true
+    },
+    {
+      "raw": "娃娃菜19包",
+      "selected_code": "80004313",
+      "passed": true
+    },
+    {
+      "raw": "小白菜1斤",
+      "selected_code": "80003724",
+      "passed": true
+    },
+    {
+      "raw": "小白菜7斤",
+      "selected_code": "80003724",
+      "passed": true
+    },
+    {
+      "raw": "小白菜19斤",
+      "selected_code": "80003724",
+      "passed": true
+    },
+    {
+      "raw": "小米1斤",
+      "selected_code": "80001148",
+      "passed": true
+    },
+    {
+      "raw": "小米7斤",
+      "selected_code": "80001148",
+      "passed": true
+    },
+    {
+      "raw": "小米19斤",
+      "selected_code": "80001148",
+      "passed": true
+    },
+    {
+      "raw": "小葱1斤",
+      "selected_code": "80003727",
+      "passed": true
+    },
+    {
+      "raw": "小葱7斤",
+      "selected_code": "80003727",
+      "passed": true
+    },
+    {
+      "raw": "小葱19斤",
+      "selected_code": "80003727",
+      "passed": true
+    },
+    {
+      "raw": "尖椒1斤",
+      "selected_code": "80003528",
+      "passed": true
+    },
+    {
+      "raw": "尖椒7斤",
+      "selected_code": "80003528",
+      "passed": true
+    },
+    {
+      "raw": "尖椒19斤",
+      "selected_code": "80003528",
+      "passed": true
+    },
+    {
+      "raw": "干豆腐1斤",
+      "selected_code": "80004911",
+      "passed": true
+    },
+    {
+      "raw": "干豆腐7斤",
+      "selected_code": "80004911",
+      "passed": true
+    },
+    {
+      "raw": "干豆腐19斤",
+      "selected_code": "80004911",
+      "passed": true
+    },
+    {
+      "raw": "挂面1袋",
+      "selected_code": "80001876",
+      "passed": true
+    },
+    {
+      "raw": "挂面7袋",
+      "selected_code": "80001876",
+      "passed": true
+    },
+    {
+      "raw": "挂面19袋",
+      "selected_code": "80001876",
+      "passed": true
+    },
+    {
+      "raw": "排骨1斤",
+      "selected_code": "80005969",
+      "passed": true
+    },
+    {
+      "raw": "排骨7斤",
+      "selected_code": "80005969",
+      "passed": true
+    },
+    {
+      "raw": "排骨19斤",
+      "selected_code": "80005969",
+      "passed": true
+    },
+    {
+      "raw": "树椒丝1斤",
+      "selected_code": "80002902",
+      "passed": true
+    },
+    {
+      "raw": "树椒丝7斤",
+      "selected_code": "80002902",
+      "passed": true
+    },
+    {
+      "raw": "树椒丝19斤",
+      "selected_code": "80002902",
+      "passed": true
+    },
+    {
+      "raw": "梅肉1斤",
+      "selected_code": "80005955",
+      "passed": true
+    },
+    {
+      "raw": "梅肉7斤",
+      "selected_code": "80005955",
+      "passed": true
+    },
+    {
+      "raw": "梅肉19斤",
+      "selected_code": "80005955",
+      "passed": true
+    },
+    {
+      "raw": "水煮肉片料1包",
+      "selected_code": "80002082",
+      "passed": true
+    },
+    {
+      "raw": "水煮肉片料7包",
+      "selected_code": "80002082",
+      "passed": true
+    },
+    {
+      "raw": "水煮肉片料19包",
+      "selected_code": "80002082",
+      "passed": true
+    },
+    {
+      "raw": "油菜1斤",
+      "selected_code": "80003748",
+      "passed": true
+    },
+    {
+      "raw": "油菜7斤",
+      "selected_code": "80003748",
+      "passed": true
+    },
+    {
+      "raw": "油菜19斤",
+      "selected_code": "80003748",
+      "passed": true
+    },
+    {
+      "raw": "油豆角1斤",
+      "selected_code": "80003749",
+      "passed": true
+    },
+    {
+      "raw": "油豆角7斤",
+      "selected_code": "80003749",
+      "passed": true
+    },
+    {
+      "raw": "油豆角19斤",
+      "selected_code": "80003749",
+      "passed": true
+    },
+    {
+      "raw": "海天上等耗油1瓶",
+      "selected_code": "80004513",
+      "passed": true
+    },
+    {
+      "raw": "海天上等耗油7瓶",
+      "selected_code": "80004513",
+      "passed": true
+    },
+    {
+      "raw": "海天上等耗油19瓶",
+      "selected_code": "80004513",
+      "passed": true
+    },
+    {
+      "raw": "海天鲜生抽1瓶",
+      "selected_code": "80001298",
+      "passed": true
+    },
+    {
+      "raw": "海天鲜生抽7瓶",
+      "selected_code": "80001298",
+      "passed": true
+    },
+    {
+      "raw": "海天鲜生抽19瓶",
+      "selected_code": "80001298",
+      "passed": true
+    },
+    {
+      "raw": "牛奶1箱",
+      "selected_code": "80004048",
+      "passed": true
+    },
+    {
+      "raw": "牛奶7箱",
+      "selected_code": "80004048",
+      "passed": true
+    },
+    {
+      "raw": "牛奶19箱",
+      "selected_code": "80004048",
+      "passed": true
+    },
+    {
+      "raw": "猪手1斤",
+      "selected_code": "80000767",
+      "passed": true
+    },
+    {
+      "raw": "猪手7斤",
+      "selected_code": "80000767",
+      "passed": true
+    },
+    {
+      "raw": "猪手19斤",
+      "selected_code": "80000767",
+      "passed": true
+    },
+    {
+      "raw": "玉米粒罐头1罐",
+      "selected_code": "80005844",
+      "passed": true
+    },
+    {
+      "raw": "玉米粒罐头7罐",
+      "selected_code": "80005844",
+      "passed": true
+    },
+    {
+      "raw": "玉米粒罐头19罐",
+      "selected_code": "80005844",
+      "passed": true
+    },
+    {
+      "raw": "番茄沙司1袋",
+      "selected_code": "80004512",
+      "passed": true
+    },
+    {
+      "raw": "番茄沙司7袋",
+      "selected_code": "80004512",
+      "passed": true
+    },
+    {
+      "raw": "番茄沙司19袋",
+      "selected_code": "80004512",
+      "passed": true
+    },
+    {
+      "raw": "白糖1斤",
+      "selected_code": "80001837",
+      "passed": true
+    },
+    {
+      "raw": "白糖7斤",
+      "selected_code": "80001837",
+      "passed": true
+    },
+    {
+      "raw": "白糖19斤",
+      "selected_code": "80001837",
+      "passed": true
+    },
+    {
+      "raw": "白菜1颗",
+      "selected_code": "80003409",
+      "passed": true
+    },
+    {
+      "raw": "白菜7颗",
+      "selected_code": "80003409",
+      "passed": true
+    },
+    {
+      "raw": "白菜19颗",
+      "selected_code": "80003409",
+      "passed": true
+    },
+    {
+      "raw": "盐1袋",
+      "selected_code": "80002987",
+      "passed": true
+    },
+    {
+      "raw": "盐7袋",
+      "selected_code": "80002987",
+      "passed": true
+    },
+    {
+      "raw": "盐19袋",
+      "selected_code": "80002987",
+      "passed": true
+    },
+    {
+      "raw": "粉条1斤",
+      "selected_code": "80001862",
+      "passed": true
+    },
+    {
+      "raw": "粉条7斤",
+      "selected_code": "80001862",
+      "passed": true
+    },
+    {
+      "raw": "粉条19斤",
+      "selected_code": "80001862",
+      "passed": true
+    },
+    {
+      "raw": "粉肠1斤",
+      "selected_code": "80000102",
+      "passed": true
+    },
+    {
+      "raw": "粉肠7斤",
+      "selected_code": "80000102",
+      "passed": true
+    },
+    {
+      "raw": "粉肠19斤",
+      "selected_code": "80000102",
+      "passed": true
+    },
+    {
+      "raw": "紫皮洋葱1斤",
+      "selected_code": "80004785",
+      "passed": true
+    },
+    {
+      "raw": "紫皮洋葱7斤",
+      "selected_code": "80004785",
+      "passed": true
+    },
+    {
+      "raw": "紫皮洋葱19斤",
+      "selected_code": "80004785",
+      "passed": true
+    },
+    {
+      "raw": "红肠1斤",
+      "selected_code": "80000101",
+      "passed": true
+    },
+    {
+      "raw": "红肠7斤",
+      "selected_code": "80000101",
+      "passed": true
+    },
+    {
+      "raw": "红肠19斤",
+      "selected_code": "80000101",
+      "passed": true
+    },
+    {
+      "raw": "红色尖椒1斤",
+      "selected_code": "80003500",
+      "passed": true
+    },
+    {
+      "raw": "红色尖椒7斤",
+      "selected_code": "80003500",
+      "passed": true
+    },
+    {
+      "raw": "红色尖椒19斤",
+      "selected_code": "80003500",
+      "passed": true
+    },
+    {
+      "raw": "腊肠1斤",
+      "selected_code": "80000072",
+      "passed": true
+    },
+    {
+      "raw": "腊肠7斤",
+      "selected_code": "80000072",
+      "passed": true
+    },
+    {
+      "raw": "腊肠19斤",
+      "selected_code": "80000072",
+      "passed": true
+    },
+    {
+      "raw": "腐竹1袋",
+      "selected_code": "80001868",
+      "passed": true
+    },
+    {
+      "raw": "腐竹7袋",
+      "selected_code": "80001868",
+      "passed": true
+    },
+    {
+      "raw": "腐竹19袋",
+      "selected_code": "80001868",
+      "passed": true
+    },
+    {
+      "raw": "臭菜1斤",
+      "selected_code": "80003439",
+      "passed": true
+    },
+    {
+      "raw": "臭菜7斤",
+      "selected_code": "80003439",
+      "passed": true
+    },
+    {
+      "raw": "臭菜19斤",
+      "selected_code": "80003439",
+      "passed": true
+    },
+    {
+      "raw": "色拉油1桶",
+      "selected_code": "80001291",
+      "passed": true
+    },
+    {
+      "raw": "色拉油7桶",
+      "selected_code": "80001291",
+      "passed": true
+    },
+    {
+      "raw": "色拉油19桶",
+      "selected_code": "80001291",
+      "passed": true
+    },
+    {
+      "raw": "蒜苔1斤",
+      "selected_code": "80003657",
+      "passed": true
+    },
+    {
+      "raw": "蒜苔7斤",
+      "selected_code": "80003657",
+      "passed": true
+    },
+    {
+      "raw": "蒜苔19斤",
+      "selected_code": "80003657",
+      "passed": true
+    },
+    {
+      "raw": "豆油1桶",
+      "selected_code": "80001297",
+      "passed": true
+    },
+    {
+      "raw": "豆油7桶",
+      "selected_code": "80001297",
+      "passed": true
+    },
+    {
+      "raw": "豆油19桶",
+      "selected_code": "80001297",
+      "passed": true
+    },
+    {
+      "raw": "豆腐1盒",
+      "selected_code": "80003399",
+      "passed": true
+    },
+    {
+      "raw": "豆腐7盒",
+      "selected_code": "80003399",
+      "passed": true
+    },
+    {
+      "raw": "豆腐19盒",
+      "selected_code": "80003399",
+      "passed": true
+    },
+    {
+      "raw": "豆芽1斤",
+      "selected_code": "80004391",
+      "passed": true
+    },
+    {
+      "raw": "豆芽7斤",
+      "selected_code": "80004391",
+      "passed": true
+    },
+    {
+      "raw": "豆芽19斤",
+      "selected_code": "80004391",
+      "passed": true
+    },
+    {
+      "raw": "豇豆角1斤",
+      "selected_code": "80003532",
+      "passed": true
+    },
+    {
+      "raw": "豇豆角7斤",
+      "selected_code": "80003532",
+      "passed": true
+    },
+    {
+      "raw": "豇豆角19斤",
+      "selected_code": "80003532",
+      "passed": true
+    },
+    {
+      "raw": "里脊1斤",
+      "selected_code": "80005949",
+      "passed": true
+    },
+    {
+      "raw": "里脊7斤",
+      "selected_code": "80005949",
+      "passed": true
+    },
+    {
+      "raw": "里脊19斤",
+      "selected_code": "80005949",
+      "passed": true
+    },
+    {
+      "raw": "重庆麻辣块1块",
+      "selected_code": "80002344",
+      "passed": true
+    },
+    {
+      "raw": "重庆麻辣块7块",
+      "selected_code": "80002344",
+      "passed": true
+    },
+    {
+      "raw": "重庆麻辣块19块",
+      "selected_code": "80002344",
+      "passed": true
+    },
+    {
+      "raw": "青椒1斤",
+      "selected_code": "80003608",
+      "passed": true
+    },
+    {
+      "raw": "青椒7斤",
+      "selected_code": "80003608",
+      "passed": true
+    },
+    {
+      "raw": "青椒19斤",
+      "selected_code": "80003608",
+      "passed": true
+    },
+    {
+      "raw": "香菜1斤",
+      "selected_code": "80003719",
+      "passed": true
+    },
+    {
+      "raw": "香菜7斤",
+      "selected_code": "80003719",
+      "passed": true
+    },
+    {
+      "raw": "香菜19斤",
+      "selected_code": "80003719",
+      "passed": true
+    },
+    {
+      "raw": "香蕉1斤",
+      "selected_code": "80005703",
+      "passed": true
+    },
+    {
+      "raw": "香蕉7斤",
+      "selected_code": "80005703",
+      "passed": true
+    },
+    {
+      "raw": "香蕉19斤",
+      "selected_code": "80005703",
+      "passed": true
+    },
+    {
+      "raw": "鲤鱼1条",
+      "selected_code": "80003132",
+      "passed": true
+    },
+    {
+      "raw": "鲤鱼7条",
+      "selected_code": "80003132",
+      "passed": true
+    },
+    {
+      "raw": "鲤鱼19条",
+      "selected_code": "80003132",
+      "passed": true
+    },
+    {
+      "raw": "鸡翅1斤",
+      "selected_code": "80000377",
+      "passed": true
+    },
+    {
+      "raw": "鸡翅7斤",
+      "selected_code": "80000377",
+      "passed": true
+    },
+    {
+      "raw": "鸡翅19斤",
+      "selected_code": "80000377",
+      "passed": true
+    },
+    {
+      "raw": "鸡胸肉1斤",
+      "selected_code": "80000335",
+      "passed": true
+    },
+    {
+      "raw": "鸡胸肉7斤",
+      "selected_code": "80000335",
+      "passed": true
+    },
+    {
+      "raw": "鸡胸肉19斤",
+      "selected_code": "80000335",
+      "passed": true
+    },
+    {
+      "raw": "黄瓜1斤",
+      "selected_code": "80003517",
+      "passed": true
+    },
+    {
+      "raw": "黄瓜7斤",
+      "selected_code": "80003517",
+      "passed": true
+    },
+    {
+      "raw": "黄瓜19斤",
+      "selected_code": "80003517",
+      "passed": true
+    }
+  ],
+  "separator_trials": [
+    {
+      "trial": 0,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 1,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 2,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 3,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 4,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 5,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 6,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 7,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 8,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 9,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 10,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 11,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 12,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 13,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 14,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 15,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 16,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 17,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 18,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 19,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 20,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 21,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 22,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 23,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 24,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 25,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 26,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 27,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 28,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 29,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 30,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 31,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 32,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 33,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 34,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 35,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 36,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 37,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 38,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 39,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 40,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 41,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 42,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 43,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 44,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 45,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 46,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 47,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 48,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 49,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 50,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 51,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 52,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 53,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 54,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 55,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 56,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 57,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 58,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 59,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 60,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 61,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 62,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 63,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 64,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 65,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 66,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 67,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 68,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 69,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 70,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 71,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 72,
+      "separator": "'\\n'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 73,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 74,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 75,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 76,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 77,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 78,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 79,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 80,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 81,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 82,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 83,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 84,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 85,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 86,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 87,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 88,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 89,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 90,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 91,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 92,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 93,
+      "separator": "'，'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 94,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 95,
+      "separator": "','",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 96,
+      "separator": "'、'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 97,
+      "separator": "'；'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 98,
+      "separator": "';'",
+      "item_count": 5,
+      "passed": true
+    },
+    {
+      "trial": 99,
+      "separator": "' '",
+      "item_count": 5,
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "采购偏好源自同一人工样本，变体不是新的独立人工标注订单"
+  ]
+}

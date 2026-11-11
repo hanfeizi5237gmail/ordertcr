@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "batch_id": "xueyuan-20261103-review",
+  "company": "xueyuan",
+  "shipping_date": "2026-11-03",
+  "mode": "order",
+  "date_policy": "single",
+  "date_policy_confirmed": false,
+  "delivery_confirmed": false,
+  "publish": false,
+  "test_only": true,
+  "config": {
+    "schema_version": 1,
+    "companies_confirmed": false,
+    "companies": [
+      {
+        "company_id": "songbei",
+        "full_name": "松北大道消防救援站",
+        "aliases": [
+          "松北大道站"
+        ],
+        "finance_name": "消防队松北大道站"
+      },
+      {
+        "company_id": "xingyue",
+        "full_name": "星月街消防站",
+        "aliases": [
+          "星月站"
+        ],
+        "finance_name": "消防队星月街站"
+      },
+      {
+        "company_id": "xueyuan",
+        "full_name": "学院路消防救援",
+        "aliases": [
+          "学院路站"
+        ],
+        "finance_name": "消防队学院路站"
+      }
+    ],
+    "default_discount": "0.95",
+    "numbering": {
+      "confirmed": false,
+      "prefix": "OR_",
+      "daily_start": 0
+    },
+    "output_policies": {
+      "standard_order": "sample_exact",
+      "finance": "sample_exact",
+      "dual_confirmed": false
+    },
+    "aliases": {},
+    "unit_rules": {},
+    "finance": {
+      "confirmed": false,
+      "price_source": "discounted_catalog",
+      "tax_freight_confirmed": false,
+      "receipt_date": null,
+      "order_number_mode": "OR",
+      "merchant_names_confirmed": false
+    }
+  },
+  "chat_files": [
+    "original/学院路站11.3下单.txt"
+  ],
+  "decisions": {
+    "学院路站11.3下单.txt:27:27": {
+      "code": "80004785",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "紫皮洋葱对应目录紫洋葱；500g可比项中优质紫洋葱3.99高于紫洋葱1.99。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:28:28": {
+      "code": "80003500",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "红色是硬约束；红尖椒为目录中唯一红色尖椒，500g计价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:41:41": {
+      "code": "80003657",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "蒜苔对应目录唯一蒜苔（绿帽）项，500g计价；未改变原始6斤。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:43:43": {
+      "code": "80003671",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定产地和新品种的土豆；鲜土豆500g可比项中大885为3.30，高于新土豆1.29和优质新土豆2.49。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:45:45": {
+      "code": "80000101",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的红肠；同为500g红肠项，农大46.47为最高挂牌价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:46:46": {
+      "code": "80005851",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的粉肠；同为500g粉肠项，一手店33.52为最高挂牌价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:59:59": {
+      "code": "80003608",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "青椒/大辣椒对应聊天青椒，目录唯一该鲜菜项，500g计价。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    },
+    "学院路站11.3下单.txt:61:61": {
+      "code": "80005703",
+      "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+      "reason": "未限定品牌的香蕉；两项500g香蕉中优选佳农5.99高于优质香蕉3.99。",
+      "confirmed_by": "agent",
+      "selection_basis": "constraints_then_highest_price"
+    }
+  }
+}

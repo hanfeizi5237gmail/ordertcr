@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "profile_id": "company-preferences-v1",
+  "company_id": "company_a",
+  "catalog_version": "REPLACE_WITH_CURRENT_CATALOG_SHA256",
+  "evidence": {
+    "kind": "user_provided_reference",
+    "source": "人工参考.xlsx",
+    "sha256": "REPLACE_WITH_REFERENCE_FILE_SHA256"
+  },
+  "aliases": {
+    "原始品名": {
+      "code": "REPLACE_WITH_CURRENT_CATALOG_CODE",
+      "request_units": ["袋"],
+      "evidence": "替换为人工参考行、原文及当前目录行的对应依据；不得引用旧价或实称"
+    }
+  },
+  "unit_rules": {},
+  "notes": "字段演示，含占位值，不能直接注册或用于真实下单。"
+}

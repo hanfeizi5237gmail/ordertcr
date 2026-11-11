@@ -1,0 +1,40 @@
+test_add_change_cancel_keep_source_spans_and_predecessor_clues (test_parsing_v6.ParseChatV6Tests.test_add_change_cancel_keep_source_spans_and_predecessor_clues) ... ok
+test_catalog_name_boundary_with_quantity_first_continuous_input (test_parsing_v6.ParseChatV6Tests.test_catalog_name_boundary_with_quantity_first_continuous_input) ... ok
+test_date_and_company_headings_are_text_evidence (test_parsing_v6.ParseChatV6Tests.test_date_and_company_headings_are_text_evidence) ... ok
+test_inline_company_date_and_quantity_clause_are_one_event (test_parsing_v6.ParseChatV6Tests.test_inline_company_date_and_quantity_clause_are_one_event) ... ok
+test_inline_company_switch_after_separator (test_parsing_v6.ParseChatV6Tests.test_inline_company_switch_after_separator) ... ok
+test_invalid_quantities_preserve_sign_and_known_identity (test_parsing_v6.ParseChatV6Tests.test_invalid_quantities_preserve_sign_and_known_identity) ... ok
+test_iso_date_configured_company_alias_and_halfwidth_colon (test_parsing_v6.ParseChatV6Tests.test_iso_date_configured_company_alias_and_halfwidth_colon) ... ok
+test_labeled_business_context_and_quantity_first_connector (test_parsing_v6.ParseChatV6Tests.test_labeled_business_context_and_quantity_first_connector) ... ok
+test_numeric_product_suffix_does_not_consume_the_order_quantity (test_parsing_v6.ParseChatV6Tests.test_numeric_product_suffix_does_not_consume_the_order_quantity) ... FAIL
+test_originals_keep_159_events (test_parsing_v6.ParseChatV6Tests.test_originals_keep_159_events) ... ok
+test_packaging_requirement_suffix_does_not_become_another_product (test_parsing_v6.ParseChatV6Tests.test_packaging_requirement_suffix_does_not_become_another_product) ... ok
+test_parenthesized_packaging_is_not_order_quantity (test_parsing_v6.ParseChatV6Tests.test_parenthesized_packaging_is_not_order_quantity) ... ok
+test_shared_quantity_each_and_missing_unit (test_parsing_v6.ParseChatV6Tests.test_shared_quantity_each_and_missing_unit) ... ok
+test_slash_adjacency_fullwidth_prefix_and_fraction (test_parsing_v6.ParseChatV6Tests.test_slash_adjacency_fullwidth_prefix_and_fraction) ... ok
+test_suffix_cancellation_and_explicit_relation_clues (test_parsing_v6.ParseChatV6Tests.test_suffix_cancellation_and_explicit_relation_clues) ... ok
+test_total_amendment_duplicate_and_packaging_clauses (test_parsing_v6.ParseChatV6Tests.test_total_amendment_duplicate_and_packaging_clauses) ... ok
+
+======================================================================
+FAIL: test_numeric_product_suffix_does_not_consume_the_order_quantity (test_parsing_v6.ParseChatV6Tests.test_numeric_product_suffix_does_not_consume_the_order_quantity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_parsing_v6.py", line 72, in test_numeric_product_suffix_does_not_consume_the_order_quantity
+    self.assertEqual([(r['name'], r['quantity'], r['unit']) for r in rows],
+AssertionError: Lists differ: [('北极冰虾80*', '1005', 'kg'), ('土豆（大885）', '3', '斤'), ('北极冰虾80*', '100', None)] != [('北极冰虾80*100', '5', 'kg'), ('土豆（大885）', '3', '斤'), ('北极冰虾80*100', None, None)]
+
+First differing element 0:
+('北极冰虾80*', '1005', 'kg')
+('北极冰虾80*100', '5', 'kg')
+
+- [('北极冰虾80*', '1005', 'kg'), ('土豆（大885）', '3', '斤'), ('北极冰虾80*', '100', None)]
+?           ----                                               ----
+
++ [('北极冰虾80*100', '5', 'kg'), ('土豆（大885）', '3', '斤'), ('北极冰虾80*100', None, None)]
+?              ++++                                                 ++++++
+
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.010s
+
+FAILED (failures=1)

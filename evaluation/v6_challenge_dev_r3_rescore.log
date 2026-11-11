@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6_challenge_replay.py", line 516, in <module>
+    run(args.seeds, args.phase, args.modes, args.rescore_from)
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6_challenge_replay.py", line 409, in run
+    old = json.loads(old_path.read_text(encoding='utf-8'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1028, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/.pyenv/versions/3.12.0/lib/python3.12/pathlib.py", line 1014, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/v6/ordertcr/evaluation/v6/challenge_dev_r3/replay_audit.json/replay_audit.json'

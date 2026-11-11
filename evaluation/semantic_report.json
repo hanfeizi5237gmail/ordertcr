@@ -1,0 +1,2003 @@
+{
+  "scenario_source": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/scenarios/semantic_cases.json",
+  "catalog_source": "original/食堂食材基准价价格表10.12-10.18.xlsx",
+  "automated_scope": "结构化期望、来源跨度、日期标题、备注保留、指定品种/形态候选守卫和不得自动选SKU/计价；其余中文语义仍需人工评估",
+  "total_cases": 41,
+  "passed_cases": 41,
+  "failed_cases": 0,
+  "checks": 344,
+  "passed_checks": 344,
+  "cases": [
+    {
+      "id": "xingyue-cold-noodle-pack",
+      "source": "星月站11.3下单.txt",
+      "source_line": 1,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留大包原始单位",
+        "冷面种类和大包规格无法从原文唯一确定，待人工确认"
+      ],
+      "must_not": [
+        "把1大包自动换算为1斤或1袋",
+        "以目录最高总价跨包装直接定SKU"
+      ]
+    },
+    {
+      "id": "xingyue-sauce-weight-vs-packet",
+      "source": "星月站11.3下单.txt",
+      "source_line": 2,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留重量需求与品牌/袋装候选差异",
+        "无确认包装关系时不得计算袋数"
+      ],
+      "must_not": [
+        "按名称相似把10斤写成10袋"
+      ]
+    },
+    {
+      "id": "xingyue-dumpling-pieces",
+      "source": "星月站11.3下单.txt",
+      "source_line": 3,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "按个数保留需求",
+        "若候选按重量计价，要求单个重量或本批实称"
+      ],
+      "must_not": [
+        "自动把300个换算为300个500g计价单位"
+      ]
+    },
+    {
+      "id": "xingyue-sandwich-ham-variant",
+      "source": "星月站11.3下单.txt",
+      "source_line": 5,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "三明治/三文治是检索线索，规格可能不同",
+        "一个包装多重未明确时标记待确认"
+      ],
+      "must_not": [
+        "直接把400g和2kg的候选当成同一规格"
+      ]
+    },
+    {
+      "id": "xingyue-cumin-missing-unit",
+      "source": "星月站11.3下单.txt",
+      "source_line": 10,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "数量2存在但单位缺失，保留原文入待处理行",
+        "未确认单位前价格和金额留空"
+      ],
+      "must_not": [
+        "默认单位为斤或袋"
+      ]
+    },
+    {
+      "id": "xingyue-date-range-title",
+      "source": "星月站11.3下单.txt",
+      "source_line": 12,
+      "passed": true,
+      "checks": [
+        {
+          "check": "date title not emitted as product",
+          "passed": true
+        },
+        {
+          "check": "date title context preserved",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留多日范围作为后续项目上下文",
+        "不能当作商品或推断年份/发货日"
+      ],
+      "must_not": [
+        "将3或5识别为商品数量"
+      ]
+    },
+    {
+      "id": "xingyue-date-3-title",
+      "source": "星月站11.3下单.txt",
+      "source_line": 13,
+      "passed": true,
+      "checks": [
+        {
+          "check": "date title not emitted as product",
+          "passed": true
+        },
+        {
+          "check": "date title context preserved",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "之后商品保留11月3号来源日期",
+        "年份和发货安排由批次确认"
+      ],
+      "must_not": [
+        "日期标题导出为商品"
+      ]
+    },
+    {
+      "id": "xingyue-heart-meat-species",
+      "source": "星月站11.3下单.txt",
+      "source_line": 14,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "猪/牛等物种不明确时保留差异，不能只按品名片段选价高商品"
+      ],
+      "must_not": [
+        "将牛护心肉无确认替代猪护心肉"
+      ]
+    },
+    {
+      "id": "xingyue-pickled-cabbage-case",
+      "source": "星月站11.3下单.txt",
+      "source_line": 17,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 酸菜鱼调料",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 酸菜馅",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "筛选箱装候选，保留每箱袋数及每袋重量差异",
+        "不可与袋装或酸菜鱼调料混同"
+      ],
+      "must_not": [
+        "把1箱自动按1袋计价"
+      ]
+    },
+    {
+      "id": "xingyue-chicken-block-raw-prepared",
+      "source": "星月站11.3下单.txt",
+      "source_line": 25,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate includes 鸡肉块",
+          "passed": true
+        },
+        {
+          "check": "candidate includes 正大美味鸡块1kg/袋",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "预制鸡块和生鲜鸡肉块身份不明，保留疑点"
+      ],
+      "must_not": [
+        "仅凭鸡块词形直接匹配预制鸡块"
+      ]
+    },
+    {
+      "id": "xingyue-date-4-title",
+      "source": "星月站11.3下单.txt",
+      "source_line": 34,
+      "passed": true,
+      "checks": [
+        {
+          "check": "date title not emitted as product",
+          "passed": true
+        },
+        {
+          "check": "date title context preserved",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "之后商品保留11月4号来源日期，不与11月3日自动合并"
+      ],
+      "must_not": [
+        "日期标题导出为商品"
+      ]
+    },
+    {
+      "id": "xingyue-corn-segments-bag",
+      "source": "星月站11.3下单.txt",
+      "source_line": 37,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "目录无同名时按原文入待处理订单",
+        "整根玉米和玉米粒不等于玉米段，需补商品/规格依据"
+      ],
+      "must_not": [
+        "把玉米段静默匹配为玉米粒或玉米面"
+      ]
+    },
+    {
+      "id": "xingyue-pork-elbow-hair",
+      "source": "星月站11.3下单.txt",
+      "source_line": 38,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "preserve processing_note",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate includes 前肘剔骨.燎毛",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留去毛加工要求与按个下单",
+        "前/后肘及按重量计价关系未明时待确认"
+      ],
+      "must_not": [
+        "把去毛备注丢弃",
+        "无实称自动计算5个肘子的500g数量"
+      ]
+    },
+    {
+      "id": "xingyue-cauliflower-first",
+      "source": "星月站11.3下单.txt",
+      "source_line": 39,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "expected date_context",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 韭菜花",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "与同日第45行相同但分别保留来源",
+        "标记疑似重复供确认"
+      ],
+      "must_not": [
+        "默默把两条去重"
+      ]
+    },
+    {
+      "id": "xingyue-cauliflower-repeat",
+      "source": "星月站11.3下单.txt",
+      "source_line": 45,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "expected date_context",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 韭菜花",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "与同日第39行分别保留来源",
+        "确认是误重复还是另加6斤后决定总量"
+      ],
+      "must_not": [
+        "直接合并为12斤",
+        "直接删掉第二条"
+      ]
+    },
+    {
+      "id": "xingyue-date-5-title",
+      "source": "星月站11.3下单.txt",
+      "source_line": 47,
+      "passed": true,
+      "checks": [
+        {
+          "check": "date title not emitted as product",
+          "passed": true
+        },
+        {
+          "check": "date title context preserved",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "之后项目进入11月5日来源上下文，不能并入前日"
+      ],
+      "must_not": [
+        "日期标题导出为商品"
+      ]
+    },
+    {
+      "id": "xingyue-pickle-missing-quantity",
+      "source": "星月站11.3下单.txt",
+      "source_line": 49,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "expected date_context",
+          "passed": true
+        },
+        {
+          "check": "preserve packaging_note",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "没有数值数量，保留完整原文到待处理行",
+        "目录的鲜萝卜丁不等于萝卜丁咸菜"
+      ],
+      "must_not": [
+        "把大袋的解释成1袋",
+        "将小水萝卜丁当咸菜"
+      ]
+    },
+    {
+      "id": "xueyuan-soy-oil-case-pack",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 4,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "桶装和4桶整件是不同计价包装，明确规格后再计价"
+      ],
+      "must_not": [
+        "把2桶直接作为2件4桶装计算"
+      ]
+    },
+    {
+      "id": "xueyuan-salad-oil-unmapped",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 5,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "当前目录没有同名商品时保留原文并标记无匹配"
+      ],
+      "must_not": [
+        "因为同属食用油就替换豆油或花生油"
+      ]
+    },
+    {
+      "id": "xueyuan-oyster-sauce-typo",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 10,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "疑似耗/蚝错字仅作为候选线索，保留原始写法",
+        "瓶装规格和商品身份待确认"
+      ],
+      "must_not": [
+        "静默改写原文并视作同名确认"
+      ]
+    },
+    {
+      "id": "xueyuan-salt-chemical-separation",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 33,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "目录无火碱时原文入待处理行，提示商品缺失"
+      ],
+      "must_not": [
+        "把火碱匹配为面碱、小苏打或其他食品添加剂"
+      ]
+    },
+    {
+      "id": "xueyuan-cabbage-count-vs-weight",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 34,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "与按斤订单不同的数量单位",
+        "目录按500g计价时需实称"
+      ],
+      "must_not": [
+        "将3颗等同3斤"
+      ]
+    },
+    {
+      "id": "xueyuan-carp-cleaned",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 37,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "preserve processing_note",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留收拾好加工要求",
+        "目录按重量计价时需实称或明确规则"
+      ],
+      "must_not": [
+        "丢掉加工备注",
+        "将5条直接视为5个500g计价单位"
+      ]
+    },
+    {
+      "id": "xueyuan-tofu-box-variety",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 40,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 麻婆豆腐",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 鱼豆腐",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 臭豆腐",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 豆腐脑",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 干豆腐",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "盒装虽能筛候选，豆腐品种与每盒规格未指定时保留疑点"
+      ],
+      "must_not": [
+        "把10盒当成10斤或任一散称豆腐"
+      ]
+    },
+    {
+      "id": "xueyuan-fresh-raw-cut-hair",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 64,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "preserve processing_note",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate includes 生猪前手（燎毛）",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 猪手冻",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "撩毛可作为燎毛候选线索，保留原文",
+        "与第55行猪手7斤作为两项保留；鲜生与熟制不能混同"
+      ],
+      "must_not": [
+        "合并到猪手7斤",
+        "凭8个直接算按500g计价金额"
+      ]
+    },
+    {
+      "id": "xueyuan-red-pepper-color",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 28,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate includes 红尖椒",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 地产尖椒",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "红色是商品约束；候选不得忽略颜色"
+      ],
+      "must_not": [
+        "只按尖椒二字自动选普通青色尖椒"
+      ]
+    },
+    {
+      "id": "xueyuan-two-small-cabbages",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 58,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "小白菜区别于白菜，颗与重量需确认换算",
+        "同站第25行小白菜1斤属不同数量表达"
+      ],
+      "must_not": [
+        "与白菜3颗合并"
+      ]
+    },
+    {
+      "id": "xueyuan-canned-corn",
+      "source": "学院路站11.3下单.txt",
+      "source_line": 53,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "罐头形态及罐单位是硬约束"
+      ],
+      "must_not": [
+        "映射到冻玉米粒袋装"
+      ]
+    },
+    {
+      "id": "songbei-black-small-eggplant",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 2,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "无同名目录项时可提紫茄子等语义候选，但颜色/品种不等同于已确认"
+      ],
+      "must_not": [
+        "将小黑茄子直接改写为紫茄子"
+      ]
+    },
+    {
+      "id": "songbei-pork-ribs-cut",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 7,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "preserve processing_note",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 排骨酱",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 牛排骨",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留切块加工要求",
+        "整排、半排或切段候选需按需求比较"
+      ],
+      "must_not": [
+        "忽略切块而按最高价选不相符部位"
+      ]
+    },
+    {
+      "id": "songbei-cooked-intestine",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 10,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "熟制要求是硬约束；目录仅苦肠字样时需核对是否熟制"
+      ],
+      "must_not": [
+        "把未注明熟制的苦肠自动视作完全相同"
+      ]
+    },
+    {
+      "id": "songbei-carp-pieces",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 5,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "按条需求可保留，目录按重量计价仍需实称"
+      ],
+      "must_not": [
+        "套用学院路站5条的重量或加工要求"
+      ]
+    },
+    {
+      "id": "songbei-egg-basket",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 21,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 鸡蛋面",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 鸡蛋干",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 鸡蛋挂面",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "厚皮与一筐的规格均待确认，不能按普通鲜鸡蛋斤价直接结算"
+      ],
+      "must_not": [
+        "从普通鸡蛋自动推断每筐重量"
+      ]
+    },
+    {
+      "id": "songbei-bagged-corn",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 24,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate includes 冻玉米粒嘉利得0.9kg*10袋/件",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 罐头",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes /罐",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "袋装与罐头互斥；袋装不同重量须进一步确认"
+      ],
+      "must_not": [
+        "映射到玉米粒罐头"
+      ]
+    },
+    {
+      "id": "songbei-autumn-red-sausage",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 32,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        },
+        {
+          "check": "candidate includes 秋林里道斯红肠",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 农大红肠",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 风味红肠",
+          "passed": true
+        },
+        {
+          "check": "candidate excludes 一手店红肠",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "秋林品牌限制候选；秋林里道斯作为近似线索需核对品牌映射"
+      ],
+      "must_not": [
+        "因风味红肠价格不同而忽略秋林品牌"
+      ]
+    },
+    {
+      "id": "songbei-roman-lettuce-count",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 33,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "目录生菜不能证明是罗马生菜",
+        "按颗与按重量不能无凭据换算"
+      ],
+      "must_not": [
+        "直接按普通生菜500g计价"
+      ]
+    },
+    {
+      "id": "songbei-chinese-number-sauce",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 44,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "前一字是一品鲜品名，后一字是一桶数量",
+        "没有品牌和桶大小时保留规格疑点"
+      ],
+      "must_not": [
+        "拆成品名品鲜酱油",
+        "将一品鲜的一计入数量"
+      ]
+    },
+    {
+      "id": "songbei-supply-bag-size",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 45,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "preserve specification_note",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留小号规格，目录无同名商品时异常入表"
+      ],
+      "must_not": [
+        "删掉非食材用品"
+      ]
+    },
+    {
+      "id": "songbei-five-color-rice",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 48,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "5是混合品种描述的一部分，普通糙米只作候选线索",
+        "混合比例/品种未明时不能用单一糙米替代"
+      ],
+      "must_not": [
+        "将5解析成下单数量",
+        "将5色糙米拆成两条商品"
+      ]
+    },
+    {
+      "id": "songbei-cassia-peeled",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 51,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "preserve processing_note",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "空格不拆成独立商品",
+        "肉桂或桂皮只是候选，去皮要求需人工确定"
+      ],
+      "must_not": [
+        "丢弃去皮要求",
+        "直接将烟桂改成桂皮"
+      ]
+    },
+    {
+      "id": "songbei-add-scrubber-reference",
+      "source": "松北大道站11.3下单.txt",
+      "source_line": 55,
+      "passed": true,
+      "checks": [
+        {
+          "check": "one product at source line",
+          "passed": true
+        },
+        {
+          "check": "raw text and character span",
+          "passed": true
+        },
+        {
+          "check": "expected name",
+          "passed": true
+        },
+        {
+          "check": "expected quantity",
+          "passed": true
+        },
+        {
+          "check": "expected unit",
+          "passed": true
+        },
+        {
+          "check": "preserve reference_note",
+          "passed": true
+        },
+        {
+          "check": "preserve event",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed SKU selection",
+          "passed": true
+        },
+        {
+          "check": "no unconfirmed invoice quantity",
+          "passed": true
+        },
+        {
+          "check": "candidate list not truncated",
+          "passed": true
+        }
+      ],
+      "expected_behavior": [
+        "保留追加事件和指定站点",
+        "这样的缺可见参照物，目录无刷锅时原文标记待处理"
+      ],
+      "must_not": [
+        "忽略末行",
+        "凭这样的推断具体刷具规格"
+      ]
+    }
+  ],
+  "separator_variants": {
+    "seed": 20261107,
+    "trials": 100,
+    "passed": 100,
+    "failed": 0,
+    "failures": []
+  }
+}

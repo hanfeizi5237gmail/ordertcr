@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "evaluation_type": "historical_reference_fitted_regression_not_unseen_accuracy",
+  "evaluation_sha256": "cea31a049d80b0418867435eb6c2b3ca3282ac5bdb82b42b36f9a4899a01f156",
+  "xlsx_rows_verified": 159,
+  "station_reports": [
+    {
+      "batch_id": "songbei-20261103-v3",
+      "row_count": 53,
+      "standard": {
+        "rows": 53,
+        "comments": 53,
+        "candidate_sets": 49,
+        "blank_amounts": 18,
+        "colors": 53,
+        "standard_total": "1582.232125"
+      },
+      "finance": {
+        "rows": 53,
+        "finance_total": "1582.232125",
+        "blank_amounts": 18
+      },
+      "manifest_sha256": "04e7051cf7ef1df86c0f9ea3d77b996cb908c8e042b3f9f6dd0c3030fe76a7d1"
+    },
+    {
+      "batch_id": "xingyue-20261103-v3",
+      "row_count": 42,
+      "standard": {
+        "rows": 42,
+        "comments": 42,
+        "candidate_sets": 40,
+        "blank_amounts": 23,
+        "colors": 42,
+        "standard_total": "1277.476875"
+      },
+      "finance": {
+        "rows": 42,
+        "finance_total": "1277.476875",
+        "blank_amounts": 23
+      },
+      "manifest_sha256": "bd976d4d96f27a127e230ba2695bcd098c5ca408fba74e9975789d97b15638aa"
+    },
+    {
+      "batch_id": "xueyuan-20261103-v3",
+      "row_count": 64,
+      "standard": {
+        "rows": 64,
+        "comments": 64,
+        "candidate_sets": 59,
+        "blank_amounts": 19,
+        "colors": 64,
+        "standard_total": "2363.31975"
+      },
+      "finance": {
+        "rows": 64,
+        "finance_total": "2363.31975",
+        "blank_amounts": 19
+      },
+      "manifest_sha256": "ddc60bd2e6ac950a038dbb34d8a61dc7f28c3f18e9eed0d6047a1b580ecef24a"
+    }
+  ],
+  "merged_finance": {
+    "row_count": 159,
+    "detail_rows_verified": 159,
+    "summary_rows_verified": 3,
+    "total": "5223.028750",
+    "source_manifests": [
+      "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/v3/songbei-20261103-v3/10967a0640765e77-5712c093/manifest.json",
+      "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/v3/xingyue-20261103-v3/37d24bb85e092ed8-c7d494b3/manifest.json",
+      "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/v3/xueyuan-20261103-v3/dea759c509f02190-1e18f414/manifest.json"
+    ]
+  },
+  "artifact_sha_verified": 10,
+  "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+  "native_comments_verified": true,
+  "candidate_sets_verified": 148,
+  "exception_colors_verified": 159,
+  "previews": [
+    {
+      "batch_id": "songbei-20261103-v3",
+      "kind": "standard",
+      "images": [
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/rendered-v3/songbei-20261103-v3/测试_下单需求_待配送_待人工处理.xlsx.png"
+      ]
+    },
+    {
+      "batch_id": "xingyue-20261103-v3",
+      "kind": "standard",
+      "images": [
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/rendered-v3/xingyue-20261103-v3/测试_下单需求_待配送_待人工处理.xlsx.png"
+      ]
+    },
+    {
+      "batch_id": "xueyuan-20261103-v3",
+      "kind": "standard",
+      "images": [
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/rendered-v3/xueyuan-20261103-v3/测试_下单需求_待配送_待人工处理.xlsx.png"
+      ]
+    },
+    {
+      "batch_id": "merged-finance",
+      "kind": "merged_finance",
+      "images": [
+        "/Users/hanfei/Documents/workspace/smartcode/ordertcr/evaluation/rendered-v3/merged-finance/测试_合并财务记账_预估草稿.xlsx.png"
+      ]
+    }
+  ],
+  "limitations": [
+    "缩略图用于检查表头、商品名、颜色、空金额和小计；原生批注由openpyxl逐项复读，缩略图不显示批注浮窗。",
+    "未执行真实宿主加载、真实订单系统导入、实际配送或财务入账。",
+    "该回归使用历史参考样本，不代表未见订单准确率。"
+  ]
+}

@@ -1,0 +1,2603 @@
+{
+  "purpose": "historical_reference_audit_not_independent_accuracy",
+  "catalog_sha256": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+  "manual_sha256": "7b7a6e800761bae8c02777285bb39b66f4e0330ab690c495c500a18ec6381c70",
+  "chat_sha256": "f25079aff542bb0c9ef93071f046cfd4390b571facc023c73df65449908e69db",
+  "workflow_manifest": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/xueyuan-20261103-review/bf7a830ee10c6b65-80a9a184/manifest.json",
+  "alignment_rule": "C1-C57=M2-M58; C58 chat-only; C59-C63=M59-M63; M64 manual-only; C64 chat-only",
+  "counts": {
+    "chat_items": 64,
+    "manual_detail_rows": 63,
+    "aligned_pairs": 62,
+    "manual_name_covered_in_catalog": 54,
+    "manual_exact_name_spec_price_unique": 52,
+    "aligned_manual_exact_catalog_denominator": 51,
+    "aligned_manual_name_spec_identity_denominator": 53,
+    "workflow_matched_same_sku": 20,
+    "workflow_selected_same_sku_including_blocked": 23,
+    "manual_only_rows": 1,
+    "chat_only_rows": 2
+  },
+  "rows": [
+    {
+      "line_id": "学院路站11.3下单.txt:1:1",
+      "chat_line": 1,
+      "raw_text": "大米1袋",
+      "parsed_name": "大米",
+      "requested_quantity": "1",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 2,
+        "name": "优谷大米",
+        "spec": "25kg",
+        "quantity": "1",
+        "price": "231"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:2:2",
+      "chat_line": 2,
+      "raw_text": "小米4斤",
+      "parsed_name": "小米",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80001148",
+      "manual": {
+        "row": 3,
+        "name": "小米",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "4.49"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001148"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001148",
+      "manual_identity_code": "80001148",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "same",
+      "differences": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:3:3",
+      "chat_line": 3,
+      "raw_text": "挂面7袋",
+      "parsed_name": "挂面",
+      "requested_quantity": "7",
+      "requested_unit": "袋",
+      "workflow_status": "needs_review",
+      "selected_code": "80001876",
+      "manual": {
+        "row": 4,
+        "name": "挂面",
+        "spec": "500g",
+        "quantity": "7",
+        "price": "3.71"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001876"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001876",
+      "manual_identity_code": "80001876",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "SKU已有候选但数量/事件仍阻塞金额"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:4:4",
+      "chat_line": 4,
+      "raw_text": "豆油2桶",
+      "parsed_name": "豆油",
+      "requested_quantity": "2",
+      "requested_unit": "桶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 5,
+        "name": "九三非转基因大豆油三级5L/桶",
+        "spec": "5L",
+        "quantity": "2",
+        "price": "73.9"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001297"
+      ],
+      "manual_catalog_status": "name_price_or_spec_conflict",
+      "manual_code": null,
+      "manual_identity_code": "80001297",
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU",
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:5:5",
+      "chat_line": 5,
+      "raw_text": "色拉油1桶",
+      "parsed_name": "色拉油",
+      "requested_quantity": "1",
+      "requested_unit": "桶",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 6,
+        "name": "九三非转基因大豆油一级5L/桶",
+        "spec": "5L",
+        "quantity": "1",
+        "price": "73.9"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001291"
+      ],
+      "manual_catalog_status": "name_price_or_spec_conflict",
+      "manual_code": null,
+      "manual_identity_code": "80001291",
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU",
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:6:6",
+      "chat_line": 6,
+      "raw_text": "海天鲜生抽1瓶",
+      "parsed_name": "海天鲜生抽",
+      "requested_quantity": "1",
+      "requested_unit": "瓶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 7,
+        "name": "海天酱油鲜味生抽",
+        "spec": "500ml",
+        "quantity": "1",
+        "price": "7.65"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001298"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001298",
+      "manual_identity_code": "80001298",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:7:7",
+      "chat_line": 7,
+      "raw_text": "东古酱油2瓶",
+      "parsed_name": "东古酱油",
+      "requested_quantity": "2",
+      "requested_unit": "瓶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 8,
+        "name": "东古一品鲜500ML/瓶",
+        "spec": "500ml",
+        "quantity": "2",
+        "price": "9.5"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001857"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001857",
+      "manual_identity_code": "80001857",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:8:8",
+      "chat_line": 8,
+      "raw_text": "冰糖4斤",
+      "parsed_name": "冰糖",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80001841",
+      "manual": {
+        "row": 9,
+        "name": "冰糖",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "9.85"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001841"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001841",
+      "manual_identity_code": "80001841",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "same",
+      "differences": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:9:9",
+      "chat_line": 9,
+      "raw_text": "白糖4斤",
+      "parsed_name": "白糖",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80001837",
+      "manual": {
+        "row": 10,
+        "name": "白糖",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "5.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001837"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001837",
+      "manual_identity_code": "80001837",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "same",
+      "differences": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:10:10",
+      "chat_line": 10,
+      "raw_text": "海天上等耗油1瓶",
+      "parsed_name": "海天上等耗油",
+      "requested_quantity": "1",
+      "requested_unit": "瓶",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 11,
+        "name": "海天上等蚝油1kg/瓶",
+        "spec": "1kg",
+        "quantity": "1",
+        "price": "14.9"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004513"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004513",
+      "manual_identity_code": "80004513",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:11:11",
+      "chat_line": 11,
+      "raw_text": "盐4袋",
+      "parsed_name": "盐",
+      "requested_quantity": "4",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 12,
+        "name": "中盐精制加碘盐",
+        "spec": "350g",
+        "quantity": "4",
+        "price": "1.76"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002987"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002987",
+      "manual_identity_code": "80002987",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:12:12",
+      "chat_line": 12,
+      "raw_text": "太太乐鸡精1袋",
+      "parsed_name": "太太乐鸡精",
+      "requested_quantity": "1",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 13,
+        "name": "太太乐鸡精",
+        "spec": "1kg",
+        "quantity": "1",
+        "price": "35"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001608",
+        "80001955"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001608",
+      "manual_identity_code": "80001608",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:13:13",
+      "chat_line": 13,
+      "raw_text": "水煮肉片料4包",
+      "parsed_name": "水煮肉片料",
+      "requested_quantity": "4",
+      "requested_unit": "包",
+      "workflow_status": "needs_review",
+      "selected_code": "80002082",
+      "manual": {
+        "row": 14,
+        "name": "水煮肉片料",
+        "spec": "100g",
+        "quantity": "4",
+        "price": "14.71"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002082"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002082",
+      "manual_identity_code": "80002082",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "SKU已有候选但数量/事件仍阻塞金额"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:14:14",
+      "chat_line": 14,
+      "raw_text": "番茄沙司2袋",
+      "parsed_name": "番茄沙司",
+      "requested_quantity": "2",
+      "requested_unit": "袋",
+      "workflow_status": "needs_review",
+      "selected_code": null,
+      "manual": {
+        "row": 15,
+        "name": "亨氏番茄沙司320g/袋",
+        "spec": "320g",
+        "quantity": "2",
+        "price": "15"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002185",
+        "80004512"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004512",
+      "manual_identity_code": "80004512",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:15:15",
+      "chat_line": 15,
+      "raw_text": "重庆麻辣块1块",
+      "parsed_name": "重庆麻辣块",
+      "requested_quantity": "1",
+      "requested_unit": "块",
+      "workflow_status": "needs_review",
+      "selected_code": null,
+      "manual": {
+        "row": 16,
+        "name": "名扬麻辣块",
+        "spec": "90g*4块",
+        "quantity": "1",
+        "price": "42.94"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002344"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002344",
+      "manual_identity_code": "80002344",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:16:16",
+      "chat_line": 16,
+      "raw_text": "太阳岛香辣酱1袋",
+      "parsed_name": "太阳岛香辣酱",
+      "requested_quantity": "1",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 17,
+        "name": "太阳岛香辣酱拧盖450g*24袋",
+        "spec": "袋",
+        "quantity": "1",
+        "price": "8.4"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:17:17",
+      "chat_line": 17,
+      "raw_text": "香油1瓶",
+      "parsed_name": "香油",
+      "requested_quantity": "1",
+      "requested_unit": "瓶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 18,
+        "name": "李锦记纯香芝麻油410ml（1*12）",
+        "spec": "瓶",
+        "quantity": "1",
+        "price": "35"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:18:18",
+      "chat_line": 18,
+      "raw_text": "树椒丝1斤",
+      "parsed_name": "树椒丝",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 19,
+        "name": "辣椒丝",
+        "spec": "500g",
+        "quantity": "1",
+        "price": "32.35"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002902"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002902",
+      "manual_identity_code": "80002902",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:19:19",
+      "chat_line": 19,
+      "raw_text": "粉条3斤",
+      "parsed_name": "粉条",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 20,
+        "name": "粉条1kg",
+        "spec": "1kg",
+        "quantity": "2",
+        "price": "16.81"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001862"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001862",
+      "manual_identity_code": "80001862",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:20:20",
+      "chat_line": 20,
+      "raw_text": "腐竹2袋",
+      "parsed_name": "腐竹",
+      "requested_quantity": "2",
+      "requested_unit": "袋",
+      "workflow_status": "needs_review",
+      "selected_code": "80001869",
+      "manual": {
+        "row": 21,
+        "name": "腐竹1kg",
+        "spec": "1kg",
+        "quantity": "2",
+        "price": "28.82"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001868"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001868",
+      "manual_identity_code": "80001868",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "different",
+      "spec_comparison": "different",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前选择与人工目录SKU不同",
+        "规格不同",
+        "SKU已有候选但数量/事件仍阻塞金额"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:21:21",
+      "chat_line": 21,
+      "raw_text": "大葱4斤",
+      "parsed_name": "大葱",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003447",
+      "manual": {
+        "row": 22,
+        "name": "大葱",
+        "spec": "500g",
+        "quantity": "4.44",
+        "price": "1.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003447"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003447",
+      "manual_identity_code": "80003447",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:22:22",
+      "chat_line": 22,
+      "raw_text": "小葱4斤",
+      "parsed_name": "小葱",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003727",
+      "manual": {
+        "row": 23,
+        "name": "小葱",
+        "spec": "500g",
+        "quantity": "4.6",
+        "price": "3.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003727"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003727",
+      "manual_identity_code": "80003727",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:23:23",
+      "chat_line": 23,
+      "raw_text": "香菜2斤",
+      "parsed_name": "香菜",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003719",
+      "manual": {
+        "row": 24,
+        "name": "香菜",
+        "spec": "500g",
+        "quantity": "2.12",
+        "price": "8.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003719"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003719",
+      "manual_identity_code": "80003719",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:24:24",
+      "chat_line": 24,
+      "raw_text": "臭菜1.5斤",
+      "parsed_name": "臭菜",
+      "requested_quantity": "1.5",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003439",
+      "manual": {
+        "row": 25,
+        "name": "臭菜",
+        "spec": "500g",
+        "quantity": "1.52",
+        "price": "11.24"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003439"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003439",
+      "manual_identity_code": "80003439",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:25:25",
+      "chat_line": 25,
+      "raw_text": "小白菜1斤",
+      "parsed_name": "小白菜",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003724",
+      "manual": {
+        "row": 26,
+        "name": "小白菜",
+        "spec": "500g",
+        "quantity": "3.18",
+        "price": "5.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003724"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003724",
+      "manual_identity_code": "80003724",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:26:26",
+      "chat_line": 26,
+      "raw_text": "旱黄瓜5.5斤",
+      "parsed_name": "旱黄瓜",
+      "requested_quantity": "5.5",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 27,
+        "name": "旱黄瓜",
+        "spec": "斤",
+        "quantity": "5.68",
+        "price": "5.9"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:27:27",
+      "chat_line": 27,
+      "raw_text": "紫皮洋葱7斤",
+      "parsed_name": "紫皮洋葱",
+      "requested_quantity": "7",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80004785",
+      "manual": {
+        "row": 28,
+        "name": "优质紫洋葱",
+        "spec": "500g",
+        "quantity": "7.1",
+        "price": "3.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004785"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004785",
+      "manual_identity_code": "80004785",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:28:28",
+      "chat_line": 28,
+      "raw_text": "红色尖椒4斤",
+      "parsed_name": "红色尖椒",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003500",
+      "manual": {
+        "row": 29,
+        "name": "红尖椒",
+        "spec": "500g",
+        "quantity": "3.88",
+        "price": "3.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003500"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003500",
+      "manual_identity_code": "80003500",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:29:29",
+      "chat_line": 29,
+      "raw_text": "五花肉7斤",
+      "parsed_name": "五花肉",
+      "requested_quantity": "7",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 30,
+        "name": "冷鲜精五花肉（金锣）",
+        "spec": "500g",
+        "quantity": "7",
+        "price": "15.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80005945"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80005945",
+      "manual_identity_code": "80005945",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:30:30",
+      "chat_line": 30,
+      "raw_text": "梅肉4斤",
+      "parsed_name": "梅肉",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 31,
+        "name": "鲜猪梅花肉（金锣）",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "14.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80005955"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80005955",
+      "manual_identity_code": "80005955",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:31:31",
+      "chat_line": 31,
+      "raw_text": "净肉4斤",
+      "parsed_name": "净肉",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 32,
+        "name": "精肉块称重（金锣）",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "14.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80005964"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80005964",
+      "manual_identity_code": "80005964",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:32:32",
+      "chat_line": 32,
+      "raw_text": "盐酥鸡3袋",
+      "parsed_name": "盐酥鸡",
+      "requested_quantity": "3",
+      "requested_unit": "袋",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 33,
+        "name": "正大盐酥鸡",
+        "spec": "袋",
+        "quantity": "3",
+        "price": "31.5"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:33:33",
+      "chat_line": 33,
+      "raw_text": "火碱3斤",
+      "parsed_name": "火碱",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 34,
+        "name": "火碱",
+        "spec": "斤",
+        "quantity": "3",
+        "price": "8.4"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:34:34",
+      "chat_line": 34,
+      "raw_text": "白菜3颗",
+      "parsed_name": "白菜",
+      "requested_quantity": "3",
+      "requested_unit": "颗",
+      "workflow_status": "needs_review",
+      "selected_code": "80003409",
+      "manual": {
+        "row": 35,
+        "name": "白菜",
+        "spec": "500g",
+        "quantity": "16.34",
+        "price": "1.29"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003409"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003409",
+      "manual_identity_code": "80003409",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "SKU已有候选但数量/事件仍阻塞金额"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:35:35",
+      "chat_line": 35,
+      "raw_text": "黄瓜8斤",
+      "parsed_name": "黄瓜",
+      "requested_quantity": "8",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003517",
+      "manual": {
+        "row": 36,
+        "name": "黄瓜",
+        "spec": "500g",
+        "quantity": "8.18",
+        "price": "3.49"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003517"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003517",
+      "manual_identity_code": "80003517",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:36:36",
+      "chat_line": 36,
+      "raw_text": "干豆腐8斤",
+      "parsed_name": "干豆腐",
+      "requested_quantity": "8",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 37,
+        "name": "北大荒干豆腐",
+        "spec": "500g",
+        "quantity": "8",
+        "price": "6.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004911"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004911",
+      "manual_identity_code": "80004911",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:37:37",
+      "chat_line": 37,
+      "raw_text": "鲤鱼5条收拾好",
+      "parsed_name": "鲤鱼",
+      "requested_quantity": "5",
+      "requested_unit": "条",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 38,
+        "name": "鲜活江鲤鱼",
+        "spec": "500g",
+        "quantity": "12",
+        "price": "14.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003132"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003132",
+      "manual_identity_code": "80003132",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:38:38",
+      "chat_line": 38,
+      "raw_text": "油菜3斤",
+      "parsed_name": "油菜",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003748",
+      "manual": {
+        "row": 39,
+        "name": "油菜",
+        "spec": "500g",
+        "quantity": "3.24",
+        "price": "1.49"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003748"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003748",
+      "manual_identity_code": "80003748",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:39:39",
+      "chat_line": 39,
+      "raw_text": "豆芽3斤",
+      "parsed_name": "豆芽",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 40,
+        "name": "豆嘴黄豆芽（称重）",
+        "spec": "500g",
+        "quantity": "3",
+        "price": "5"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004391"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004391",
+      "manual_identity_code": "80004391",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:40:40",
+      "chat_line": 40,
+      "raw_text": "豆腐10盒",
+      "parsed_name": "豆腐",
+      "requested_quantity": "10",
+      "requested_unit": "盒",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 41,
+        "name": "北大荒老豆腐",
+        "spec": "490g",
+        "quantity": "10",
+        "price": "5"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003399"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003399",
+      "manual_identity_code": "80003399",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:41:41",
+      "chat_line": 41,
+      "raw_text": "蒜苔6斤",
+      "parsed_name": "蒜苔",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003657",
+      "manual": {
+        "row": 42,
+        "name": "蒜苔（绿帽）",
+        "spec": "500g",
+        "quantity": "6.24",
+        "price": "8.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003657"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003657",
+      "manual_identity_code": "80003657",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:42:42",
+      "chat_line": 42,
+      "raw_text": "鸡胸肉6斤",
+      "parsed_name": "鸡胸肉",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 43,
+        "name": "正大单冻鸡胸肉500g",
+        "spec": "500g",
+        "quantity": "6.2",
+        "price": "10.35"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80000335"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80000335",
+      "manual_identity_code": "80000335",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:43:43",
+      "chat_line": 43,
+      "raw_text": "土豆15斤",
+      "parsed_name": "土豆",
+      "requested_quantity": "15",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003671",
+      "manual": {
+        "row": 44,
+        "name": "土豆（大885）",
+        "spec": "500g",
+        "quantity": "15.4",
+        "price": "3.3"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003671"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003671",
+      "manual_identity_code": "80003671",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:44:44",
+      "chat_line": 44,
+      "raw_text": "尖椒7斤",
+      "parsed_name": "尖椒",
+      "requested_quantity": "7",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003527",
+      "manual": {
+        "row": 45,
+        "name": "地产尖椒",
+        "spec": "500g",
+        "quantity": "7",
+        "price": "3.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003528"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003528",
+      "manual_identity_code": "80003528",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "different",
+      "spec_comparison": "same",
+      "quantity_comparison": "same",
+      "differences": [
+        "当前选择与人工目录SKU不同"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:45:45",
+      "chat_line": 45,
+      "raw_text": "红肠2斤",
+      "parsed_name": "红肠",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80000101",
+      "manual": {
+        "row": 46,
+        "name": "农大红肠",
+        "spec": "500g",
+        "quantity": "2.3",
+        "price": "46.47"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80000101"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80000101",
+      "manual_identity_code": "80000101",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:46:46",
+      "chat_line": 46,
+      "raw_text": "粉肠2斤",
+      "parsed_name": "粉肠",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80005851",
+      "manual": {
+        "row": 47,
+        "name": "农大粉肠",
+        "spec": "500g",
+        "quantity": "2.7",
+        "price": "21.76"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80000102"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80000102",
+      "manual_identity_code": "80000102",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "different",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "当前选择与人工目录SKU不同",
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:47:47",
+      "chat_line": 47,
+      "raw_text": "腊肠2斤",
+      "parsed_name": "腊肠",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 48,
+        "name": "风味广式腊肠",
+        "spec": "500g",
+        "quantity": "2",
+        "price": "18.24"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80000072"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80000072",
+      "manual_identity_code": "80000072",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:48:48",
+      "chat_line": 48,
+      "raw_text": "咸鸭蛋25个",
+      "parsed_name": "咸鸭蛋",
+      "requested_quantity": "25",
+      "requested_unit": "个",
+      "workflow_status": "matched",
+      "selected_code": "80004094",
+      "manual": {
+        "row": 49,
+        "name": "咸鸭蛋",
+        "spec": "个",
+        "quantity": "25",
+        "price": "2.78"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004094"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004094",
+      "manual_identity_code": "80004094",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "same",
+      "differences": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:49:49",
+      "chat_line": 49,
+      "raw_text": "鸡翅6斤",
+      "parsed_name": "鸡翅",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 50,
+        "name": "正大鲜鸡翅中",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "32.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80000377"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80000377",
+      "manual_identity_code": "80000377",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:50:50",
+      "chat_line": 50,
+      "raw_text": "排骨6斤",
+      "parsed_name": "排骨",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 51,
+        "name": "金锣鲜猪排骨（纯肋条排骨切段）",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "32.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80005969"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80005969",
+      "manual_identity_code": "80005969",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:51:51",
+      "chat_line": 51,
+      "raw_text": "油豆角6斤",
+      "parsed_name": "油豆角",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003749",
+      "manual": {
+        "row": 52,
+        "name": "油豆角",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "4.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003749"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003749",
+      "manual_identity_code": "80003749",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "same",
+      "differences": []
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:52:52",
+      "chat_line": 52,
+      "raw_text": "橘子12斤",
+      "parsed_name": "橘子",
+      "requested_quantity": "12",
+      "requested_unit": "斤",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 53,
+        "name": "橘子",
+        "spec": "斤",
+        "quantity": "12.8",
+        "price": "9.1"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:53:53",
+      "chat_line": 53,
+      "raw_text": "玉米粒罐头6罐",
+      "parsed_name": "玉米粒罐头",
+      "requested_quantity": "6",
+      "requested_unit": "罐",
+      "workflow_status": "needs_review",
+      "selected_code": null,
+      "manual": {
+        "row": 54,
+        "name": "甘竹玉米粒罐头",
+        "spec": "425g",
+        "quantity": "6",
+        "price": "7.6"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80005844"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80005844",
+      "manual_identity_code": "80005844",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:54:54",
+      "chat_line": 54,
+      "raw_text": "娃娃菜4包",
+      "parsed_name": "娃娃菜",
+      "requested_quantity": "4",
+      "requested_unit": "包",
+      "workflow_status": "needs_review",
+      "selected_code": null,
+      "manual": {
+        "row": 55,
+        "name": "娃娃菜袋装",
+        "spec": "袋",
+        "quantity": "4",
+        "price": "6.5"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004313"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004313",
+      "manual_identity_code": "80004313",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:55:55",
+      "chat_line": 55,
+      "raw_text": "猪手7斤",
+      "parsed_name": "猪手",
+      "requested_quantity": "7",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 56,
+        "name": "生猪前手（燎毛）",
+        "spec": "500g",
+        "quantity": "13.8",
+        "price": "24.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80000767"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80000767",
+      "manual_identity_code": "80000767",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:56:56",
+      "chat_line": 56,
+      "raw_text": "豇豆角6斤",
+      "parsed_name": "豇豆角",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003532",
+      "manual": {
+        "row": 57,
+        "name": "豇豆角",
+        "spec": "500g",
+        "quantity": "6.8",
+        "price": "4.8"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003532"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003532",
+      "manual_identity_code": "80003532",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:57:57",
+      "chat_line": 57,
+      "raw_text": "里脊6斤",
+      "parsed_name": "里脊",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 58,
+        "name": "冷鲜小里脊肉（金锣）",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "15.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80005949"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80005949",
+      "manual_identity_code": "80005949",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:58:58",
+      "chat_line": 58,
+      "raw_text": "小白菜3颗",
+      "parsed_name": "小白菜",
+      "requested_quantity": "3",
+      "requested_unit": "颗",
+      "workflow_status": "needs_review",
+      "selected_code": "80003724",
+      "manual": null,
+      "alignment": "chat_only",
+      "manual_catalog_status": "not_applicable",
+      "manual_code": null,
+      "sku_comparison": "manual_row_missing",
+      "spec_comparison": "not_applicable",
+      "quantity_comparison": "not_applicable",
+      "differences": [
+        "聊天项目未见人工对应行；不能判为解析错误或已取消"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:59:59",
+      "chat_line": 59,
+      "raw_text": "青椒6斤",
+      "parsed_name": "青椒",
+      "requested_quantity": "6",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003608",
+      "manual": {
+        "row": 59,
+        "name": "青椒/大辣椒",
+        "spec": "500g",
+        "quantity": "6.2",
+        "price": "2.79"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003608"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003608",
+      "manual_identity_code": "80003608",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:60:60",
+      "chat_line": 60,
+      "raw_text": "牛奶3箱",
+      "parsed_name": "牛奶",
+      "requested_quantity": "3",
+      "requested_unit": "箱",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 60,
+        "name": "完达山纯牛奶（小枕）",
+        "spec": "240ml*16袋",
+        "quantity": "3",
+        "price": "36.5"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004048"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004048",
+      "manual_identity_code": "80004048",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:61:61",
+      "chat_line": 61,
+      "raw_text": "香蕉12斤",
+      "parsed_name": "香蕉",
+      "requested_quantity": "12",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80005703",
+      "manual": {
+        "row": 61,
+        "name": "优选佳农香蕉",
+        "spec": "500g",
+        "quantity": "14",
+        "price": "5.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80005703"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80005703",
+      "manual_identity_code": "80005703",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:62:62",
+      "chat_line": 62,
+      "raw_text": "洗洁精1桶",
+      "parsed_name": "洗洁精",
+      "requested_quantity": "1",
+      "requested_unit": "桶",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 62,
+        "name": "白猫洗洁精",
+        "spec": "桶",
+        "quantity": "1",
+        "price": "25.2"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:63:63",
+      "chat_line": 63,
+      "raw_text": "桌布10个",
+      "parsed_name": "桌布",
+      "requested_quantity": "10",
+      "requested_unit": "个",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 63,
+        "name": "台布",
+        "spec": "袋",
+        "quantity": "10",
+        "price": "6.3"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:64:64",
+      "chat_line": 64,
+      "raw_text": "生猪手撩毛8个",
+      "parsed_name": "生猪手",
+      "requested_quantity": "8",
+      "requested_unit": "个",
+      "workflow_status": "needs_review",
+      "selected_code": null,
+      "manual": null,
+      "alignment": "chat_only",
+      "manual_catalog_status": "not_applicable",
+      "manual_code": null,
+      "sku_comparison": "manual_row_missing",
+      "spec_comparison": "not_applicable",
+      "quantity_comparison": "not_applicable",
+      "differences": [
+        "聊天项目未见人工对应行；不能判为解析错误或已取消"
+      ]
+    }
+  ],
+  "manual_only": [
+    {
+      "manual": {
+        "row": 64,
+        "name": "蒜瓣",
+        "spec": "500g",
+        "quantity": "5",
+        "price": "8.88"
+      },
+      "reason": "聊天无蒜瓣来源，人工增项不可当成自动识别真值"
+    }
+  ],
+  "first_20_differences": [
+    {
+      "line_id": "学院路站11.3下单.txt:1:1",
+      "chat_line": 1,
+      "raw_text": "大米1袋",
+      "parsed_name": "大米",
+      "requested_quantity": "1",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 2,
+        "name": "优谷大米",
+        "spec": "25kg",
+        "quantity": "1",
+        "price": "231"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:3:3",
+      "chat_line": 3,
+      "raw_text": "挂面7袋",
+      "parsed_name": "挂面",
+      "requested_quantity": "7",
+      "requested_unit": "袋",
+      "workflow_status": "needs_review",
+      "selected_code": "80001876",
+      "manual": {
+        "row": 4,
+        "name": "挂面",
+        "spec": "500g",
+        "quantity": "7",
+        "price": "3.71"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001876"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001876",
+      "manual_identity_code": "80001876",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "SKU已有候选但数量/事件仍阻塞金额"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:4:4",
+      "chat_line": 4,
+      "raw_text": "豆油2桶",
+      "parsed_name": "豆油",
+      "requested_quantity": "2",
+      "requested_unit": "桶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 5,
+        "name": "九三非转基因大豆油三级5L/桶",
+        "spec": "5L",
+        "quantity": "2",
+        "price": "73.9"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001297"
+      ],
+      "manual_catalog_status": "name_price_or_spec_conflict",
+      "manual_code": null,
+      "manual_identity_code": "80001297",
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU",
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:5:5",
+      "chat_line": 5,
+      "raw_text": "色拉油1桶",
+      "parsed_name": "色拉油",
+      "requested_quantity": "1",
+      "requested_unit": "桶",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 6,
+        "name": "九三非转基因大豆油一级5L/桶",
+        "spec": "5L",
+        "quantity": "1",
+        "price": "73.9"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001291"
+      ],
+      "manual_catalog_status": "name_price_or_spec_conflict",
+      "manual_code": null,
+      "manual_identity_code": "80001291",
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU",
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:6:6",
+      "chat_line": 6,
+      "raw_text": "海天鲜生抽1瓶",
+      "parsed_name": "海天鲜生抽",
+      "requested_quantity": "1",
+      "requested_unit": "瓶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 7,
+        "name": "海天酱油鲜味生抽",
+        "spec": "500ml",
+        "quantity": "1",
+        "price": "7.65"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001298"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001298",
+      "manual_identity_code": "80001298",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:7:7",
+      "chat_line": 7,
+      "raw_text": "东古酱油2瓶",
+      "parsed_name": "东古酱油",
+      "requested_quantity": "2",
+      "requested_unit": "瓶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 8,
+        "name": "东古一品鲜500ML/瓶",
+        "spec": "500ml",
+        "quantity": "2",
+        "price": "9.5"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001857"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001857",
+      "manual_identity_code": "80001857",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:10:10",
+      "chat_line": 10,
+      "raw_text": "海天上等耗油1瓶",
+      "parsed_name": "海天上等耗油",
+      "requested_quantity": "1",
+      "requested_unit": "瓶",
+      "workflow_status": "unmapped",
+      "selected_code": null,
+      "manual": {
+        "row": 11,
+        "name": "海天上等蚝油1kg/瓶",
+        "spec": "1kg",
+        "quantity": "1",
+        "price": "14.9"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80004513"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004513",
+      "manual_identity_code": "80004513",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:11:11",
+      "chat_line": 11,
+      "raw_text": "盐4袋",
+      "parsed_name": "盐",
+      "requested_quantity": "4",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 12,
+        "name": "中盐精制加碘盐",
+        "spec": "350g",
+        "quantity": "4",
+        "price": "1.76"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002987"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002987",
+      "manual_identity_code": "80002987",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:12:12",
+      "chat_line": 12,
+      "raw_text": "太太乐鸡精1袋",
+      "parsed_name": "太太乐鸡精",
+      "requested_quantity": "1",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 13,
+        "name": "太太乐鸡精",
+        "spec": "1kg",
+        "quantity": "1",
+        "price": "35"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001608",
+        "80001955"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001608",
+      "manual_identity_code": "80001608",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:13:13",
+      "chat_line": 13,
+      "raw_text": "水煮肉片料4包",
+      "parsed_name": "水煮肉片料",
+      "requested_quantity": "4",
+      "requested_unit": "包",
+      "workflow_status": "needs_review",
+      "selected_code": "80002082",
+      "manual": {
+        "row": 14,
+        "name": "水煮肉片料",
+        "spec": "100g",
+        "quantity": "4",
+        "price": "14.71"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002082"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002082",
+      "manual_identity_code": "80002082",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "SKU已有候选但数量/事件仍阻塞金额"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:14:14",
+      "chat_line": 14,
+      "raw_text": "番茄沙司2袋",
+      "parsed_name": "番茄沙司",
+      "requested_quantity": "2",
+      "requested_unit": "袋",
+      "workflow_status": "needs_review",
+      "selected_code": null,
+      "manual": {
+        "row": 15,
+        "name": "亨氏番茄沙司320g/袋",
+        "spec": "320g",
+        "quantity": "2",
+        "price": "15"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002185",
+        "80004512"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80004512",
+      "manual_identity_code": "80004512",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:15:15",
+      "chat_line": 15,
+      "raw_text": "重庆麻辣块1块",
+      "parsed_name": "重庆麻辣块",
+      "requested_quantity": "1",
+      "requested_unit": "块",
+      "workflow_status": "needs_review",
+      "selected_code": null,
+      "manual": {
+        "row": 16,
+        "name": "名扬麻辣块",
+        "spec": "90g*4块",
+        "quantity": "1",
+        "price": "42.94"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002344"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002344",
+      "manual_identity_code": "80002344",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:16:16",
+      "chat_line": 16,
+      "raw_text": "太阳岛香辣酱1袋",
+      "parsed_name": "太阳岛香辣酱",
+      "requested_quantity": "1",
+      "requested_unit": "袋",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 17,
+        "name": "太阳岛香辣酱拧盖450g*24袋",
+        "spec": "袋",
+        "quantity": "1",
+        "price": "8.4"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:17:17",
+      "chat_line": 17,
+      "raw_text": "香油1瓶",
+      "parsed_name": "香油",
+      "requested_quantity": "1",
+      "requested_unit": "瓶",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 18,
+        "name": "李锦记纯香芝麻油410ml（1*12）",
+        "spec": "瓶",
+        "quantity": "1",
+        "price": "35"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [],
+      "manual_catalog_status": "name_absent",
+      "manual_code": null,
+      "manual_identity_code": null,
+      "catalog_price_matches_manual": false,
+      "sku_comparison": "manual_not_exact_catalog",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "人工品目未能按名称+规格+挂牌价唯一定位当前目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:18:18",
+      "chat_line": 18,
+      "raw_text": "树椒丝1斤",
+      "parsed_name": "树椒丝",
+      "requested_quantity": "1",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 19,
+        "name": "辣椒丝",
+        "spec": "500g",
+        "quantity": "1",
+        "price": "32.35"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80002902"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80002902",
+      "manual_identity_code": "80002902",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:19:19",
+      "chat_line": 19,
+      "raw_text": "粉条3斤",
+      "parsed_name": "粉条",
+      "requested_quantity": "3",
+      "requested_unit": "斤",
+      "workflow_status": "ambiguous",
+      "selected_code": null,
+      "manual": {
+        "row": 20,
+        "name": "粉条1kg",
+        "spec": "1kg",
+        "quantity": "2",
+        "price": "16.81"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001862"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001862",
+      "manual_identity_code": "80001862",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "not_selected",
+      "spec_comparison": "not_selected",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前流程未选定人工目录SKU"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:20:20",
+      "chat_line": 20,
+      "raw_text": "腐竹2袋",
+      "parsed_name": "腐竹",
+      "requested_quantity": "2",
+      "requested_unit": "袋",
+      "workflow_status": "needs_review",
+      "selected_code": "80001869",
+      "manual": {
+        "row": 21,
+        "name": "腐竹1kg",
+        "spec": "1kg",
+        "quantity": "2",
+        "price": "28.82"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80001868"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80001868",
+      "manual_identity_code": "80001868",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "different",
+      "spec_comparison": "different",
+      "quantity_comparison": "not_comparable_without_unit_or_actual_basis",
+      "differences": [
+        "当前选择与人工目录SKU不同",
+        "规格不同",
+        "SKU已有候选但数量/事件仍阻塞金额"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:21:21",
+      "chat_line": 21,
+      "raw_text": "大葱4斤",
+      "parsed_name": "大葱",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003447",
+      "manual": {
+        "row": 22,
+        "name": "大葱",
+        "spec": "500g",
+        "quantity": "4.44",
+        "price": "1.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003447"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003447",
+      "manual_identity_code": "80003447",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:22:22",
+      "chat_line": 22,
+      "raw_text": "小葱4斤",
+      "parsed_name": "小葱",
+      "requested_quantity": "4",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003727",
+      "manual": {
+        "row": 23,
+        "name": "小葱",
+        "spec": "500g",
+        "quantity": "4.6",
+        "price": "3.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003727"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003727",
+      "manual_identity_code": "80003727",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    },
+    {
+      "line_id": "学院路站11.3下单.txt:23:23",
+      "chat_line": 23,
+      "raw_text": "香菜2斤",
+      "parsed_name": "香菜",
+      "requested_quantity": "2",
+      "requested_unit": "斤",
+      "workflow_status": "matched",
+      "selected_code": "80003719",
+      "manual": {
+        "row": 24,
+        "name": "香菜",
+        "spec": "500g",
+        "quantity": "2.12",
+        "price": "8.99"
+      },
+      "alignment": "ordered_name_anchor",
+      "catalog_candidates": [
+        "80003719"
+      ],
+      "manual_catalog_status": "exact_unique",
+      "manual_code": "80003719",
+      "manual_identity_code": "80003719",
+      "catalog_price_matches_manual": true,
+      "sku_comparison": "same",
+      "spec_comparison": "same",
+      "quantity_comparison": "different_manual_quantity_possible_actual_or_edit",
+      "differences": [
+        "数量不同；人工值可能来自实称/改量，聊天不可推出"
+      ]
+    }
+  ],
+  "limitations": [
+    "人工订单不证明11月3日目录价格适用，也不证明实称/改量原因",
+    "有多个人工可选SKU时不强行定位；非精确目录行不进入SKU准确率分母",
+    "历史样例参与偏好学习后不能再充当独立前向准确率样本"
+  ]
+}

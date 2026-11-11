@@ -1,0 +1,1855 @@
+{
+  "assessment": "non_blind_prior_manual_workbook_seen_in_same_conversation",
+  "note": "无历史profile的AI语义复核；评估人员此前读过人工表，非真正盲测。SKU选择后与人工表逐项比较；数量实称不覆盖。",
+  "profile_used": false,
+  "all_chat_items": 64,
+  "ai_decision_count": 43,
+  "catalog_covered_identity_denominator": 53,
+  "identity_correct": 29,
+  "identity_percent": 54.72,
+  "all_aligned_identity_percent": 46.77,
+  "rows": [
+    {
+      "chat_line": 1,
+      "raw_text": "大米1袋",
+      "expected_code": null,
+      "manual": {
+        "row": 2,
+        "name": "优谷大米",
+        "spec": "25kg",
+        "quantity": "1",
+        "price": "231"
+      },
+      "selected": {
+        "category": "米类",
+        "code": "80005852",
+        "name": "磨盘山长粒香大米",
+        "price": "215.00",
+        "row": 1386,
+        "sheet": "Sheet0",
+        "spec": "25kg"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80005852",
+        "confirmed_by": "agent",
+        "reason": "原文“大米1袋”：大米候选同为25kg长粒香整袋；无品牌指定，在同规格同品类候选中挂牌价215高于145。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少袋到25kg的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 2,
+      "raw_text": "小米4斤",
+      "expected_code": "80001148",
+      "manual": {
+        "row": 3,
+        "name": "小米",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "4.49"
+      },
+      "selected": {
+        "category": "米类",
+        "code": "80001148",
+        "name": "小米",
+        "price": "4.49",
+        "row": 1363,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001148",
+        "confirmed_by": "agent",
+        "reason": "原文“小米4斤”：原名小米、米类、500g称重，与按斤需求匹配；排除小米辣与小米面。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 3,
+      "raw_text": "挂面7袋",
+      "expected_code": "80001876",
+      "manual": {
+        "row": 4,
+        "name": "挂面",
+        "spec": "500g",
+        "quantity": "7",
+        "price": "3.71"
+      },
+      "selected": {
+        "category": "面类",
+        "code": "80001876",
+        "name": "挂面",
+        "price": "3.71",
+        "row": 1405,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001876",
+        "confirmed_by": "agent",
+        "reason": "原文“挂面7袋”：商品原名挂面、面类500g，作为未注明品牌的最接近通用品；7袋的包装重量仍需复核。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少袋到500g的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 4,
+      "raw_text": "豆油2桶",
+      "expected_code": "80001297",
+      "manual": {
+        "row": 5,
+        "name": "九三非转基因大豆油三级5L/桶",
+        "spec": "5L",
+        "quantity": "2",
+        "price": "73.9"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 5,
+      "raw_text": "色拉油1桶",
+      "expected_code": "80001291",
+      "manual": {
+        "row": 6,
+        "name": "九三非转基因大豆油一级5L/桶",
+        "spec": "5L",
+        "quantity": "1",
+        "price": "73.9"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "unmapped",
+          "message": "当前目录没有合理候选"
+        }
+      ]
+    },
+    {
+      "chat_line": 6,
+      "raw_text": "海天鲜生抽1瓶",
+      "expected_code": "80001298",
+      "manual": {
+        "row": 7,
+        "name": "海天酱油鲜味生抽",
+        "spec": "500ml",
+        "quantity": "1",
+        "price": "7.65"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80001298",
+        "name": "海天酱油鲜味生抽",
+        "price": "7.65",
+        "row": 78,
+        "sheet": "Sheet0",
+        "spec": "500ml"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001298",
+        "confirmed_by": "agent",
+        "reason": "原文“海天鲜生抽1瓶”：海天酱油鲜味生抽500ml，鲜生抽为词序省略且瓶装吻合；排除1.9L小桶。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少瓶到500ml的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 7,
+      "raw_text": "东古酱油2瓶",
+      "expected_code": "80001857",
+      "manual": {
+        "row": 8,
+        "name": "东古一品鲜500ML/瓶",
+        "spec": "500ml",
+        "quantity": "2",
+        "price": "9.5"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80001857",
+        "name": "东古一品鲜500ML/瓶",
+        "price": "9.50",
+        "row": 325,
+        "sheet": "Sheet0",
+        "spec": "500ml"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001857",
+        "confirmed_by": "agent",
+        "reason": "原文“东古酱油2瓶”：品牌东古、酱油、瓶装三个明确条件下，目录东古一品鲜500ML/瓶是唯一瓶装酱油，其他东古酱油为桶/整件；此处一品鲜是目录品名，不据此改写用户原文。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 8,
+      "raw_text": "冰糖4斤",
+      "expected_code": "80001841",
+      "manual": {
+        "row": 9,
+        "name": "冰糖",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "9.85"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80001841",
+        "name": "冰糖",
+        "price": "9.85",
+        "row": 319,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001841",
+        "confirmed_by": "agent",
+        "reason": "原文“冰糖4斤”：原名冰糖且500g按斤计价；不引入黄冰糖/单晶等未指定品种。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 9,
+      "raw_text": "白糖4斤",
+      "expected_code": "80001837",
+      "manual": {
+        "row": 10,
+        "name": "白糖",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "5.99"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80001837",
+        "name": "白糖",
+        "price": "5.99",
+        "row": 315,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001837",
+        "confirmed_by": "agent",
+        "reason": "原文“白糖4斤”：原名白糖、500g称重，优于400g袋和100斤整包。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 10,
+      "raw_text": "海天上等耗油1瓶",
+      "expected_code": "80004513",
+      "manual": {
+        "row": 11,
+        "name": "海天上等蚝油1kg/瓶",
+        "spec": "1kg",
+        "quantity": "1",
+        "price": "14.9"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80004513",
+        "name": "海天上等蚝油 1kg/瓶",
+        "price": "14.90",
+        "row": 667,
+        "sheet": "Sheet0",
+        "spec": "1kg"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80004513",
+        "confirmed_by": "agent",
+        "reason": "原文“海天上等耗油1瓶”：海天上等耗油疑为蚝油错字，目录海天上等蚝油1kg/瓶同时满足品牌、上等与瓶装；保留原文。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 11,
+      "raw_text": "盐4袋",
+      "expected_code": "80002987",
+      "manual": {
+        "row": 12,
+        "name": "中盐精制加碘盐",
+        "spec": "350g",
+        "quantity": "4",
+        "price": "1.76"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对"
+        }
+      ]
+    },
+    {
+      "chat_line": 12,
+      "raw_text": "太太乐鸡精1袋",
+      "expected_code": "80001608",
+      "manual": {
+        "row": 13,
+        "name": "太太乐鸡精",
+        "spec": "1kg",
+        "quantity": "1",
+        "price": "35"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "different_specs",
+          "message": "同名商品的包装或规格不能按挂牌价直接比较"
+        }
+      ]
+    },
+    {
+      "chat_line": 13,
+      "raw_text": "水煮肉片料4包",
+      "expected_code": "80002082",
+      "manual": {
+        "row": 14,
+        "name": "水煮肉片料",
+        "spec": "100g",
+        "quantity": "4",
+        "price": "14.71"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80002082",
+        "name": "水煮肉片料",
+        "price": "14.71",
+        "row": 455,
+        "sheet": "Sheet0",
+        "spec": "100g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80002082",
+        "confirmed_by": "agent",
+        "reason": "原文“水煮肉片料4包”：目录水煮肉片料100g与原名一致；包的具体克重仍需确认。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少包到100g的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 14,
+      "raw_text": "番茄沙司2袋",
+      "expected_code": "80004512",
+      "manual": {
+        "row": 15,
+        "name": "亨氏番茄沙司320g/袋",
+        "spec": "320g",
+        "quantity": "2",
+        "price": "15"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80004512",
+        "name": "亨氏番茄沙司 320g/袋",
+        "price": "15.00",
+        "row": 666,
+        "sheet": "Sheet0",
+        "spec": "320g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80004512",
+        "confirmed_by": "agent",
+        "reason": "原文“番茄沙司2袋”：亨氏番茄沙司320g/袋与袋装吻合；同名同规格80002185挂牌价8.90，按同层最高价取15.00。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 15,
+      "raw_text": "重庆麻辣块1块",
+      "expected_code": "80002344",
+      "manual": {
+        "row": 16,
+        "name": "名扬麻辣块",
+        "spec": "90g*4块",
+        "quantity": "1",
+        "price": "42.94"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80002344",
+        "name": "名扬麻辣块",
+        "price": "42.94",
+        "row": 503,
+        "sheet": "Sheet0",
+        "spec": "90g*4块"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80002344",
+        "confirmed_by": "agent",
+        "reason": "原文“重庆麻辣块1块”：目录唯一实体为名扬麻辣块90g×4块；重庆按描述来源地/风味而非明确名扬之外的品牌，商品身份可提案，单块与整包数量仍独立待审。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少块到90g*4块的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 16,
+      "raw_text": "太阳岛香辣酱1袋",
+      "expected_code": null,
+      "manual": {
+        "row": 17,
+        "name": "太阳岛香辣酱拧盖450g*24袋",
+        "spec": "袋",
+        "quantity": "1",
+        "price": "8.4"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "袋/包规格有差异，缺每袋净重或包装关系，候选只供人工核对"
+        }
+      ]
+    },
+    {
+      "chat_line": 17,
+      "raw_text": "香油1瓶",
+      "expected_code": null,
+      "manual": {
+        "row": 18,
+        "name": "李锦记纯香芝麻油410ml（1*12）",
+        "spec": "瓶",
+        "quantity": "1",
+        "price": "35"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80001589",
+        "name": "美狮牌香油",
+        "price": "25.29",
+        "row": 224,
+        "sheet": "Sheet0",
+        "spec": "250ml"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001589",
+        "confirmed_by": "agent",
+        "reason": "原文“香油1瓶”：美狮牌香油250ml是香油候选中明确小瓶装，区别桶装5kg/5L。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少瓶到250ml的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 18,
+      "raw_text": "树椒丝1斤",
+      "expected_code": "80002902",
+      "manual": {
+        "row": 19,
+        "name": "辣椒丝",
+        "spec": "500g",
+        "quantity": "1",
+        "price": "32.35"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 19,
+      "raw_text": "粉条3斤",
+      "expected_code": "80001862",
+      "manual": {
+        "row": 20,
+        "name": "粉条1kg",
+        "spec": "1kg",
+        "quantity": "2",
+        "price": "16.81"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80001863",
+        "name": "粉条按斤",
+        "price": "6.99",
+        "row": 330,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001863",
+        "confirmed_by": "agent",
+        "reason": "原文“粉条3斤”：目录粉条按斤500g与3斤称重需求最接近，排除宽粉/地瓜/土豆等指定品类。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 20,
+      "raw_text": "腐竹2袋",
+      "expected_code": "80001868",
+      "manual": {
+        "row": 21,
+        "name": "腐竹1kg",
+        "spec": "1kg",
+        "quantity": "2",
+        "price": "28.82"
+      },
+      "selected": {
+        "category": "调料类",
+        "code": "80001869",
+        "name": "腐竹",
+        "price": "16.90",
+        "row": 334,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少袋到500g的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 21,
+      "raw_text": "大葱4斤",
+      "expected_code": "80003447",
+      "manual": {
+        "row": 22,
+        "name": "大葱",
+        "spec": "500g",
+        "quantity": "4.44",
+        "price": "1.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003447",
+        "name": "大葱",
+        "price": "1.99",
+        "row": 808,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003447",
+        "confirmed_by": "agent",
+        "reason": "原文“大葱4斤”：蔬菜大葱500g，精确品名与重量计价相合。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 22,
+      "raw_text": "小葱4斤",
+      "expected_code": "80003727",
+      "manual": {
+        "row": 23,
+        "name": "小葱",
+        "spec": "500g",
+        "quantity": "4.6",
+        "price": "3.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003727",
+        "name": "小葱",
+        "price": "3.99",
+        "row": 891,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003727",
+        "confirmed_by": "agent",
+        "reason": "原文“小葱4斤”：蔬菜小葱500g，精确品名与重量计价相合。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 23,
+      "raw_text": "香菜2斤",
+      "expected_code": "80003719",
+      "manual": {
+        "row": 24,
+        "name": "香菜",
+        "spec": "500g",
+        "quantity": "2.12",
+        "price": "8.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003719",
+        "name": "香菜",
+        "price": "8.99",
+        "row": 888,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003719",
+        "confirmed_by": "agent",
+        "reason": "原文“香菜2斤”：蔬菜香菜500g，排除香菜籽。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 24,
+      "raw_text": "臭菜1.5斤",
+      "expected_code": "80003439",
+      "manual": {
+        "row": 25,
+        "name": "臭菜",
+        "spec": "500g",
+        "quantity": "1.52",
+        "price": "11.24"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003439",
+        "name": "臭菜",
+        "price": "11.24",
+        "row": 806,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003439",
+        "confirmed_by": "agent",
+        "reason": "原文“臭菜1.5斤”：蔬菜臭菜500g，精确品名与重量计价相合。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 25,
+      "raw_text": "小白菜1斤",
+      "expected_code": "80003724",
+      "manual": {
+        "row": 26,
+        "name": "小白菜",
+        "spec": "500g",
+        "quantity": "3.18",
+        "price": "5.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003724",
+        "name": "小白菜",
+        "price": "5.99",
+        "row": 890,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003724",
+        "confirmed_by": "agent",
+        "reason": "原文“小白菜1斤”：蔬菜小白菜500g，不能与白菜合并。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 26,
+      "raw_text": "旱黄瓜5.5斤",
+      "expected_code": null,
+      "manual": {
+        "row": 27,
+        "name": "旱黄瓜",
+        "spec": "斤",
+        "quantity": "5.68",
+        "price": "5.9"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 27,
+      "raw_text": "紫皮洋葱7斤",
+      "expected_code": "80004785",
+      "manual": {
+        "row": 28,
+        "name": "优质紫洋葱",
+        "spec": "500g",
+        "quantity": "7.1",
+        "price": "3.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003772",
+        "name": "紫洋葱",
+        "price": "1.99",
+        "row": 904,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003772",
+        "confirmed_by": "agent",
+        "reason": "原文“紫皮洋葱7斤”：紫皮洋葱与紫洋葱同义，选目录通用紫洋葱500g；优质紫洋葱有额外等级。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 28,
+      "raw_text": "红色尖椒4斤",
+      "expected_code": "80003500",
+      "manual": {
+        "row": 29,
+        "name": "红尖椒",
+        "spec": "500g",
+        "quantity": "3.88",
+        "price": "3.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003500",
+        "name": "红尖椒",
+        "price": "3.99",
+        "row": 816,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003500",
+        "confirmed_by": "agent",
+        "reason": "原文“红色尖椒4斤”：红色尖椒归一到蔬菜红尖椒500g，颜色是硬约束，不能选普通尖椒。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 29,
+      "raw_text": "五花肉7斤",
+      "expected_code": "80005945",
+      "manual": {
+        "row": 30,
+        "name": "冷鲜精五花肉（金锣）",
+        "spec": "500g",
+        "quantity": "7",
+        "price": "15.99"
+      },
+      "selected": {
+        "category": "肉制品",
+        "code": "80005958",
+        "name": "鲜猪五花肉（金锣）",
+        "price": "13.99",
+        "row": 1150,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80005958",
+        "confirmed_by": "agent",
+        "reason": "原文“五花肉7斤”：鲜猪五花肉500g为不限定精/下/切片的通用五花肉，排除其他部位加工。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 30,
+      "raw_text": "梅肉4斤",
+      "expected_code": "80005955",
+      "manual": {
+        "row": 31,
+        "name": "鲜猪梅花肉（金锣）",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "14.99"
+      },
+      "selected": {
+        "category": "肉制品",
+        "code": "80005290",
+        "name": "云宴三花精选梅肉",
+        "price": "18.99",
+        "row": 1107,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80005290",
+        "confirmed_by": "agent",
+        "reason": "原文“梅肉4斤”：目录云宴三花精选梅肉500g为唯一梅肉实体。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 31,
+      "raw_text": "净肉4斤",
+      "expected_code": "80005964",
+      "manual": {
+        "row": 32,
+        "name": "精肉块称重（金锣）",
+        "spec": "500g",
+        "quantity": "4",
+        "price": "14.99"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "unmapped",
+          "message": "当前目录没有合理候选"
+        }
+      ]
+    },
+    {
+      "chat_line": 32,
+      "raw_text": "盐酥鸡3袋",
+      "expected_code": null,
+      "manual": {
+        "row": 33,
+        "name": "正大盐酥鸡",
+        "spec": "袋",
+        "quantity": "3",
+        "price": "31.5"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "unmapped",
+          "message": "当前目录没有合理候选"
+        }
+      ]
+    },
+    {
+      "chat_line": 33,
+      "raw_text": "火碱3斤",
+      "expected_code": null,
+      "manual": {
+        "row": 34,
+        "name": "火碱",
+        "spec": "斤",
+        "quantity": "3",
+        "price": "8.4"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "unmapped",
+          "message": "当前目录没有合理候选"
+        }
+      ]
+    },
+    {
+      "chat_line": 34,
+      "raw_text": "白菜3颗",
+      "expected_code": "80003409",
+      "manual": {
+        "row": 35,
+        "name": "白菜",
+        "spec": "500g",
+        "quantity": "16.34",
+        "price": "1.29"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003409",
+        "name": "白菜",
+        "price": "1.29",
+        "row": 798,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003409",
+        "confirmed_by": "agent",
+        "reason": "原文“白菜3颗”：蔬菜白菜500g，按颗需求可先定商品身份但重量另审。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少颗到500g的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 35,
+      "raw_text": "黄瓜8斤",
+      "expected_code": "80003517",
+      "manual": {
+        "row": 36,
+        "name": "黄瓜",
+        "spec": "500g",
+        "quantity": "8.18",
+        "price": "3.49"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003517",
+        "name": "黄瓜",
+        "price": "3.49",
+        "row": 819,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003517",
+        "confirmed_by": "agent",
+        "reason": "原文“黄瓜8斤”：蔬菜黄瓜500g，排除酸黄瓜、黄瓜干、老黄瓜。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 36,
+      "raw_text": "干豆腐8斤",
+      "expected_code": "80004911",
+      "manual": {
+        "row": 37,
+        "name": "北大荒干豆腐",
+        "spec": "500g",
+        "quantity": "8",
+        "price": "6.99"
+      },
+      "selected": {
+        "category": "豆制品",
+        "code": "80004911",
+        "name": "北大荒干豆腐",
+        "price": "6.99",
+        "row": 1645,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80004911",
+        "confirmed_by": "agent",
+        "reason": "原文“干豆腐8斤”：北大荒干豆腐500g为未指定丝/扣/加厚的片状干豆腐；与豆骅堂称重同为500g，挂牌价6.99高于6.00。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 37,
+      "raw_text": "鲤鱼5条收拾好",
+      "expected_code": "80003132",
+      "manual": {
+        "row": 38,
+        "name": "鲜活江鲤鱼",
+        "spec": "500g",
+        "quantity": "12",
+        "price": "14.99"
+      },
+      "selected": {
+        "category": "水产品",
+        "code": "80003133",
+        "name": "鲜活鲤鱼",
+        "price": "10.00",
+        "row": 1186,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003133",
+        "confirmed_by": "agent",
+        "reason": "原文“鲤鱼5条收拾好”：鲜活鲤鱼500g是未限定江鲤鱼品种的通用候选；收拾好为加工备注，条到重量另审。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少条到500g的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 38,
+      "raw_text": "油菜3斤",
+      "expected_code": "80003748",
+      "manual": {
+        "row": 39,
+        "name": "油菜",
+        "spec": "500g",
+        "quantity": "3.24",
+        "price": "1.49"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003748",
+        "name": "油菜",
+        "price": "1.49",
+        "row": 897,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003748",
+        "confirmed_by": "agent",
+        "reason": "原文“油菜3斤”：蔬菜油菜500g，精确品名与重量计价相合。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 39,
+      "raw_text": "豆芽3斤",
+      "expected_code": "80004391",
+      "manual": {
+        "row": 40,
+        "name": "豆嘴黄豆芽（称重）",
+        "spec": "500g",
+        "quantity": "3",
+        "price": "5"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 40,
+      "raw_text": "豆腐10盒",
+      "expected_code": "80003399",
+      "manual": {
+        "row": 41,
+        "name": "北大荒老豆腐",
+        "spec": "490g",
+        "quantity": "10",
+        "price": "5"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 41,
+      "raw_text": "蒜苔6斤",
+      "expected_code": "80003657",
+      "manual": {
+        "row": 42,
+        "name": "蒜苔（绿帽）",
+        "spec": "500g",
+        "quantity": "6.24",
+        "price": "8.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003657",
+        "name": "蒜苔（绿帽）",
+        "price": "8.99",
+        "row": 862,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003657",
+        "confirmed_by": "agent",
+        "reason": "原文“蒜苔6斤”：蔬菜蒜苔（绿帽）500g为目录唯一蒜苔商品。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 42,
+      "raw_text": "鸡胸肉6斤",
+      "expected_code": "80000335",
+      "manual": {
+        "row": 43,
+        "name": "正大单冻鸡胸肉500g",
+        "spec": "500g",
+        "quantity": "6.2",
+        "price": "10.35"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 43,
+      "raw_text": "土豆15斤",
+      "expected_code": "80003671",
+      "manual": {
+        "row": 44,
+        "name": "土豆（大885）",
+        "spec": "500g",
+        "quantity": "15.4",
+        "price": "3.3"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 44,
+      "raw_text": "尖椒7斤",
+      "expected_code": "80003528",
+      "manual": {
+        "row": 45,
+        "name": "地产尖椒",
+        "spec": "500g",
+        "quantity": "7",
+        "price": "3.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003527",
+        "name": "尖椒",
+        "price": "2.49",
+        "row": 823,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003527",
+        "confirmed_by": "agent",
+        "reason": "原文“尖椒7斤”：蔬菜尖椒500g与原名精确，红尖椒和地产尖椒有额外限定。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 45,
+      "raw_text": "红肠2斤",
+      "expected_code": "80000101",
+      "manual": {
+        "row": 46,
+        "name": "农大红肠",
+        "spec": "500g",
+        "quantity": "2.3",
+        "price": "46.47"
+      },
+      "selected": {
+        "category": "方便食品",
+        "code": "80000101",
+        "name": "农大红肠",
+        "price": "46.47",
+        "row": 1466,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80000101",
+        "confirmed_by": "agent",
+        "reason": "原文“红肠2斤”：红肠无品牌要求；同为500g的可比红肠中农大红肠46.47挂牌价最高。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 46,
+      "raw_text": "粉肠2斤",
+      "expected_code": "80000102",
+      "manual": {
+        "row": 47,
+        "name": "农大粉肠",
+        "spec": "500g",
+        "quantity": "2.7",
+        "price": "21.76"
+      },
+      "selected": {
+        "category": "方便食品",
+        "code": "80005851",
+        "name": "一手店粉肠",
+        "price": "33.52",
+        "row": 1573,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80005851",
+        "confirmed_by": "agent",
+        "reason": "原文“粉肠2斤”：粉肠无品牌要求；同为500g的可比粉肠中一手店粉肠33.52挂牌价最高。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 47,
+      "raw_text": "腊肠2斤",
+      "expected_code": "80000072",
+      "manual": {
+        "row": 48,
+        "name": "风味广式腊肠",
+        "spec": "500g",
+        "quantity": "2",
+        "price": "18.24"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 48,
+      "raw_text": "咸鸭蛋25个",
+      "expected_code": "80004094",
+      "manual": {
+        "row": 49,
+        "name": "咸鸭蛋",
+        "spec": "个",
+        "quantity": "25",
+        "price": "2.78"
+      },
+      "selected": {
+        "category": "蛋类",
+        "code": "80004094",
+        "name": "咸鸭蛋",
+        "price": "2.78",
+        "row": 1328,
+        "sheet": "Sheet0",
+        "spec": "个"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80004094",
+        "confirmed_by": "agent",
+        "reason": "原文“咸鸭蛋25个”：咸鸭蛋原名精确，目录计价单位为个。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 49,
+      "raw_text": "鸡翅6斤",
+      "expected_code": "80000377",
+      "manual": {
+        "row": 50,
+        "name": "正大鲜鸡翅中",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "32.99"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 50,
+      "raw_text": "排骨6斤",
+      "expected_code": "80005969",
+      "manual": {
+        "row": 51,
+        "name": "金锣鲜猪排骨（纯肋条排骨切段）",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "32.99"
+      },
+      "selected": {
+        "category": "肉制品",
+        "code": "80005399",
+        "name": "云宴三花猪排骨肉",
+        "price": "15.99",
+        "row": 1109,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80005399",
+        "confirmed_by": "agent",
+        "reason": "原文“排骨6斤”：云宴三花猪排骨肉500g为未指定部位/切段的通用猪排骨，较同类鲜猪排骨肉14.99挂牌价15.99更高。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 51,
+      "raw_text": "油豆角6斤",
+      "expected_code": "80003749",
+      "manual": {
+        "row": 52,
+        "name": "油豆角",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "4.99"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003749",
+        "name": "油豆角",
+        "price": "4.99",
+        "row": 898,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003749",
+        "confirmed_by": "agent",
+        "reason": "原文“油豆角6斤”：蔬菜油豆角500g与原名精确；地产油豆角有额外产地限定。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 52,
+      "raw_text": "橘子12斤",
+      "expected_code": null,
+      "manual": {
+        "row": 53,
+        "name": "橘子",
+        "spec": "斤",
+        "quantity": "12.8",
+        "price": "9.1"
+      },
+      "selected": {
+        "category": "水果类",
+        "code": "80003786",
+        "name": "云南蜜桔",
+        "price": "7.00",
+        "row": 8,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003786",
+        "confirmed_by": "agent",
+        "reason": "原文“橘子12斤”：目录无同名橘子，黄岩/云南蜜桔均为500g鲜橘类且原文不限制产地；按可比挂牌价云南蜜桔7.00高于黄岩6.53，作为语义近义提案，不推断实际供货产地。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 53,
+      "raw_text": "玉米粒罐头6罐",
+      "expected_code": "80005844",
+      "manual": {
+        "row": 54,
+        "name": "甘竹玉米粒罐头",
+        "spec": "425g",
+        "quantity": "6",
+        "price": "7.6"
+      },
+      "selected": {
+        "category": "方便食品",
+        "code": "80005844",
+        "name": "甘竹玉米粒罐头",
+        "price": "7.60",
+        "row": 1571,
+        "sheet": "Sheet0",
+        "spec": "425g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80005844",
+        "confirmed_by": "agent",
+        "reason": "原文“玉米粒罐头6罐”：目录甘竹玉米粒罐头425g唯一明确罐头产品，排除冻玉米粒袋装。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 54,
+      "raw_text": "娃娃菜4包",
+      "expected_code": "80004313",
+      "manual": {
+        "row": 55,
+        "name": "娃娃菜袋装",
+        "spec": "袋",
+        "quantity": "4",
+        "price": "6.5"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80004313",
+        "name": "娃娃菜袋装",
+        "price": "6.50",
+        "row": 924,
+        "sheet": "Sheet0",
+        "spec": "袋"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80004313",
+        "confirmed_by": "agent",
+        "reason": "原文“娃娃菜4包”：娃娃菜袋装唯一目录项；包与袋为包装口语近义，按袋计价关系另审。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 55,
+      "raw_text": "猪手7斤",
+      "expected_code": "80000767",
+      "manual": {
+        "row": 56,
+        "name": "生猪前手（燎毛）",
+        "spec": "500g",
+        "quantity": "13.8",
+        "price": "24.99"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "商品仅有语义候选，需人工确认"
+        }
+      ]
+    },
+    {
+      "chat_line": 56,
+      "raw_text": "豇豆角6斤",
+      "expected_code": "80003532",
+      "manual": {
+        "row": 57,
+        "name": "豇豆角",
+        "spec": "500g",
+        "quantity": "6.8",
+        "price": "4.8"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003532",
+        "name": "豇豆角",
+        "price": "4.80",
+        "row": 825,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003532",
+        "confirmed_by": "agent",
+        "reason": "原文“豇豆角6斤”：蔬菜豇豆角500g，与原名精确；排除泡豇豆角。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 57,
+      "raw_text": "里脊6斤",
+      "expected_code": "80005949",
+      "manual": {
+        "row": 58,
+        "name": "冷鲜小里脊肉（金锣）",
+        "spec": "500g",
+        "quantity": "6",
+        "price": "15.99"
+      },
+      "selected": {
+        "category": "肉制品",
+        "code": "80001004",
+        "name": "鲜猪里脊",
+        "price": "12.99",
+        "row": 1060,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80001004",
+        "confirmed_by": "agent",
+        "reason": "原文“里脊6斤”：鲜猪里脊500g是未限定切片/肉丝/小里脊的通用猪里脊；牛羊异物种排除。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 58,
+      "raw_text": "小白菜3颗",
+      "expected_code": null,
+      "manual": null,
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003724",
+        "name": "小白菜",
+        "price": "5.99",
+        "row": 890,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003724",
+        "confirmed_by": "agent",
+        "reason": "原文“小白菜3颗”：小白菜商品身份精确；3颗到500g计价重量未确认。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少颗到500g的已确认换算关系"
+        }
+      ]
+    },
+    {
+      "chat_line": 59,
+      "raw_text": "青椒6斤",
+      "expected_code": "80003608",
+      "manual": {
+        "row": 59,
+        "name": "青椒/大辣椒",
+        "spec": "500g",
+        "quantity": "6.2",
+        "price": "2.79"
+      },
+      "selected": {
+        "category": "蔬菜",
+        "code": "80003608",
+        "name": "青椒/大辣椒",
+        "price": "2.79",
+        "row": 848,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80003608",
+        "confirmed_by": "agent",
+        "reason": "原文“青椒6斤”：蔬菜青椒/大辣椒500g，青椒精确同义。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 60,
+      "raw_text": "牛奶3箱",
+      "expected_code": "80004048",
+      "manual": {
+        "row": 60,
+        "name": "完达山纯牛奶（小枕）",
+        "spec": "240ml*16袋",
+        "quantity": "3",
+        "price": "36.5"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "semantic_review",
+          "message": "仅见单品参考候选，缺每箱件数和每箱净重，不能将1箱当成1袋或计价单位"
+        }
+      ]
+    },
+    {
+      "chat_line": 61,
+      "raw_text": "香蕉12斤",
+      "expected_code": "80005703",
+      "manual": {
+        "row": 61,
+        "name": "优选佳农香蕉",
+        "spec": "500g",
+        "quantity": "14",
+        "price": "5.99"
+      },
+      "selected": {
+        "category": "水果类",
+        "code": "80005703",
+        "name": "优选佳农香蕉",
+        "price": "5.99",
+        "row": 59,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": true,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80005703",
+        "confirmed_by": "agent",
+        "reason": "原文“香蕉12斤”：优选佳农香蕉与优质香蕉同为500g，未指定品牌/等级时按同层最高挂牌价5.99。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": []
+    },
+    {
+      "chat_line": 62,
+      "raw_text": "洗洁精1桶",
+      "expected_code": null,
+      "manual": {
+        "row": 62,
+        "name": "白猫洗洁精",
+        "spec": "桶",
+        "quantity": "1",
+        "price": "25.2"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "unmapped",
+          "message": "当前目录没有合理候选"
+        }
+      ]
+    },
+    {
+      "chat_line": 63,
+      "raw_text": "桌布10个",
+      "expected_code": null,
+      "manual": {
+        "row": 63,
+        "name": "台布",
+        "spec": "袋",
+        "quantity": "10",
+        "price": "6.3"
+      },
+      "selected": null,
+      "product_status": "unmapped",
+      "identity_correct": false,
+      "decision": null,
+      "issues": [
+        {
+          "code": "unmapped",
+          "message": "当前目录没有合理候选"
+        }
+      ]
+    },
+    {
+      "chat_line": 64,
+      "raw_text": "生猪手撩毛8个",
+      "expected_code": null,
+      "manual": null,
+      "selected": {
+        "category": "肉制品",
+        "code": "80000767",
+        "name": "生猪前手（燎毛）",
+        "price": "24.99",
+        "row": 1050,
+        "sheet": "Sheet0",
+        "spec": "500g"
+      },
+      "product_status": "matched",
+      "identity_correct": false,
+      "decision": {
+        "catalog_version": "6a0223e4f3db42fe56d6cabb0bd94fdea0e8b123c290eafc395571d48c13f687",
+        "code": "80000767",
+        "confirmed_by": "agent",
+        "reason": "原文“生猪手撩毛8个”：生猪前手（燎毛）500g与生猪手撩毛语义和加工要求相合；8个到斤的实重另审。",
+        "selection_basis": "constraints_then_highest_price"
+      },
+      "issues": [
+        {
+          "code": "quantity_conversion",
+          "message": "缺少个到500g的已确认换算关系"
+        }
+      ]
+    }
+  ],
+  "manifest_path": "/Users/hanfei/Documents/workspace/smartcode/ordertcr/outputs/semantic-v2/xueyuan-20261103-semantic-v2/4b98b6bc6237a317-14da9b93/manifest.json"
+}

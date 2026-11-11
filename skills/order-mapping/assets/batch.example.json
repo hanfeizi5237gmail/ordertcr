@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "test_only": true,
+  "batch_id": "DEMO_ONLY_001",
+  "shipping_date": "2026-11-03",
+  "company": "DEMO_ONLY",
+  "config": {
+    "schema_version": 1,
+    "companies": [
+      {
+        "company_id": "DEMO_ONLY",
+        "full_name": "示例公司（请替换并确认）",
+        "aliases": [],
+        "finance_name": "示例商户（请替换并确认）"
+      }
+    ],
+    "companies_confirmed": false,
+    "default_discount": "0.95",
+    "numbering": {
+      "confirmed": false,
+      "prefix": "OR_",
+      "daily_start": 0
+    },
+    "output_policies": {
+      "standard_order": "sample_exact",
+      "finance": "sample_exact",
+      "dual_confirmed": false
+    },
+    "aliases": {},
+    "unit_rules": {},
+    "finance": {
+      "confirmed": false,
+      "price_source": "discounted_catalog",
+      "tax_freight_confirmed": false,
+      "receipt_date": null,
+      "order_number_mode": "OR",
+      "merchant_names_confirmed": false
+    }
+  },
+  "mode": "order",
+  "date_policy": "single",
+  "date_policy_confirmed": false,
+  "delivery_confirmed": false,
+  "publish": false,
+  "items": [
+    {
+      "line_id": "demo:1",
+      "raw_text": "青萝卜6斤",
+      "source_name": "演示聊天.txt",
+      "source_line": 1,
+      "char_start": 0,
+      "char_end": 5,
+      "name": "青萝卜",
+      "quantity": "6",
+      "unit": "斤",
+      "notes": "",
+      "date_context": null,
+      "issues": []
+    }
+  ]
+}

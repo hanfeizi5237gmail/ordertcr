@@ -1,0 +1,88 @@
+........F.F......F.EFE.....
+======================================================================
+ERROR: test_explicit_retransmission_keeps_original_amount_and_duplicate_record (test_raw_messages_v6.RawMessageTests.test_explicit_retransmission_keeps_original_amount_and_duplicate_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_raw_messages_v6.py", line 63, in test_explicit_retransmission_keeps_original_amount_and_duplicate_record
+    original, duplicate = [event['row'] for event in result['events']]
+    ^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+
+======================================================================
+ERROR: test_invalid_quantity_is_one_review_row_not_a_failed_batch (test_raw_messages_v6.RawMessageTests.test_invalid_quantity_is_one_review_row_not_a_failed_batch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_raw_messages_v6.py", line 44, in test_invalid_quantity_is_one_review_row_not_a_failed_batch
+    result = self.run_text('公司：甲站\n配送日期：2026-11-03\n青萝卜0斤\n青萝卜-2斤\n青萝卜x斤')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_raw_messages_v6.py", line 33, in run_text
+    return self.run(self.root/'runtime',request,self.root/'output')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/scripts/order_mapping_core/raw_messages.py", line 130, in process_messages
+    manifest=process_batch(runtime_root,batch,output_root,base_dir=base)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/scripts/order_mapping_core/workflow.py", line 333, in process_batch
+    items, sources = _load_inputs(batch, base)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/scripts/order_mapping_core/workflow.py", line 190, in _load_inputs
+    _validate_item(item)
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/scripts/order_mapping_core/workflow.py", line 156, in _validate_item
+    decimal_value(item['quantity'], '需求数量', positive=True)
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/scripts/order_mapping_core/money.py", line 16, in decimal_value
+    raise ValueError(f"{label}超出允许范围")
+ValueError: 需求数量超出允许范围
+
+======================================================================
+FAIL: test_invalid_quantities_preserve_sign_and_known_identity (test_parsing_v6.ParseChatV6Tests.test_invalid_quantities_preserve_sign_and_known_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_parsing_v6.py", line 23, in test_invalid_quantities_preserve_sign_and_known_identity
+    self.assertEqual([(r['name'], r['quantity'], r['unit']) for r in rows],
+AssertionError: Lists differ: [('黑芝麻', '0', '斤'), ('干桂圆肉-', '2', '斤'), ('晴王葡萄x斤', None, None)] != [('黑芝麻', '0', '斤'), ('干桂圆肉', '-2', '斤'), ('晴王葡萄', None, '斤')]
+
+First differing element 1:
+('干桂圆肉-', '2', '斤')
+('干桂圆肉', '-2', '斤')
+
+- [('黑芝麻', '0', '斤'), ('干桂圆肉-', '2', '斤'), ('晴王葡萄x斤', None, None)]
+?                           -                    --         ^^^^
+
++ [('黑芝麻', '0', '斤'), ('干桂圆肉', '-2', '斤'), ('晴王葡萄', None, '斤')]
+?                               +                         ^^^
+
+
+======================================================================
+FAIL: test_labeled_business_context_and_quantity_first_connector (test_parsing_v6.ParseChatV6Tests.test_labeled_business_context_and_quantity_first_connector)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_parsing_v6.py", line 14, in test_labeled_business_context_and_quantity_first_connector
+    self.assertEqual(len(rows), 1)
+AssertionError: 5 != 1
+
+======================================================================
+FAIL: test_total_amendment_duplicate_and_packaging_clauses (test_parsing_v6.ParseChatV6Tests.test_total_amendment_duplicate_and_packaging_clauses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_parsing_v6.py", line 32, in test_total_amendment_duplicate_and_packaging_clauses
+    self.assertEqual(len(rows), 4)
+AssertionError: 6 != 4
+
+======================================================================
+FAIL: test_explicit_total_change_resolves_append_chain_and_cancel (test_raw_messages_v6.RawMessageTests.test_explicit_total_change_resolves_append_chain_and_cancel)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/hanfei/Documents/workspace/smartcode/ordertcr/skills/order-mapping/tests/test_raw_messages_v6.py", line 55, in test_explicit_total_change_resolves_append_chain_and_cancel
+    self.assertEqual([r['event_state'] for r in rows],
+AssertionError: Lists differ: ['inactive', 'active', 'pending', 'cancellation_record'] != ['superseded', 'superseded', 'inactive', 'cancellation_record']
+
+First differing element 0:
+'inactive'
+'superseded'
+
+- ['inactive', 'active', 'pending', 'cancellation_record']
++ ['superseded', 'superseded', 'inactive', 'cancellation_record']
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.385s
+
+FAILED (failures=4, errors=2)
